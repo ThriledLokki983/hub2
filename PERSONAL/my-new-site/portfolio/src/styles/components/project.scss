@@ -1,0 +1,436 @@
+@use '../mixins/mixins';
+
+.projects {
+    @include mixins.section-layout;
+
+  
+
+    & span {
+        @include mixins.span-style;
+    }
+
+    a {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+    }
+
+    &-container {
+        max-width: 1000px;
+        margin: 50px auto;
+
+        @media only screen and (max-width:786px) {
+            @include mixins.mobile-layout;
+            height: auto;
+        }
+
+        & span {
+            @include mixins.span-style;
+        }
+    }
+
+    @media only screen and (max-width:786px) {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 20rem;
+    }
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.project {
+    &__right {
+        @include mixins.project-alignment;
+        margin-bottom: 5rem;
+
+        &-img {
+            @include mixins.photo-effect;
+            border-radius: 4px;
+            grid-column: 1 / 8;
+            grid-row: 1 / -1;
+            box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(#8892b0, 0.1);
+
+            &:hover {
+                background: none;
+                cursor: pointer;
+            }
+
+            @media screen and (max-width:786px) {
+                height: 95%;
+            }
+            @include mixins.tablet {
+                grid-column: 1 / -1;
+                opacity: 0.25;
+            }
+
+            &:before {
+                @include mixins.before-effect;
+            }
+
+            img {
+                border-radius: 4px;
+                position: relative;
+                mix-blend-mode: multiply;
+                filter: grayscale(100%) contrast(1);
+
+                @media screen and (max-width: 786px) {
+                    object-fit: cover;
+                    width: auto;
+                    height: 100%;
+                }
+
+                &:hover {
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-container {
+            @media only screen and (max-width:786px) {
+                @include mixins.mobile-layout;
+            }
+
+            & h2 {
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-label {
+            color: var(--brand);
+            font-family: var(--font-robo);
+            font-size: 1.2rem;
+
+            display: flex;
+            justify-content: flex-end;
+
+            @include mixins.tablet {
+                justify-content: flex-start;
+            }
+        }
+
+        &-title {
+            font-size: 3rem;
+            margin: 0.5rem 0 0.5rem;
+            padding: 0;
+            font-family: var(--font-robo);
+            color: var(--text-1);
+
+            display: flex;
+            justify-content: flex-end;
+            @include mixins.tablet {
+                justify-content: flex-start;
+            }
+        }
+
+        &-links {
+            &-icon {
+                @include mixins.project-icons;
+            }
+        }
+
+        &-details {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #aaa;
+
+            p {
+                border: 1px solid rgba(#8892b0, 0.1);
+                background-color: var(--surface-4);
+                color: var(--text-2);
+                padding: 20px 25px;
+                box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+                border-radius: 0.3rem;
+                font-weight: 300;
+                text-align: justify;
+
+                @include mixins.tablet {
+                    background-color: transparent;
+                    padding: 20px;
+                }
+            }
+
+            ul {
+                display: flex;
+                margin-top: 20px;
+                justify-content: flex-end;
+
+                @include mixins.tablet {
+                    justify-content: flex-start;
+                }
+
+                li {
+                    @include mixins.ul-style;
+                }
+            }
+        }
+
+        &-content {
+            position: relative;
+            grid-column: 7 / 13;
+            grid-row: 1 / -1;
+
+            @include mixins.tablet {
+                grid-column: 1 / -1;
+                padding: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 786px) {
+            align-items: flex-start;
+        }
+    }
+
+    &__left {
+        @include mixins.project-alignment;
+        margin-bottom: 5rem;
+
+        &-img {
+            @include mixins.photo-effect;
+            border-radius: 4px;
+            grid-column: 6 / -1;
+            grid-row: 1 / -1;
+            box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(#8892b0, 0.1);
+
+            @media screen and (max-width: 786px) {
+                height: 95%;
+            }
+                @include mixins.tablet {
+                    grid-column: 1 / -1;
+                    opacity: 0.25;
+                }
+
+            &:before {
+                @include mixins.before-effect;
+            }
+
+            img {
+                border-radius: 4px;
+                position: relative;
+                mix-blend-mode: multiply;
+                filter: grayscale(100%) contrast(1);
+
+                @media screen and (max-width:786px) {
+                    object-fit: cover;
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+
+        &-container {
+            & h2 {
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-label {
+            color: var(--brand);
+            font-family: var(--font-robo);
+            font-size: 1.2rem;
+        }
+
+        &-title {
+            font-size: 3rem;
+            margin: 0.5rem 0 0.5rem;
+            padding: 0;
+            font-family: var(--font-robo);
+            color: var(--text-1);
+        }
+
+        &-links {
+            &-icon {
+                @include mixins.project-icons;
+            }
+        }
+
+        &-details {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #aaa;
+
+            p {
+                border: 1px solid rgba(#8892b0, 0.1);
+                background-color: var(--surface-4);
+                color: var(--text-2);
+                padding: 20px 25px;
+                box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.1);
+                border-radius: 0.3rem;
+                font-weight: 300;
+                text-align: justify;
+                border-radius: 4px;
+
+
+                @include mixins.tablet {
+                    background-color: transparent;
+                    padding: 20px;
+                }
+            }
+
+            ul {
+                display: flex;
+                margin-top: 20px;
+                @include mixins.ul-style;
+
+                li {
+                    margin-right: 20px;
+                    color: #aaa;
+                    font-size: 1.4rem;
+                    line-height: 1.6
+                }
+            }
+        }
+
+        &-content {
+            @include mixins.project-content;
+
+            @include mixins.tablet {
+                grid-column: 1 / -1;
+                padding: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 786px) {
+            align-items: flex-start;
+        }
+    }
+
+    &-container {
+        @media only screen and (max-width:786px) {
+            @include mixins.mobile-layout;
+            margin-top: 40rem;
+        }
+    }
+}
+
+
+ul[data-project-lists] {
+    inline-size: 70%; margin-inline: auto;
+
+    @media (max-width: 786px) {
+        inline-size: 90%;
+        margin-block-start: 2rem;
+    }
+}
+
+.icon {
+    inline-size: 2rem; block-size: 2rem; cursor: pointer;
+    fill: var(--text-1);
+    transition: fill 0.2s ease-in;
+
+     &:hover {
+        fill: var(--brand);
+     }
+}
+
+// Projects CTA Button
+.projects-cta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    > a {
+        background-color: var(--brand);
+        padding: var(--size-4) var(--size-8);
+        border-radius: var(--size-2);
+        display: flex;
+        align-items: center;
+        color: var(--surface-1);
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}
+
+.projects-view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 2px solid var(--brand);
+    color: var(--brand);
+    text-decoration: none;
+    font-family: var(--font-robo);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    
+    &:hover,
+    &:focus {
+        background: var(--brand);
+        color: var(--surface-1);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    &:focus {
+        outline: 2px solid var(--brand);
+        outline-offset: 2px;
+    }
+    
+    .icon {
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover .icon {
+        transform: translateX(4px);
+    }
+}
+
+// Full projects page styling
+.projects--full {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    display: block;
+    
+    .project__left,
+    .project__right {
+        margin-bottom: 4rem;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        @media only screen and (max-width: 786px) {
+            margin-bottom: 3rem;
+        }
+    }
+    
+    // Remove scroll snapping styles for full page
+    & {
+        scroll-snap-align: none;
+    }
+}
+
+// Projects page container
+.projects-page {
+    h1 {
+        margin-bottom: 3rem;
+        text-align: left;
+        
+        @media only screen and (max-width: 786px) {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    }
+}

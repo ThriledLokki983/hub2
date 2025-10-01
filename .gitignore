@@ -15,6 +15,10 @@ PERSONAL/*
 !PERSONAL/workplace/**
 # But exclude node_modules from workplace too
 PERSONAL/workplace/**/node_modules/
+!PERSONAL/my_site/
+!PERSONAL/my_site/**
+!PERSONAL/my-new-site/
+!PERSONAL/my-new-site/**
 !PERSONAL/2025/
 PERSONAL/2025/*
 !PERSONAL/2025/FRANK/

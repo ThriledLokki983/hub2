@@ -1,0 +1,600 @@
+@use '../mixins/mixins';
+
+// Resume page container
+.resume-page {
+  padding: 2rem 0;
+  
+  @media print {
+    padding: 0;
+  }
+}
+
+// Resume container
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--surface-1);
+  color: var(--text-1);
+  line-height: 1.6;
+  
+  @media print {
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    color: #000 !important;
+    background: #fff !important;
+  }
+}
+
+// Resume header
+.resume-header {
+  background: var(--surface-2, #f8f9fa);
+  padding: 3rem 2rem 2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: 3px solid var(--brand);
+  
+  @media print {
+    background: #fff !important;
+    padding: 1rem;
+    border-radius: 0;
+    border-bottom: 2px solid #ff922b;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    padding: 2rem 1rem 1.5rem;
+  }
+}
+
+.resume-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.resume-name {
+  font-family: var(--font-robo-mono, "Roboto Mono", monospace);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--text-1);
+  margin: 0;
+  line-height: 1.2;
+  
+  @media print {
+    font-size: 2.5rem;
+    color: #000 !important;
+  }
+}
+
+.resume-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--brand);
+  margin: 0.5rem 0 0 0;
+  
+  @media print {
+    color: #ff922b !important;
+    font-size: 1.3rem;
+  }
+}
+
+// Contact information
+.resume-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+  @media only screen and (max-width: 768px) {
+    align-self: stretch;
+  }
+}
+
+.resume-contact-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resume-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-2, #6c757d);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--brand);
+  }
+  
+  svg {
+    flex-shrink: 0;
+    opacity: 0.8;
+  }
+  
+  @media print {
+    color: #333 !important;
+    
+    &:hover {
+      color: #333 !important;
+    }
+  }
+}
+
+// Resume actions (download, back buttons)
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  
+  @media print {
+    display: none !important;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  
+  &:focus {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+}
+
+.resume-btn-primary {
+  background: var(--brand);
+  color: var(--surface-1);
+  
+  &:hover {
+    background: var(--brand);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.resume-btn-secondary {
+  background: transparent;
+  color: var(--text-1);
+  border: 2px solid var(--text-2);
+  
+  &:hover {
+    background: var(--text-2);
+    color: var(--surface-1);
+    transform: translateY(-1px);
+  }
+}
+
+// Resume content
+.resume-content {
+  padding: 2rem;
+  
+  @media print {
+    padding: 1rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.resume-section {
+  margin-bottom: 3rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media print {
+    margin-bottom: 2rem;
+    break-inside: avoid;
+  }
+}
+
+.resume-section-title {
+  font-family: var(--font-robo-mono, "Roboto Mono", monospace);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--brand);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--brand);
+  position: relative;
+  
+  @media print {
+    color: #ff922b !important;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Professional summary
+.resume-summary {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: var(--text-1);
+  
+  @media print {
+    color: #000 !important;
+    font-size: 1rem;
+  }
+}
+
+// Experience section
+.resume-experience-item {
+  margin-bottom: 2.5rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media print {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+  }
+}
+
+.resume-experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.resume-experience-title {
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-1);
+    margin: 0;
+    
+    @media print {
+      color: #000 !important;
+      font-size: 1.2rem;
+    }
+  }
+  
+  h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--brand);
+    margin: 0.2rem 0 0 0;
+    
+    @media print {
+      color: #ff922b !important;
+    }
+  }
+}
+
+.resume-experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  
+  @media only screen and (max-width: 768px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.resume-period {
+  font-weight: 600;
+  color: var(--text-1);
+  
+  @media print {
+    color: #000 !important;
+  }
+}
+
+.resume-location {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  
+  @media print {
+    color: #666 !important;
+  }
+}
+
+.resume-experience-description {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-1);
+    
+    &::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--brand);
+      font-weight: bold;
+    }
+    
+    @media print {
+      color: #000 !important;
+      
+      &::before {
+        color: #ff922b !important;
+      }
+    }
+  }
+}
+
+// Technologies
+.resume-technologies {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  
+  strong {
+    color: var(--text-1);
+    
+    @media print {
+      color: #000 !important;
+    }
+  }
+  
+  @media print {
+    color: #666 !important;
+  }
+}
+
+// Education section
+.resume-education-item {
+  margin-bottom: 2rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media print {
+    break-inside: avoid;
+  }
+}
+
+.resume-education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.resume-education-title {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-1);
+    margin: 0;
+    
+    @media print {
+      color: #000 !important;
+    }
+  }
+  
+  h4 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--brand);
+    margin: 0.2rem 0 0 0;
+    
+    @media print {
+      color: #ff922b !important;
+    }
+  }
+}
+
+.resume-education-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  
+  @media only screen and (max-width: 768px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.resume-education-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-2);
+    font-size: 0.95rem;
+    
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--brand);
+    }
+    
+    @media print {
+      color: #666 !important;
+      
+      &::before {
+        color: #ff922b !important;
+      }
+    }
+  }
+}
+
+// Projects section
+.resume-project-item {
+  margin-bottom: 2rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media print {
+    break-inside: avoid;
+  }
+}
+
+.resume-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-1);
+    margin: 0;
+    
+    @media print {
+      color: #000 !important;
+    }
+  }
+}
+
+.resume-project-links {
+  display: flex;
+  gap: 1rem;
+  
+  a {
+    color: var(--brand);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    @media print {
+      color: #ff922b !important;
+    }
+  }
+}
+
+.resume-project-description {
+  color: var(--text-1);
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  
+  @media print {
+    color: #000 !important;
+  }
+}
+
+// Skills section
+.resume-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.resume-skill-category {
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-1);
+    margin: 0 0 0.5rem 0;
+    
+    @media print {
+      color: #000 !important;
+    }
+  }
+  
+  p {
+    color: var(--text-2);
+    margin: 0;
+    line-height: 1.6;
+    
+    @media print {
+      color: #666 !important;
+    }
+  }
+}
+
+// Print optimizations
+@media print {
+  .resume-container {
+    box-shadow: none !important;
+  }
+  
+  .resume-section {
+    page-break-inside: avoid;
+  }
+  
+  .resume-experience-item,
+  .resume-project-item,
+  .resume-education-item {
+    page-break-inside: avoid;
+  }
+}
+
+// Responsive improvements
+@media only screen and (max-width: 768px) {
+  .resume-container {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .resume-header {
+    border-radius: 0;
+  }
+}
+
+#download-pdf,
+.resume-btn-secondary {
+    font-size: 1.4rem;
+}
+
+#download-pdf > svg,
+.resume-btn-secondary > svg,
+.resume-contact-item > svg {
+    inline-size: 2rem; block-size: 2rem;
+}

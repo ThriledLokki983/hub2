@@ -1,0 +1,33 @@
+.header__nav {
+	--link-accent: hsl(166, 100%, 40%);
+
+	position: relative;
+}
+
+.nav-list {
+	display: flex; flex-direction: column;
+}
+
+.nav-item {
+	display: flex; flex-direction: row;
+	padding-block-end: 0.75rem;
+}
+.nav-item:not(:first-child) {
+	padding-block-start: 0.75rem;
+}
+
+.nav-link {
+	display: block; text-decoration: none;
+	font-family: var(--font-primary);
+	font-size: 1.4rem; font-weight: 300;
+	color: var(--text2);
+	transform: translateX(0);
+
+	transition: color 200ms ease,
+		transform 350ms ease;
+}
+
+.nav-link:hover {
+	color: var(--link-accent);
+	transform: translateX(0.5rem);
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gideon Nimoh</title>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#222">
+    <meta name="description" content="My portfolio">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/svg/logo.svg" />
+    <link rel="stylesheet" href="/src/styles/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <section class="scroll_root">
+          <figure class="header-bg"></figure>
+          <section class="header__menu">
+            <nav class="header__nav">
+              <h1 class="name"> Gideon<br/>Nimoh</h1>
+              <hr class="divider" data-width="60%"/>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">Contact</a>
+                </li>
+              </ul>
+              <ul class="social__media">
+                <li class="social__media-item">
+                  <a href="#" class="social__media-link">
+                  <svg class="icon">
+                    <use xlink:href="/src/assets/svg/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+                </li>
+                <li class="social__media-item">
+                  <a href="#" class="social__media-link">
+                  <svg class="icon">
+                    <use xlink:href="/src/assets/svg/sprite.svg#icon-github"></use>
+                  </svg>
+                  </a>
+                </li>
+                <li class="social__media-item">
+                  <a href="#" class="social__media-link">
+                  <svg class="icon">
+                    <use xlink:href="/src/assets/svg/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  </a>
+                </li>
+                <li class="social__media-item">
+                  <a href="#" class="social__media-link">
+                  <svg class="icon">
+                    <use xlink:href="/src/assets/svg/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                  </a>
+                </li>
+                <li class="social__media-item">
+                  <a href="#" class="social__media-link">
+                  <svg class="icon">
+                    <use xlink:href="/src/assets/svg/sprite.svg#icon-codepen"></use>
+                  </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <article class="header-right">
+              <figure class="photo">
+                <!-- <img src="/src/assets/images/gideon-1.jpg" alt="Gideon Nimoh" class="photo__img" /> -->
+              </figure>
+            </article>
+          </section>
+        </section>
+
+      </header>
+
+
+      <article class="toggle">
+        <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+          <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+            <mask class="moon" id="moon-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="white" />
+              <circle cx="24" cy="10" r="6" fill="black" />
+            </mask>
+            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+            <g class="sun-beams" stroke="currentColor">
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+             </g>
+          </svg>
+        </button>
+      </article>
+
+    </main>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

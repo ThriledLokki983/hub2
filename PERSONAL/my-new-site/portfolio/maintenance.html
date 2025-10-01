@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Gideon Nimoh Portfolio - Currently under maintenance. We'll be back soon with exciting updates!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical fonts preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Mono:wght@200;300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Mono:wght@200;300;400;500&display=swap"></noscript>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Gideon Nimoh Portfolio" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    
+    <title>Under Maintenance - Gideon Nimoh Portfolio</title>
+    
+    <!-- Inline critical CSS for immediate rendering -->
+    <style>
+      /* Critical CSS for immediate rendering */
+      *{box-sizing:border-box;margin:0;padding:0}
+      
+      /* Critical theme variables */
+      :root {
+        --green: #64ffda;
+        --brand-light: #ff922b;
+        --text-1-light: #343a40;
+        --text-2-light: #6c757d;
+        --surface-1-light: #ffffff;
+        --surface-2-light: #f8f9fa;
+        --brand-dark: #ffa94d;
+        --text-1-dark: #e9ecef;
+        --text-2-dark: #adb5bd;
+        --surface-1-dark: #0a0a0a;
+        --surface-2-dark: #1a1a1a;
+        
+        /* Set defaults for light mode */
+        color-scheme: light;
+        --brand: var(--brand-light);
+        --text-1: var(--text-1-light);
+        --text-2: var(--text-2-light);
+        --surface-1: var(--surface-1-light);
+        --surface-2: var(--surface-2-light);
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --brand: var(--brand-dark);
+          --text-1: var(--text-1-dark);
+          --text-2: var(--text-2-dark);
+          --surface-1: var(--surface-1-dark);
+          --surface-2: var(--surface-2-dark);
+        }
+      }
+      
+      [color-scheme="light"] {
+        color-scheme: light;
+        --brand: var(--brand-light);
+        --text-1: var(--text-1-light);
+        --text-2: var(--text-2-light);
+        --surface-1: var(--surface-1-light);
+        --surface-2: var(--surface-2-light);
+      }
+      
+      [color-scheme="dark"] {
+        color-scheme: dark;
+        --brand: var(--brand-dark);
+        --text-1: var(--text-1-dark);
+        --text-2: var(--text-2-dark);
+        --surface-1: var(--surface-1-dark);
+        --surface-2: var(--surface-2-dark);
+      }
+      
+      body{
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        background: var(--surface-1);
+        color: var(--text-1);
+        overflow-x: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /* Screen reader only content */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      
+      /* Main container */
+      .maintenance-container {
+         display: flex; flex-direction: column;
+        text-align: center;
+        max-width: 600px; margin-inline: auto;
+        padding: 2rem;
+        animation: fadeInUp 0.8s ease-out;
+      }
+      
+      /* Logo/Icon */
+      .maintenance-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 2rem;
+        background: var(--brand);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: pulse 2s infinite;
+      }
+      
+      .maintenance-icon svg {
+        width: 40px;
+        height: 40px;
+        color: var(--surface-1);
+      }
+      
+      /* Typography */
+      .maintenance-title {
+        font-family: "Roboto Mono", monospace;
+        font-size: clamp(2rem, 4vw + 1rem, 4rem);
+        font-weight: 300;
+        margin-bottom: 1rem;
+        color: var(--text-1);
+        letter-spacing: -0.02em;
+      }
+      
+      .maintenance-subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        color: var(--brand);
+      }
+      
+      .maintenance-description {
+        font-size: 1.5rem;
+        color: var(--text-2);
+        margin-bottom: 2rem;
+        line-height: 1.7;
+      }
+      
+      /* Progress indicator */
+      .maintenance-progress {
+        background: var(--surface-2);
+        border-radius: 10px;
+        height: 8px;
+        margin: 2rem 0;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .maintenance-progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, var(--brand), var(--surface-4));
+        border-radius: 10px;
+        animation: progressAnimation 3s ease-in-out infinite;
+      }
+      
+      /* Contact section */
+      .maintenance-contact {
+         margin-top: 3rem;
+        padding: 1.5rem;
+        background: var(--surface-2);
+        border-left: 4px solid var(--brand);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        text-align: left;
+      }
+      
+      .maintenance-contact h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--text-1);
+      }
+      
+      .maintenance-contact p {
+        color: var(--text-2);
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+      
+      .maintenance-contact a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+      }
+
+        .maintenance-contact a:first-of-type {
+            padding-block-end: 1rem;
+        }
+      
+      .maintenance-contact a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+      
+      /* Theme toggle */
+      .theme-toggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: var(--surface-2);
+        border: 2px solid var(--brand);
+        color: var(--brand);
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+      
+      .theme-toggle:hover {
+        background: var(--brand);
+        color: var(--surface-1);
+        transform: scale(1.1);
+      }
+      
+      .theme-toggle:focus {
+        outline: 2px solid var(--brand);
+        outline-offset: 4px;
+      }
+      
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+      
+      @keyframes progressAnimation {
+        0% {
+          width: 20%;
+          transform: translateX(-100%);
+        }
+        50% {
+          width: 60%;
+          transform: translateX(50%);
+        }
+        100% {
+          width: 20%;
+          transform: translateX(300%);
+        }
+      }
+      
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .maintenance-container {
+          padding: 1rem;
+        }
+        
+        .theme-toggle {
+          top: 0.5rem;
+          right: 0.5rem;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle between light and dark themes">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+
+    <main class="maintenance-container" role="main">
+      <!-- Maintenance icon -->
+      <div class="maintenance-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+        </svg>
+      </div>
+
+      <!-- Main content -->
+      <h1 class="maintenance-title">Under Maintenance</h1>
+      <h2 class="maintenance-subtitle">I am Making Things Better</h2>
+      
+      <p class="maintenance-description">
+        I'm currently performing some scheduled maintenance to improve your experience. 
+        The site will be back online shortly with exciting new features and improvements.
+      </p>
+
+      <!-- Progress indicator -->
+      <div class="maintenance-progress" role="progressbar" aria-label="Maintenance progress">
+        <div class="maintenance-progress-bar"></div>
+      </div>
+
+      <!-- Expected return time -->
+      <p class="maintenance-description">
+        <strong>Expected return:</strong> <span id="return-time">Shortly</span>
+      </p>
+
+      <!-- Contact information -->
+      <div class="maintenance-contact">
+        <h3>Need to get in touch?</h3>
+        <p>If you have any urgent inquiries, feel free to reach out:</p>
+        <p>
+          Email: <a href="mailto:hello@nimoh.io">hello@nimoh.io</a><br>
+          LinkedIn: <a href="https://www.linkedin.com/in/gideon-nimoh/" target="_blank" rel="noopener noreferrer">Connect with me</a>
+        </p>
+      </div>
+    </main>
+
+    <script type="module" src="/src/maintenance-main.ts"></script>
+  </body>
+</html>

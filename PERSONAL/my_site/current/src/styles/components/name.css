@@ -1,0 +1,7 @@
+.name {
+	font-family: var(--font-mono);
+	font-size: 3rem; font-weight: 600;
+	text-align: left;
+	letter-spacing: 4px;
+	line-height: normal;
+}

@@ -1,0 +1,75 @@
+.contact {
+    max-width: 60rem;
+    margin: 0px auto 100px;
+    text-align: center;
+
+    &--head {
+        & span {
+            @include span-style;
+        }
+    }
+    .heading__number {
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    .overline {
+        display: block;
+        margin-bottom: 20px;
+        color: $green;
+        font-family: $font-robo-mono;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    &__title {
+        font-size: clamp(4rem, 5vw, 6rem);
+    }
+
+    &__info {
+        font-size: 1.7rem;
+        color: $slate;
+        font-weight: 300;
+    }
+
+    &__email-link {
+        color: $green;
+        background-color: transparent;
+        border: 1px solid $green;
+        border-radius: 0.5rem;
+        padding: 1.25rem 1.75rem;
+        font-size: 1.5rem;
+        font-family: $font-robo-mono;
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: $transition;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    & a {
+        display: inline-block;
+        position: relative;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        // @include mobile-layout;
+        margin: 20rem 0 25rem 0;
+        padding: 0 2.5rem;
+        max-width: 100%;
+        width: 100%;
+
+        &__info {
+            text-align: justify;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        a {
+            align-self: center;
+            font-size: 2rem;
+            padding: 2rem;
+        }
+    }
+}

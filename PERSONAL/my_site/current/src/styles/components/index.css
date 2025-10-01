@@ -1,0 +1,12 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+@import "sun-and-moon.css";
+@import "theme-toggle.css";
+@import "logo.css";
+@import "header.css";
+@import "name.css";
+@import "menu.css";
+@import "divider.css";
+@import "nav.css";
+@import "social-media.css";
+
+@custom-media --motionOK (prefers-reduced-motion: no-preference);

@@ -1,0 +1,166 @@
+@mixin section-layout {
+    width: 70%;
+    max-width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5rem;
+
+   
+}
+
+@mixin mobile-layout {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 2.5rem;
+    max-width: 100%;
+    width: 100%;
+    height: 90vh;
+    min-height: 100vh;
+}
+
+// EXPERIENCE LIST STYLES
+@mixin list-style {
+    align-items: flex-start;
+    li {
+        font-size: 1.5rem;
+        list-style: none;
+        color: $slate;
+
+        &::before {
+            content: "\290D";
+            color: #64ffda;
+
+            @media only screen and (max-width: $bp-smallest) {
+                display: none;
+            }
+        }
+    }
+}
+
+// HEADING__NUMBER SPAN STYLE
+@mixin span-style {
+    color: var(--text-1);
+    font-family: var(--font-robo-mono);
+    font-size: 2rem;
+    padding-right: 1.5rem;
+}
+
+@mixin text-style {
+    margin-bottom: 0;
+    text-align: justify;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+// ICON STYLES
+
+@mixin icon-style {
+    width: 10rem;
+    height: 10rem;
+    fill: rgba(#64ffda, 0.3);
+
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 2rem;
+        width: 8rem;
+        height: 8rem;
+        fill: #64ffda;
+        stroke-width: 15rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@mixin icon-box-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin experience-header-style {
+    text-align: left;
+    padding: 0;
+    display: flex;
+    font-size: 1.7rem;
+    font-family: $font-robo-mono;
+}
+
+// GENERAL
+@mixin flex-column-start {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+@mixin project-alignment {
+    margin: 30px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+
+    @media only screen and (max-width: 786px) {
+        margin: 0 0 4rem 0;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin project-icons {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--text-1);
+}
+
+@mixin ul-style {
+    margin-right: 20px;
+    color: #aaa;
+    font-size: 1.3rem;
+    // font-family: $font-robo-mono;
+}
+
+@mixin project-content {
+    position: relative; z-index: 2;
+    grid-column: 1 / 7;
+    grid-row: 1 / -1;
+}
+
+@mixin photo-effect {
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: -1;
+    // background-color: var(--surface-2);
+    // background: linear-gradient(0.4turn, var(--surface-2), var(--surface-4));
+}
+
+@mixin before-effect {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    // background-color: var(--surface-2);
+    mix-blend-mode: screen;
+    border-radius: 2px;
+}
+
+h1.projects-heading {
+    @media (max-width: 786px) {
+        font-size: 3rem;
+    }
+}

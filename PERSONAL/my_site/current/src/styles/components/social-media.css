@@ -1,0 +1,33 @@
+.social__media {
+	--link-accent: hsl(166, 100%, 40%);
+
+	display: flex; align-items: center; justify-content: flex-start; gap: 1.5rem; flex-wrap: wrap;
+	margin-block-start: 5rem;
+
+}
+
+.social__media-item {
+	color: var(--text2);
+}
+
+.social__media-link {
+	display: flex; align-items: center; justify-content: center;
+}
+
+.social__media-link  > svg {
+	width: 1.5rem; height: 1.5rem;
+	fill: var(--surface4);
+	transition: fill 0.2s ease;
+}
+
+[data-theme="light"] .social__media-link  > svg {
+	fill: var(--text2);
+}
+
+.social__media-link:hover > svg {
+	fill: var(--text2);
+}
+
+[data-theme="light"]:hover > svg {
+	fill: var(--text1);
+}

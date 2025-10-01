@@ -1,0 +1,48 @@
+.theme-toggle {
+  --size: 2rem;
+  --icon-fill: hsl(210 10% 30%);
+  --icon-fill-hover: hsl(210 10% 15%);
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  outline-offset: 5px;
+
+  & > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+}
+
+@media (hover: none) {
+	.theme-toggle {
+		--size: 48px;
+	}
+}
+
+[data-theme="dark"] & {
+	--icon-fill: hsl(210 10% 70%);
+	--icon-fill-hover: hsl(210 15% 90%);
+}
+
+/* Sticky toggler */
+.toggle {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 1000;
+	border: 1px solid var(--surface2);
+	padding: 1rem;
+	display: flex; place-content: center; place-items: center;
+}

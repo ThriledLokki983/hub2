@@ -1,0 +1,7 @@
+# @format
+----
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nimohgid/public_html
+    - /bin/cp -rf $SOURCE_DIR/* $DEPLOYPATH # /bin/cp -rf index.html $DEPLOYPATH
+    - /bin/cp -rf $SOURCE_DIR/.* $DEPLOYPATH

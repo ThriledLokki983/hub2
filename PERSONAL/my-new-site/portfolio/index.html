@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Gideon Nimoh - Full Stack Web Developer specializing in front-end development with expertise in building exceptional digital experiences." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <!-- Critical fonts preload with faster loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Mono:wght@200;300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Mono:wght@200;300;400;500&display=swap"></noscript>
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="/src/main.ts">
+    <link rel="modulepreload" href="/src/components/header.ts">
+    <link rel="modulepreload" href="/src/components/home.ts">
+    <link rel="modulepreload" href="/src/components/navigation.ts">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Gideon Nimoh Portfolio" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    
+    <title>Gideon Nimoh - Full Stack Web Developer</title>
+    
+    <!-- Inline critical CSS for immediate rendering -->
+    <style>
+      /* Critical CSS for immediate rendering - optimized for FCP */
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.5;background: var(--surface-1);color:#343a40;overflow-x:hidden}
+      
+      /* Critical layout styles */
+      .navigation{position:sticky;top:0;z-index:5;height:100px;width:100%;border-top:4px solid #ff922b}
+      .main-content{display:flex;flex-direction:column;height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+      .content{width:100%;height:100vh;min-height:100vh;scroll-snap-align:start;display:flex;justify-content:center;align-items:center}
+      
+      /* Skip link */
+      .skip-link{position:absolute;top:-40px;left:6px;background:#ff922b;color:#fff;padding:8px;text-decoration:none;border-radius:4px;z-index:1000;font-weight:bold}
+      .skip-link:focus{top:6px;outline:2px solid #fff;outline-offset:2px}
+      
+      /* Prevent FOUC with optimized animations */
+      .navigation,.main-content{opacity:0;animation:fadeIn 0.15s ease-out forwards}
+      @keyframes fadeIn{to{opacity:1}}
+      
+      /* Critical font loading optimization */
+      .intro h1{font-family:"Roboto Mono",monospace;font-size:clamp(2rem,4.25vw,7rem);font-weight:200;animation:typing 3s steps(20,end),blink-caret .95s step-end infinite;overflow:hidden;border-right:.05em solid #ff922b;white-space:nowrap;letter-spacing:.1em}
+      
+      /* Critical animations for better perceived performance */
+      @keyframes typing{from{width:0}to{width:100%}}
+      @keyframes blink-caret{from,to{border-color:transparent}50%{border-color:#ff922b}}
+      
+      /* Essential navigation styles */
+      .nav__link{color:#495057;text-decoration:none;transition:color 0.15s ease}
+      .nav__link[aria-selected="true"]{color:#ff922b}
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="navigation" role="banner">
+      <section id="header"></section>
+    </header>
+
+    <main id="main" role="main">
+      <!-- Live region for screen reader announcements -->
+      <div id="announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+      
+      <nav id="nav" role="navigation" aria-label="Page sections navigation"></nav>
+      <div class="main-content" id="main-content">
+        <section id="home" class="content" role="region" aria-labelledby="home-heading"></section>
+        <section id="projects" class="content" role="region" aria-labelledby="projects-heading">
+          <!-- <h1 id="projects-heading">Projects</h1> -->
+        </section>
+        <section id="experience" class="content" role="region" aria-labelledby="experience-heading"></section>
+        <section id="about" class="content" role="region" aria-labelledby="about-heading"></section>
+        <section id="contact" class="content" role="region" aria-labelledby="contact-heading"></section>
+      </div>
+      <!-- <div class="header">
+        <h3>Scheme</h3>
+        <form id="theme-switcher">
+          <div>
+            <input checked type="radio" id="auto" name="theme" value="auto">
+            <label for="auto">Auto</label>
+          </div>
+          <div>
+            <input type="radio" id="light" name="theme" value="light">
+            <label for="light">Light</label>
+          </div>
+          <div>
+            <input type="radio" id="dark" name="theme" value="dark">
+            <label for="dark">Dark</label>
+          </div>
+          <div>
+            <input type="radio" id="dim" name="theme" value="dim">
+            <label for="dim">Dim</label>
+          </div>
+          <div>
+            <input type="radio" id="grape" name="theme" value="grape">
+            <label for="grape">Grape</label>
+          </div>
+          <div>
+            <input type="radio" id="choco" name="theme" value="choco">
+            <label for="choco">Choco</label>
+          </div>
+          <div>
+            <input type="radio" id="navy" name="theme" value="navy">
+            <label for="navy">Navy</label>
+          </div>
+        </form>
+      </div> -->
+      <div class="theme">
+        <!-- <section>
+          <div class="surface-samples">
+            <div class="icon-container">
+              <svg width="102" height="93" viewBox="0 0 102 93" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M44.9662 26.0286C44.7073 24.9731 44.2991 24.0472 43.7415 23.2506C43.184 22.4342 42.487 21.7472 41.6506 21.1896C40.8342 20.6121 39.8783 20.184 38.7831 19.9052C37.7078 19.6065 36.5229 19.4571 35.2285 19.4571C32.4407 19.4571 30.061 20.1242 28.0896 21.4584C26.1381 22.7926 24.6446 24.7143 23.6091 27.2234C22.5935 29.7324 22.0857 32.7593 22.0857 36.3039C22.0857 39.8883 22.5736 42.955 23.5493 45.5039C24.5251 48.0528 25.9788 50.0043 27.9104 51.3584C29.842 52.7125 32.2415 53.3896 35.1091 53.3896C37.3031 53.3896 39.1749 53.1123 40.7245 52.5578V67.4077C38.8979 67.7004 36.9862 67.8467 34.9896 67.8467C29.0355 67.8467 23.8082 66.5822 19.3078 64.0532C14.8074 61.5242 11.2926 57.9199 8.76363 53.2402C6.25454 48.5606 5 42.9948 5 36.5428C5 31.4848 5.76667 27.0043 7.3 23.1013C8.85324 19.1983 11.0039 15.9026 13.7519 13.2143C16.5 10.5061 19.6762 8.46493 23.2805 7.09091C26.8848 5.69697 30.748 5 34.8701 5C38.4943 5 41.8597 5.51775 44.9662 6.55325C48.0926 7.56883 50.8506 9.02251 53.2402 10.9143C55.6497 12.7861 57.5913 15.0065 59.0649 17.5753C60.5385 20.1441 61.4346 22.9619 61.7532 26.0286H44.9662Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.605 45.3999H35.2285V33.5713H62.3506V33.6625L81.7269 62.1212H82.1541V33.5714H96.9999V88.1142H84.6106L64.8519 59.4579H64.5315V88.1142H49.6857V42.1144H40.605V45.3999Z"/>
+              </svg>
+            </div>
+            <div class="surface-1 rad-shadow">1</div>
+            <div class="surface-2 rad-shadow">2</div>
+            <div class="surface-3 rad-shadow">3</div>
+            <div class="surface-4 rad-shadow">4</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="text-samples">
+            <h1 class="text-1">
+              <span class="swatch brand rad-shadow"></span>
+              Brand
+            </h1>
+            <h1 class="text-1">
+              <span class="swatch text-1 rad-shadow"></span>
+              Text Color 1
+            </h1>
+            <h1 class="text-2">
+              <span class="swatch text-2 rad-shadow"></span>
+              Text Color 2
+            </h1>
+            <br>
+            <p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="text-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </section> -->
+      </div>
+    </main>
+
+    <footer id="footer"></footer>
+    
+    <!-- Load main script with defer for better performance -->
+    <script type="module" src="/src/main.ts" defer></script>
+  </body>
+</html>

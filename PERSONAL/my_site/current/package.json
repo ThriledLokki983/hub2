@@ -1,0 +1,25 @@
+{
+  "name": "gideon-nimoh-portfolio",
+  "author": {
+    "name": "Gideon Nimoh",
+    "email": "hello@nimoh.io"
+  },
+  "private": true,
+  "type": "module",
+  "license": "LIC",
+  "version": "0.0.0",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "start": "vite --port=1301",
+    "dev": "vite --port=1301",
+    "build": "vite build --base=/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "postcss-preset-env": "^9.5.11",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {}
+}

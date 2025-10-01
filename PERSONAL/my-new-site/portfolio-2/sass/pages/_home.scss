@@ -1,0 +1,25 @@
+.home {
+    @include section-layout;
+
+    // animation: moveInBottom 1.2s ease-out;
+
+    &__text {
+        max-width: 50rem;
+        font-weight: 300;
+    }
+
+    &__start {
+        padding-left: 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        font-family: $font-robo-mono;
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        @include mobile-layout;
+    }
+}

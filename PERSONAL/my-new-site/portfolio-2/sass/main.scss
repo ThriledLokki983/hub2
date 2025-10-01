@@ -1,0 +1,25 @@
+// Import all scss files into this main file for compiling
+
+/** @format */
+
+@import "utils";
+
+@import "abstract/animations";
+@import "abstract/mixins";
+
+@import "layout/layout";
+@import "layout/base";
+
+@import "features/buttons";
+@import "features/sides";
+@import "features/typography";
+@import "features/modal";
+
+@import "pages/header";
+@import "pages/home";
+@import "pages/about";
+@import "pages/experience";
+@import "pages/projects";
+@import "pages/project-lists";
+@import "pages/contact";
+@import "pages/footer";
