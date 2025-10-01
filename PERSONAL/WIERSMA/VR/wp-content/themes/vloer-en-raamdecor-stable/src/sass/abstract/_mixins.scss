@@ -1,0 +1,251 @@
+// default layout which will also restrict the content within a specified width and center the content
+@mixin default-layout {
+  width: var(--container-width);
+  margin-inline: auto;
+
+  // @include respond(640px) {
+  // 	width: var(--mobile-width);
+  // 	margin-inline: auto;
+  // }
+}
+
+@mixin full-width {
+  width: var(--restricted-width);
+}
+
+/*
+* Create a grid layout with specified number of columns which will be passed in as a parameter
+*/
+@mixin grid-layout($columns: 3) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: 2rem;
+}
+
+/*
+* Create an intrinsically responsive grid layout, optionally using a CSS custom  property to extend to variable contexts. Each column will resize at the same rate, and items will begin to break to a new row if the width reaches the --min/$width value.
+*/
+@mixin grid-auto-layout($width: 15ch) {
+  --width: 100%;
+  width: var(--width);
+  --min: $width;
+  --max-width: var(--width);
+  --gap: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--max-width), $width), 1fr)
+  ); /* min() with 100% prevents overflow
+  in extra narrow spaces */
+  grid-auto-flow: row;
+
+  grid-gap: var(--gap);
+}
+
+// display flex and put direction to column
+@mixin flex-column-content() {
+  display: flex;
+
+  flex-direction: column;
+}
+
+// display flex and space between content
+@mixin flex-space-content() {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+// flex-start
+@mixin flex-start-content() {
+  display: flex;
+
+  justify-content: flex-start;
+}
+
+// flex-end
+@mixin flex-end-content() {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+// display flex and put the content in the center
+@mixin flex-center-content() {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+// display flex and put the content in the to the left
+@mixin flex-left-content() {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// display flex and put the content in the to the right
+@mixin flex-right-content() {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// Media queries
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Transition
+@mixin transition($property, $duration: 0.25s, $timing: ease-out) {
+  transition: $property $duration $timing;
+}
+
+@mixin absolute-btn {
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    letter-spacing: 0.4px;
+  }
+
+  @include respond(960px) {
+    button {
+      bottom: 4rem;
+    }
+  }
+}
+
+@mixin product-figure-styles($direction: flex-end) {
+  figure {
+    position: relative;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    figcaption {
+      width: 100%;
+      background: var(--price-label-bg);
+      position: absolute;
+      bottom: 3rem;
+      padding: 1rem 2.5rem;
+
+      h3 {
+        @include flex-column-content();
+        justify-content: center;
+        align-items: $direction;
+        color: var(--primary-color);
+        font-family: var(--font-primary);
+
+        span:first-child {
+          text-transform: uppercase;
+          font-weight: var(--font-regular);
+        }
+
+        span:last-child {
+          font-weight: var(--font-black);
+          font-size: 2.3rem;
+
+          span {
+            font-weight: var(--font-regular);
+            text-transform: none;
+            font-size: 1.2rem;
+
+            sup {
+              font-weight: var(--font-regular);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin quote-styles($content: '\201c') {
+  content: $content;
+  position: absolute;
+  font-size: var(--quote-font-size);
+  line-height: 1;
+  font-family: var(--font-primary);
+  font-weight: var(--font-black);
+  color: var(--clr-green-light);
+  font-style: initial;
+}
+
+@mixin rating-stars($size: 1.5rem) {
+  fill: var(--clr-yellow);
+  width: $size;
+  height: $size;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.5;
+  stroke: var(--clr-yellow);
+
+  @include respond(960px) {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@mixin track() {
+  background-color: transparent; /* get rid of Firefox track background */
+}
+
+@mixin thumb() {
+  $h: 2em;
+  background-color: currentcolor;
+  border: none; /* get rid of Firefox thumb border */
+  border-radius: 0; /* get rid of Firefox corner rounding */
+  pointer-events: auto; /* catch clicks */
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@mixin scaleUpOnHover {
+  img {
+    transform: translateZ(0);
+    transition: transform 0.45s ease-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2) translateZ(0);
+    }
+
+    button.secondary {
+      color: var(--secondary-color);
+      background: var(--secondary-color-hover);
+      border: 1px solid var(--secondary-color-hover);
+    }
+
+    button.red {
+      color: var(--tertiary-color);
+      border: 1px solid var(--tertiary-color-hover);
+      background: var(--tertiary-color-hover);
+    }
+
+    button.primary {
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color-hover);
+      background: var(--primary-color-hover);
+    }
+  }
+}
+
+@mixin scaleUpOnHoverLink {
+  transition: transform 0.25s ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
