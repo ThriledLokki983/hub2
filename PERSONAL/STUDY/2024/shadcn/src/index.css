@@ -1,0 +1,432 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  --brand-hue: 200;
+  --brand-saturation: 100%;
+  --brand-lightness: 50%;
+
+  --brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+  --text1-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
+  --surface1-light: hsl(var(--brand-hue) 25% 97%);
+
+  --brand-dark: hsl( var(--brand-hue) calc(var(--brand-saturation) / 2) calc(var(--brand-lightness) / 1.5) );
+  --text1-dark: hsl(var(--brand-hue) 15% 85%);
+  --surface1-dark: hsl(var(--brand-hue) 10% 10%);
+}
+
+:root {
+  --brand: var(--brand-light);
+  --text1: var(--text1-light);
+  --surface1: var(--surface1-light);
+}
+
+@media (--dark) {
+  :root {
+    --brand: var(--brand-dark);
+    --text1: var(--text1-dark);
+    --surface1: var(--surface1-dark);
+  }
+}
+
+html {
+  block-size: 100%;
+  background-color: var(--surface1);
+  color: var(--text1);
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vmin;
+}
+
+.github-corner {
+  fill: var(--text1);
+  color: var(--surface1);
+
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}
+
+@keyframes octocat-wave{
+  0%,100% {
+    transform: rotate(0)
+  }
+  20%,60% {
+    transform: rotate(-25deg)
+  }
+  40%,80% {
+    transform: rotate(10deg)
+  }
+}
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+.gui-split-button {
+  --theme:        hsl(220 75% 50%);
+  --theme-hover:  hsl(220 75% 45%);
+  --theme-active: hsl(220 75% 40%);
+  --theme-text:   hsl(220 75% 25%);
+  --theme-border: hsl(220 50% 75%);
+  --ontheme:      hsl(220 90% 98%);
+  --popupbg:      hsl(220 0% 100%);
+
+  --border: 1px solid var(--theme-border);
+  --radius: 6px;
+  --in-speed: 500ms;
+  --out-speed: 100ms;
+
+  display: inline-flex;
+  border-radius: var(--radius);
+  background: var(--theme);
+  color: var(--ontheme);
+  fill: var(--ontheme);
+
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (--dark) {
+    --theme:        hsl(220 50% 60%);
+    --theme-hover:  hsl(220 50% 65%);
+    --theme-active: hsl(220 75% 70%);
+    --theme-text:   hsl(220 10% 85%);
+    --theme-border: hsl(220 20% 70%);
+    --ontheme:      hsl(220 90% 5%);
+    --popupbg:      hsl(220 10% 30%);
+  }
+
+  & button {
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    border: none;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 1ch;
+    white-space: nowrap;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+
+    padding-block: 1.25ch;
+    padding-inline: 2.5ch;
+
+    color: var(--ontheme);
+    outline-color: var(--theme);
+    outline-offset: -5px;
+
+    &:is(:hover, :focus-visible) {
+      background: var(--theme-hover);
+      color: var(--ontheme);
+
+      & > svg {
+        stroke: currentColor;
+        fill: none;
+      }
+    }
+
+    &:active {
+      background: var(--theme-active);
+    }
+  }
+
+  & > button {
+    border-radius: var(--radius) 0 0 var(--radius);
+
+    @supports (border-start-start-radius: 1px) {
+      border-end-start-radius: var(--radius);
+      border-start-start-radius: var(--radius);
+    }
+  }
+
+  @media (--light) {
+    & > button,
+    & button:is(:focus-visible, :hover) {
+      text-shadow: 0 1px 0 var(--theme-active);
+    }
+    & > .gui-popup-button > svg,
+    & button:is(:focus-visible, :hover) > svg {
+      filter: drop-shadow(0 1px 0 var(--theme-active));
+    }
+  }
+
+  & svg {
+    inline-size: 2ch;
+    box-sizing: content-box;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+  }
+}
+
+.gui-popup-button {
+  inline-size: 4ch;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-inline-start: var(--border);
+  border-radius: 0 var(--radius) var(--radius) 0;
+
+  @supports (border-start-start-radius: 1px) {
+    border-inline-start: var(--border);
+    border-start-end-radius: var(--radius);
+    border-end-end-radius: var(--radius);
+  }
+
+  &:is(:hover,:focus-within) {
+    background: var(--theme-hover);
+  }
+
+  /* fixes iOS trying to be helpful */
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background: var(--theme-active);
+  }
+
+  &:focus-within {
+    & > svg {
+      transition-duration: var(--in-speed);
+      transform: rotateZ(.5turn);
+    }
+    & > .gui-popup {
+      transition-duration: var(--in-speed);
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  @media (--motionOK) {
+    & > svg {
+      transition: transform var(--out-speed) ease;
+    }
+    & > .gui-popup {
+      transform: translateY(5px);
+
+      transition:
+        opacity var(--out-speed) ease,
+        transform var(--out-speed) ease;
+    }
+  }
+}
+
+.gui-popup {
+  --shadow: 220 70% 15%;
+  --shadow-strength: 1%;
+
+  opacity: 0;
+  pointer-events: none;
+
+  position: absolute;
+  inset-block-end: 80%;
+  inset-inline-start: -1.5ch;
+
+  list-style-type: none;
+  background: var(--popupbg);
+  color: var(--theme-text);
+  padding-inline: 0;
+  padding-block: .5ch;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: .9em;
+  transition: opacity var(--out-speed) ease;
+
+  box-shadow:
+    0 -2px 5px 0 hsl(var(--shadow) / calc(var(--shadow-strength) + 5%)),
+    0 1px 1px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 10%)),
+    0 2px 2px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 12%)),
+    0 5px 5px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 13%)),
+    0 9px 9px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 14%)),
+    0 16px 16px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 20%))
+  ;
+
+  /* fixes iOS trying to be helpful */
+  &:focus {outline: none}
+
+  @media (--dark) {
+    --shadow-strength: 5%;
+    --shadow: 220 3% 2%;
+
+    & button:not(:focus-visible, :hover) {
+      text-shadow: 0 1px 0 var(--ontheme);
+    }
+
+    & button:not(:focus-visible, :hover) > svg {
+      filter: drop-shadow(0 1px 0 var(--ontheme));
+    }
+  }
+
+  @media (width <= 400px) {
+    inset-inline-start: -200%;
+  }
+
+  & svg {
+    fill: var(--popupbg);
+    stroke: var(--theme);
+
+    @media (prefers-color-scheme: dark) {
+      stroke: var(--theme-border);
+    }
+  }
+
+  & button {
+    color: var(--theme-text);
+    width: 100%;
+  }
+}

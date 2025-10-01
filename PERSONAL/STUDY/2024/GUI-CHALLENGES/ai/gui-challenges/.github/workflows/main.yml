@@ -1,0 +1,86 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Build Stories
+      run: cd stories && npm install && npm run build
+
+    - name: Build Centering
+      run: cd centering && npm install && npm run build
+
+    - name: Build Sidenav
+      run: cd sidenav && npm install && npm run build
+
+    - name: Build Tabs
+      run: cd tabs && npm install && npm run build
+
+    - name: Build Settings
+      run: cd settings && npm install && npm run build
+
+    - name: Build Split Text
+      run: cd split-text && npm install && npm run build
+
+    - name: Build Media Scroller
+      run: cd media-scroller && npm install && npm run build
+
+    - name: Build Color Schemes
+      run: cd color-schemes && npm install && npm run build
+
+    - name: Build Breadcrumbs
+      run: cd breadcrumbs && npm install && npm run build
+
+    - name: Build Switch
+      run: cd switch && npm install && npm run build
+
+    - name: Build Split Buttons
+      run: cd split-buttons && npm install && npm run build
+
+    - name: Build Multi-Select
+      run: cd multi-select && npm install && npm run build
+
+    - name: Build Game Menu
+      run: cd game-menu && npm install && npm run build
+
+    - name: Build Toast
+      run: cd toast && npm install && npm run build
+
+    - name: Build Theme Switch
+      run: cd theme-switch && npm install && npm run build
+
+    - name: Build SVG Favicon
+      run: cd svg-favicon && npm install && npm run build
+
+    - name: Build Loading Bar
+      run: cd progress && npm install && npm run build
+
+    - name: Build Dialog
+      run: cd dialog && npm install && npm run build
+
+    - name: Build Buttons
+      run: cd buttons && npm install && npm run build
+
+    - name: Build FAB
+      run: cd FAB && npm install && npm run build
+
+    - name: Build Carousel
+      run: cd carousel && npm install && npm run build
+
+    - name: Build Crooked Grid
+      run: cd crooked-illusion && npm install && npm run build
+      
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        PROJECT_ID: gui-challenges
