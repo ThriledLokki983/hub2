@@ -1,0 +1,178 @@
+# 🍲 Recipe API with TypeScript, Express, and PostgreSQL
+
+This guide walks you step-by-step through setting up a **TypeScript-based Express backend** for handling and creating recipes, using **PostgreSQL** as the database and following the structure of a **typescript-express-starter** project.
+
+---
+
+## ✅ 1. Set up the project
+
+1. Create a new folder for your project (e.g., `recipe-api`).
+
+2. Open a terminal in that folder.
+
+3. Initialize a new Node.js project:
+	 ```bash
+	 npm init -y
+	 ```
+
+4. Install the required dependencies:
+
+- **express** – Web framework
+- **sequelize** – ORM for SQL databases
+- **pg** and **pg-hstore** – PostgreSQL drivers
+- **cors** – Enable CORS
+- **dotenv** – Manage environment variables
+- **morgan** – Logging HTTP requests
+```bash
+npm install express sequelize pg pg-hstore cors dotenv morgan
+```
+
+5. Install the TypeScript and development dependencies:
+```bash
+npm install –save-dev typescript ts-node-dev @types/node @types/express @types/cors @types/morgan
+```
+6. Initialize TypeScript:
+```bash
+npx tsc --init
+```
+7. Create your `tsconfig.json` or update it to include:
+- Module resolution
+- `outDir` for compiled code
+- `rootDir` set to `src`
+
+---
+
+## ✅ 2. Create the folder structure
+
+Inside your project, create this structure:
+
+/recipe-api
+├── src/
+│   ├── controllers/       # Business logic
+│   ├── routes/            # API route definitions
+│   ├── models/            # Sequelize models
+│   ├── config/            # DB configuration
+│   ├── app.ts             # Express app setup
+│   └── server.ts          # Entry point
+├── .env                   # Environment variables
+├── .gitignore             # Ignored files
+├── package.json           # Project metadata
+├── tsconfig.json          # TypeScript config
+└── README.md              # Project documentation
+---
+
+## ✅ 3. Set up the Express app
+
+In `src/app.ts`:
+
+- Load environment variables using `dotenv`
+- Set up middleware:
+  - JSON body parser
+  - CORS
+  - Logging with `morgan`
+- Set up routing using your recipe routes
+- Export the configured Express app
+
+In `src/server.ts`:
+
+- Import the app from `app.ts`
+- Connect to the database
+- Start the server on a port defined in `.env`
+
+---
+
+## ✅ 4. Connect to PostgreSQL
+
+In `src/config/db.ts`:
+
+- Use Sequelize to set up a PostgreSQL connection
+- Load the connection string from `.env`
+- Authenticate the database and sync models
+- Export the Sequelize instance for use in models
+
+---
+
+## ✅ 5. Define your environment variables
+
+In your `.env` file, define:
+- PORT=5000
+- DATABASE_URL=postgres://username:password@localhost:5432/recipe_db
+
+Replace `username`, `password`, and `recipe_db` with your local PostgreSQL credentials.
+
+---
+
+## ✅ 6. Create the Recipe model
+
+In `src/models/recipe.ts`:
+
+- Define a Sequelize model for a recipe
+- Include fields such as:
+  - `title` (required)
+  - `ingredients` (as a JSON/text array)
+  - `instructions` (required)
+  - `image` (optional)
+  - `createdAt` (default to now)
+- Register the model with Sequelize
+
+---
+
+## ✅ 7. Set up the routes
+
+In `src/routes/recipeRoutes.ts`:
+
+- Define RESTful endpoints:
+  - GET `/recipes` – Fetch all recipes
+  - GET `/recipes/:id` – Fetch a single recipe by ID
+  - POST `/recipes` – Create a new recipe
+  - PUT `/recipes/:id` – Update a recipe
+  - DELETE `/recipes/:id` – Delete a recipe
+- Connect each route to a controller function
+
+---
+
+## ✅ 8. Write the controller functions
+
+In `src/controllers/recipeController.ts`:
+
+- Write the business logic for each route:
+  - Use Sequelize model methods (e.g., `findAll`, `findByPk`, `create`, `update`, `destroy`)
+  - Wrap logic in `try/catch` for error handling
+  - Return JSON responses with appropriate status codes
+
+---
+
+## ✅ 9. Connect everything together
+
+- In `app.ts`, import the recipe routes and use them
+- In `server.ts`, ensure the database is connected before starting the server
+- Use console logging to confirm server is running and DB is connected
+
+---
+
+## ✅ 10. Test your API
+
+Use **Postman**, **Insomnia**, or any HTTP client to test:
+
+- `GET /api/recipes` – Fetch all recipes
+- `GET /api/recipes/:id` – Fetch recipe by ID
+- `POST /api/recipes` – Create a new recipe
+- `PUT /api/recipes/:id` – Update a recipe
+- `DELETE /api/recipes/:id` – Delete a recipe
+
+Make sure to send and receive data in JSON format.
+
+---
+
+## ✅ Summary
+
+By the end of this setup, you’ll have:
+
+- A TypeScript-based Express backend
+- PostgreSQL integration with Sequelize ORM
+- A RESTful API for managing recipes
+- A clean and scalable project structure
+
+---
+
+Let me know if you want to scaffold this as a working codebase or get step-by-step commands for each file!
