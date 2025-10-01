@@ -1,0 +1,174 @@
+/**
+ * Colors › Shades
+ */
+$white: #FFFFFF;
+$whitish: #F7F7FA;
+$whitish-alt: #F3F3F3;
+$grey: hsl(0, 0%, 92%);
+$grey-light: #818181; // @TODO: These should be swapped...
+$grey-lightest: #DDDDDD;
+$grey-dark: #D1D1D1; // @TODO: These should be swapped...
+$grey-darker: #757575;
+$grey-darkest: #474747;
+$blackish: #252525;
+$black: #000000;
+
+/**
+ * Colors › Brand
+ */
+$blue-lightest: #EFF1F4;
+$blue-light: #D2D7E2;
+$blue-medium: #62719A;
+$blue: #415385;
+$blue-dark: #203570;
+
+/**
+ * Colors › Core
+ */
+$primary-color-lightest: $blue-lightest;
+$primary-color-light: $blue-light;
+$primary-color-medium: $blue-medium;
+$primary-color-regular: $blue;
+$primary-color-dark: $blue-dark;
+
+$primary-color: $primary-color-regular;
+
+$background-color: $white;
+
+$text-color-light: $grey-darker;
+$text-color-regular: $grey-darkest;
+
+$text-color: $text-color-regular;
+
+/**
+ * Colors › Status
+ */
+$error-color: #C52A1A;
+$error-color-light: #F3D4D1;
+$error-color-dark: #822720;
+
+$warning-color: #EB8C00; // #FFBF1F
+$warning-color-light: #FFECBD; // #FFF4D9
+$warning-color-text: #C34C2F;
+
+$success-color: #175D2D; // #22992E
+$success-color-light: #D4EBE9;
+
+/**
+ * Colors › Other
+ */
+$input-border-color: $grey-dark;
+$input-focus-color: $primary-color;
+$input-disabled-color: $whitish;
+
+$selection-color: rgba($primary-color, 0.25);
+$placeholder-color: rgba($black, 0.4);
+
+// $focus-color: $accessibility-blue;
+// $focus-ring: 3px solid $focus-color;
+
+/**
+ * Fonts
+ */
+$title-font: 'ITC Charter', 'Charter', 'Times New Roman', serif;
+$heading-font: 'PwC Helvetica Neue', 'Helvetica Neue', 'Helvetica', sans-serif;
+$body-font: 'PwC Helvetica Neue', 'Helvetica Neue', 'Helvetica', sans-serif;
+$ui-font: 'PwC Helvetica Neue', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+/**
+ * Borders
+ */
+$border-radius-small: 0.125rem;
+$border-radius-regular: 0.25rem;
+$border-radius-large: 0.5rem;
+
+$border-radius: $border-radius-regular;
+
+/**
+ * Box shadows
+ */
+$box-shadow: 0 0 1px 0 rgba($black, 0.1), 0 4px 8px 0 rgba($black, 0.2);
+$box-shadow-light: 0 0 1px 0 rgba($black, 0.05), 0 2px 4px 0 rgba($black, 0.1);
+
+/**
+ * Transitions
+ */
+$transition-layout: all 0.35s ease;
+$transition-split-layout: all 1.25s ease;
+
+/**
+ * Icons
+ */
+$icon-size: 16px;
+
+/**
+ * Gutters
+ */
+$gutter: 20px;
+$gutter-site: 8px;
+
+/**
+ * Widths & Sizes
+ */
+$site-max-width: 1440px;
+$content-max-width: 680px;
+$content-max-width-large: 920px;
+$settings-max-width: 1200px;
+$modal-max-width: 800px;
+$modal-text-max-width: 520px;
+
+$max-widths: (
+    site: $site-max-width,
+    content: $content-max-width,
+    full: 100%,
+);
+
+$header-desktop-width-expanded: 270px;
+$header-desktop-width-collapsed: 73px;
+$header-mobile-height: 64px;
+$header-breakpoint-small: 640;
+$header-breakpoint-large: 1500;
+
+$mobile-nav-height: 72px;
+
+$step-nav-height: 74px;
+
+$people-search-results-height: 401px;
+
+$meet-details-container-name: meet-details-wrapper;
+$meet-details-breakpoint: 600px;
+
+$left-sidebar-min-width: 300px;
+$right-sidebar-min-width: 380px;
+$right-sidebar-transition-breakpoint: 2048;
+
+/*
+ * Z-index
+ */
+$z-index: (
+    skip-links: 10000,
+    tooltip: 5000,
+    toast: 2500,
+    fetch-loader: 2000,
+    modal: 1550,
+    modal-backdrop: 1500,
+    contact-card: 1420,
+    calendar-snapshot-popup: 1410,
+    response-history-card: 1400,
+    calendar-event-detail-popup: 1501,
+    slot-sidebar: 1400,
+    site-header: 1000,
+    dropdown-menu: 200,
+    page-bottom-nav: 100,
+    people-search-results: 10,
+    meet-update-button: 9,
+);
+
+/**
+ * Breakpoints
+ */
+$tiny: 480;
+$small: 640;
+$medium: 900;
+$large: 1200;
+$huge: 1600;

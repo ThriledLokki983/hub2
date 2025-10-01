@@ -1,0 +1,20 @@
+@mixin description-toggle {
+
+    @include bare-button; @include font-smoothing;
+    margin-bottom: 1rem;
+    display: block; padding: 0.5rem 0.125rem 0.5rem;
+    color: $primary-color; font-size: inherit;
+
+    @include hover {
+        color: $primary-color-dark;
+    }
+
+    &[hidden] {
+        display: none;
+    }
+
+    & > svg {
+        margin-right: 10px;
+    }
+
+}

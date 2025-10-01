@@ -1,0 +1,33 @@
+@mixin dashboard-card {
+
+    position: relative;
+    display: flex; flex-direction: column; padding: 1.5rem;
+    background: $white; border-radius: $border-radius-large;
+
+    & > header {
+        margin-bottom: 1.5rem; flex: 0 0 auto;
+        display: flex; justify-content: space-between; grid-gap: 0.5rem;
+    }
+    &[data-is-loading="true"] > header {
+        margin-bottom: 0;
+    }
+    & > header > div {
+        margin: -0.5rem 0; flex: 0 0 auto;
+        display: flex; align-items: center; grid-gap: 1rem;
+    }
+    & > header > div > * {
+        flex: 0 0 auto;
+    }
+
+    & > div,
+    & > ul,
+    & > ol {
+        flex: 1 0 auto;
+    }
+
+    & > header > h2 {
+        margin: -0.15em 0 0;
+        font-weight: 500;
+    }
+
+}

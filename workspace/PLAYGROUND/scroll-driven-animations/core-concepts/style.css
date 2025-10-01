@@ -1,0 +1,341 @@
+& {
+  font-size: 62.5%;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+p {
+  text-align: left;
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4rem;
+  text-align: left;
+  margin-top: 5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5.2em;
+  line-height: 1.1;
+}
+
+#app, .main {
+  width: 100%; height: 100dvh;
+  display: flex; flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2rem 1rem; flex: 1;
+  border: 1px dashed rgb(100, 108, 255, 0.3); border-radius: 4px;
+}
+
+.read-the-docs {
+  color: #888; font-style: italic;
+}
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/*  */
+.warning {
+  box-sizing: border-box;
+  padding: 1em;
+  margin: 1em 0;
+  border: 1px solid #ccc;
+  background: rgba(255 255 205 / 0.8);
+}
+
+/* Support */
+@supports (animation-timeline: view()) {
+  .warning:not([data-bug]) {
+    display: none;
+  }
+}
+
+#progress {
+  z-index: 10;
+  position: fixed;  left: 0;  top: 0;
+  width: 100%;  height: 1em;
+  transform-origin: 0 50%;
+  background-color: rgba(100, 108, 255, 0.7);
+}
+
+#progress {
+  animation: grow-progress auto linear;
+  animation-timeline: --page-scroll;
+}
+
+@keyframes grow-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+#progress {
+  animation: grow-progress 2s linear forwards;
+}
+#progress {
+  animation: grow-progress linear forwards;
+  /* [block - inline] [root, self]*/
+  animation-timeline: scroll(); /* Default is scroll(block root) */
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(45% 20% 45% 20%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+@keyframes sticky-parallax-header {
+  from {
+    background-position: 50% 0;
+    height: 100vh;
+    font-size: calc(4vw + 1em);
+  }
+  to {
+    background-position: 50% 100%;
+    height: 10vh;
+    font-size: 2em;
+    background-color: #1a1a1a;
+  }
+}
+
+#sticky-parallax-header {
+  position: fixed;
+  top: 0;
+
+  animation: sticky-parallax-header linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0vh 90vh;
+}
+
+/* Body adjustments */
+/* body {
+  padding-top: 100vh;
+} */
+
+@keyframes rotate-cover {
+  0% {
+    transform: translateX(-100%) rotateY(-45deg);
+  }
+  35% {
+    transform: translateX(0) rotateY(-45deg);
+  }
+  50% {
+    transform: rotateY(0deg) translateZ(1em) scale(1.5);
+  }
+  65% {
+    transform: translateX(0) rotateY(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotateY(45deg);
+  }
+}
+
+@keyframes adjust-z-index {
+  0% {
+    z-index: 1;
+  }
+  50% {
+    z-index: 10;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+.cards li {
+  view-animation-name: --li-in-and-out-of-view;
+  view-timeline-axis: inline;
+}
+
+.cards li {
+  animation: adjust-z-index linear both;
+  /* animation-timeline: view(inline); */
+  animation-timeline: --li-in-and-out-of-view;
+}
+
+.cards li {
+  animation: rotate-cover linear both;
+  /* animation-timeline: view(inline); */
+  animation-timeline: --li-in-and-out-of-view;
+}
+
+
+@keyframes adjust-position {
+  from {
+    transform: translateY(calc(-100% + 100vh));
+  }
+  to {
+    transform: translateY(calc(100% - 100vh));
+  }
+}
+
+.column-reverse {
+  animation: adjust-position linear forwards;
+  animation-timeline: scroll(root block);
+}
+
+#wrapper {
+  height: 500vh;
+  overflow: visible; /* To make position sticky work */
+
+  view-timeline-name: --section-pin-tl;
+  view-timeline-axis: block;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+
+  height: 100vh; width: 100vw;
+  overflow-x: clip;
+}
+
+@keyframes move {
+  to { transform: translateX(calc(-100% + 100vw) )}
+}
+
+.horizontal-strip {
+  height: 100vh; width: 250vmax;
+
+  animation: move linear forwards;
+  animation-timeline: --section-pin-tl;
+  animation-range: contain 0% contain 100%;
+}
+
+
+
+
+
+@keyframes animate-in {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes animate-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-100%); }
+}
+
+/* Alternative */
+@keyframes animate-in-and-out {
+  entry 0% { opacity: 0; transform: translateY(100%); }
+  entry 100% { opacity: 1; transform: translateY(0); }
+
+  exit 0% { opacity: 1; transform: translateY(0); }
+  exit 100% { opacity: 0; transform: translateY(-100%); }
+}
+
+#list-view li {
+  animation: animate-in linear forwards,
+              animate-out linear forwards;
+  animation-timeline: view();
+  animation-range: entry, exit;
+}
+
+#list-view li {
+  animation: linear animate-in-and-out;
+  animation-timeline: view();
+}
+
+/*
+<axis> = x|inline | y|block --- default is block
+* The axis of the scrolling that drives the progress of the timeline.
+* Value: x (inline) or y (block - DEFAULT)
+<view-timeline-inset>
+* An adjustment of the view progress visibility range.
+* Value: auto (default) or <length-percentage> (0% to 100%)
+*/
+.revealing-image {
+  animation: reveal 1s forwards;
+  animation-timeline: view();
+  animation-range: entry 25% cover 50%;
+}
+

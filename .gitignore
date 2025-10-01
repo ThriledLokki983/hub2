@@ -25,11 +25,17 @@ workspace/*
 workspace/vibe-coding/*
 !workspace/vibe-coding/README.md
 !workspace/vibe-coding/react/
+!workspace/PLAYGROUND/
+workspace/PLAYGROUND/*
+!workspace/PLAYGROUND/default-styles/
+!workspace/PLAYGROUND/default-styles/**
+!workspace/PLAYGROUND/scroll-driven-animations/
+!workspace/PLAYGROUND/scroll-driven-animations/**
 
 # But exclude large files even from included directories
 **/node_modules/
 **/*.jpg
-**/*.jpeg  
+**/*.jpeg
 **/*.png
 **/*.gif
 **/*.pdf
