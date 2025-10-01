@@ -1,0 +1,128 @@
+/* stylelint-disable no-duplicate-selectors */
+
+@import-normalize;
+
+@import 'utility/variables';
+@import 'utility/functions';
+@import 'utility/mixins';
+@import 'utility/font-imports';
+@import 'utility/font-mixins';
+
+
+/**
+ * Core
+ */
+:root {
+    --bd-filter: contrast(0.7);
+    --bg-overlay: hsl(0, 0%, 95%);
+    --s-val: 0.75px;
+    --base-shadow: hsla(214, 80%, 27%, 0.031);
+    --shade: hsl(from(--base) calc(h + 8) calc(l + 5));
+    --sp-c: 24px;
+    --spacing: 4vw;
+    --header-block-size: 70px;
+    --container-padding-inline: 2rem;
+    --content-max-width: 1440px;
+    --breakout-max-width: 95dvw;
+    --disabled-opacity: 0.4;
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width) ) / 2);
+    --main-content-header-height: 150px;
+    --transition-timing: 200ms;
+    --aside-tour-color: #f9f9f9;
+    --tour-transition: all 400ms ease-in-out;
+
+    --step--2: clamp(0.6944rem, 0.6643rem + 0.1508vw, 0.8rem);
+    --step--1: clamp(0.8333rem, 0.7857rem + 0.2381vw, 1rem);
+    --step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
+    --step-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
+    --step-2: clamp(1.44rem, 1.2934rem + 0.733vw, 1.9531rem);
+    --step-3: clamp(1.728rem, 1.5242rem + 1.0192vw, 2.4414rem);
+    --step-4: clamp(2.0736rem, 1.7941rem + 1.3974vw, 3.0518rem);
+    --step-5: clamp(2.4883rem, 2.1094rem + 1.8948vw, 3.8147rem);
+
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px; quotes: '“' '”' '‘' '’';
+    accent-color: $primary-color;
+}
+
+// @view-transition {
+//     navigation: auto;
+// }
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+
+    // outline: 1px solid red // TODO: Remove this outline
+}
+
+#root {
+    overflow: clip; // TODO: Remove this later
+}
+
+body {
+    @include styled-scrollbar($primary-color-light);
+    @include body-font; @include regular-text;
+    margin: 0; padding: 0;
+    background: var(--bg-overlay); color: $text-color;
+    line-height: 1.5; letter-spacing: -0.025em;
+}
+
+/**
+ * Helpers
+ */
+[hidden] {
+    display: none !important;
+}
+
+[tabindex="-1"] {
+    outline: none;
+}
+
+:focus-visible:is(button, a, li[data-leg-list="true"]) {
+    outline: 1px solid $primary-color-regular; outline-offset: 2px;
+    border-radius: calc($border-radius / 2); transition: outline 0.1s ease;
+}
+
+button[disabled] {
+    cursor: not-allowed !important;
+}
+
+[data-color="success"] {
+    color: $success-color;
+}
+[data-color="warning"] {
+    color: $warning-color;
+}
+[data-color="error"] {
+    color: $error-color;
+}
+
+/**
+ * Variables for usages in JS
+ */
+:root {
+
+    --breakpoint-tiny: #{$tiny};
+    --breakpoint-small: #{$small};
+    --breakpoint-medium: #{$medium};
+    --breakpoint-large: #{$large};
+    --breakpoint-huge: #{$huge};
+
+}
+
+/**
+ * Primers
+ */
+@import 'primer/forms';
+@import 'primer/headings';
+@import 'primer/hr';
+@import 'primer/links';
+@import 'primer/media';
+@import 'primer/paragraphs';
+@import 'primer/dialog';
+@import 'primer/tooltip';
+@import 'primer/tour';
+@import 'primer/footer';

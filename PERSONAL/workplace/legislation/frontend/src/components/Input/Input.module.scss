@@ -1,0 +1,342 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex; flex-direction: column; gap: 1.25rem;
+    margin-block-start: 1.5rem;
+}
+
+.root__forminput {
+    position: relative;
+    display: flex; flex-direction: column; gap: 0.25rem;
+
+    &[data-allow-edit="false"] {
+        opacity: 0.8;
+
+        > label,
+        > input,
+        > textarea {
+            pointer-events: none; cursor: not-allowed; opacity: 0.95;
+        }
+
+        @include hover {
+            cursor: not-allowed;
+        }
+    }
+
+    &[data-required="true"] > label::after {
+        content: "*"; color: $error-color;
+        opacity: 0.75; padding-inline-start: 5px;
+    }
+
+    &[data-disabled="true"] {
+        > label:first-of-type {
+            opacity: 0.4;
+        }
+    }
+
+    &[data-role-specific="true"] > label[data-not-applicable="true"] {
+        gap: 1.75rem; margin: 0;
+    }
+}
+.root__forminput[data-effective-until="true"] {
+    margin-block-start: 1rem;
+}
+.root__forminput[data-user-email-domain="true"] > input {
+    + span[data-domain="true"],
+    + span:not([data-extra]) {
+        position: absolute; inset: auto auto 0.5rem 0.25rem;
+        color: $blue; font-size: 1.25rem; font-weight: $font-weight-medium;
+    }
+
+    + span[data-domain="true"] {
+        inset: auto auto 95px 0.25rem;
+    }
+}
+
+/**
+* Input and Labels
+*/
+.root__forminput label {
+    @include medium-text;
+}
+
+.root__forminput span[data-extra="true"],
+.root__forminput span[data-sublabel="true"] {
+    @include medium-text;
+}
+.root__forminput span[data-extra="true"],
+.root__forminput span[data-sublabel="true"] {
+    color: $grey-lightest; line-height: normal;
+    margin: 0; text-transform: none; text-align: left;
+
+    @include bp-min($medium) {
+        font-size: 0.9rem;
+    }
+}
+.root__forminput label:not([data-checkbox="true"]) {
+    position: relative; color: $blue; font-weight: $font-weight-medium;
+    text-transform: uppercase; margin-block-end: 0;
+    padding-inline-start: 0.05rem; text-align: left;
+
+    &[data-required="true"]::after {
+        content: "*"; color: $error-color;
+        opacity: 0.75; padding-inline-start: 5px;
+    }
+}
+.root__forminput:not(:has([data-subtitle="true"])) label {
+    margin-block-end: 0.25rem;
+
+    > span:not([data-not-applicable="true"]) {
+        color: $blue; opacity: 1;
+        transition: opacity 200ms ease-in;
+    }
+
+    span[data-not-applicable="true"] {
+        @include regular-text;
+
+        @include bp-min($medium) {
+            font-size: 0.9rem; opacity: 0.7;
+        }
+
+        @include hover {
+            color: $blue;
+        }
+    }
+    span[data-not-applicable="true"] {
+        color: $text-color;
+        transition: color 200ms ease-in-out;
+
+        &[data-date="true"] > span[data-not-applicable="true"] {
+            margin-inline-end: 0.5rem;
+        }
+    }
+
+}
+span[data-disabled="true"] {
+    opacity: var(--disabled-opacity);
+}
+
+.root__forminput label > div {
+    position: absolute; inset: 0 0.25rem auto auto;
+
+    > label {
+        padding: 0;
+
+        > input {
+            block-size: 0.9rem; inline-size: 0.9rem;
+        }
+
+        > span {
+            padding-inline-start: 0.35rem;
+            color: $grey-lightest; font-weight: $font-weight-regular;
+        }
+    }
+}
+.root__forminput label > div > label > span {
+    @include medium-text;
+}
+
+
+.root__forminput span {
+    @include small-text;
+}
+.root__forminput span {
+    text-align: left;
+
+    @include bp-min($medium) {
+        font-size: 14px;
+    }
+}
+.root__forminput input[type="text"],
+.root__forminput input[type="email"],
+.root__forminput input[type="date"],
+.root__forminput textarea {
+    background-color: $grey-light; field-sizing: content;
+    padding: 0.85rem 0.75rem; border: none; box-shadow: none;
+
+    &[disabled] {
+        background-color: rgba($grey-lightest, 0.2);
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    &[data-input-error="true"] {
+        box-shadow:
+            inset 0 0 0 .0625rem rgba($error-color, 0.5),
+            0 0 0 .25rem rgba($error-color, 0.12);
+    }
+}
+.root__forminput > input::placeholder,
+.root__forminput > textarea::placeholder {
+    color: $grey-lightest;
+    opacity: 0.7;
+    font-size: 13px;
+}
+.root__forminput[data-disabled="true"] > label:first-of-type:not([for="middle_name"]) {
+    > span,
+    + span {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: var(--disabled-opacity);
+    }
+}
+
+.root__forminput input[type="date"] {
+    max-inline-size: 50%;
+}
+
+.root__forminput span[data-subtitle="true"] > strong[data-email-domain] {
+    color: $blue;
+}
+
+
+/**
+ * Number of Characters left
+ */
+.root__charactersleft {
+    position: absolute; right: 10px; bottom: 10px;
+    display: block; color: #757575; font-size: 0.75rem;
+    line-height: normal;
+    user-select: none; overflow: hidden;
+    white-space: nowrap; text-overflow: ellipsis;
+    visibility: visible; opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.root[data-rsvp="true"] ~ span {
+    bottom: 25px;
+}
+.root__charactersleft[data-hidden="true"] {
+    opacity: 0; visibility: hidden;
+}
+
+
+label.root__checkbox {
+    justify-content: flex-end; gap: 0.5rem; display: flex; align-items: flex-end;
+    color: $text-color; forced-color-adjust: none;
+
+
+
+    &[data-show-expiration-date="true"] {
+        justify-content: flex-start; margin-block: 0.25rem 0;
+        font-size: 0.9rem; color: $text-color; forced-color-adjust: none;
+    }
+
+    &[data-not-applicable="true"] {
+        position: absolute; inset: auto 0 auto auto; gap: 1.5rem;
+
+        .root__check {
+            position: absolute; inset: auto 0.25rem auto auto;
+        }
+
+        svg {
+            inline-size: 1rem; block-size: 1rem; padding-block-start: 0.05rem;
+        }
+    }
+
+    &::after {
+        content: "" !important; display: block;
+    }
+
+    > span {
+        @include medium-text;
+        color: rgba(37, 37, 37, 0.85);
+    }
+
+    &[data-jurisdiction="true"] {
+        svg {
+            padding-block-start: 0.2rem;
+        }
+    }
+
+    svg {
+        inline-size: 0.95rem; block-size: 0.9rem; padding-block-start: 0.05rem;
+        fill: none; stroke: $white; stroke-width: 3px;
+        stroke-dasharray: 22px; stroke-dashoffset: 66; transition: all 200ms;
+    }
+
+    &[data-pressed] .root__check {
+        border-color: $primary-color-light;
+    }
+
+    &[data-focus-visible] .root__check {
+        outline: 2px solid rgba($primary-color, 0.8);
+        outline-offset: 2px;
+    }
+
+    &:not([data-selected]) {
+        .root__check {
+            border-color: #757575; background: #757575; opacity: 0.2;
+        }
+    }
+
+    &:not([data-indeterminate]) {
+        & svg {
+            stroke: $white;
+            fill: none;
+            stroke-dashoffset: 44;
+        }
+    }
+
+    &[data-selected],
+    &[data-indeterminate] {
+        .root__check {
+            border-color: $primary-color;
+            background: $primary-color;
+        }
+
+        &[data-pressed] .root__check {
+            border-color: $primary-color-light;
+            background: $primary-color-light;
+        }
+
+        svg {
+            stroke-dashoffset: 44;
+        }
+    }
+
+    &[data-indeterminate] {
+        & svg {
+            stroke: none;
+            fill: $primary-color-light;
+        }
+    }
+
+    &[data-requirements-check="true"] {
+        align-items: flex-start;
+
+        > div[data-content="true"] > span {
+            @include bp-min($medium) {
+                font-size: 1 !important; color: #757575; font-weight: 400;
+            }
+        }
+
+        > div[data-content="true"] {
+            display: block; margin-block-start: -0.25rem; cursor: pointer;
+            text-transform: none; color: rgba($text-color, 0.85);
+        }
+    }
+}
+
+.root__check {
+    display: flex; align-items: center; justify-content: center;
+    inline-size: 1.143rem; block-size: 1.143rem;
+    border: 2px solid $primary-color; border-radius: calc($border-radius / 2);
+    transition: all 200ms;
+
+    + span {
+        @include line-clamp(1);
+    }
+    + span {
+        max-inline-size: 23rem;
+    }
+
+    + span[data-inner-content="true"] {
+        opacity: 0.8; font-weight: 400;
+    }
+
+    + span[data-not-applicable="true"][data-date="true"] {
+        margin-inline-end: 0.35rem;
+    }
+}
+

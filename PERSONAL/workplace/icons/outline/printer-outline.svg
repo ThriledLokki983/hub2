@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>printer-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="printer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,4 L10,8 L8,8 L8,4 C8,2.896 8.896,2 10,2 L22,2 C23.104,2 24,2.896 24,4 L24,8 L22,8 L22,4 L10,4 Z M22.1538462,19 C23.1729231,19 24,19.9856 24,21.2 L24,23.4454667 L24,25.6454667 L24,28.5333333 C24,29.3444 23.4486154,30 22.7692308,30 L9.23076923,30 C8.55138462,30 8,29.3444 8,28.5333333 L8,25.6454667 L8,23.4454667 L8,20.4666667 C8,19.6570667 8.55138462,19 9.23076923,19 L22.1538462,19 Z M22,25.7148889 L22,23.3815556 L22,21 L10,21 L10,23.3815556 L10,25.7148889 L10,28 L22,28 L22,25.7148889 Z M2,10 L30,10 C31.104,10 32,10.8736 32,11.95 L32,26 L26.6666667,26 L26.6666667,24.05 L30,24.05 L30,11.95 L2,11.95 L2,24.05 L5.33333333,24.05 L5.33333333,26 L0,26 L0,11.95 C0,10.8736 0.896,10 2,10 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

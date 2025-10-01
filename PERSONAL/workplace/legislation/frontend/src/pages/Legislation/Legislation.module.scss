@@ -1,0 +1,135 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+.root__toggle {
+    position: relative;
+}
+.root__filtertop {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-block-end: 0.5rem;
+}
+
+/**
+* Aside Header
+*/
+.root__header  {
+    position: relative;
+}
+.root__header > h4 {
+    @include h4;
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+    margin-block-end: 1rem;
+}
+.root__header > span {
+    @include large-text;
+    font-size: 16px;
+    color: $grey-lighter;
+    font-weight: $font-weight-regular;
+}
+.root__header > button {
+    @include bare-button;
+    position: absolute;
+    right: 0; top: 0;
+    font-weight: $font-weight-bold;
+    display: flex; align-items: center; gap: 5px;
+    text-decoration: underline;
+
+    > svg {
+        transform: translateX(0);
+        transition: transform 0.25s ease-in;
+    }
+
+    @include hover {
+        color: $blue;
+
+        > svg {
+            transform: translateX(5px);
+        }
+    }
+}
+
+
+/**
+*  Active Filters
+*/
+.root__filters {
+    @include bare-list;
+    display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 10px;
+    inline-size: fit-content; margin-block-end: 1rem;
+
+    transition: inline-size 0.25s ease;
+}
+.root__filters[data-hidden="true"] {
+    margin-block-end: 0
+}
+.root__filters li {
+    @include appear;
+    display: flex; align-items: center;
+    padding: 0.5rem 1rem; border-radius: $border-radius-x-large;
+    background-color: $blue-medium; block-size: 2.625rem;
+    color: $white; max-inline-size: 12rem;
+
+    > span {
+        @include line-clamp(1); max-inline-size: 8rem;
+
+        &[data-label="in effect"],
+        &[data-label="pending"] {
+            text-transform: capitalize;
+        }
+    }
+
+    &[data-total-filters="true"] {
+        display: flex; justify-content: center; flex-direction: column; gap: 0.1rem;
+        padding: 0.15rem 1rem;
+        line-height: normal; margin-inline-start: 0.75rem; margin-block-end: 0.2rem;
+        // background-color: rgba($blue-medium, 0.6);
+
+        > span {
+            block-size: auto;
+
+            // &:last-child {
+            //     display: flex; align-items: flex-end;
+            //     block-size: 10px;
+            // }
+        }
+    }
+}
+.root__filters li[data-hiding="true"] {
+    @include vanish;
+}
+.root__filters li > button {
+    @include bare-button; flex: 0 0 auto;
+    padding: 0.25rem; margin-inline-start: 5px;
+    color: inherit; line-height: 0;
+}
+.root__filters li > button:hover {
+    opacity: 0.85;
+}
+.root__filters li > button > svg {
+    width: 12px; height: 12px;
+}
+
+
+/**
+* Newly uploaded legislations
+*/
+.root__newly_uploaded {
+    color: $white;
+    position: absolute; inset: auto 1rem 1rem auto;
+    padding: 1rem; border-radius: $border-radius;
+    background-color: $blue;
+    min-block-size: 100px; max-inline-size: 350px;
+
+    > p {
+        word-break: break-all;
+        margin: 0;
+    }
+}
+
+[data-btn-set][data-project-edit][data-remove-requirement] > button {
+    min-inline-size: 30%;
+}

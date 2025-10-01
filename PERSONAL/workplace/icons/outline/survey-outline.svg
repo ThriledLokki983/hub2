@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>survey-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="survey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M25,2 L27,2 C28.1053333,2 29,2.896 29,4 L29,30 C29,31.104 28.1053333,32 27,32 L5,32 C3.896,32 3,31.104 3,30 L3,4 C3,2.896 3.896,2 5,2 L7,2 L7,4 L5,4 L5,30 L27,30 L27,4 L25,4 L25,2 Z M11,2 L11,0 L21,0 L21,2 L11,2 Z M9.93333333,20 L22.0666667,20 C22.552,20 23,20.448 23,21 C23,21.552 22.552,22 22.0666667,22 L9.93333333,22 C9.448,22 9,21.552 9,21 C9,20.448 9.448,20 9.93333333,20 Z M9.93333333,12 L22.0666667,12 C22.552,12 23,12.448 23,13 C23,13.552 22.552,14 22.0666667,14 L9.93333333,14 C9.448,14 9,13.552 9,13 C9,12.448 9.448,12 9.93333333,12 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

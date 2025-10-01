@@ -1,0 +1,128 @@
+@import '../../styles/utils';
+
+.root {
+    color: $text-color;
+
+    button {
+        display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+        padding: 0.5rem 0.75rem !important; color: rgba($text-color, 0.8) !important;
+        max-inline-size: 250px;  min-inline-size: 8.5rem; background-color: transparent !important;
+        inline-size: 100%;
+
+        &[data-focus-visible] {
+            outline: 2px solid $primary-color-light;
+            outline-offset: -1px;
+        }
+
+        &[dat-hovered] {
+            span[aria-hidden] {
+                svg {
+                    transform: scaleY(3px);
+                }
+            }
+        }
+
+
+        &[aria-expanded="true"] {
+            span[aria-hidden] {
+                svg {
+                    transform: scaleY(-1) translateY(1px);
+                }
+            }
+        }
+    }
+
+    .react-aria-SelectValue {
+        &[data-placeholder] {
+            font-style: italic;
+            color: rgba(0 0 0 / 0.1);
+        }
+    }
+
+
+    span[aria-hidden] {
+        inline-size: 1rem; block-size: 1rem; line-height: 1.375rem;
+        forced-color-adjust: none; border-radius: $border-radius; font-size: 0.857rem;
+
+        svg {
+            inline-size: 0.9rem; block-size: 0.9rem;
+            transform: scaleY(1) translateY(1px);
+
+            transition: transform 0.25s ease-in-out;
+        }
+    }
+}
+
+
+.root__popover[data-trigger=Select] {
+    min-inline-size: 165px; box-shadow: $box-shadow-ultra; outline: none;
+    border-radius: $border-radius;
+    animation: fade-in 0.15s ease-in-out;
+
+    &[data-exiting] {
+        animation: fade-out 100ms ease-in;
+    }
+
+    .root__listbox {
+        padding: 0.7rem 0.25rem; background: $white; border-radius: $border-radius;
+        display: block; inline-size: unset; border: none; outline: none;
+        max-block-size: inherit; min-block-size: unset;
+
+        .react-aria-Header {
+            padding-left: 1.571rem;
+        }
+
+        > div[aria-disabled="true"] {
+            opacity: 0.5; cursor: not-allowed;
+        }
+    }
+
+    .root__list_item,
+    [data-select-item] {
+        padding: 0.35rem 0.75rem; cursor: pointer; transition: all 0.25s ease-in-out;
+
+        &[data-focus-visible] {
+            outline: none;
+        }
+
+        &[data-hovered="true"] {
+            background: rgba($text-color-light, 0.8);
+            outline: none; color: $blue;
+        }
+
+        &[data-selected] {
+            font-weight: 400; background: unset;
+            outline: none; color: $blue;
+        }
+
+        &[data-focused],
+        &[data-pressed] {
+            background: rgba($text-color-light, 0.1); border-radius: $border-radius;
+            color: rgba($text-color-light, 0.85);
+        }
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-0.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-0.25rem);
+    }
+}

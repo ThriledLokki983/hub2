@@ -1,0 +1,176 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative; display: flex; justify-content: space-between;
+    inline-size: 100%;
+
+    &[data-create-tabs="true"] {
+        margin-block-end: 1.25rem;
+
+        > div > div {
+            flex: 1;
+        }
+    }
+}
+
+/**
+* LegislationDetails Tablist
+*/
+.root__tablist {
+    overflow-x: auto;
+    display: flex; justify-content: flex-start; gap: 1rem;
+    inline-size: 100%; max-inline-size: 100%; margin-block-end: 0rem;
+    border-bottom: 2.5px solid transparent;
+
+    &:has(div[data-split="true"]) {
+        overflow: visible; z-index: 1;
+    }
+
+    &[data-align="auto"] {
+        justify-content: space-between;
+    }
+
+    &[data-align="left"] {
+        justify-content: flex-start;
+
+        > li {
+            flex: unset;
+        }
+    }
+
+    &[data-type="tabs"] {
+        border-color: $whitish;
+    }
+
+    @include bp-min($small) {
+        overflow-x: hidden;
+        justify-content: space-around;
+    }
+
+
+}
+.root__tablist > div[data-tab] {
+    border-bottom: 2px solid transparent;
+    position: relative; height: 100%; outline: none;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; text-decoration: none; user-select: none;
+    font-size: 0.9375em; line-height: 1.15;
+    color: $text-color-light;
+    transition: background 0.15s ease;
+
+    &[data-hovered],
+    &[data-focused] {
+        color: rgba($primary-color, 0.9); cursor: pointer;
+    }
+
+    &[data-selected] {
+        border-color: $primary-color;
+    }
+
+    &[data-disabled] {
+        color: $primary-color; cursor: not-allowed;
+        &[data-selected] {
+            border-color: rgba($primary-color, 0.5);
+        }
+    }
+
+    &[data-focus-visible]:after {
+        content: ''; position: absolute;
+        border: calc($border-radius / 2) solid rgba($primary-color-regular, 0.4);
+        inset: $border-radius; border-radius: $border-radius;
+    }
+
+    @include hover {
+        transition: background 0.05s ease;
+    }
+
+    &:not(:last-of-type) {
+        svg {
+            display: none;
+        }
+    }
+
+    &:last-of-type > a > span {
+        display: flex; align-items: center;
+
+        > svg {
+            inline-size: 1.2rem; block-size: 1.2rem;
+            margin-inline-end: 0.5rem;
+        }
+    }
+
+    &[data-has-error="true"] {
+        border-color: $error-color;
+
+        > span {
+            color: $error-color;
+        }
+    }
+}
+.root__tablist > div[data-selected="true"] {
+    border-color: $primary-color;
+    color: $primary-color;
+}
+.root__tablist > div[data-tab] {
+    position: relative;
+    display: flex; align-items: center; justify-content: flex-start;
+    text-align: center; text-decoration: none; user-select: none;
+    font-size: 16px; line-height: 1.15;
+    color: rgba($text-color-light, 0.6); font-weight: $font-weight-medium;
+    padding: 0.6rem; transition: color 0.15s ease;
+
+    @include bp-min($tiny) {
+        padding: 0.5rem 1.5rem;
+    }
+
+    > span {
+        line-height: normal;
+    }
+
+    @include hover {
+        color: $blue;
+    }
+
+    &[aria-selected="true"] {
+        color: $blue;
+    }
+}
+
+
+/********************************
+ * Actions
+ ********************************/
+.root__actions {
+    margin-inline-start: auto; inline-size: max-content;
+    display: flex; align-items: center; gap: 1rem;
+    justify-content: flex-end; border-bottom: 2.5px solid #f9f9f9;
+
+    > div:first-of-type {
+        margin-block: 0 0.25rem; inline-size: max-content;
+
+        > a:last-of-type,
+        > button:last-of-type {
+            min-inline-size: fit-content; display: flex; align-items: center; gap: 0.5rem;
+
+            &:is([data-edit-btn][data-size="small"]) {
+                padding: 0.4375rem 0.75rem !important;
+            }
+        }
+    }
+}
+.root__actions > div[data-btn-set="true"]:not([data-edit-btn]),
+.root__actions > div[data-btn-set="true"]:not([data-edit-btn]) {
+    > a[data-edit-btn="true"],
+    > button[data-edit-btn="true"] {
+        padding-inline: 4rem; inline-size: max-content;
+
+        &[data-size="small"] {
+            padding-block: 0.4375rem !important;
+        }
+    }
+}
+
+
+.root__tab[data-has-error="true"] {
+    border-color: $error-color;
+}

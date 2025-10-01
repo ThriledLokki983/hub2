@@ -1,0 +1,524 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+.root__article {
+    inline-size: 100%; block-size: auto; margin-block-end: 1.75rem;
+    min-block-size: calc(100vh - 217px - 75px - 95px);
+    padding-inline: 0.5rem; padding-block: 1rem 0;
+
+    &[data-tab="2"] {
+        overflow: unset;
+
+        > section {
+            block-size: auto;
+
+            > article[data-div-group] {
+                overflow: unset;
+            }
+        }
+    }
+}
+.root__article > p {
+    @include large-text; color: rgba($text-color-light, 0.9);
+    text-wrap: pretty; margin-block-end: 2rem;
+}
+
+/********************************
+ * Hidden Content
+ ********************************/
+section[data-hidden="true"] {
+    opacity: 0; visibility: hidden;
+    block-size: 0; inline-size: 0; pointer-events: none;
+}
+
+
+/********************************
+ * Client Edit Details
+ ********************************/
+.root__client_details {
+    position: relative;
+    display: flex; align-items: flex-start; gap: 2rem;
+}
+.root__client_details > article[data-logo] {
+    min-inline-size: 30%; display: flex; flex-direction: column;
+
+    > p {
+        @include medium-text;
+        max-inline-size: 90%; margin: 0; text-wrap: pretty;
+
+        &:last-of-type {
+            opacity: 0.5;
+        }
+    }
+
+    > small {
+        @include small-text;
+        color: $text-color-light; margin-block-start: 0.5rem;
+    }
+}
+.root__client_details > article[data-logo] > span {
+    @include medium-text; margin-block-end: 1rem;
+    color: $blue; font-weight: $font-weight-medium;
+    text-transform: uppercase;
+}
+.root__client_details > article[data-logo] > div[data-client-logo] {
+    inline-size: 260px; block-size: auto; margin-block-end: 1rem; padding: 0;
+    background-color: transparent; justify-content: flex-start;
+
+    &:has(img) {
+        block-size: 280px;
+    }
+
+    > img {
+        inline-size: 100%; block-size: 100%; object-fit: cover;
+        border-radius: 8px;
+    }
+
+    > svg {
+        inline-size: max-content; block-size: auto;
+        border-radius: $border-radius; fill: transparent;
+        stroke: rgba($border-color, 0.4);
+    }
+}
+.root__client_details > div[data-edit-group] {
+    max-inline-size: 45%;
+    display: flex; flex-direction: column; gap: 2rem;
+}
+
+
+/********************************
+ * Data Row
+********************************/
+div[data-row="true"] {
+    display: flex; flex-direction: column; inline-size: 100%;
+    position: relative; margin-block-end: 2rem;
+}
+div[data-row="true"] > span[data-title="true"] {
+    @include medium-text;
+}
+div[data-row="true"] > span[data-title="true"] > small {
+    @include small-text;
+}
+div[data-row="true"] > span[data-title="true"] {
+    line-height: normal; display: flex; align-items: flex-end; gap: 0.5rem;
+    font-weight: $font-weight-medium; text-transform: uppercase;
+    color: $blue-medium; padding-block-end: 5px;
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+
+    > small {
+        background-color: $blue; color: $white; padding: 0.25rem 0.75rem;
+        border-radius: $border-radius-x-large; line-height: normal;
+    }
+}
+
+/********************************
+ * Client Details
+ ********************************/
+.root__client_details div[data-row="true"] > span[data-subtitle="true"],
+.root__client_details div[data-row="true"] > span[data-domain="true"] {
+    @include medium-text; @include line-clamp(10);
+}
+.root__client_details div[data-row="true"] > span[data-subtitle="true"],
+.root__client_details div[data-row="true"] > span[data-domain="true"] {
+    inline-size: 80%; font-weight: $font-weight-regular; margin-block-start: 0.5rem;
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+.root__client_details div[data-row="true"] span[data-domain="true"] {
+    color: rgba($text-color-light, 0.9); inline-size: 80%; text-wrap: pretty;
+
+    @include bp-min($medium) {
+        text-wrap: balance;
+    }
+
+    &[data-top-content="true"] {
+        inline-size: 75%; text-wrap: balance;
+        margin-block-end: 0.25rem;
+
+        @include bp-min($medium) {
+            text-wrap: pretty;
+        }
+
+        > strong[data-email-domain="true"] {
+            color: $blue; font-weight: $font-weight-medium;
+        }
+    }
+}
+
+
+/********************************
+ * Team members
+ ********************************/
+.root__team {
+    @include styled-scrollbar($grey-light); flex: 1;
+    overflow: auto; position: relative; padding: 1.25rem 1rem;
+    min-block-size: 25rem;
+
+    &[data-empty="true"] > ol {
+        display: flex; place-content: center; place-items: center;
+
+        > span {
+            @include medium-text;
+        }
+    }
+}
+
+article[data-div-group="true"] {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+
+    > div {
+        flex: 1; display: flex; flex-direction: column; flex-wrap: wrap;
+        margin: 0; inline-size: 100%;
+
+        @include bp-min($medium) {
+            min-inline-size: 49%; inline-size: 49%;
+        }
+
+        > ol {
+            flex: 1;
+        }
+    }
+}
+.root__team > h6 {
+    font-weight: $font-weight-medium; display: flex; align-items: flex-end;
+    text-transform: uppercase; margin-block-end: 0.5rem; color: $blue;
+    line-height: normal; gap: 0.5rem;
+
+    > small {
+        font-size: 0.6875rem; background-color: $blue;
+        color: $white; padding: 0.25rem 0.75rem;
+        border-radius: 6.25rem; line-height: normal;
+    }
+
+    + span[data-subtitle="true"] {
+        color: $text-color-light;
+    }
+}
+.root__team > span {
+    @include medium-text;
+}
+.root__team > span {
+    color: $text-color-light;
+    margin-block-end: 1rem; min-block-size: 2rem;
+}
+
+.root__admin_setup ol[data-team] {
+    min-inline-size: 49%; margin: 0; inline-size: 100%;
+
+    @include bp-min($medium) {
+        max-inline-size: 49%; inline-size: 49%;
+    }
+}
+.root__team ol,
+ol[data-team] {
+    margin: 1.5rem 0; list-style-type: none; border-radius: $border-radius;
+    background-color: $white; padding: 1.5rem 1rem;
+
+    > li {
+        margin: 0; padding-block-end: 0.5rem; position: relative;
+
+        &[data-hidden="false"] {
+            color: $text-color-light; opacity: 0.8;
+        }
+    }
+}
+.root__team > ol > li[data-hidden="true"] {
+    visibility: hidden; opacity: 0; inline-size: 0; block-size: 0;
+}
+.root__team > ol > li[data-hidden="false"] {
+    @include regular-text;
+}
+.root__team > ol > li[data-hidden="false"] {
+    visibility: visible; opacity: 1; inline-size: 100%; block-size: auto;
+    transition: opacity 0.3s ease-in;
+}
+
+.root__team ol > li {
+    padding-block: 1rem 0;
+
+    &:last-of-type {
+        padding-block: 1rem;
+    }
+
+    &:not(:first-of-type) {
+        padding-block: 0.5rem 0;
+    }
+}
+
+
+/********************************
+ * Admin Setup
+ ********************************/
+.root__admin_setup {
+    position: relative;
+}
+.root__admin_setup > article[data-div-group] {
+    display: flex; gap: 0 1rem; overflow: auto;
+}
+
+/*******************************************
+ * Content Configuration / Client Preview
+*******************************************/
+.root__preview_client_view,
+.root__content_configuration {
+    block-size: 100%; inline-size: 100%;
+    display: flex; gap: 0rem;
+
+    &[data-is-empty="true"] {
+        min-block-size: calc(100dvh - 29rem);
+    }
+}
+.root__preview_client_view > aside,
+.root__content_configuration > aside {
+    inline-size: 25%; display: flex; flex-direction: column;
+    overflow: scroll; padding-block-end: 1.5rem;
+
+    > div[data-btn-set] {
+        margin-block: auto 4rem; padding-block-start: 4rem;
+        > a,
+        > button {
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+    }
+    > header {
+        display: flex; align-items: flex-end; justify-content: space-between;
+        > h6 {
+            @include h6; color: $text-color-light; font-weight: $font-weight-medium;
+            margin-block-end: 1rem;
+            // text-transform: capitalize;
+        }
+
+        > a {
+            display: flex; place-content: center; place-items: center;
+            min-inline-size: 2.25rem; padding: 0.5rem 0.75rem !important; margin-inline-end: 1rem;
+        }
+    }
+
+    > div[data-aside-button="true"] {
+        padding-block: 1rem 0.5rem;
+    }
+
+    ul > li[data-empty] {
+        margin: 0 !important; color: rgba($text-color-light, 0.6)
+    }
+}
+
+
+/********************************
+ * Content Configuration
+********************************/
+.root__content_configuration > aside > ul {
+    @include bare-list;
+
+    &:not(:last-of-type) {
+        margin-block-end: 1.25rem;
+    }
+
+    > span {
+        @include medium-text; color: $blue; font-weight: $font-weight-medium;
+        text-transform: uppercase;
+    }
+
+    > li:first-of-type {
+        margin-block-start: 0.5rem;
+    }
+}
+.root__content_configuration > article[data-legislation-content="true"] {
+    inline-size: 85%; display: flex; flex-direction: column;
+    border-radius: $border-radius; background-color: $white;
+    box-shadow: $box-shadow-ultra;
+
+    > div[data-legislation-list="true"] {
+        display: flex; flex-direction: column; overflow: scroll;
+        padding: 0 1.5rem 7rem;
+    }
+
+    > header {
+        padding: 1.25rem 1.5rem 0;
+        > h6,
+        > div:first-of-type {
+            margin-block-end: 1.5rem;
+
+        }
+
+        > h6 > span {
+            @include large-text; color: $text-color-light; font-weight: $font-weight-regular;
+        }
+    }
+}
+
+
+/********************************
+ * List of Legislations
+********************************/
+div[data-legislation-list="true"] > ul {
+    @include styled-scrollbar($primary-color-light); @include bare-list;
+
+    > li[data-legislation-card="true"] {
+        &:has(+ li:hover) > article,
+        &:has(+ li:hover) > a {
+            border-color: transparent;
+        }
+    }
+
+    > li[data-legislation-card="true"] > article,
+    > li[data-legislation-card="true"] > a {
+        text-decoration: none;
+        display: flex; justify-content: space-between; align-items: center;
+        padding-block: 0.75rem;  border-bottom: 1px solid rgba($grey-lightest, 0.1);
+        transition: all 200ms ease-in;
+
+        > div {
+            display: flex; flex-direction: column;
+            max-inline-size: 60%; margin: 0; padding: 0;
+
+            span {
+                @include large-text; @include line-clamp(1);
+                color: $text-color;
+            }
+
+            > span:last-of-type {
+                @include medium-text; color: $text-color-light;
+            }
+        }
+
+        > div:last-of-type {
+            > button {
+                display: flex; align-items: center; justify-content: space-between;
+
+                > svg {
+                    inline-size: 0.8rem; block-size: 0.8rem;
+                    margin-inline-start: 0.5rem;
+                }
+
+                @include hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        @include hover {
+            background-color: rgba($primary-color-light, 0.1);
+            padding-inline: 0.5rem; border-radius: $border-radius;
+            border-color: transparent; cursor: pointer;
+
+            > div {
+                span {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+
+/*******************************************
+ * Client Preview
+*******************************************/
+.root__preview_client_view {
+    // Take entire height, take away the height of the header, footer, and the top content
+    block-size: calc(100vh - 217px - 75px - 160px);
+}
+.root__preview_client_view > article {
+    container: client-preview / size; background-color: $white;
+    display: flex; flex-direction: column; padding: 1.25rem 1.5rem;
+    position: relative; inline-size: 95%; margin-inline-start: 5%;
+    border-radius: $border-radius; box-shadow: $box-shadow-ultra;
+
+    &[data-empty-state="true"] {
+        padding: 0;
+
+        > svg[data-empty-icon="true"] {
+            inline-size: 100%; block-size: 100%;
+            fill: $white;
+        }
+    }
+}
+
+.root__preview_client_view > article[data-empty-state="true"] > .root__searchempty {
+    inline-size: 100%; position: absolute; inset: 30% auto auto;
+    display: flex; place-content: center; place-items: center;
+    color: rgba(117, 117, 117, 0.1);
+
+    > svg {
+        inline-size: 50%; block-size: 30%;
+
+        @container navigator-landing (block-size <= 720px) {
+            inline-size: 35%; block-size: 30%;
+        }
+    }
+}
+.root__preview_client_view > article[data-empty-state="true"] > .root__searchemptytext {
+    @include h5; @include line-clamp(1);
+    color: $text-color-light; text-align: center; opacity: 0.75;
+
+    @include bp-min($medium) {
+        font-size: 20px; transform: translateY(-100px);
+    }
+
+    @container navigator-landing (block-size <= 720px) {
+        transform: translateY(0);
+    }
+}
+
+/*******************************************
+ * Client Preview === Search Results page
+*******************************************/
+.root__preview_client_view > article:last-of-type > header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+
+    > p,
+    > span {
+        @include medium-text;
+        font-weight: $font-weight-regular;
+        margin-bottom: 18px;
+    }
+
+    > div {
+        display: flex; align-items: center;
+
+        svg {
+            inline-size: 20px; block-size: 17px;
+            margin-inline-end: 7px;
+        }
+
+        span {
+            @include medium-text;
+            font-weight: $font-weight-regular;
+        }
+    }
+}
+.root__preview_client_view > article > ul.root__filters {
+    @include bare-list; position: relative;
+    display: flex; justify-content: flex-start; flex-wrap: wrap; gap: 10px;
+    width: fit-content; transition: width 0.25s ease;
+
+    > li {
+        @include appear;
+        display: flex; align-items: center;
+        padding: 0.5rem 1rem; border-radius: $border-radius-x-large;
+        background-color: $blue-medium; color: $white;
+
+        > button {
+            @include bare-button;
+            flex: 0 0 auto; padding: 0.25rem;
+            margin-inline-start: 5px; color: inherit; line-height: 0;
+
+            @include hover {
+                opacity: 0.85;
+            }
+
+            > svg {
+                width: 12px; height: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../../../../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex; flex-direction: column;
+
+    > * {
+        text-align: left;
+    }
+}
+
+.root > .root__title {
+    @include h6;
+    margin-block-end: 0.25rem;
+}
+
+header.root > .root__description {
+    @include medium-text;
+}
+.root > .root__description {
+    text-transform: none;
+    margin: 0;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+}
+
+

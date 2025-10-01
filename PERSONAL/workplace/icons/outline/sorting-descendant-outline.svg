@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>sorting-descendant-outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="sorting-descendant" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.99310345,20.8551724 L11.9517241,25.8206897 L11.9517241,0 L13.937931,0 L13.937931,30.7862069 L5,21.8482759 L5.99310345,20.8551724 Z M20.1172414,6.43089655 L25.8551724,11.2242759 L27.144,9.93103448 L17.6896552,0.459034483 L17.6896552,32 L20.1172414,32 L20.1172414,6.43089655 Z M18.1310345,1.52717241 L26.5172414,9.91337931 L25.8242759,10.6063448 L19.6449655,5.46868966 L19.6449655,31.5586207 L18.1001379,31.5586207 L18.1310345,1.52717241 Z" id="Group" fill="#2D2D2D" fill-rule="nonzero"></path>
+    </g>
+</svg>

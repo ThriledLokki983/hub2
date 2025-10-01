@@ -1,0 +1,30 @@
+@import '../../../styles/utils';
+
+/**
+* Root
+*/
+.root {
+    position: relative;
+}
+
+header > button {
+    @include bare-button;
+    position: absolute;
+    right: 0; top: 0;
+    font-weight: $font-weight-bold;
+    display: flex; align-items: center; gap: 5px;
+    text-decoration: underline;
+
+    > svg {
+        transform: translateX(0);
+        transition: transform 0.25s ease-in;
+    }
+
+    @include hover {
+        color: $blue;
+
+        > svg {
+            transform: translateX(5px);
+        }
+    }
+}

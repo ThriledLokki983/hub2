@@ -1,0 +1,6 @@
+---
+react:
+  nameOverride: asics
+  image:
+    path: productlegislationnavigator/frontend
+  add_ssh: false

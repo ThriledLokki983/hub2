@@ -1,0 +1,62 @@
+@import '../../../styles/utils.scss';
+
+.root {
+    position: relative;
+}
+
+.root__upload {
+    position: relative; display: flex; flex-direction: column;
+}
+.root__upload > h5 {
+    @include medium-text;
+    inline-size: 100%; text-align: start;
+    font-weight: 500; color: $blue; text-transform: uppercase;
+}
+.root__upload > div:first-of-type {
+    display: flex; gap: 1rem;
+
+    > span:first-of-type {
+        inline-size: auto; block-size: 5.25rem;
+        border: 1px solid $grey; border-radius: $border-radius;
+
+        &[data-show-default="true"] {
+            border-color: transparent;
+        }
+
+        > img {
+            inline-size: 100%; block-size: 100%; object-fit: cover; border-radius: $border-radius;
+        }
+    }
+}
+.root__upload div[data-left-column="true"] > .root__upload_local > label {
+    @include medium-text; color: $blue; text-decoration: underline; margin: 0;
+
+    transition: all 0.25s ease-in-out;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+
+    @include hover {
+        cursor: pointer; color: $blue-dark;
+    }
+}
+.root__upload div[data-left-column="true"] {
+    display: flex; flex-direction: column; gap: 0.25rem; align-items: start;
+
+    > div:first-of-type > input {
+        display: none;
+    }
+
+    p {
+        padding: 0; text-align: start;
+        margin: 0 !important;
+    }
+}
+.root__upload div[data-left-column="true"] > .root__upload_text {
+    @include medium-text;
+
+    &:last-of-type {
+        opacity: 0.5;
+    }
+}

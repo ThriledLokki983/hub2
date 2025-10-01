@@ -1,0 +1,126 @@
+@import '../../../../../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex; gap: 1.5rem;
+}
+
+
+/**
+* LegislationDetails Tab panel Navigation
+*/
+.root__tabpanelnav {
+    position: relative;
+    flex: 1 1 30%;
+
+    &[data-allow-edit="false"] {
+        opacity: 0.95; filter: grayscale(0.2);
+
+        > ul[data-nav="true"][data-allow-edit="false"] > li {
+            @include hover {
+                cursor: not-allowed;
+            }
+
+            > button {
+                pointer-events: none;
+            }
+        }
+    }
+}
+nav.root__tabpanelnav {
+    @include bare-list;
+}
+.root__tabpanelnav > ul {
+    display: flex; flex-direction: column;
+    margin-block: 0;
+}
+.root__tabpanelnav > ul > li {
+    width: 100%;
+    background-color: $grey-light;
+    border-radius: $border-radius;
+}
+.root__tabpanelnav > ul > li.root__roleitem > button {
+    @include bare-button;
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    text-align: left;
+    padding: 1rem 0.75rem;
+    inline-size: 100%;
+    font-size: 16px; font-weight: $font-weight-regular;
+    border-radius: $border-radius;
+    color: inherit; line-height: 0;
+    transform: translateX(0);
+
+    transition: color 0.35s ease, transform 0.35s ease;
+
+    @include hover {
+        &:not([data-active="true"]) > span {
+            transform: translateX(5px);
+        }
+    }
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+.root__tabpanelnav > ul > li.root__roleitem > button > span {
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+}
+.root__tabpanelnav > ul > li[data-active="true"] > button,
+.root__tabpanelnav > ul > li:has([aria-selected="true"]) > button {
+    color: $white;
+    background-color: $blue;
+}
+.root__tabpanelnav > ul > li > button > svg {
+    transform: rotate(-90deg);
+}
+
+
+/**
+* TabPanel content
+*/
+article.root__tabpanelcontent {
+    @include styled-scrollbar($primary-color-light);
+}
+.root__tabpanelcontent {
+    position: relative;
+    flex: 1 1 40%;
+    max-block-size: 338px;
+    overflow: auto;
+    padding: 1rem 1.5rem;
+    background-color: $grey-light;
+    border-radius: $border-radius;
+    max-inline-size: 300px;
+    margin-inline-end: 60px;
+}
+
+.root__tabpanelcontent > div {
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;
+    row-gap: 0.65rem;
+
+    label {
+        font-weight: $font-weight-medium; margin: 0;
+        transition: color 200ms ease-in;
+
+        @include hover {
+            color: $blue;
+        }
+    }
+
+    &[data-allow-edit="false"] > div[data-is-pill="false"] {
+        opacity: 0.8; pointer-events: none;
+
+        @include hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+// buttonset
+.root__buttonset {
+    display: flex; gap: 1rem; justify-content: flex-end;
+    margin-block-start: 1.5rem;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>calendar-declined-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="calendar-declined" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30,12 L30,30 C30,31.0538182 29.1836033,31.9181157 28.1491916,31.9945109 L28,32 L4,32 C2.94618182,32 2.0818843,31.1836033 2.00548911,30.1491916 L2,30 L2,12 L30,12 Z M20.6777547,16 L16,20.6777547 L11.3222453,16 L10,17.3222453 L14.6777547,22 L10,26.6777547 L11.3222453,28 L16,23.3222453 L20.6777547,28 L22,26.6777547 L17.3222453,22 L22,17.3222453 L20.6777547,16 Z M10,0 L10,4 L22,4 L22,0 L26,0 L26,4 L30,4 L30,8 L2,8 L2,4 L6,4 L6,0 L10,0 Z" id="Shape" fill="#212121"></path>
+    </g>
+</svg>

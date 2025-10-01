@@ -1,0 +1,189 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+
+    &:focus-visible {
+        outline: 1px solid rgba(65, 83, 133, 0.12);
+    }
+
+    &[data-profile-setting="true"] {
+        max-inline-size: 25rem;
+        inline-size: 25rem;
+
+        > div {
+            max-inline-size: 25rem;
+            background-color: #f3f3f3;
+            border-radius: $border-radius !important;
+
+            > div:not([role="listbox"]) {
+                display: flex; align-items: center;
+                max-block-size: 2.8rem !important;
+                block-size: 2.8rem !important;
+                border: none !important;
+                // box-shadow: none;
+            }
+        }
+    }
+}
+
+
+.root svg {
+    z-index: 10;
+    position: absolute; right: 1rem; bottom: 0.85rem;
+    transform: rotate(0deg);
+
+    transition: transform 0.25s ease-in;
+}
+
+/**
+* Combobox
+*/
+.root__combo {
+    position: relative;
+    display: block;
+    max-width: 300px;
+
+    &:focus-visible {
+        outline: 1px solid rgba(65, 83, 133, 0.12);
+    }
+}
+
+/**
+* Combobox label
+*/
+.root__combolabel {
+    z-index: 10;
+    position: absolute; inset: 1.15rem 1.1rem auto; margin: 0;
+    transition: all 0.3s; pointer-events: none; user-select: none;
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+
+    transform: translateY(-0.5rem);
+    font-size: 0.75rem;
+}
+
+.root__combovalue {
+    @include medium-text;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+}
+
+
+/**
+* Combobox input
+*/
+.root .root__comboinput {
+    z-index: 10; position: relative;
+    max-block-size: 2.625rem;
+    padding: 0.75rem 1rem; margin-block-end: 0;
+}
+.root .root__comboinput[aria-expanded="true"] svg {
+    transform: rotate(-180deg);
+}
+.root[data-select-only="true"][data-is-active="true"] {
+    background: $white;
+    border-top-right-radius: $border-radius; border-top-left-radius: $border-radius;
+    box-shadow:
+        inset 0 0 0 .0625rem $input-focus-color,
+        0 0 0 0.25rem rgba(65, 83, 133, 0.12);
+
+    &:focus-visible {
+        outline: 1px solid rgba(65, 83, 133, 0.12);
+    }
+}
+.root[data-select-only="true"][data-is-active="false"] .root__comboinput[data-select-only="true"] {
+    border: 1px solid $input-border-color;
+    border-top-right-radius: 0; border-bottom-right-radius: 0;
+    border-right: none;
+}
+.root .root__comboinput[data-select-only="true"] {
+    display: block;
+    min-inline-size: 12rem; max-block-size: 2.625rem;
+    border-top-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius; border-top-left-radius: $border-radius;
+    border-right: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+.root > .root__combo:has(:focus) ~ svg,
+.root > .root__combo:has(:focus-visible) ~ svg,
+.root > .root__combo:has(:focus-within) ~ svg,
+.root > .root__combo:has(:active) ~ svg {
+    fill: $blue; transform: rotate(-180deg);
+}
+.root__open .root__comboinput {
+    border-radius: $border-radius $border-radius 0 0;
+}
+.root__comboinput[aria-expanded="true"] + .root__combolabel {
+    transform: translateY(-0.5rem);
+    font-size: 0.75rem;
+}
+
+/**
+* Combobox menu
+*/
+.root__combomenu,
+.root__combomenu[aria-hidden="true"] {
+
+    z-index: 15;
+    position: absolute; inset: 102% auto auto 0;
+    opacity: 0; visibility: hidden;
+    block-size: 0; max-block-size: 300px;
+    inline-size: 99.9%; max-inline-size: 100%;
+    overflow-y: scroll; background: $white;
+    border-radius: 0 0 0.39738rem 0.39738rem;
+    box-shadow:
+        inset 0 -0.0125rem 0 0.0625rem $blue,
+        0 0.025rem 0 0.25rem rgba(65, 83, 133, 0.12);
+    border-top: 1px solid transparent;
+    transform: translateY(-3px);
+
+    &[data-select-only="true"] {
+        transform: translate(0px, -2px);
+    }
+
+    transition:
+        block-size var(--transition-timing) ease-in,
+        opacity var(--transition-timing) ease-in,
+        visibility 0s linear var(--transition-timing);
+}
+.root__combo.root__open > .root__combomenu {
+    display: block; z-index: 50;
+    opacity: 1; visibility: visible;
+    max-block-size: 300px; block-size: auto;
+
+    transition:
+        block-size var(--transition-timing) ease-in,
+        opacity var(--transition-timing) ease-in,
+        visibility 0s;
+}
+
+/**
+* Combobox option
+*/
+.root__option,
+.root__current {
+    @include medium-text; text-align: start;
+    padding: 8px 10px 10px;
+    color: $text-color-light;
+
+    @include bp-min($medium)  {
+        font-size: 1rem;
+    }
+
+    @include hover {
+        background-color: rgba($text-color-light, 0.07);
+        cursor: pointer;
+    }
+}
+
+option[aria-selected="true"] {
+    background-color: rgba($text-color-light, 0.05);
+}
+
+.root__option.root__current {
+    background-color: rgba($text-color-light, 0.05);
+
+}

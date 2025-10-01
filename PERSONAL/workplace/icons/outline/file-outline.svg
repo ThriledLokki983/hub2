@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>file-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="file" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30,4 C31.104,4 32,4.896 32,6 L32,28 L0,28 L0,4 L30,4 Z M2,26 L30,26 L30,6 L2,6 L2,26 Z M9,17 L6,17 L6,20 L4,20 L4,12 L10,12 L10,14 L6,14 L6,15 L9,15 L9,17 Z M14,20 L12,20 L12,12 L14,12 L14,20 Z M18,18 L21,18 L21,20 L16,20 L16,12 L18,12 L18,18 Z M27,17 L24.7714885,17 L24.7714885,18 L27.9947589,18 L27.9947589,20 L23,20 L23,12 L28,12 L28,14 L24.7714885,14 L24.7714885,15 L27,15 L27,17 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

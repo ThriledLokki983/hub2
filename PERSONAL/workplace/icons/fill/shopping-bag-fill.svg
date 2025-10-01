@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>shopping-bag-fill-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="shopping-bag-fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,6 C10,2.6862915 12.6862915,0 16,0 C19.3137085,0 22,2.6862915 22,6 L28,6 L28,30 C28,31.1045695 27.1045695,32 26,32 L4,32 L4,8 C4,6.8954305 4.8954305,6 6,6 L10,6 Z M13,6 L19,6 C19,4.34314575 17.6568542,3 16,3 C14.3431458,3 13,4.34314575 13,6 Z" id="Icon/ShoppingBag/Fill" fill="#212121"></path>
+    </g>
+</svg>

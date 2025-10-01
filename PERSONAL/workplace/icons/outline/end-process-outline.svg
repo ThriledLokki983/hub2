@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>end-process-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="end-process" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,30 C12.5,30 9.304,28.7 6.846,26.568 L26.568,6.846 C28.7,9.304 30,12.5 30,16 C30,23.72 23.72,30 16,30 M2,16 C2,8.28 8.28,2 16,2 C19.5,2 22.696,3.3 25.154,5.432 L5.432,25.154 C3.3,22.696 2,19.5 2,16 M16,0 C7.164,0 0,7.164 0,16 C0,24.836 7.164,32 16,32 C24.836,32 32,24.836 32,16 C32,7.164 24.836,0 16,0" id="Page-1" fill="#212121"></path>
+    </g>
+</svg>

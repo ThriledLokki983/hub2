@@ -1,0 +1,320 @@
+@import '../../../../styles/utils';
+
+/********************************
+ * Content Configuration
+ ********************************/
+.root {
+    position: relative; overflow: hidden;
+    display: flex; justify-content: flex-start; gap: 1rem;
+}
+.root > article {
+    position: relative; background-color: $white;
+    display: flex; flex-direction: column; justify-content: flex-start;
+    border: 1px solid rgba($border-color, 0.3); border-radius: $border-radius;
+    padding: 0 1rem 1.25rem; overflow: auto; inline-size: 40%;
+
+    div[data-jurisdiction="true"] > article {
+        margin-inline-end: 0.25rem; inline-size: 100%;
+    }
+
+    div[data-edit-group] {
+        border-color: transparent;
+    }
+}
+
+div[data-config-notice="true"] {
+    margin-block: -2rem 0.5rem;
+
+    > p > span[role="button"] {
+        color: $error-color; text-decoration: underline;
+
+        > small {
+            @include hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/********************************
+ * Selected Attributes
+ ********************************/
+.root > article[data-selected-attributes="true"] {
+    padding: 0 1rem 1.25rem; padding-block-end: 7rem;
+
+    &[data-allow-edit="false"] {
+        opacity: 0.85;
+    }
+}
+.root > article[data-selected-attributes="true"] > header {
+    position: sticky; top: 0; z-index: 1; padding-block: 1.25rem 1rem;
+    display: flex; align-items: center; justify-content: space-between;
+    margin-block-end: 1rem; background-color: $white;
+
+    > h6 {
+        @include h6; margin: 0;
+    }
+
+    > button {
+        font-weight: $font-weight-regular;
+
+        @include hover {
+            background-color: transparent; text-decoration: underline;
+        }
+    }
+
+}
+
+/********************************
+ * List of legislations Content
+ ********************************/
+.root > article[data-legislation-content="true"] {
+    inline-size: 60%; padding: 0 1.5rem 1.25rem; overflow: auto;
+
+    > header {
+        position: sticky; top: 0; z-index: 9; background-color: $white;
+
+        > span[data-is-filtering="true"] {
+            font-weight: $font-weight-regular;
+
+            > strong[data-last-part="true"] {
+                color: $blue;
+            }
+        }
+
+        &:has(> span[data-is-filtering="true"]) {
+            padding-block: 0 1.25rem;
+        }
+    }
+
+    > header > div[data-search] {
+        inline-size: 100%;
+
+        > div:first-of-type {
+            inline-size: 100%;
+        }
+    }
+
+    > header > div {
+        display: flex; align-items: flex-start; justify-content: space-between;
+        padding-block: 1.25rem 0; background-color: $white;
+
+        > h6,
+        > div:first-of-type {
+            margin-block-end: 1.5rem;
+        }
+
+        > h6 > span {
+            color: $text-color-light; font-weight: $font-weight-regular;
+        }
+
+        > button {
+            display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+            border: 1px solid $border-color; border-radius: $border-radius;
+
+            > svg {
+                inline-size: 1rem; block-size: 0.85rem;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+
+}
+.root > article[data-legislation-content="true"] > header h6 > span {
+    @include large-text;
+}
+
+
+
+/********************************
+ * List of Legislations
+********************************/
+.root > article[data-legislation-content="true"] > div[data-legislation-list="true"] {
+    display: flex; flex-direction: column;
+
+    > li[data-empty="true"]  {
+        list-style-type: none;
+    }
+
+    > ul {
+        @include styled-scrollbar($primary-color-light);
+    }
+
+    ul[data-tab-list="true"] {
+        padding-block-end: 5rem; position: relative; z-index: 1;
+    }
+}
+.root > article[data-legislation-content="true"] > div[data-legislation-list="true"] > ul {
+    margin: 0; padding: 0; list-style-type: none; overflow: auto;
+
+    > li {
+        margin: 0;
+
+        &[data-legislation-card="true"] {
+            &:has(+ li:hover) > article,
+            &:has(+ li:hover) > a {
+                border-color: transparent;
+            }
+        }
+    }
+
+    > li[data-legislation-card="true"] > article,
+    > li[data-legislation-card="true"] > a {
+        text-decoration: none;
+        display: flex; justify-content: space-between; align-items: center;
+        padding-block: 0.75rem;  border-bottom: 1px solid rgba($grey-lightest, 0.1);
+        transition: all 200ms ease-in;
+
+        > div {
+            display: flex; flex-direction: column;
+            max-inline-size: 60%; margin: 0; padding: 0;
+
+            span {
+                overflow: hidden; text-wrap: balance;
+                display: -webkit-box; text-overflow: ellipsis;
+                -webkit-line-clamp: 1; line-clamp: 1; -webkit-box-orient: vertical;
+                color: $text-color;
+            }
+
+            > span:last-of-type {
+                color: $text-color-light;
+            }
+        }
+
+        > div:last-of-type {
+            > button {
+                display: flex; align-items: center; justify-content: space-between;
+
+                > svg {
+                    inline-size: 0.8rem; block-size: 0.8rem;
+                    margin-inline-start: 0.5rem;
+                }
+
+                @include hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        @include hover {
+            background-color: rgba($primary-color-light, 0.1);
+            padding-inline: 0.5rem; border-radius: $border-radius;
+            border-color: transparent; cursor: pointer;
+
+            > div {
+                span {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+.root > article[data-legislation-content="true"] > div[data-legislation-list="true"] > ul {
+    > li[data-legislation-card="true"] > article > div > span,
+    > li[data-legislation-card="true"] > a > div > span {
+        @include large-text;
+
+        &:last-of-type {
+            @include medium-text;
+        }
+    }
+}
+
+/********************************
+ * Legislation Card
+********************************/
+li[data-legislation-card="true"] > article,
+li[data-legislation-card="true"] > a {
+    @include link;
+}
+li[data-legislation-card="true"] > article > div > h5,
+li[data-legislation-card="true"] > a > div > h5 {
+    @include h5; @include line-clamp(1);
+}
+li[data-legislation-card="true"] > article > div > h5,
+li[data-legislation-card="true"] > a > div > h5 {
+    font-size: 1rem; font-weight: $font-weight-regular;
+    margin-block-end: 0.25rem; margin-inline-end: 1rem;
+    transition: color 50ms ease-in;
+}
+li[data-legislation-card="true"] > div > span  {
+    position: relative; display: flex; align-items: center;
+    font-size: 0.9rem; font-weight: $font-weight-regular;
+    color: $grey-lightest; max-inline-size: 80%;
+    transition: color 50ms ease-in;
+}
+li[data-legislation-card="true"] > article > span > small,
+li[data-legislation-card="true"] > a > span > small {
+    @include small-text;
+}
+li[data-legislation-card="true"] {
+    container: legislation-card / inline-size;
+
+    position: relative; padding-inline: 0;
+    border-bottom: 1px solid rgba($grey-lightest, 0.1);
+    transition: all 200ms ease-in;
+
+    // select the previous sibling of the hovered element
+    &:has(+ li:hover) {
+        border-color: transparent;
+    }
+
+    > article,
+    > a {
+        --cl-sp: 90px;
+        --cl-lp: 13.625rem;
+
+        display: grid; grid-template-columns:
+            minmax(0, 55%)
+            minmax(calc(var(--cl-lp) + 10px), 1fr)
+            minmax(calc(var(--cl-sp) + 10px), 1fr);
+        gap: 1rem;
+        padding-block: 1rem !important;
+        border-radius: $border-radius; text-decoration: none;
+        transition: all 200ms ease-in;
+
+        > span > small {
+            color: rgba($text-color-light, 0.9);
+        }
+
+        > div:first-of-type {
+            display: flex; flex-direction: column; align-items: flex-start;
+        }
+
+        > div:last-of-type {
+            margin: 0; display: flex; justify-content: flex-end;
+
+            > button {
+                display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+                min-inline-size: fit-content; block-size: 2.625rem;
+
+                > svg {
+                    inline-size: 0.85rem; block-size: 0.85rem;
+                }
+            }
+        }
+    }
+
+    @include hover {
+        background-color: rgba($primary-color-light, 0.1);
+        padding-inline: 0.5rem; border-radius: $border-radius; border-color: transparent;
+
+        > a {
+            color: $blue;
+
+            > div:first-of-type > span {
+                color: $blue;
+            }
+
+            > div:first-of-type > span > small {
+                color: inherit; text-decoration: none;
+
+                svg {
+                    @include appear; transform: rotate(-40deg);
+                }
+            }
+        }
+    }
+}

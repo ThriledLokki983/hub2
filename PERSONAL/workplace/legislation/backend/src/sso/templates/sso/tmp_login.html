@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#415385">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" href="{{ frontend_url }}favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="{{ frontend_url }}favicon.png" type="image/png">
+
+    <title>Logged out | Sustainability Legislation Navigator</title>
+    <meta name="description" content="Sustainability Legislation Navigator by PwC">
+    <script type="module" crossorigin="" src="{{ frontend_url }}assets/index-42e04a98.js"></script>
+    <link rel="stylesheet" href="{{ frontend_url }}assets/index-777332e1.css">
+</head>
+<body>
+
+<noscript>You need to <a href="https://www.enable-javascript.com/" rel="external noopener noreferrer" target="_blank">enable
+    JavaScript</a> to run this app.
+</noscript>
+
+<div id="root">
+    <section class="_layout_4r9kz_239" data-full-width="true" data-is-onboarding="false">
+        <main id="content" data-full-width="true" data-is-onboarding="false">
+            <section class="_root_131u5_236">
+                <header class="_root__header_131u5_260"><img src="{{ frontend_url }}assets/pwc-logo-outline-8c248231.svg"
+                                                             alt="PwC Logo"></header>
+                <h2>Welcome to the <br> Sustainability Legislation Navigator</h2>
+                LOGIN TEST
+                <p class="_root__text_131u5_278">Your
+                    personalized destination for sustainability legislation information,
+                    streamlining legal compliance documents, and fostering collaboration
+                    across your company departments.</p>
+                <p class="_root__text_131u5_278">Get the information you need, precisely when you need it.</p>
+                Verified email address:
+                <div class="_root_15k7d_236">
+                    <form action="{% url 'login' %}" method="post">
+                        {% csrf_token %}
+                        <input class="_root_aji9p_236" name="email" placeholder="example@company.com"/>
+                        <button class="_root_aji9p_236" type="submit" data-size="large" data-variation="primary">Continue</button>
+                    </form>
+                </div>
+                Or continue with:
+                <div class="_root_15k7d_236">
+                    <form action="{% url 'login' %}" method="get">
+                        {% csrf_token %}
+                        <button class="_root_aji9p_236" type="submit" data-size="large" data-variation="primary">PwC SSO Login</button>
+                    </form>
+                </div>
+                <section class="_root__account_131u5_299">
+                    <div hidden=""><p>No account?</p><a class="_root_aji9p_236" data-size="large"
+                                                        data-variation="tertiary" href="{{ frontend_url }}"
+                                                        target="" rel="">Create a PwC SSO account</a></div>
+                    <p>Having trouble? Please request assistance from your PwC Contact.</p></section>
+                <div class="_root__searcicon_131u5_355">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="620" height="623" viewBox="0 0 620 623">
+                        <path
+                            d="M497.427 437.736H465.99L454.847 426.991C495.194 380.194 517.368 320.45 517.324 258.662C517.324 207.504 502.154 157.494 473.732 114.957C445.31 72.4205 404.912 39.2671 357.648 19.6896C310.384 0.112074 258.375 -5.0103 208.2 4.97024C158.024 14.9508 111.935 39.5859 75.7605 75.7605C39.5859 111.935 14.9508 158.024 4.97024 208.2C-5.0103 258.375 0.112074 310.384 19.6896 357.648C39.2671 404.912 72.4205 445.31 114.957 473.732C157.494 502.154 207.504 517.324 258.662 517.324C322.731 517.324 381.626 493.846 426.991 454.847L437.736 465.99V497.427L636.707 696L696 636.707L497.427 437.736ZM258.662 437.736C159.575 437.736 79.5884 357.75 79.5884 258.662C79.5884 159.575 159.575 79.5884 258.662 79.5884C357.75 79.5884 437.736 159.575 437.736 258.662C437.736 357.75 357.75 437.736 258.662 437.736Z"
+                            fill="#E8E8E8"></path>
+                    </svg>
+                </div>
+                <footer class="_root_19gyw_236"><p>© 2024
+                    PwC. PwC. All rights reserved. PwC refers to the PwC network and/or one
+                    or more of its member firms, each of which is a separate legal entity.
+                    Please see <a href="https://pwc.com/structure" target="_blank" rel="noreferrer">www.pwc.com/structure</a>
+                    for further details.</p></footer>
+            </section>
+        </main>
+    </section>
+</div>
+
+
+</body>
+</html>

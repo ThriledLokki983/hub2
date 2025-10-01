@@ -1,0 +1,37 @@
+---
+- - :permit
+  - MIT
+  - :who: EC
+    :why: default
+    :versions: []
+    :when: 2020-08-20 09:30:10.485597400 Z
+- - :permit
+  - New BSD
+  - :who: EC
+    :why: default
+    :versions: []
+    :when: 2020-08-20 09:30:31.134781000 Z
+- - :permit
+  - BSD
+  - :who: EC
+    :why: default
+    :versions: []
+    :when: 2020-08-20 09:30:36.961221300 Z
+- - :approve
+  - uWSGI
+  - :who: EC
+    :why: cant find license
+    :versions: []
+    :when: 2020-08-20 09:31:42.524237000 Z
+- - :approve
+  - uwsgi
+  - :who: EC
+    :why: cant find license
+    :versions: []
+    :when: 2020-08-20 09:31:51.206520100 Z
+- - :permit
+  - GNU General Public License (GPL)
+  - :who: EC
+    :why: default
+    :versions: []
+    :when: 2020-08-20 09:33:34.646129900 Z

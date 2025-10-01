@@ -1,0 +1,32 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: grid; place-content: center; place-items: center;
+    min-block-size: calc(100dvh - calc(var(--header-block-size) * 1.5));
+}
+.root > [data-btn-set] {
+    margin: 0;
+}
+.root > h2 {
+    opacity: 0.6;
+}
+
+.root > p:first-of-type {
+    display: flex; gap: 0.25rem; flex-direction: column;
+    place-content: center; place-items: center;
+    opacity: 0.75;
+    margin: 0;
+}
+.root > p:first-of-type a {
+    text-decoration: underline;
+}
+
+.root__icon {
+    display: flex; place-content: center; place-items: center;
+    inline-size: 67.5%; block-size: auto;
+    margin-inline: auto;
+}
+.root__icon > svg {
+    inline-size: 100%; block-size: 100%;
+}

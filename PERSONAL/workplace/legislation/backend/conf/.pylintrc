@@ -1,0 +1,12 @@
+[MESSAGES CONTROL]
+disable=missing-docstring,no-name-in-module,fixme,duplicate-code, too-few-public-methods, unused-argument, import-error, unrecognized-option, unused-variable, no-member
+
+[FORMAT]
+max-line-length=120
+
+[MASTER]
+ignore=migrations
+django-settings-module=core.settings.pylint
+
+[BASIC]
+good-names=logger,urlpatterns,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,mm,hh,dd,wd,mo,fy,ts,df,km

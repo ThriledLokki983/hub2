@@ -1,0 +1,217 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex; flex-direction: column;
+    block-size: calc(100dvh - calc(var(--header-block-size) * 1.05));
+}
+.root > .avg-pwc-wrapper {
+    inline-size: 70%; margin-inline: auto;
+
+    &[data-is-admin="true"] {
+        margin-top: auto !important;
+    }
+}
+.root > .avg-pwc-wrapper > p {
+    @include bp-min($medium) {
+        text-wrap: pretty;
+    }
+}
+.root > [data-settings-head] {
+    padding-inline: 0;
+
+    @include bp-min($medium) {
+        inline-size: 70%; margin-inline: auto;
+    }
+}
+
+.root [data-btn-set] {
+    margin: 0;
+
+    &:has([data-profile-setting="true"]) {
+        max-inline-size: 100%;
+    }
+}
+.root [data-btn-set] button {
+    display: flex; align-items: center;
+    min-block-size: 2.75rem;
+    padding-inline: 1.5rem;
+}
+.root [data-btn-set] button > svg {
+    inline-size: 1.2rem; block-size: 1.2rem;
+}
+.root [data-btn-set-submit] {
+    position: relative;
+    inline-size: 100%;
+    margin-block: 4rem 1rem;
+    justify-content: flex-end;
+
+    &::before {
+        content: "";
+        position: absolute; top: -2rem;
+        inline-size: 100%; block-size: 1px;
+        background-color: $grey-light;
+    }
+
+    button {
+        min-inline-size: 20ch
+    }
+}
+
+/**
+* CLient Label
+*/
+.root__client {
+    @include small-text;
+    margin-block: 0.75rem 2rem;
+    opacity: 0.65;
+}
+
+/**
+* Form container
+*/
+.root__form {
+    @include styled-scrollbar($primary-color-light);
+    background-color: $white;
+    padding:
+        calc(var(--content-padding-all, var(--sp-c)) * 2)
+        calc(var(--content-padding-all, var(--sp-c)) * 1.5);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-ultra;
+
+    @include bp-min($medium) {
+        inline-size: 70%; margin-inline: auto;
+        max-block-size: calc(100dvh - calc(var(--header-block-size) * 0.15) -
+        var(--main-content-header-height));
+        block-size: fit-content;
+        overflow: auto;
+
+        transition: all var(--transition-duration) ease-in-out;
+    }
+}
+
+.root__form > form {
+    flex-direction: row; flex-wrap: wrap; column-gap: 1.5rem;
+    min-block-size: auto;
+
+    div[data-is-disabled="true"] {
+        @include hover {
+            cursor: not-allowed;
+        }
+    }
+}
+.root__rolelist {
+    flex: 1; margin-block-start: 1rem;
+    display: flex; align-items: flex-end; column-gap: 1.5rem;
+    row-gap: 0.0005rem;
+    flex-wrap: wrap;
+}
+.root > .root__form .root__rolelist > div:first-of-type {
+    display: flex; flex-direction: column; align-items: flex-start;
+    gap: 0.065rem;
+}
+.root__rolelistheader {
+    position: relative; font-size: 0.8125rem; color: $blue;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase; margin-block-end: 0;
+    padding-inline-start: 0.05rem; text-align: left;
+}
+.root__form > form > [data-form-profile-group="true"],
+.root__form > form > .root__rolelist > [data-form-profile-group="true"] {
+    flex: 1; display: flex; flex-direction: row; align-items: flex-end;
+    margin-block-start: 0; min-inline-size: 45%; border-bottom: none;
+
+    &[data-roles="true"] {
+        margin-block-start: 0.5rem; padding-block-end: 0.25rem;
+    }
+
+    > div:first-of-type {
+        flex: 1;
+    }
+
+    > button {
+        display: flex; place-content: center; place-items: center;
+        min-inline-size: 2.5rem; max-inline-size: 3rem;
+        min-block-size: 2.75rem; padding: 0.6875rem 0.9rem;
+    }
+
+    > div[data-readonly="true"] {
+        > label {
+            opacity: 1 !important;
+        }
+    }
+}
+
+.root__form > .root__client {
+    inline-size: 100%;
+    display: flex; align-items: flex-start; justify-content: flex-end;
+}
+
+
+/**
+* Form Input
+*/
+.root__forminput {
+    flex: 1; display: flex; flex-direction: column; gap: 0.25rem;
+}
+.root__forminput[data-effective-until="true"] {
+    margin-block-start: 1rem;
+}
+.root__forminput label {
+    position: relative;
+    @include medium-text;
+    color: $blue;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    margin-block-end: 0;
+    padding-inline-start: 0.05rem;
+    text-align: left;
+
+    &[data-required="true"]::after {
+        content: "*";
+        color: $error-color;
+        opacity: 0.75;
+        padding-inline-start: 5px;
+    }
+
+
+}
+
+.root span[data-subtitle="true"] {
+    @include medium-text;
+}
+.root span[data-subtitle="true"] {
+    color: $text-color-light;
+}
+
+.root__forminput input[type="text"],
+.root__forminput input[type="date"],
+.root__forminput textarea {
+    background-color: $grey-light;
+    padding: 0.85rem 0.75rem; border: none; box-shadow: none;
+
+    &:disabled,
+    &:read-only {
+        opacity: 0.9; user-select: none;
+    }
+}
+
+.root__dropdown {
+    flex: 1 1 auto;
+
+    > div:first-of-type {
+        display: flex; align-items: center; justify-content: space-between;
+        background-color: rgba($text-color-light, 0.1); border-radius: $border-radius;
+        inline-size: 87%; min-block-size: 2.625rem;
+
+        > button {
+            min-inline-size: 100%; min-block-size: 3rem;
+            color: $text-color-light;
+
+            > span {
+                color: #757575;
+            }
+        }
+
+    }
+}

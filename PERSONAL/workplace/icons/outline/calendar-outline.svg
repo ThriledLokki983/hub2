@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30,10 L30,12 L30,30 C30,31.104 29.104,32 28,32 L4,32 C2.896,32 2,31.104 2,30 L2,4 L7,4 L7,0 L9,0 L9,4 L23,4 L23,0 L25,0 L25,4 L30,4 L30,10 Z M4,10 L28,10 L28,6 L4,6 L4,10 Z M4,30 L28,30 L28,12 L4,12 L4,30 Z M24,28 L24,26 L26,26 L26,28 L24,28 Z" id="ic_ol_Calendar" fill="#212121"></path>
+    </g>
+</svg>

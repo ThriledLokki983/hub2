@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>login-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7.962,9.2408 L9.374,7.8268 L17.546,15.9988 L9.374,24.1728 L7.962,22.7588 L13.72,16.9988 L-1.77635684e-15,16.9988 L-1.77635684e-15,14.9988 L13.72,14.9988 L7.962,9.2408 Z M30.0006,0 C31.1046,0 32.0006,0.896 32.0006,2 L32.0006,30 C32.0006,31.104 31.1046,32 30.0006,32 L14.0006,32 C12.8966,32 12.0006,31.104 12.0006,30 L12.0006,27 L14.0006,27 L14.0006,30 L30.0006,30 L30.0006,2 L14.0006,2 L14.0006,5 L12.0006,5 L12.0006,2 C12.0006,0.896 12.8966,0 14.0006,0 L30.0006,0 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

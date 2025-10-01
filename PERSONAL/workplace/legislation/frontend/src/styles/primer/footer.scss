@@ -1,0 +1,43 @@
+section[data-full-width="true"] .avg-pwc-wrapper {
+    grid-column: full-width;
+}
+section[data-is-settings-page="true"] .avg-pwc-wrapper {
+    inline-size: 70%; margin-inline: auto;
+}
+
+.avg-pwc-wrapper {
+    margin-top: auto; grid-column: content;
+    position: relative; color: #5D595D;
+    display: flex; flex-direction: column;
+    margin-block-start: auto; inline-size: 98%;
+    margin-inline-start: 1%;
+}
+.avg-pwc-footer:nth-of-type(2) {
+    display: none
+}
+
+.avg-pwc-footer p {
+    @include medium-text;
+}
+.avg-pwc-footer p {
+    color: #5D595D; font-weight: $font-weight-regular;
+    text-wrap: pretty; margin-block-end: 0;
+}
+.gQgVTF a,
+.avg-pwc-footer > div > a {
+    @include link;
+}
+.gQgVTF a,
+.avg-pwc-footer > div > a {
+    margin-block-start: 0.5rem; color: #5D595D;
+    font-weight: $font-weight-regular;
+
+    @include hover {
+        color: $blue-dark !important;
+        background-color: transparent !important;
+        text-decoration: underline;
+    }
+}
+.avg-pwc-footer > .gQgVTF {
+    padding-top: 0 !important;
+}

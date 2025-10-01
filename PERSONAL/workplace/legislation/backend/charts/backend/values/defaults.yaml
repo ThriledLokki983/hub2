@@ -1,0 +1,6 @@
+---
+django:
+  nameOverride: productlegislationnavigator
+  image:
+    path: productlegislationnavigator/backend
+

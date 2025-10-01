@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>confirmed-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="confirmed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M29.7533333,13.432 L31.416,11.764 C31.7893333,13.1133333 32,14.5306667 32,16 C32,24.8373333 24.8373333,32 16,32 C7.164,32 0,24.8373333 0,16 C0,7.164 7.164,0 16,0 C18.9306667,0 21.664,0.805333333 24.024,2.18266667 L22.568,3.64266667 C20.5653333,2.57333333 18.3226667,2 16,2 C8.28133333,2 2,8.28133333 2,16 C2,23.72 8.28133333,30 16,30 C23.72,30 30,23.72 30,16 C30,15.1306667 29.9106667,14.2733333 29.7533333,13.432 Z M11.5994667,13.8890667 L15.5128,17.8024 L28.8168,4.45706667 L30.2328,5.86906667 L15.5141333,20.6317333 L10.1848,15.3037333 L11.5994667,13.8890667 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

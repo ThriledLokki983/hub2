@@ -1,0 +1,95 @@
+@import '../../styles/utils';
+
+.root {
+    container: navigator-landing / size;
+
+    position: relative;
+    display: flex; flex-direction: column;
+
+    > svg[data-empty-icon="true"] {
+        fill: $white;
+    }
+}
+.root[data-show-guide="true"],
+.root[data-show-guide="true"] .root__searchempty {
+    backdrop-filter: var(--bd-filter);
+}
+.root[data-show-guide="true"] .root__searchempty {
+    inset: 0;
+    backdrop-filter: contrast(0.65);
+    color: rgba(117, 117, 117, 0.1);
+}
+
+.root svg {
+    inline-size: 100%; block-size: 100%;
+}
+
+.root .root__searchempty {
+    inline-size: 100%;
+    position: absolute; inset: 30% auto auto;
+    display: flex; place-content: center; place-items: center;
+    color: rgba(117, 117, 117, 0.1);
+
+}
+.root .root__searchempty > svg {
+    inline-size: 50%; block-size: 30%;
+
+    @container navigator-landing (block-size <= 720px) {
+        inline-size: 35%; block-size: 30%;
+    }
+}
+.root__searchemptytext {
+    @include h5; @include line-clamp(1);
+    color: $text-color-light;
+    text-align: center;
+    opacity: 0.75;
+
+    @include bp-min($medium) {
+        font-size: 20px;
+        transform: translateY(-100px);
+    }
+
+    @container navigator-landing (block-size <= 720px) {
+        transform: translateY(0);
+    }
+}
+.root mark {
+    text-align: center;
+}
+
+/**
+* Job Roles
+*/
+.root__jobrole {
+    position: relative;
+    @include large-text;
+    font-weight: $font-weight-medium;
+    color: $blue-medium;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        width: calc(100% - 10px);
+        border-bottom: 2px solid $blue-medium;
+    }
+
+    @include bp-min($medium) {
+        font-size: inherit;
+    }
+}
+
+/**
+* Filtered total
+*/
+.root__total {
+    position: absolute; bottom: 4px;
+    @include medium-text;
+    font-weight: $font-weight-regular;
+    padding: 4px 16px; border-radius: 100px;
+    display: inline-flex; align-items: center;
+    max-block-size: 20px; margin-inline-start: 2px;
+    color: $white;
+    background-color: $blue-medium;
+}

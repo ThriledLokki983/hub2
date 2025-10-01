@@ -1,0 +1,609 @@
+@import '../../styles/utils';
+
+.root {
+    --alt-clr: rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+article[data-accordion="true"][data-empty-content="true"] {
+    margin-block-end: 1.75rem;
+}
+
+aside[data-first-tab="false"] {
+    display: none;
+}
+.root__modalbutton {
+    z-index: 5;
+    position: sticky; top: 0;
+    background-color: $white;
+    padding-block: 0;
+    display: flex; justify-content: flex-end;
+}
+.root__modalbutton > button {
+    min-inline-size: 2rem;
+    display: flex; place-content: center; place-items: center;
+    position: absolute; top: 0; left: -1rem;
+    background-color: transparent !important;
+
+    svg {
+        transition: all 0.25s ease-in;
+    }
+
+    @include hover {
+        svg {
+            fill: $black;
+        }
+    }
+}
+
+p[data-details] {
+    margin-block: 0.75rem 1rem
+}
+
+/**
+* header
+*/
+.root__header > h4.root__header__title {
+    @include medium-text;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @include bp-min($tiny) {
+        font-size: 16px;
+    }
+}
+
+/**
+* LegislationDetails Intro
+*/
+.root__intro {
+    padding-block: 0; padding: 1rem 0; margin-block-end: 0.5rem;
+}
+.root__intro > h5 {
+    @include h6;
+}
+.root__intro > h5 {
+    color: $grey-darker;
+    font-weight: $font-weight-medium;
+
+    @include bp-min($tiny) {
+        font-size: 18px;
+    }
+}
+.root__intro p {
+    @include medium-text;
+}
+.root__intro p {
+    color: $text-color-light;
+    margin-block: 0;
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+
+/**
+* LegislationDetails TopContent
+*/
+.root__topcontent {
+    display: flex; justify-content: space-between; align-items: center;
+}
+.root__topcontent > h3 {
+    @include h6;
+}
+.root__topcontent > h3 {
+    font-size: 32px; text-wrap: pretty; color: $grey-darker;
+    font-weight: $font-weight-medium;
+    margin-block: 1.25rem 0; max-inline-size: 80%;
+
+}
+.root__topcontent > span {
+    @include medium-text;
+}
+.root__topcontent > span {
+    margin-block: 0;
+    display: flex; align-items: center;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+
+    &::before {
+        --size: 13px;
+        content: '';
+        display: inline-block; margin-inline-end: 10px;
+
+        inline-size: var(--size); block-size: var(--size);
+        border-radius: 100px;
+        background-color: #8C8C8C;
+        box-shadow:
+            inset 0 0 0 .0625rem #C5C5C5,
+            0 0 0 .2rem #C5C5C5;
+    }
+
+    &[data-in-effect="true"] {
+        color: lighten($success-color, 10%);
+
+        &::before {
+            background-color: lighten($success-color, 8%);
+            box-shadow:
+                inset 0 0 0 .0625rem lighten($success-color, 20%),
+                0 0 0 .2rem lighten($success-color, 25%);
+        }
+    }
+
+    &[data-in-effect="false"] {
+        color: #8C8C8C;
+
+
+        &::before {
+            background-color: #8C8C8C;
+            box-shadow:
+                inset 0 0 0 .0625rem #C5C5C5,
+                0 0 0 .2rem #C5C5C5;
+        }
+    }
+}
+
+/**
+* LegislationDetails Tablist
+*/
+.root__tablist {
+    @include bare-list;
+}
+.root__tablist {
+    gap: 1.25rem;
+    overflow-x: auto;
+    display: flex; inline-size: 100%; max-inline-size: 100%;
+    margin-block-end: 0rem;
+    @include bp-min($small) {
+        overflow-x: hidden;
+    }
+}
+.root__tablist > li:last-of-type {
+    margin-inline-start: auto;
+
+    > button {
+        padding-inline: 5rem;
+    }
+}
+.root__tablist > li {
+    border-bottom: 2px solid transparent;
+}
+.root__tablist > li:has(a[aria-selected="true"]) {
+    border-color: $primary-color;
+    color: $primary-color;
+}
+.root__tablist > li > a {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    height: 100%;
+    text-align: center; text-decoration: none; user-select: none;
+    font-size: 16px; line-height: 1.15;
+    color: $text-color-light; font-weight: $font-weight-medium;
+    transition: color 0.15s ease;
+
+    padding: 0.6rem;
+
+    @include bp-min($tiny) {
+        padding: 1rem 0.75rem;
+    }
+
+    @include hover {
+        color: $blue;
+    }
+}
+.root__tablistlink[aria-selected="true"] {
+    color: $blue;
+}
+
+/**
+* LegislationDetails Tab panel Navigation
+*/
+.root__tabpanelnav {
+    position: relative;
+}
+.root__tabpanelnav ul {
+    @include bare-list;
+}
+.root__tabpanelnav ul {
+    display: flex; flex-direction: column;
+    margin-block: 0;
+}
+.root__tabpanelnav ul > li {
+    width: 100%;
+}
+.root__tabpanelnav > ul > li.root__roleitem > button {
+    @include bare-button;
+}
+.root__tabpanelnav > ul > li.root__roleitem > button {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    text-align: left;
+    padding: 1.1rem 0.75rem;
+    inline-size: 100%;
+    font-size: 16px; font-weight: $font-weight-medium;
+    border-radius: $border-radius;
+    color: inherit; line-height: 0;
+    transform: translateX(0);
+
+    transition: color 0.35s ease, transform 0.35s ease;
+
+    @include hover {
+        color: $blue;
+
+        &:not([data-active="true"]) > span {
+            transform: translateX(5px);
+        }
+    }
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+.root__tabpanelnav > ul > li.root__roleitem > button > span {
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+}
+.root__tabpanelnav > ul > li[data-active="true"] > button,
+.root__tabpanelnav > ul > li:has([aria-selected="true"]) > button {
+    color: $blue;
+    background-color: $white;
+}
+.root__tabpanelnav ul > li > button > svg {
+    transform: rotate(-90deg);
+}
+
+
+/**
+* Detail Rows
+*/
+.root__detailrow,
+.root__detailheader {
+    position: relative;
+    display: flex; flex-direction: column; inline-size: 100%;
+    margin-block-end: 2rem;
+
+    > span[data-title="true"] {
+        @include medium-text;
+    }
+    > span[data-title="true"] {
+        font-weight: $font-weight-medium;
+        text-transform: uppercase;
+        color: $blue-medium;
+        padding-block-end: 5px;
+
+        @include bp-min($medium) {
+            font-size: 16px;
+        }
+    }
+
+    > span[data-subtitle="true"]:not([data-is-empty="true"]) {
+        max-inline-size: 97%; text-wrap: wrap;
+
+        &[data-alternate] {
+            max-inline-size: 99%;
+        }
+    }
+}
+article[data-accordion="true"] div.root__detailrow {
+    margin-block-end: 0.5rem;
+
+    &:first-of-type {
+        margin-block-start: 1.5rem;
+    }
+}
+article[data-accordion="true"] > span[data-intro="true"] {
+    @include medium-text;
+}
+article[data-accordion="true"] > span[data-intro="true"] {
+    color: rgba($text-color-light, 0.95);
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+}
+.root__detailheader {
+    position: relative; inline-size: 100%;
+    display: grid; grid-template-columns: 1fr minmax(12.5rem, 18.75rem) 1fr;
+    margin-block-end: 0; align-items: baseline;
+}
+.root__detailheader > span[data-subtitle="true"] {
+    @include medium-text; @include line-clamp(3);
+}
+.root__detailheader > span[data-subtitle="true"] {
+    inline-size: fit-content; text-wrap: wrap;
+    font-weight: $font-weight-regular;
+
+    &[data-alternate] {
+        // make it clear for focus on what is important info to consume
+        background-color: var(--alt-clr); padding: 1rem; border-radius: $border-radius;
+        min-inline-size: 70%; max-inline-size: 95%;
+        // color: $text-color-light;
+    }
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+.root__detailheader > span[data-subtitle="true"][data-type="true"] {
+    color: hsla(43, 100%, 50%, 1); border-radius: $border-radius-x-large;
+    font-weight: $font-weight-medium; padding: 4px 16px;
+    background-color: hsla(43, 100%, 87%, 1); inline-size: fit-content;
+    display: inline-flex; align-items: center; justify-content: center;
+    align-self: baseline;
+}
+.root__detailrow ul {
+    @include bare-list;
+}
+.root__detailrow > ul[data-alternate="true"] {
+    background-color: var(--alt-clr); padding: 0.75rem 1rem;
+    max-inline-size: 70%; min-inline-size: 50%; border-radius: $border-radius;
+    // color: $text-color-light;
+}
+.root__detailrow ul > li {
+    padding-block: 0.25rem; font-weight: $font-weight-regular;
+
+    &[data-description-list-item] {
+        display: flex; align-items: flex-start; justify-content: flex-start; gap: 0.5rem;
+        padding-inline: 0; padding-block: 0 0.25rem;
+
+        &:last-of-type {
+            padding-block-end: 1rem;
+        }
+    }
+}
+.root__detailrow ul:has(li[data-list="true"]) {
+    list-style-type: decimal; padding-inline-start: 1rem;
+    margin-block-end: 1rem;
+}
+.root__detailrow ul > li[data-link="true"] > a {
+    color: $blue-medium; text-decoration: underline;
+    transition: color 0.15s ease; padding: 0;
+    font-weight: $font-weight-regular;
+
+    @include hover {
+        color: $blue; background-color: transparent;
+    }
+}
+
+// paragraph
+.root__detailrow p {
+    @include large-text;
+}
+.root__detailrow span,
+.root__detailrow p {
+    max-inline-size: 85%;
+
+    &[data-alternate] {
+        max-inline-size: 99%;
+        background-color: var(--alt-clr); padding: 1rem; border-radius: $border-radius;
+        // color: $text-color-light;
+    }
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+
+/**
+* Team Members
+*/
+.root__teammembers {
+    --image-size: 40px;
+
+    @include bare-list;
+    display: flex; align-items: center; justify-content: flex-start; flex-wrap: wrap;
+    column-gap: 1rem;
+    margin-block-end: 2rem;
+}
+.root__teammembers > li {
+    display: flex; align-items: center; justify-content: flex-start;
+    border: 1px solid $grey-light; min-inline-size: 250px;
+    margin-block-end: 1.5rem; padding: 0.5rem;
+    border-radius: $border-radius-large;
+    transition: background-color 0.15s ease;
+
+    @include hover {
+        cursor: pointer; user-select: none;
+        background-color: lighten($grey-lightest, 37%);
+    }
+
+    @include bp-min($medium) {
+        min-inline-size: 320px;
+    }
+}
+.root__teammembers > li > div {
+    line-height: normal
+}
+.root__teammembers > li > div > h6 {
+    @include h6;
+}
+.root__teammembers > li > div > h6 {
+    color: $grey-darker; line-height: normal; margin: 0;
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+.root__teammembers > li > div > span {
+    @include medium-text;
+}
+.root__teammembers > li > div > span {
+    color: $text-color-light; margin-block: 0;
+
+    @include bp-min($medium) {
+        font-size: 14px;
+    }
+}
+.root__teammembers > li > img {
+    display: inline-block;
+    block-size: var(--image-size); inline-size: var(--image-size);
+    aspect-ratio: 1/1; object-fit: cover; border-radius: $border-radius-x-large;
+    border-inline-end: 1px solid $grey-light; margin-inline-end: 8px;
+}
+
+// Add a little space to the bottom of the article
+/* No idea why I am using a data attribute here - just bcos :-) */
+.root__article[data-content="true"] {
+    padding-block-end: 2.5rem; block-size: max-content;
+}
+
+
+/**
+* details
+*/
+.root__details {
+    display: flex; align-items: flex-start; flex-direction: column;
+    transition: flex 0.35s ease; block-size: 100%;
+
+    > div:first-of-type {
+        padding: 0;
+
+        > div:first-of-type {
+            margin: 0;
+        }
+    }
+}
+.root__details > .root__roles {
+    display: flex; gap: 4rem; inline-size: 100%;
+    block-size: inherit;
+
+    > aside {
+        inline-size: 23rem;
+    }
+
+    > ul {
+        flex: 1;
+    }
+}
+.root__details > .root__roles[data-is-editing="true"] {
+    position: sticky; top: 0;
+    gap: 2rem; flex-direction: column;
+}
+.root__details > .root__roles[data-is-editing="true"] > aside ul[data-nav="true"] {
+    flex-direction: row;
+
+    li > button {
+        padding-inline: 2.5rem;
+    }
+
+    li > button > svg {
+        transform: rotate(0);
+    }
+}
+.root__details > .root__roles[data-is-editing="true"] > ul[data-role-view="true"] li {
+    > div:first-of-type > div > h5 {
+        inline-size: max-content;
+    }
+}
+.root__details > div:first-of-type > aside {
+    flex: 1 1 25%;
+    min-inline-size: 400px;
+}
+.root__details > div:first-of-type > ul {
+    flex: 1 1 75%;
+}
+
+.root__details[data-is-editing="true"] {
+    gap: 2rem;
+}
+
+.root__details > .root__edit {
+    flex: 1 1 50%; background-color: $white;
+    border-radius: $border-radius; box-shadow: $box-shadow-ultra;
+    padding: var(--content-padding-all, var(--sp-c));
+}
+
+.root__edit[data-is-editing="false"] {
+    flex: 0 0 0; inline-size: 0; opacity: 0; visibility: hidden;
+
+    transition:
+        flex 0.5s ease,
+        inline-size 0.5s ease,
+        opacity 0.5s ease;
+}
+.root__edit[data-is-editing="true"] {
+    flex: 1 1 50%; inline-size: 100%; opacity: 1; visibility: visible;
+
+    transition:
+        flex 0.5s ease,
+        inline-size 0.5s ease,
+        opacity 0.5s ease 0.3s;
+}
+
+
+.root__roles > article[data-empty-roles="true"],
+article[data-empty-roles="true"] {
+    display: flex; place-content: center; place-items: center; flex-direction: column;
+    inline-size: 100%; background-color: $white;
+    padding: var(--content-padding-all, var(--sp-c));
+    border-radius: $border-radius; box-shadow: $box-shadow-ultra;
+
+    > h3 {
+        opacity: 0.5;
+    }
+}
+.root__roles > article[data-empty-roles="true"] > div[data-icon-block="true"],
+article[data-empty-roles="true"] > div[data-icon-block="true"] {
+    display: grid; place-content: center; place-items: center;
+    block-size: auto; inline-size: 80%;
+    margin-block-end: 2rem;
+
+    svg {
+        inline-size: 100%; block-size: 100%;
+    }
+}
+
+
+.root__notes {
+    @include bare-list;
+
+    &:first-of-type > li {
+        display: flex; flex-direction: column;
+
+        > div:first-of-type {
+            display: flex; align-items: flex-start; justify-content: flex-start; gap: 0.5rem;
+
+            > span:first-of-type {
+                @include medium-text;
+            }
+            > span:first-of-type {
+                color: $blue-medium;
+            }
+
+            > span:last-of-type {
+                max-inline-size: 95%; text-wrap: pretty;
+            }
+        }
+
+        > span:first-of-type {
+            padding-inline-start: 0.5rem;
+        }
+
+        > ul {
+            list-style-type: none; margin-block: 0.5rem; padding-inline-start: 1rem;
+            display: flex; align-items: center; justify-content: flex-start; flex-direction: row;
+
+            > span:first-of-type {
+                @include medium-text;
+            }
+            > span:first-of-type {
+                margin-inline: 0.25rem 0.75rem;
+                color: rgba($text-color-light, 0.75);
+            }
+
+            > li {
+                @include small-text;
+            }
+            > li {
+                padding: 0.25rem 0.75rem; margin-inline-end: 0.75rem;
+                background-color: $blue-light; border-radius: $border-radius;
+                color: $blue-medium;
+            }
+        }
+    }
+}
+
+.root__role_content {
+    margin-block-start: 1.25rem;
+}

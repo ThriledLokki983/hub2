@@ -1,0 +1,31 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+.root > label {
+    padding-block: 0.5rem;
+    display: flex; align-items: center; color: inherit;
+}
+.root[data-is-disabled="true"] > label,
+.root[data-is-disabled="true"] > label > input {
+    cursor: not-allowed;
+}
+.root label > input {
+    flex: 0 0 auto;
+}
+.root label > input:not(:checked):disabled {
+    opacity: 0.65;
+}
+.root label > span {
+    @include medium-text;
+}
+.root label > span {
+    @include font-smoothing(); @include line-clamp(1);
+    height: 1.2rem; max-inline-size: 12.5rem;
+    margin: 0; transform: translateY(-0.5px);
+    display: block; padding-inline-start: 0.75rem;
+    line-height: normal; cursor: pointer;
+    text-align: left; user-select: none;
+}

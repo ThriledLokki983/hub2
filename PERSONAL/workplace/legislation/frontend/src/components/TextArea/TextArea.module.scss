@@ -1,0 +1,24 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+/**
+ * Number of Characters left
+ */
+.root__charactersleft {
+    position: absolute; right: 10px; bottom: 10px;
+    display: block; color: #757575; font-size: 0.75rem;
+    line-height: normal;
+    user-select: none; overflow: hidden;
+    white-space: nowrap; text-overflow: ellipsis;
+    visibility: visible; opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.root[data-rsvp="true"] ~ span {
+    bottom: 25px;
+}
+.root__charactersleft[data-hidden="true"] {
+    opacity: 0; visibility: hidden;
+}

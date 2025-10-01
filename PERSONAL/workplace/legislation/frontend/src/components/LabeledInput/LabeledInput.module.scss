@@ -1,0 +1,60 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+/**
+ * Inputs
+ */
+.root > input,
+.root > textarea,
+.root > select,
+.root > [styled-select] > select {
+    // padding: 1.7rem 1.1rem 0.6rem !important;
+    color: $text-color-light;
+}
+.root > [styled-select] > select {
+    padding-right: 3.5rem !important;
+}
+
+/**
+ * Labels
+ */
+.root > label {
+    position: absolute; top: 0.7rem; left: 1.1rem; right: 1.1rem; margin: 0;
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    transition: all 0.3s; pointer-events: none; user-select: none;
+    color: $text-color-light;
+}
+.root > input:not(:placeholder-shown) ~ label,
+.root > textarea:not(:placeholder-shown) ~ label,
+.root > input:focus-visible ~ label,
+.root > textarea:focus-visible ~ label,
+.root > select ~ label,
+.root > [styled-select] ~ label {
+    transform: translateY(-0.5rem);
+    font-size: 0.75rem;
+}
+.root > [styled-select] ~ label {
+    padding-right: 3rem - 1.1rem;
+}
+
+/**
+ * Icons
+ */
+.root[data-has-icon="true"] > input,
+.root[data-has-icon="true"] > textarea,
+.root[data-has-icon="true"] > select,
+.root[data-has-icon="true"] > [styled-select] > select {
+    // padding-left: 3rem;
+    padding-left: 1rem;
+    padding-right: 3rem;
+}
+.root[data-has-icon="true"] > label {
+    right: 3rem;
+}
+.root[data-has-icon="true"] > svg {
+    position: absolute; top: 0.85rem; right: 0.85rem;
+    min-inline-size: 25px; pointer-events: none;
+}

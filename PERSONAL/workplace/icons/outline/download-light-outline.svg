@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>upload-light-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="upload-light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15.980035,22.5926234 L8.29241529,14.9050037 C7.9021064,14.5146949 7.9021064,13.8819416 8.29241529,13.4916327 C8.68139206,13.1013238 9.31414537,13.1013238 9.70445425,13.4916327 L14.9809508,18.7681292 L14.9809508,0 L16.9791191,0 L16.9791191,18.7681292 L22.2556157,13.4916327 C22.6459246,13.1013238 23.2786779,13.1013238 23.6676546,13.4916327 C24.0579635,13.8819416 24.0579635,14.5146949 23.6676546,14.9050037 L15.980035,22.5926234 Z M7,32 L7,30 L25,30 L25,32 L7,32 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

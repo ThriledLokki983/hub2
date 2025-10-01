@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>archive-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="archive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,24.558143 L4.8,32 C4.241656,31.9998512 4.000136,31.8138792 4,31.2558143 L4,2.2325571 C4,1.01488325 5.183868,0 6.8,0 L25.2,0 C26.816136,0 28,1.01488325 28,2.2325571 L28,31.2558143 C27.999864,31.8138792 27.758344,31.9998512 27.2,32 L16,24.558143 Z M16,22.1568968 L26,28.801412 L26,2.2325571 C26,2.194987 25.7607957,2 25.2,2 L6.8,2 C6.23920659,2 6,2.19498868 6,2.2325571 L5.99999995,28.801412 L16,22.1568968 Z" id="Shape" fill="#212121" fill-rule="nonzero"></path>
+    </g>
+</svg>

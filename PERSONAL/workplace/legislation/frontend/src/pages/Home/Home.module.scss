@@ -1,0 +1,8 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+
+    min-block-size: calc(100dvh - calc(var(--header-block-size) * 2));
+    margin-block: 2rem;
+}

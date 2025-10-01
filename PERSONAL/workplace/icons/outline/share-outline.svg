@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>share-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M2.66666667,0 L32,0 L32,29.3333333 C32,30.8066667 30.8066667,32 29.3333333,32 L2.66666667,32 C1.19466667,32 0,30.8066667 0,29.3333333 L0,2.66666667 C0,1.19333333 1.19466667,0 2.66666667,0 Z M30,30 L30,2 L2,2 L2,30 L30,30 Z M13.1761333,20.2381333 L11.7614667,18.8234667 L23.5868,6.99946667 L16,6.99946667 C15.448,6.99946667 15,6.5528 15,5.99946667 C15,5.44746667 15.448,4.99946667 16,4.99946667 L27.0001333,4.99946667 L27.0001333,16 C27.0001333,16.5533333 26.5534667,17 26.0001333,17 C25.4481333,17 25.0001333,16.5533333 25.0001333,16 L25.0001333,8.41413333 L13.1761333,20.2381333 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

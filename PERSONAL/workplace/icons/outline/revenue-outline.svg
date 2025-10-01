@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>revenue-outline-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="revenue-outline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M20,7.10542736e-15 L20,10 L10,10 L10,18 L3.90798505e-14,18 L3.90798505e-14,32 L32,32 L32,7.10542736e-15 L20,7.10542736e-15 Z M2,20 L10,20 L10,30 L2,30 L2,20 Z M12,30 L12,12 L20,12 L20,30 L12,30 Z M30,30 L22,30 L22,2 L30,2 L30,30 Z" id="Shape" fill="#2D2D2D" fill-rule="nonzero"></path>
+    </g>
+</svg>

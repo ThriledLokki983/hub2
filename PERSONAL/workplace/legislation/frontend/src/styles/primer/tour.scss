@@ -1,0 +1,150 @@
+[data-tour-guide] {
+    z-index: 9999;
+    position: absolute; inset: 0.75rem -22.25rem auto auto;
+    max-inline-size: 350px;
+    border-radius: $border-radius; padding: 0.75rem 1.2rem;
+    background-color: $blue; color: $white;
+    pointer-events: auto; /* Ensures it can receive pointer events */
+
+    &[data-first-tour="true"] {
+        inset: -20% 0 auto 2rem;
+
+        &::before {
+            inset: auto 1rem -0.9rem auto;
+            transform: rotate(150deg);
+            border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+        }
+
+        @include bp-min($medium) {
+            position: absolute; inset: 0.75rem -22.25rem auto auto;
+
+            &::before {
+                inset: 1rem auto auto -0.6rem;
+                transform: translateX(-50%);
+                border-style: solid; border-width: 1rem 1.25rem 0.75rem 0;
+            }
+
+        }
+    }
+
+    &[data-list-content="true"] {
+        // &::before {
+        //     inset: 0.75rem -22.25rem auto auto;
+        //     transform: rotate(150deg);
+        //     border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+        // }
+
+        @include bp-min($medium) {
+            &::before {
+                inset: auto 1rem -0.95rem auto;
+                transform: rotate(150deg);
+                border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+            }
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: ''; display: block;
+        inset: 1rem auto auto -0.6rem;
+        transform: translateX(-50%);
+        inline-size: 0; block-size: 0;
+        border-style: solid; border-width: 1rem 1.25rem 0.75rem 0;
+        border-color: transparent $blue transparent transparent;
+    }
+
+    &[data-top-position="true"] {
+        inset: -10.85rem 10rem auto auto;
+
+        &[data-list-content="true"] {
+            inset: -12rem 16.5rem auto auto; inline-size: 20rem;
+
+            &::before {
+                inset: auto 1rem -0.9rem auto;
+                transform: rotate(150deg);
+                border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+            }
+
+            @include bp-min($medium) {
+                inset: -11rem 16.5rem auto auto; inline-size: auto;
+
+                &::before {
+                    inset: auto 1rem -0.9rem auto;
+                    transform: rotate(150deg);
+                    border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+                }
+            }
+        }
+
+        &[data-filters="true"]  {
+            inset: -9.85rem 17rem auto auto; inline-size: 20rem;
+
+            &::before {
+                inset: auto 1rem -0.9rem auto;
+                transform: rotate(150deg);
+                border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+            }
+
+            @include bp-min($medium) {
+                inset: -9.5rem 10rem auto auto; inline-size: auto;
+
+                &::before {
+                    inset: auto auto -0.9rem 1rem;
+                    transform: rotate(150deg);
+                    border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+                }
+            }
+        }
+    }
+
+    &[data-bottom-position="true"] {
+        inset: auto 15.5rem -10.85rem auto;
+
+        &::before {
+            inset: -0.9rem 1rem 1rem auto;
+            transform: rotate(-30deg);
+            border-style: solid; border-width: 0.65rem 1.3rem 0.75rem 0;
+        }
+
+        @include bp-min($medium) {
+            inset: auto 10rem -10.85rem auto;
+        }
+    }
+
+    > p {
+        @include large-text;
+        line-height: 22px;
+        text-align: left;
+        text-wrap: balance;
+
+        @include bp-min($medium) {
+            font-size: 0.95rem;
+            text-wrap: pretty;
+        }
+    }
+
+    &[data-first-tour="true"] > div[data-button-set="true"] {
+        > button:first-of-type {
+            pointer-events: none;
+        }
+    }
+
+    > div[data-button-set="true"] {
+        display: flex; justify-content: space-between;
+        margin-block-start: 0;
+
+        button {
+            padding: 0.5rem 0; text-decoration: underline;
+            color: $white; text-align: right;
+
+            &:first-of-type {
+                text-align: left; text-decoration: none;
+                font-weight: $font-weight-regular;
+            }
+
+            @include hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

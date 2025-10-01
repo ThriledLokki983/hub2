@@ -1,0 +1,672 @@
+@use 'sass:math';
+
+// ALl animations
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.4;
+    }
+}
+
+@keyframes detect-scroll{
+    from,
+    to {
+        // stylelint-disable-next-line
+        --can-scroll: ;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes resize-width {
+    from {
+        width: 100%;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        width: 0;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vanish {
+    from {
+        display: inline-block;
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes slide-from-right {
+    from {
+        opacity: 0;
+        transform: translateX(75px);
+    }
+}
+
+@keyframes slide-to-left {
+    to {
+        opacity: 0;
+        transform: translateX(-75px);
+    }
+}
+
+::view-transition-old {
+    animation: 350ms both slide-to-left ease;
+}
+
+::view-transition-new {
+    animation: 350ms both slide-from-right ease;
+}
+
+
+/**
+ * Avatar
+ */
+@mixin avatar($size: 32px) {
+    @include ui-font;
+    flex: 0 0 auto; display: inline-block;
+    width: $size; height: $size; line-height: $size; padding: 0;
+    background: $primary-color; color: $white;
+    border-radius: 50%; text-align: center; text-transform: uppercase;
+    user-select: none;
+    & > img {
+        width: 100%; height: 100%;
+        vertical-align: baseline; border-radius: 50%;
+    }
+}
+
+/**
+ * Default contained padding.
+ */
+@mixin container-padding {
+    padding: $gutter;
+    @include bp-min($small) {
+        padding: ($gutter * 2.5) ($gutter * 2) ($gutter * 2);
+    }
+}
+
+/**
+ * Default contained container.
+ */
+@mixin container($size: $content-max-width, $padding: true, $full-height: false) {
+    margin: 0 auto;
+    max-width: calc(#{$size} + #{($gutter * 2)});
+    @include bp-min($small) {
+        max-width: calc(#{$size} + #{($gutter * 4)});
+    }
+    @if ($padding) {
+        @include container-padding;
+    }
+    @if ($full-height) {
+        margin-top: -($gutter);
+        display: flex; flex-direction: column;
+        justify-content: center; align-items: flex-start;
+        min-height: calc(100vh - ($gutter-site * 2));
+    }
+}
+
+/**
+* Grid Container
+*/
+@mixin grid-container() {
+    --transition-delay: 300ms;
+    --transition-duration: 250ms;
+    --block-sz-val: 1.15;
+
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--content-padding) * 0.25) calc(var(--content-padding) * 0.25);
+    align-items: flex-start;
+
+    @include bp-min($medium) {
+        grid-template-columns:
+            [aside-start]
+            minmax($min-sbar-width, $max-sbar-width)
+            [aside-end]
+            1fr;
+    }
+
+
+
+    > aside,
+    > section[data-main-content="true"] {
+        @include styled-scrollbar($primary-color-light);
+
+        position: relative;
+        grid-column: 1 / -1;
+        background-color: $white;
+        padding-block: 0 var(--content-padding-all, var(--sp-c));
+        padding-inline: var(--content-padding-all, var(--sp-c));
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-ultra;
+
+        transition: all var(--transition-duration) ease-in;
+
+        @include bp-min($medium) {
+            max-block-size: calc(100dvh - calc(var(--header-block-size) * 2.5) -
+            var(--main-content-header-height));
+            block-size: calc(100dvh - calc(var(--header-block-size) * 2.5) -
+            var(--main-content-header-height));
+            overflow: auto;
+
+            transition: all var(--transition-duration) ease-in-out;
+        }
+    }
+
+    > aside {
+        @include bp-min($medium) {
+            grid-column: aside;
+        }
+    }
+
+    > section {
+        @include bp-min($medium) {
+            &:first-of-type {
+                grid-column: span 2;
+            }
+
+            &:last-of-type {
+                grid-column: auto;
+            }
+        }
+    }
+
+    @keyframes hide-aside {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(-100%);
+            // display: none;
+        }
+    }
+
+    @keyframes show-new-div {
+        0% {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+/**
+ * Pointer device + SPA-safe hover.
+ */
+@mixin hover {
+    &:hover {
+        @media (hover: hover) {
+            @content;
+        }
+    }
+}
+
+/**
+ * Full height + iOS Safari touch callout 'bugfix'.
+ */
+@mixin full-height($offset: false, $fill-available: false) {
+    min-height: 100vh;
+    @if ($fill-available) {
+        @supports (-webkit-touch-callout: none) {
+            min-height: -webkit-fill-available;
+        }
+    }
+    @else if ($offset ) {
+        min-height: calc(100vh + #{$offset});
+        @supports (-webkit-touch-callout: none) {
+            min-height: -webkit-fill-available;
+        }
+    }
+}
+
+/**
+ * Horizontal rule
+ */
+@mixin hr {
+    margin: 1.5em 0;
+    border: 0; border-top: 1px solid $line-color;
+}
+
+/**
+ * Get rid of default button styling.
+ */
+@mixin bare-button {
+    appearance: none;
+    background: transparent; border: 0;
+    font-family: inherit; line-height: 1.1;
+    text-decoration: none; text-align: center;
+    cursor: pointer; color: $text-color;
+}
+
+/*
+ * Get rid of list-style and padding.
+ */
+@mixin bare-list {
+    margin: 0; padding: 0; list-style-type: none;
+
+    > li {
+        margin: 0;
+    }
+}
+
+/**
+ * Container query breakpoints mixins.
+ * @TODO: make this work, since it's not working yet with Sass...
+ */
+@mixin cq-min($name, $point: 0) {
+    @container #{$name} (min-width: px-to-em($point)) {
+        @content;
+    }
+}
+
+@mixin cq-max($name, $point: 0) {
+    @container #{$name} (max-width: px-to-em(($point) - 0.0625em)) {
+        @content;
+    }
+}
+
+/**
+ * Media query breakpoints mixins.
+ */
+@mixin bp-min($point: 0) {
+    @media (min-width: px-to-em($point)) {
+        @content;
+    }
+}
+
+@mixin bp-max($point: 0) {
+    @media (max-width: (px-to-em($point) - 0.0625em)) {
+        @content;
+    }
+}
+
+@mixin bp-min-max($min-point: 0, $max-point: 0) {
+    @media (min-width: px-to-em($min-point)) and (max-width: (px-to-em($max-point) - 0.0625em)) {
+        @content;
+    }
+}
+
+/**
+ * Target high dpi screens.
+ */
+/* stylelint-disable indentation, scss/operator-no-unspaced */
+@mixin high-dpi {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+           only screen and (-o-min-device-pixel-ratio: 13/10),
+           only screen and (min-resolution: 120dpi),
+           only screen and (min-resolution: 1.3dppx) {
+        @content;
+    }
+}
+/* stylelint-enable indentation, scss/operator-no-unspaced */
+
+/**
+ * Styled scrollbar
+ */
+@mixin styled-scrollbar($color: $grey-dark) {
+    // Standardized (currently only Firefox, plus on macOS only when system
+    // preferences are set to always show scrollbar).
+    scrollbar-color: $color transparent;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    // WebKit only (Chrome, Safari, Edge).
+    &::-webkit-scrollbar-track {
+        margin: 3px 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color;
+        border-right: 5px solid transparent;
+        border-top: 0; border-bottom: 0; border-left: 0;
+        background-clip: padding-box;
+    }
+}
+
+/**
+ * Easier way to provide object-fit polyfill hook
+ */
+@mixin object-fit($fit: cover, $position: center) {
+    object-fit: $fit; object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    @if $fit == cover {
+        max-width: none;
+    }
+}
+
+/**
+ * Smooth scrolling
+ */
+@mixin smooth-scrolling {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/**
+ * Placeholder styling
+ */
+@mixin placeholder {
+    &::placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+/**
+ * Font smoothing
+ */
+@mixin font-smoothing($enabled: true) {
+    @if $enabled {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: initial;
+        -moz-osx-font-smoothing: initial;
+    }
+}
+
+/**
+ * Media query dark mode
+ *
+ * Usage:
+ * body {
+ *    @include dark-mode { background: $blackish; }
+ * }
+ */
+@mixin dark-mode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+/**
+ * Clearfix
+ * Actually an @extend, but we don't want to depend on inclusion order
+ *
+ * Usage:
+ * section { @include clearfix(); }
+ */
+@mixin clearfix {
+    &::after {
+        display: table; clear: both; content: '';
+    }
+}
+
+/**
+ * Hide element visually.
+ */
+@mixin visually-hidden {
+    position: absolute !important; overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px; height: 1px; word-wrap: normal;
+    user-select: none;
+}
+
+/**
+* Style for links
+*/
+@mixin link {
+    text-decoration: underline;
+    padding: 0 !important;
+    min-inline-size: fit-content !important; min-block-size: 0 !important;
+    cursor: pointer;
+}
+
+/**
+* Stye for single toggle
+*/
+@mixin single-toggle {
+
+    @include body-font;
+    display: flex; align-items: center;
+    color: inherit; line-height: 1.2;
+    cursor: pointer; user-select: none;
+
+    &[data-is-disabled="true"] {
+        cursor: not-allowed;
+    }
+
+    &:hover,
+    &:focus-within {
+        color: $black;
+    }
+
+    & > input {
+        position: absolute; width: 0; height: 0; opacity: 0;
+    }
+
+    & > div {
+        margin-left: 10px; flex: 0 0 auto; position: relative;
+        width: 36px; height: 20px;
+        background: $grey-dark; border-radius: 15px;
+        transition: all 0.15s ease;
+    }
+
+    &:hover > div,
+    &:focus-within > div {
+        background: darken($grey-darker, 10);
+    }
+
+    & > div::before {
+        content: "";
+        position: absolute; top: 2px; left: 2px;
+        height: 16px; width: 16px;
+        background: white; border-radius: 10px;
+        transition: all 0.15s ease;
+    }
+
+    & > input:checked + div {
+        background: $primary-color;
+    }
+    & > input:checked + div::before {
+        transform: translateX(36px - 4px - 16px)
+    }
+
+}
+
+/**
+ * Avatar
+ */
+@mixin avatar($size: 32px) {
+    @include ui-font;
+    flex: 0 0 auto; display: inline-block;
+    width: $size; height: $size; line-height: $size; padding: 0;
+    background: $primary-color; color: $white; border-radius: 50%;
+    font-size: math.div($size, 2.5); text-align: center; text-transform: uppercase;
+    user-select: none;
+    &[data-is-external="true"] {
+        display: flex; place-content: center; place-items: center;
+        background: $grey-darker;
+    }
+    &[data-has-image="true"] {
+        background: $grey;
+    }
+    & > img {
+        width: 100%; height: 100%;
+        vertical-align: baseline; border-radius: 50%; overflow: hidden;
+        object-fit: cover;
+    }
+
+    // Hide everything when pending and show only question mark
+    &[data-pending="true"] {
+        display: flex; align-items: center; justify-content: center;
+        background: rgba(209, 209, 209, 1);
+
+        & > img,
+        & > span {
+            display: none;
+        }
+
+        &::after {
+            content: '?';
+            display: block;
+            font-size: 1.2em;
+            line-height: 1;
+            font-weight: 300;
+        }
+    }
+}
+
+/**
+* Clamp lines/rows of text to a fixed amount.
+*/
+@mixin line-clamp($amount: 3) {
+    overflow: hidden;
+    text-wrap: balance;
+    display: -webkit-box; text-overflow: ellipsis;
+    -webkit-line-clamp: $amount; -webkit-box-orient: vertical;
+}
+
+/**
+* Table columns for consistent spacing.
+*/
+@mixin table-columns($columns: 1) {
+    --cl-sp: 90px;
+    --cl-lp: 170px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 53%)
+        minmax(10rem, 1fr)
+        minmax(calc(var(--cl-sp) - 20px), 1fr)
+        minmax(calc(var(--cl-sp) + 10px), 1fr);
+    gap: 1rem;
+
+    &[data-user-is-admin="true"][data-is-editing="false"][data-variant="project-tabs"] {
+        grid-template-columns:
+            minmax(0, 55%)
+            minmax(calc(var(--cl-sp) + 10px), 1fr)
+            minmax(calc(var(--cl-sp) - 20px), 1fr);
+    }
+
+    &[data-user-is-admin="true"][data-is-editing="false"] {
+        grid-template-columns:
+            minmax(0, 43%)
+            minmax(var(--cl-sp), var(--cl-lp))
+            minmax(var(--cl-sp), var(--cl-lp))
+            minmax(var(--cl-sp), 1fr);
+    }
+
+    &[data-user-is-admin="true"][data-is-editing="true"] {
+        grid-template-columns:
+            minmax(0, 35%)
+            minmax(var(--cl-sp), 1fr)
+            minmax(var(--cl-sp), 1fr)
+            minmax(calc(var(--cl-sp) - 40px), 40px);
+    }
+}
+
+
+/**
+* Vanish animation
+*/
+@mixin vanish {
+    animation: vanish 0.3s forwards;
+}
+
+/**
+* Appear animation
+*/
+@mixin appear {
+    animation: appear 0.3s forwards;
+}
+
+/**
+* Reduce width to 0 and hide
+*/
+@mixin resize-width {
+    animation: resize-width 0.1s forwards;
+}
+
+/**
+* Add radial gradient to the top and bottom of an element
+*/
+@mixin radial-gradient($color: $grey-light, $size: 50%) {
+    &::before,
+    &::after {
+        --vis-if-can-scroll: var(--can-scroll) visible;
+        --vis-if-cant-scroll: hidden;
+        --can-add-padding: 0;
+        --cant-add-padding: var(--pd-spc) 0;
+
+        content: '';
+        display: block;
+        z-index: 5;
+        position: sticky; left: 0; right: 0; block-size: 20px;
+        visibility: var(--vis-if-can-scroll, var(--vis-if-cant-scroll));
+        animation: reveal linear both;
+        animation-timeline: --scroll-timeline;
+    }
+
+    &::before {
+        top: calc(167px - 1.5rem);
+        background: radial-gradient(farthest-side at 50% 0, $color, rgb(0 0 0 / 0));
+        animation-range: 1em 2em;
+    }
+
+    &::after {
+        bottom: -25px;
+        background: radial-gradient(farthest-side at 50% 100%, $color, rgb(0 0 0 / 0));
+        animation-direction: reverse;
+        animation-range: calc(100% - 2em) calc(100% - 1em);
+    }
+}
+
+@mixin detect-scroll {
+    animation: detect-scroll;
+    animation-timeline: --scroll-timeline;
+    animation-fill-mode: none;
+}
+
+@mixin pulse {
+    animation: pulse 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) alternate-reverse infinite;
+}

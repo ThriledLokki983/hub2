@@ -1,0 +1,168 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+
+    &[data-allow-search="false"] {
+        opacity: 0.75;
+
+        label,
+        input {
+            pointer-events: none; cursor: not-allowed; opacity: 0.95;
+        }
+
+        @include hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+.root > div:first-of-type > svg {
+    position: absolute; inset: auto 1rem 0.9rem auto;
+    fill: rgba($text-color-light, 0.7) !important;
+}
+
+/**
+* Input and Labels
+*/
+.root > div:first-of-type > label {
+    @include medium-text;
+}
+.root > div:first-of-type > label {
+    position: relative; color: $blue; font-weight: $font-weight-medium;
+    text-transform: uppercase; margin-block-end: 0.25rem;padding-inline-start: 0.05rem;
+    text-align: left;
+
+    &[data-required="true"]::after {
+        content: "*"; color: $error-color;
+        opacity: 0.75; padding-inline-start: 5px;
+    }
+}
+
+/**
+* Input and Span
+*/
+.root > div:first-of-type > span[data-subtitle="true"] {
+    @include regular-text;
+}
+.root > div:first-of-type > span[data-subtitle="true"] {
+    color: $grey-lightest; font-weight: $font-weight-regular; text-align: left;
+}
+
+
+.root > div:first-of-type > span[data-subtitle] + input {
+    padding-block: 0.85rem; padding-inline: 0.75rem 2rem;
+    background-color: $grey-light; margin-block-start: 0.5rem;
+    min-block-size: 2.625rem; border: none; box-shadow: none;
+
+    &[disabled] {
+        background-color: rgba($grey-lightest, 0.2);
+        opacity: 0.3; cursor: not-allowed;
+    }
+}
+
+.root > div:first-of-type > input::placeholder {
+    color: $grey-lightest; opacity: 0.7; font-size: 13px;
+}
+
+/**
+* Results Container
+*/
+.root__resultscontainer {
+    position: relative;
+}
+.root__resultscontainer > .root__results {
+    @include styled-scrollbar;
+}
+.root__resultscontainer > .root__results {
+    z-index: 2; position: absolute; overflow: hidden; overflow-y: auto;
+    inset: -(1.25rem - 0.25rem) 0 auto 0; margin-block-start: 1.25rem;
+    display: none; max-block-size: 200px; padding: 0.5rem;
+    background: $white; border-radius: $border-radius-large;
+    box-shadow: $box-shadow-ultra; transition: all 0.15s;
+
+}
+.root[data-is-searching="true"]:focus-within .root__results {
+    display: block;
+}
+.root__results > ol {
+    @include bare-list;
+}
+.root__results > ol {
+    user-select: none;
+}
+.root__results > p {
+    margin: 0; padding: 1rem 1rem 1rem (3.5rem - 0.5rem);
+    color: $text-color-light; line-height: 1.35;
+}
+.root__results > p[role="alert"] {
+    color: $text-color-light;
+}
+.root__results > p[data-is-error="true"] {
+    color: $error-color;
+}
+
+
+/**
+* Profile List Item
+*/
+.root__profile {
+    display: flex; align-items: center;
+    padding: 0.35rem 0.5rem; border-radius: $border-radius;
+    transition: all 0.05s; cursor: pointer;
+}
+.root__profile[data-disabled="true"] {
+    opacity: 0.5; cursor: default;
+}
+.root__profile:not([data-disabled="true"]) {
+    @include hover {
+        background: rgba($blue, 0.035);
+    }
+}
+
+/**
+ * Body
+ */
+.root__body {
+    inline-size: 100%; margin-inline-start: 0.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    line-height: 1.15;
+}
+
+
+/**
+ * Name
+ */
+.root__name {
+    display: flex; flex-direction: column; align-items: flex-start;
+}
+.root__name > p {
+    margin-bottom: 0.01rem; margin-right: $gutter;
+}
+.root__name > p > mark {
+    @include ui-font(true);
+    background: none; color: $black; line-height: inherit;
+}
+.root__name > span {
+    @include medium-text;
+}
+.root__name > span {
+    @include font-smoothing;
+    display: block; color: $text-color-light; text-align: right;
+}
+
+
+/**
+ * Email
+ */
+.root__email {
+    flex: 1;
+    display: flex; justify-content: flex-end;
+}
+.root__email > span {
+    @include medium-text;
+}
+.root__email > span {
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    text-transform: capitalize; display: block; color: $text-color-light;
+}

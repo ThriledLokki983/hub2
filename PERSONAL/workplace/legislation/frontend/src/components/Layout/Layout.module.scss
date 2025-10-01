@@ -1,0 +1,123 @@
+@import '../../styles/utils';
+
+/**
+* Layout
+*/
+.layout,
+[data-content-grid="true"] {
+    --content-padding: 24px;
+
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        [full-width-start] minmax(var(--container-padding-inline), 1fr)
+        [breakout-start] minmax(0, var(--breakout-size))
+        [content-start] min(100% - (var(--container-padding-inline) * 2), var(--content-max-width))
+        [content-end] minmax(0, var(--breakout-size))
+        [breakout-end] minmax(var(--container-padding-inline), 1fr)
+        [full-width-end];
+    grid-auto-flow: dense;
+
+    &:not([data-header="true"]) {
+        block-size: 100dvh;
+        grid-template-rows:
+            minmax(var(--header-block-size), calc(var(--header-block-size) + 5px))
+            1fr
+            minmax(calc(var(--header-block-size) + 5px), calc(var(--header-block-size) + 10px));
+    }
+
+    &[data-is-details-page="true"],
+    &[data-is-project-page="true"] {
+        grid-template-rows:
+            minmax(var(--header-block-size), calc(var(--header-block-size) + 5px))
+            1fr;
+
+        > .avg-pwc-wrapper {
+            grid-row: unset; max-block-size: max-content;
+        }
+    }
+
+    &[data-header="true"] {
+        grid-row: 1 / 2;
+    }
+}
+.layout[data-show-guide="true"] {
+    backdrop-filter: var(--bd-filter);
+}
+
+/**
+* Default containers
+*/
+.layout > [data-full-width="true"] {
+    grid-column: full-width;
+}
+.layout > *,
+.layout section[data-content="true"][data-header="true"] {
+    grid-column: full-width;
+
+    &:is([data-is-project-details-page="true"]) {
+        @include bp-min($medium) {
+            max-block-size: fit-content; overflow: auto; margin-block-end: 1.5rem;
+        }
+    }
+
+    &:has([data-logs-page="true"]) {
+        display: flex; flex-direction: column;
+    }
+
+    &[data-settings="true"] {
+        max-block-size: calc(100dvh - calc(var(--header-block-size) + 5rem));
+
+        > .avg-pwc-wrapper {
+            padding-block-start: 0.75rem;
+        }
+    }
+
+    @include bp-min($medium) {
+        grid-column: content;
+        max-block-size:
+            calc(
+                100dvh - calc(var(--header-block-size) + 5px) -
+                calc(var(--header-block-size) + 10px)
+            );
+    }
+
+    &[data-details-page="true"] {
+        @include bp-min($medium) {
+            grid-column: content;
+            max-block-size:
+                calc(
+                    100dvh - calc(var(--header-block-size) + 5px) -
+                    calc(var(--header-block-size) - 58px)
+                );
+        }
+    }
+}
+.layout > *[data-breakout="true"] {
+    grid-column: breakout;
+}
+.layout[data-is-settings-page="true"] {
+    overflow: auto;
+}
+
+
+/**
+* Full width layout (Only needed for the login page).
+*/
+.layout[data-full-width="true"] {
+    position: relative; overflow-y: auto; overflow-x: clip;
+    background-image: url('../../assets/icons/logout.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-block-size: 100dvh; min-inline-size: 100dvw;
+    padding: calc(var(--spacing) * 2) var(--spacing);
+
+    transition: all 300ms ease-in-out;
+
+    @include bp-min($medium) {
+        background-size: contain;
+        background-position: top 18dvh right 1dvh;
+        padding: calc(var(--spacing) / 2) calc(var(--spacing) * 3);
+        background-color: var(--bg-overlay);
+    }
+}

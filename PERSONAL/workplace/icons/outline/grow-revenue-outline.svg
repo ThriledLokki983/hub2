@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>grow-revenue-outline-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="grow-revenue-outline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5.10027397,19.0071233 L4,17.6394521 L23.4410959,1.85863014 L17.8652055,1.89369863 C17.3568009,1.89369863 16.9446575,1.48155528 16.9446575,0.973150685 C16.9446575,0.464746093 17.3568009,0.0526027397 17.8652055,0.0526027397 L26.579726,-1.0658141e-14 L26.6673973,8.72767123 C26.6673973,9.23607582 26.2552539,9.64821918 25.7468493,9.64821918 C25.2384447,9.64821918 24.8263014,9.23607582 24.8263014,8.72767123 L24.7736986,3.15178082 L5.10027397,19.0071233 Z M20,12 L32,12 L32,32 L0,32 L0,24 L10,24 L10,17 L20,17 L20,12 Z M2,26 L2,30 L10,30 L10,26 L2,26 Z M12,30 L20,30 L20,19 L12,19 L12,30 Z M30,30 L30,14 L22,14 L22,30 L30,30 Z" id="Combined-Shape" fill="#2D2D2D" fill-rule="nonzero"></path>
+    </g>
+</svg>

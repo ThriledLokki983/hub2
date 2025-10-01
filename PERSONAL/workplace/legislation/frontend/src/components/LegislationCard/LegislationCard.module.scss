@@ -1,0 +1,256 @@
+@import '../../styles/utils';
+
+.root {
+    container: legislation-card / inline-size;
+
+    position: relative; padding-inline: 0;
+    border-bottom: 1px solid rgba($grey-lightest, 0.1);
+    transition: all 200ms ease-in;
+
+    // select the previous sibling of the hovered element
+    &:has(+ li:hover) {
+        border-color: transparent;
+    }
+
+    @include hover {
+        background-color: rgba($primary-color-light, 0.1);
+        padding-inline: 0.5rem; border-radius: $border-radius; border-color: transparent;
+
+        > a {
+            color: $blue;
+
+            > div:first-of-type > span {
+                color: $blue;
+            }
+
+            > div:first-of-type > span > small {
+                color: inherit; text-decoration: underline;
+
+                svg {
+                    @include appear; transform: rotate(-40deg);
+                }
+            }
+        }
+    }
+}
+
+.root[data-is-active="true"] {
+    background-color: rgba($primary-color-light, 0.15);
+    padding-inline: 1rem; border-radius: $border-radius;
+    border-color: transparent;
+}
+
+/**
+* Legislation Card
+*/
+.root__card {
+    @include table-columns;
+    align-items: center;
+}
+
+.root > a {
+    @include link; padding-block: 1rem !important;
+    border-radius: $border-radius; text-decoration: none;
+    transition: all 200ms ease-in;
+}
+.root__card > div > h5 {
+    @include h5; @include line-clamp(1);
+    font-size: 1rem; font-weight: $font-weight-regular;
+    margin-block-end: 0.25rem; margin-inline-end: 1rem;
+    transition: color 50ms ease-in;
+}
+.root__card > div > span  {
+    position: relative; display: flex; align-items: center;
+    font-size: 0.9rem; font-weight: $font-weight-regular;
+    color: $grey-lightest; max-inline-size: 80%;
+    transition: color 50ms ease-in;
+}
+.root__card > div:first-of-type > span > small > svg {
+    @include vanish;
+    fill: $blue; margin-right: 3px; transition: all 0.2s ease-in;
+}
+.root__card > div:first-of-type > span > small:first-child {
+    @include medium-text; @include line-clamp(1);
+    max-inline-size: 80%; color: $grey-lightest;
+}
+.root__card > span[data-edit-column="true"] {
+    display: flex; align-items: center; justify-content: space-between;
+
+    &[data-is-editing="true"] {
+        justify-self: flex-end;
+    }
+}
+.root__card > span[data-edit-column="true"] > button,
+.root__card > span[data-edit-column="true"] > a,
+.root__card > span[data-edit-column="true"] > div {
+    display: flex; place-content: center; place-items: center;
+    min-inline-size: 2rem; max-block-size: 1rem;
+    text-align: center; padding: 0.25rem 0.5rem;
+
+    > span {
+        @include medium-text;
+    }
+
+    > svg {
+        inline-size: 0.8rem; block-size: 0.8rem;
+    }
+}
+
+/**
+* Content
+*/
+.root__cardcontent[data-navigation] {
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;
+}
+.root__content > ul {
+    @include bare-list;
+
+    &:first-of-type > li {
+        display: flex; flex-direction: column;
+
+        > div:first-of-type {
+            display: flex; align-items: flex-start; justify-content: flex-start; gap: 0.5rem;
+
+            > span:first-of-type {
+                @include medium-text;
+                color: $blue-medium;
+            }
+
+            > span:last-of-type {
+                @include line-clamp(3);
+                max-inline-size: 93%; text-wrap: pretty;
+            }
+        }
+
+        > span:first-of-type {
+            padding-inline-start: 0.5rem;
+        }
+
+        > ul {
+            list-style-type: none; margin-block: 0.5rem; padding-inline-start: 1rem;
+            display: flex; align-items: center; justify-content: flex-start; flex-direction: row;
+
+            > span:first-of-type {
+                @include medium-text; margin-inline: 0.25rem 0.75rem;
+                color: rgba($text-color-light, 0.75);
+            }
+
+            > li {
+                @include small-text; color: $blue-medium;
+                padding: 0.15rem 0.5rem; margin-inline-end: 0.75rem;
+                background-color: $blue-light; border-radius: $border-radius;
+            }
+        }
+    }
+}
+
+
+.root__content > h6 {
+    @include h6; font-size: 1rem;
+    font-weight: $font-weight-bold; color: $blue-medium;
+}
+.root__content .root__roleoption {
+    margin-inline-start: 2rem;
+
+    &::before {
+        content: '•'; margin-inline-end: 0.5rem;
+    }
+}
+.root__cardcontent[data-navigation] button,
+.root__cardcontent[data-navigation] a {
+    @include bare-button;  @include font-smoothing;
+    flex: 0 0 auto; justify-self: flex-end; padding: 0.6875rem 0;
+    font-size: 1rem; font-weight: $font-weight-light;
+    background: transparent; color: $blue-medium;
+    transition: all 0.25s ease-in;
+
+    > svg {
+        transform: translate(0px, 4px); transition: transform 0.2s ease-in;
+    }
+
+    @include hover {
+        color: $blue; text-decoration: underline;
+
+        svg {
+            transform: translate(4px, 4px);
+        }
+    }
+}
+
+.root__cardcontent[data-navigation] > a[aria-disabled="true"] {
+    color: $blue-light; cursor: not-allowed;
+
+    @include hover {
+        text-decoration: underline;
+
+        svg {
+            transform: translate(4px, 3px);
+        }
+    }
+
+    svg {
+        transform: translate(0, 3px);
+        transition: transform 0.25s ease-in;
+    }
+}
+
+/**
+* Legislation Card - Content
+*/
+.root__content {
+    @include appear;
+    height: fit-content;
+}
+.root__content[data-show-content="false"] {
+    @include vanish;
+}
+
+/**
+* Legislation Card - Meta
+*/
+.root__meta {
+    @include medium-text;
+    font-size: 0.9rem;
+}
+
+
+/*
+* Container query stylings
+*/
+@container legislation-card (inline-size <= 500px) {
+    .root span {
+        @include line-clamp(1);
+        padding: 1rem 0; align-self: start;
+    }
+
+    .root__card {
+        > div > h5,
+        > div > span {
+            padding: 0; @include line-clamp(1);
+        }
+
+    }
+}
+
+
+.root__detailrow {
+    position: relative; margin-block-end: 2rem;
+    display: flex; flex-direction: column; inline-size: 100%;
+}
+
+.root__detailrow span[data-title="true"] {
+    @include medium-text; color: $blue-medium; padding-block-end: 0.25rem;
+    font-weight: $font-weight-medium; text-transform: uppercase;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+}
+.root__detailrow > span[data-subtitle="true"] {
+    @include medium-text; @include line-clamp(3); inline-size: 93%; text-wrap: pretty;
+    font-weight: $font-weight-regular;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+}

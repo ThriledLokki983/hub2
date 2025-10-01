@@ -1,0 +1,247 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    max-inline-size: 100%;
+    text-align: center;
+}
+
+form.root ul {
+    @include bare-list;
+    transform: translateY(20%);
+
+    transition: transform 100ms ease-in;
+}
+form.root ul[data-has-file="true"] {
+    position: relative; z-index: 99;
+    transform: translateY(0);
+    inline-size: 100%;
+    background-color: $blue;
+    border-radius: $border-radius;
+
+    transition: transform 100ms ease-out 100ms;
+
+    &[data-is-error="true"] {
+        background-color: $error-color-light;
+
+        > li {
+            color: $error-color;
+
+            > button {
+                color: $error-color;
+
+                &::before {
+                    border-color: $error-color;
+                }
+            }
+        }
+    }
+
+    &[data-is-info="true"] {
+        background: $warning-color-light; color: $warning-color;
+
+        > li {
+            color: $warning-color;
+
+            > button {
+                color: $warning-color;
+
+                &::before {
+                    border-color: $warning-color;
+                }
+            }
+        }
+    }
+}
+form.root ul[data-has-file="true"] > li {
+    position: relative; z-index: 99;
+    display: flex; align-items: center; justify-content: flex-start;
+    gap: 0.75rem; color: $white; padding: 1.25rem;
+    transition: all 200ms ease-in;
+
+    > span {
+        line-height: normal;
+    }
+
+    > svg[data-info-icon="true"] {
+        inline-size: 1.2rem; block-size: 1.1rem;
+    }
+}
+form.root ul[data-has-file="true"] > li > button {
+    margin-left: auto;
+    color: $white;
+    min-inline-size: 3rem;
+    position: relative;
+
+    &::before {
+        position: absolute; inset: 0 auto auto -1rem;
+        content: '';
+        border-left: 1px solid $white;
+        block-size: 100%;
+        inline-size: 1px;
+    }
+
+    @include hover {
+        cursor: pointer !important;
+    }
+}
+
+.root .root__input {
+    display: none;
+}
+
+.root > .root__label {
+    position: relative; z-index: 99;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    background-color: rgba($text-color-light, 0.07); border-radius: $border-radius;
+    padding: 1.25rem; block-size: 100%; margin: 0;
+    border: 1px dashed transparent; overflow: hidden;
+
+    transition: border 200ms ease-in, background-color 200ms ease-in-out;
+
+    @include hover {
+        border-color: rgba($blue, 0.3);
+        cursor: pointer;
+    }
+}
+.root > .root__label[data-drag-active="true"] {
+    z-index: 0;
+}
+.root > .root__label[data-has-file="true"] {
+    position: relative; z-index: 0;
+    pointer-events: none; user-select: none;
+    padding: 0; block-size: 0;
+
+    @include hover {
+        cursor: default;
+    }
+}
+
+.root > .root__text {
+    color: $blue-dark;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+}
+
+
+div.root__upload_local > span {
+    @include medium-text;
+}
+.root__upload_local {
+    padding-block: 0.85rem;
+    display: flex; align-items: center;
+    inline-size: max-content;
+    transform: translateY(0);
+    visibility: visible; opacity: 1; block-size: auto;
+
+    transition: transform 300ms ease-in-out;
+
+    > span {
+        padding: 0;
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        color: $blue; font-size: 0.85rem;
+        font-weight: 400; text-wrap: nowrap;
+        margin: 0; text-decoration: none;
+        transition: text-decoration 200ms ease-in;
+
+        @include hover {
+            text-decoration: underline;
+        }
+    }
+}
+.root__upload_local[data-has-file="true"] {
+    transform: translateY(-200%);
+    visibility: hidden; opacity: 0;
+    block-size: 0; padding: 0;
+}
+
+.root__file_element {
+    position: absolute; inset: 0;
+    z-index: 0;
+    inline-size: 100%; block-size: 100%;
+    border-radius: $border-radius;
+
+    transition: all 300ms ease-in;
+}
+
+.root__file_element[data-drag-active="true"] {
+    z-index: 999;
+    background-color: rgba($blue, 0.05);
+    border: 1px dashed rgba($blue, 0.1);
+
+    &[data-drag-error="true"] {
+        background-color: rgba($error-color-light, 0.5);
+        border: 1px dashed rgba($error-color-light, 0.8);
+    }
+}
+
+
+/**
+* Errors
+*/
+article[data-is-hidden="true"] {
+    display: none;
+}
+article[data-drag] {
+    @include appear;
+}
+article[data-drag] > ul {
+    @include bare-list;
+}
+article[data-drag] > ul {
+    display: flex; flex-direction: column; align-items: flex-start;
+
+    > li {
+        position: relative; text-align: left; padding-inline-start: 1rem;
+
+        &::before {
+            content: '•';
+            position: absolute; inset: 0 auto auto 0.25rem;
+        }
+    }
+
+    p {
+        margin-block-end: 0.25rem;
+    }
+}
+article.root__errors > small {
+    @include medium-text;
+}
+article[data-drag] {
+    padding: 1rem; margin-block: 0.5rem 0;
+    background-color: rgba($text-color-light, 0.07); border-radius: $border-radius;
+}
+article.root__duplicate_info {
+    p {
+        margin: 0 !important;
+    }
+}
+.root__errors > p {
+    text-align: left;
+}
+
+/**
+* File Size Area
+*/
+span[data-size="true"] {
+    @include medium-text;
+}
+span[data-size="true"] {
+    margin-block: 0.5rem; inline-size: 100%; text-align: center;
+    display: flex; place-items: center; place-content: center;
+}
+
+
+/**
+* Action buttonSet area
+*/
+section > div[data-btn-set] {
+    margin-block-start: 2rem;
+    display: flex; place-content: center; gap: 1rem;
+}

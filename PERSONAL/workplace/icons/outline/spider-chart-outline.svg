@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>spider-chart-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="spider-chart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,0.779999971 L32,12.4046804 L25.8885438,31.2138085 L6.11145618,31.2138085 L0,12.4046804 L16,0.779999971 Z M2.47213596,13.2079261 L7.63932023,29.110884 L24.3606798,29.110884 L29.527864,13.2079261 L16,3.37935754 L2.47213596,13.2079261 Z M16,7.08877332 L26,14.3541986 L22.1803399,26.1099036 L9.81966011,26.1099036 L6,14.3541986 L16,7.08877332 Z M8.47213596,15.1574443 L11.3475242,24.0069792 L20.6524758,24.0069792 L23.527864,15.1574443 L16,9.68813089 L8.47213596,15.1574443 Z M16,12.3460844 L21,15.9787971 L19.0901699,21.8566496 L12.9098301,21.8566496 L11,15.9787971 L16,12.3460844 Z M13.472136,16.7820427 L14.4376941,19.7537252 L17.5623059,19.7537252 L18.527864,16.7820427 L16,14.945442 L13.472136,16.7820427 Z" id="spiderchart-outline" fill="#212121" fill-rule="nonzero"></path>
+    </g>
+</svg>

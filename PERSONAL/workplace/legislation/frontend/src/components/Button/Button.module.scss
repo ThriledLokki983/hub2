@@ -1,0 +1,124 @@
+@import '../../styles/utils';
+
+.root {
+    @include bare-button; @include ui-font; @include font-smoothing;
+    display: inline-block; min-inline-size: 14ch; min-block-size: 42px; padding: 11px 22px;
+    background: $blue; color: $white; outline: 0;
+    border-radius: $border-radius; font-size: 16px;
+    transition: background 0.1s, color 0.1s, opacity 0.4s;
+    @include hover {
+        background: $blue-dark;
+    }
+
+    // &[data-pressed] {
+    //     background: $blue-dark;
+    //     border-color: $blue-dark;
+    // }
+
+    // &[data-focus-visible] {
+    //     outline: 2px solid $primary-color-light;
+    //     outline-offset: -1px;
+    // }
+
+}
+.root[disabled],
+.root[data-disabled="true"] {
+    opacity: 0.4; cursor: not-allowed;
+}
+
+/**
+ * Secondary (outline)
+ */
+.root[data-variation="secondary"] {
+    padding: 10px 21px;
+    background: $white; color: $blue;
+    border: 1px solid $blue;
+    @include hover {
+        background: rgba($blue, 0.05);
+    }
+}
+
+/**
+ * Secondary (outline)
+ */
+.root[data-variation="secondary-trans"] {
+    padding: 10px 21px;
+    background: rgba($blue, 0.1); color: $blue;
+    border: 1px solid transparent;
+    @include hover {
+        background: rgba($blue, 0.15);
+    }
+}
+
+/**
+ * Tertiary (text)
+ */
+.root[data-variation="tertiary"] {
+    padding: 10px 21px;
+    background: transparent; color: $blue;
+    @include hover {
+        background: rgba($blue, 0.05);
+    }
+}
+
+/**
+ * Quaternary (text)
+ */
+.root[data-variation="quaternary"] {
+    padding: 10px 21px;
+    background: transparent; color: $white;
+    @include hover {
+        background: rgba($white, 0.1);
+    }
+}
+
+/**
+ * Transparent Button
+ */
+.root[data-variation="transparent"] {
+    padding: 10px 21px;
+    background: transparent; color: $blue;
+    @include hover {
+        background: rgba($blue, 0.05);
+    }
+}
+
+/**
+ * Cancel Button
+ */
+.root[data-variation="cancel"] {
+    padding: 10px 21px !important;
+    background: $text-color-light; color: $white;
+    @include hover {
+        background: rgba($text-color-light, 0.8);
+    }
+}
+
+/**
+ * Small
+ */
+.root[data-size="small"] {
+    min-block-size: 34px; padding: 7px 16px;
+}
+.root[data-size="small"][data-variation="secondary"] {
+    padding: 6px 15px;
+}
+
+/**
+ * Medium
+ */
+.root[data-size="medium"],
+.root[data-size="medium"][data-variation="secondary"] {
+    padding: 10px 50px;
+}
+
+/**
+ * Large
+ */
+.root[data-size="large"] {
+    min-inline-size: 300px;
+
+    @include bp-min($medium) {
+        min-inline-size: 350px;
+    }
+}

@@ -1,0 +1,20 @@
+@import '../../../../../../styles/utils';
+
+.root {
+    position: relative;
+
+    &[data-hidden="true"] {
+        opacity: 0; visibility: hidden; pointer-events: none;
+        block-size: 0; inline-size: 0;
+    }
+}
+
+.root div[data-show-expiration-date="true"] {
+    margin-block: 1rem 0;
+
+    label {
+        @include bp-min($medium) {
+            font-size: 1rem !important;
+        }
+    }
+}

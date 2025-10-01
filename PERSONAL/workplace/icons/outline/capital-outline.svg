@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>capital-outline-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="capital-outline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,30 L0,30 L0,32 L31.9777778,32 L31.9777778,30 L29,30 L29,12 L32,12 L32,8.22222222 L16,-3.55271368e-15 L1.57898386e-15,8.13333333 L1.57898386e-15,12 L3.04444444,12 L3,30 Z M5,12 L11,12 L11,30 L5,30 L5,12 Z M19,12 L19,30 L13,30 L13,12 L19,12 Z M29.8888889,10 L2.08888889,10 L2.08888889,9.46666667 L16,2.44444444 L29.8888889,9.51111111 L29.8888889,10 Z M27,30 L21,30 L21,12 L27,12 L27,30 Z" id="Shape" fill="#2D2D2D" fill-rule="nonzero"></path>
+    </g>
+</svg>

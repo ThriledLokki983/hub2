@@ -1,0 +1,111 @@
+@import '../../../styles/utils';
+
+/**
+* Legislation main layout
+*/
+.root {
+    @include grid-container;
+    position: relative;
+    overflow: unset;
+
+    &[data-details-page="true"] {
+        max-block-size: 100% !important;
+        block-size: unset;
+
+        > section[data-main-content="true"] {
+            max-block-size: 100%;
+
+            &[data-middle-tab="true"],
+            &[data-first-tab="true"][data-job-role-is-empty="false"] {
+                block-size: auto; max-block-size: unset !important;
+
+                > article[data-content="true"] {
+                    padding-block-end: 0;
+                }
+            }
+
+            &[data-first-tab="true"] {
+                margin-block-end: 2.5rem;
+            }
+
+            &[data-first-tab="false"][data-middle-tab="false"] {
+                margin-block-end: 1rem;
+            }
+        }
+    }
+}
+.root:has(> section[data-header-content="true"][data-details="true"][data-details-page="true"]) {
+    display: flex; flex-direction: column;
+
+    &[data-details-page="true"] {
+        &:not(:has(section[data-first-tab="false"][data-middle-tab="false"])) {
+            overflow-y: auto; overflow-x: hidden; padding-block-end: 0.5rem;
+        }
+    }
+
+    > section:first-of-type {
+        min-inline-size: 100%;
+    }
+}
+
+.root > section[data-main-content="true"][data-is-first="true"] {
+    padding: var(--pd-sp);
+}
+.root > section[data-main-content="true"]:not([data-is-first="true"]) {
+    scroll-timeline: --scroll-timeline block;
+}
+.root > section[data-main-content="true"] {
+    --pd-sp: var(--content-padding-all, var(--sp-c));
+
+    padding: 0 var(--pd-sp) var(--pd-sp) var(--pd-sp);
+
+    @include bp-min($medium) {
+        grid-column: auto;
+    }
+}
+.root > section[data-main-content="true"][data-client-page="true"] {
+    grid-row: unset;
+    padding: var(--pd-sp) var(--pd-sp) var(--pd-sp) var(--pd-sp);
+}
+.root > section[data-main-content="true"][data-details="true"] {
+    grid-column: 1 / -1;
+    grid-row: unset;
+    background-color: transparent;
+    box-shadow: none;
+    padding-block-end: 0; block-size: 100%; min-inline-size: 100%;
+    padding-inline: 0.75rem;
+    // block-size: calc(100dvh - 390px);
+    overflow: unset;
+}
+.root > aside {
+    padding-block: 0;
+    max-inline-size: 100%;
+    transition:
+        opacity var(--transition-duration) var(--transition-delay),
+        display var(--transition-duration) 0s,
+        visibility var(--transition-duration) 0s;
+}
+.root > aside > * {
+    opacity: 1; visibility: visible; padding: 0.25rem;
+}
+.root > aside[data-details="true"] {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/**
+* Resizing the layout when editing
+*/
+aside[data-is-editing="true"] {
+    width: 0; opacity: 0; padding: 0; visibility: hidden; display: none;
+}
+aside[data-is-editing="false"] {
+    width: 100%;
+    opacity: 1;
+    display: block;
+
+    transition:
+        width var(--transition-duration) 0.1s,
+        opacity var(--transition-duration) var(--transition-delay),
+        display var(--transition-duration) 0s,;
+}

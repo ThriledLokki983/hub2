@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "assets/*": ["assets/*"],
+      "components/*": ["components/*"],
+      "configs/*": ["configs/*"],
+      "contexts/*": ["contexts/*"],
+      "data/*": ["data/*"],
+      "helpers/*": ["helpers/*"],
+      "hooks/*": ["hooks/*"],
+      "hocs/*": ["hocs/*"],
+      "pages/*": ["pages/*"],
+      "stores/*": ["stores/*"],
+      "styles/*": ["styles/*"]
+    },
+    "typeRoots": ["node_modules/@types", "src/@types", "src/types", "src/types/react-app-env.d.ts",],
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

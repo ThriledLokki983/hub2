@@ -1,0 +1,229 @@
+@import '../../styles/utils';
+
+/**
+* Accordion root/Container
+*/
+.root {
+    --text-color: #191919;
+
+    border-radius: $border-radius; overflow: visible; position: relative;
+    background-color: transparent; cursor: pointer; list-style-type: none;
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &[data-navigator-accordion="true"] {
+        div[data-large-content="true"]:first-of-type {
+            padding-block: 0.5rem 0.75rem;
+        }
+    }
+
+    &[data-navigator-accordion="true"] > div > div:last-of-type > span {
+        > button:first-of-type {
+            display: none;
+        }
+    }
+
+
+}
+.root[data-role-view="true"]:not([data-is-new="true"]) > .root__toggle span[data-icon="true"],
+.root[data-requirements="true"]:not([data-is-new="true"]) > .root__toggle span[data-icon="true"] {
+    > button[data-delete-item="true"] {
+        opacity: 0; visibility: hidden; user-select: none; pointer-events: none;
+    }
+}
+
+/**
+* Accordion Toggle
+*/
+.root__toggle {
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; overflow: hidden; padding: 1.25rem 0.25rem 1.35rem;
+    border-radius: $border-radius;
+
+    svg {
+        transform: translateY(0);
+        transition: transform 250ms ease-in;
+    }
+
+    &:not([data-large-content="true"]) {
+        @include hover {
+
+            span[data-title="true"],
+            svg {
+                color: $blue;
+            }
+        }
+    }
+
+    @include hover {
+
+        h5[data-title="true"] {
+            color: $blue;
+            transition: color 0.15s ease-in;
+        }
+    }
+
+}
+.root__toggle > .root__iconcontainer {
+    cursor: pointer; overflow: hidden; margin-inline-start: auto;
+
+    &[data-rotate="true"] {
+        > span > button[data-not-large="true"] > svg {
+            transform: rotate(-180deg);
+        }
+    }
+}
+// special case for role view
+[data-role-view="true"] > div.root__toggle {
+    padding: 1.25rem;
+    background-color: $white;
+}
+.root__toggle > span > button {
+    @include bare-button;
+    flex: 0 0 auto; justify-self: flex-end;
+    border-radius: $border-radius-x-large;
+    background: $blue-medium;
+    min-inline-size: 1.4rem;
+    inline-size: 1.4rem;
+    min-block-size: 1.4rem;
+    padding: 0;
+    margin-inline-start: 5px;
+    color: $white; line-height: 0;
+
+    @include hover {
+        background: $blue;
+    }
+}
+.root__toggle > span > svg {
+    inline-size: 1.2rem; block-size: 1.2rem;
+    fill: $blue;
+    margin-inline-start: 1px;
+
+    @include hover {
+        fill: $blue-medium;
+    }
+}
+.root__toggle > span[data-title="true"] {
+    @include large-text;
+    font-size: 16px; font-weight: $font-weight-medium; color: var(--text-color);
+    text-overflow: ellipsis; user-select: none; white-space: nowrap; overflow: hidden;
+    text-transform: capitalize; transition: color 0.3s ease-in;
+}
+.root__toggle[aria-selected="true"] > span[data-title="true"] {
+    color: $blue;
+}
+.root > .root__toggle span[data-icon="true"] > button {
+    @include hover {
+        background-color: transparent;
+        color: $blue;
+    }
+}
+.root__toggle span[data-icon="true"] {
+    display: flex; align-items: center; justify-content: flex-end;
+    min-inline-size: 2rem; max-block-size: 3rem;min-block-size: 2rem;
+    color: $blue; margin-inline: auto 0.5rem;
+
+    > button[data-action-btn="true"] {
+        z-index: 2; padding: 0;
+        display: flex; place-content: center; place-items: center;
+        min-inline-size: 1.2rem; max-block-size: 1.2rem; min-block-size: 1.2rem;
+
+        > svg {
+            z-index: 1;
+            pointer-events: none; user-select: none;
+            inline-size: 1.2rem; block-size: 1.2rem;
+        }
+    }
+
+    > button:not([data-action-btn="true"]) {
+        padding: 0 0.25rem;
+        margin-inline-end: -1.75rem;
+        color: $text-color-light;
+        display: flex; align-items: center;
+        min-block-size: auto;
+        font-size: 0.95rem;
+        font-weight: $font-weight-regular;
+        opacity: 1; visibility: visible;
+
+        transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+
+        &[data-is-hidden="true"] {
+            opacity: 0; visibility: hidden;
+            transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+        }
+
+        > svg {
+            inline-size: 0.75rem; block-size: 0.75rem;
+        }
+
+        @include hover {
+            background-color: transparent;
+            color: rgba($error-color, 0.7);
+        }
+    }
+}
+.root__toggle > svg {
+    color: $blue;
+    inline-size: 1.2rem; block-size: 1.2rem;
+    margin-inline-end: 0.75rem;
+}
+[data-icon="true"] > svg {
+    inline-size: 1rem; block-size: 1rem;
+}
+span[data-icon="true"][data-rotate="true"] > button[data-not-large="true"] > svg {
+    transform: rotate(-180deg);
+}
+.root__toggle > .root__intro {
+    @include bp-min($medium) {
+        max-inline-size: 50%;
+    }
+}
+.root__toggle > .root__intro > span[data-subtitle="true"] {
+    @include small-text; @include line-clamp(1);
+}
+.root__toggle > .root__intro > h5 {
+    @include h6;
+    font-size: 16px;
+    font-weight: $font-weight-regular;
+    margin-block-end: 0.25rem;
+}
+.root__toggle > .root__intro > span {
+    @include medium-text; @include line-clamp(1);
+    font-size: 14px;
+    font-weight: $font-weight-regular;
+    color: $grey-lightest;
+
+
+}
+
+/**
+* Accordion Content
+*/
+.root__content {
+    padding: 10px;
+    transition: height 0.3s;
+}
+.root__content[data-hidden="true"] {
+    display: none;
+    padding-bottom: 0;
+}
+.root__content__text {
+    display: inline-block;
+}
+
+.root__accordionitem__text {
+    display: inline-block;
+    padding-block-start: 10px;
+}
+
+.root__cursordefault {
+    cursor: default;
+    overflow: hidden;
+}
+
+.root__classesicon {
+    position: relative;
+}

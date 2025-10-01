@@ -1,0 +1,110 @@
+@import '../../../../../../styles/utils';
+
+/**
+* Group Header
+*/
+.root {
+    position: relative; display: flex; flex-direction: column; gap: 0.15rem;
+
+    h6,
+    p,
+    input,
+    label {
+        position: relative; opacity: 1;
+        transition: opacity 100ms ease-in;
+    }
+
+    > p {
+        display: flex; align-items: center;
+
+        svg {
+            margin-inline: 0.25rem;
+        }
+    }
+}
+
+.root[data-required="true"] > h6[data-group-title="true"],
+.root[data-required="false"] > h6[data-group-title="true"]  {
+    position: relative;
+    > span {
+        position: relative; padding-inline-start: 0;
+    }
+}
+
+.root[data-group-disabled="true"] {
+    h6 > span,
+    p {
+        opacity: 0.4;
+    }
+}
+.root[data-group-disabled="true"] + ul {
+    input,
+    label {
+        opacity: 0.3; pointer-events: none;
+    }
+}
+
+
+/**
+* Group Title
+*/
+div.root[data-group-header="true"] > h6[data-group-title="true"] {
+    @include medium-text;
+}
+div.root[data-group-header="true"] > h6[data-group-title="true"] label > span {
+    @include small-text;
+}
+.root[data-group-header="true"] > h6[data-group-title="true"] {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    position: relative;
+    color: $blue;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    margin-block-end: 0;
+    text-align: left;
+
+    > span {
+        font-size: 1rem;
+
+        &[data-required="true"] {
+            &::before {
+                content: '*'; position: absolute; inset: -0.1rem -0.75rem auto auto;
+                color: $error-color; font-size: 0.875rem;
+                padding-inline-start: 0;
+            }
+        }
+    }
+
+    label {
+        margin: 0; padding-inline-start: 0.65rem;
+
+        > input {
+            block-size: 0.9rem; inline-size: 0.9rem;
+        }
+
+        > span {
+            color: $grey-lightest; font-weight: $font-weight-regular;
+            padding-inline-start: 0.5rem;
+        }
+    }
+}
+
+/**
+* Group Subtitle
+*/
+div.root[data-group-header="true"] > p[data-group-subtitle="true"] {
+    @include small-text;
+}
+.root[data-group-header="true"] > p[data-group-subtitle="true"] {
+    color: $grey-lightest;
+    margin: 0; text-transform: none; text-align: left;
+
+    @include bp-min($medium) {
+        font-size: 14px;
+    }
+
+    > svg {
+        inline-size: 0.85rem; block-size: 0.95rem;
+        fill: $blue;
+    }
+}

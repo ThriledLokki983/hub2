@@ -1,0 +1,34 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: background-runner
+spec:
+  schedule: "* 1 * * *"
+  successfulJobsHistoryLimit: 3
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          annotations:
+            sidecar.istio.io/inject: "false"
+        spec:
+          restartPolicy: OnFailure
+          serviceAccount: "backend-{{ .Values.nameOverride }}"
+          securityContext:
+            fsGroup: 1000
+            runAsUser: 1000
+          serviceAccountName: "backend-{{ .Values.nameOverride }}"
+          containers:
+          - command:
+            - ./src/manage.py
+            - run_tasks
+            name: run-background-management-command
+            image: "{{ .Values.image.registry }}/{{ .Values.image.path }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+            securityContext:
+              runAsUser: 1000
+            envFrom:
+              - secretRef:
+                  name: app
+            env:
+              {{- include "django.podEnv" . | nindent 14 }}

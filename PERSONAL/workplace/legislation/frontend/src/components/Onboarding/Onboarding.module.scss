@@ -1,0 +1,203 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+
+/**
+ * Content
+ */
+.root__content {
+    display: flex; flex-direction: column;
+    place-items: center; min-block-size: auto;
+
+    @include bp-min($medium) {
+        min-block-size: 30rem;
+    }
+}
+.root__content[hidden] {
+    display: none;
+}
+.root__content > figure {
+    inline-size: 120px; block-size: 100px; margin-block-end: 1rem;
+    display: none;
+
+    @include bp-min($medium) {
+        display: block;
+        inline-size: 260px; block-size: 226px; margin-block-end: 41px;
+    }
+}
+.root__content img {
+    inline-size: 100%; block-size: auto; object-fit: cover;
+}
+.root__content h2 {
+    @include h2;
+}
+.root__content h2 {
+    max-inline-size: 40ch; margin-block-end: 1.5rem;
+    font-size: 2rem; text-align: center;
+}
+.root__content p {
+    @include large-text;
+}
+.root__content p {
+    font-size: 18px; line-height: 32px; margin-block-end: 0;
+    text-align: center;
+
+    @include bp-min($medium) {
+        margin-block-end: 2rem;
+    }
+}
+
+
+/**
+ * Form
+ */
+.root__form {
+    display: flex; flex-direction: column; place-items: center;
+    width: 100%; min-block-size: auto;
+}
+.root__form ul {
+    padding: 0; margin: 0; place-content: center;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+}
+.root__form header {
+    max-inline-size: 100%; margin-block: 1rem;
+
+    @include bp-min($medium) {
+        max-inline-size: 520px; margin-block: 3.5rem 1.5rem;
+    }
+}
+.root__form header {
+    > h2 {
+        @include h2;
+    }
+
+    > h2 {
+        text-align: center;
+    }
+
+    strong {
+        color: $blue-medium;
+    }
+}
+.root__form p:last-of-type {
+    text-transform: uppercase; color: $blue-medium; margin-block-start: 2.5rem;
+    font-size: 18px; font-weight: $font-weight-medium;
+}
+
+/**
+* ROle Button
+*/
+.root__rolebutton {
+    min-block-size: 3rem;
+}
+.root__rolebutton label {
+    min-block-size: inherit; padding: 0.5rem 1.5rem;
+    border-radius: 100px; background-color: $grey-light; margin: 0;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+
+    @include hover {
+        background-color: rgba($grey-lighter, 0.18);
+    }
+}
+.root__rolebutton > label span {
+    @include medium-text;
+}
+.root__rolebutton > label span {
+    color: $grey-lightest; font-size: 14px;
+    font-weight: $font-weight-medium;
+}
+
+.root__rolebutton > label:has(input[checked]) {
+    background-color: $blue;
+    color: $white; font-weight: $font-weight-medium;
+    border-color: $blue;
+
+    transition: all 250ms ease-in;
+}
+.root__rolebutton > label:has(input[checked]) > span {
+    color: $white;
+}
+
+/**
+ * Toggle
+ */
+.root__togglelabel {
+    @include single-toggle;
+}
+.root__togglelabel {
+    display: flex; justify-content: space-between;
+}
+.root__togglelabel[aria-hidden='true'] {
+    opacity: 0; visibility: hidden;
+}
+
+/**
+ * Nav › Steps (dots)
+ */
+.root__nav > ol {
+    @include bare-list;
+}
+.root__nav > ol {
+    display: flex; justify-content: center;
+
+    @include bp-min($medium) {
+        margin-block: 1rem 0.25rem;
+    }
+}
+.root__nav > ol > li > button {
+    @include bare-button;
+}
+.root__nav > ol > li > button {
+    padding: 10px 3px;
+}
+.root__nav > ol > li > button > span {
+    display: block; width: 9px; height: 9px; padding: 0;
+    line-height: 0; border-radius: 6px;
+    background: $primary-color-light; transition: all 0.1s ease;
+}
+.root__nav > ol > li > button[aria-pressed="true"] > span {
+    width: 20px;
+    background: $primary-color;
+}
+.root__nav > ol > li > button:hover > span {
+    background: $primary-color-dark;
+}
+
+/**
+* Footer
+*/
+.root__footer {
+    --button-inline-size: 220px;
+    --button-block-size: 3rem;
+
+    align-self: center;
+    display: flex; justify-content: flex-end; align-items: center; gap: $gutter;
+}
+.root__footer button {
+    min-inline-size: fit-content;
+
+    @include bp-min($medium) {
+        min-inline-size: var(--button-inline-size);
+        min-block-size: var(--button-block-size);
+    }
+}
+
+
+// Extra info
+div[data-extra-info="true"] {
+    margin-block: 0.75rem 0.5rem; display: flex; place-content: center;
+
+    > span {
+        opacity: 0.6; font-style: italic;
+
+        @include bp-min($medium) {
+            font-size: 1rem;
+        }
+    }
+}
+div[data-extra-info="true"] > span {
+    @include medium-text;
+}

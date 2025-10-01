@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>close-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16.0283743,14.6375973 L29.6375973,1.02837432 L30.9987663,2.38954336 L17.3895434,15.9987663 L30.974093,29.583316 L29.6104566,30.9469524 L16.025907,17.3624027 L2.3624027,31.025907 L1.00123367,29.664738 L14.664738,16.0012337 L1.02590699,2.3624027 L2.38954336,0.998766334 L16.0283743,14.6375973 Z" id="close-outline" fill="#212121"></path>
+    </g>
+</svg>

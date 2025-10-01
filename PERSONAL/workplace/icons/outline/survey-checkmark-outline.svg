@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>survey-checkmark-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="survey-checkmark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22,18 L24,18 L24,26 L8,26 L8,10 L16,10 L16,12 L10,12 L10,24 L22,24 L22,18 Z M24.0629147,10 L25.4197037,11.4070405 L16.5084865,20 L12,15.6525309 L13.3567891,14.2454904 L16.5084865,17.2846272 L24.0629147,10 Z M27,2 C28.1053333,2 29,2.896 29,4 L29,30 C29,31.104 28.1053333,32 27,32 L5,32 C3.896,32 3,31.104 3,30 L3,4 C3,2.896 3.896,2 5,2 L8,2 L8,4 L5,4 L5,30 L27,30 L27,4 L24,4 L24,2 L27,2 Z M10,2 L10,0 L22,0 L22,2 L10,2 Z" id="Combined-Shape" fill="#212121" fill-rule="nonzero"></path>
+    </g>
+</svg>

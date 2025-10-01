@@ -1,0 +1,13 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex;
+}
+
+.root[data-block="true"] {
+    flex-direction: column;
+}
+.root[data-inline="true"] {
+    flex-direction: row; gap: 0.5rem;
+}

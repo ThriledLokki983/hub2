@@ -1,0 +1,65 @@
+@import '../../styles/utils';
+
+.root {
+    margin: 0; padding: 0;
+    list-style-type: none; display: flex;
+    flex-wrap: wrap; align-items: center;
+    gap: 0.625rem; place-content: flex-start;
+
+    > li {
+        border-radius: 1000px; outline: none;
+    }
+
+    &[data-role-specific="true"] {
+        > li {
+            padding-block-end: 0;
+
+            > button {
+                &:not([data-selected]) {
+                    background-color: rgba(129, 129, 129, 0.12) !important;
+                }
+            }
+        }
+    }
+}
+
+.root__toggle_button {
+    background-color: $grey-light; color: rgba($blackish, 0.5);
+    border: 1px solid rgba($blackish, 0.05);
+    forced-color-adjust: none; border-radius: 1000px;
+    appearance: none; vertical-align: middle; padding: 0.8rem 2rem;
+    text-align: center; margin: 0; outline: none;
+
+    > span {
+        @include medium-text; color: rgba($blackish, 0.5);
+
+        @include bp-min($medium){
+            font-size: 0.9rem; font-weight: 400;
+        }
+    }
+
+    transition: all 200ms ease-in;
+
+    &[data-pressed] {
+        box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.1);  border-radius: 1000px !important;
+        background: var(--button-background-pressed); border-color: var(--border-color-pressed);
+    }
+
+    &[data-selected] {
+        background: $blue; border-color: $blue; color: $white;
+
+        > span {
+            color: $white;
+        }
+
+        &[data-pressed] {
+            background: rgba($blue, 0.9); border-color: rgba($blue, 0.9);
+            border-radius: 1000px !important;
+        }
+    }
+
+    &[data-focus-visible] {
+        outline: 2px solid $primary-color-light; outline-offset: calc($border-radius / 2);
+        border-radius: 1000px !important;
+    }
+}

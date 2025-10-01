@@ -1,0 +1,156 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex; flex-direction: column; gap: 0.75rem;
+    margin-block-start: 1.5rem;
+    padding-block-end: 1.5rem;
+
+    border-block-end: 1px solid $grey-light;
+
+    &[data-group="add-more-action"] {
+        margin-block-start: 0.8rem;
+    }
+
+    &:first-of-type {
+        margin-block-start: 0;
+    }
+
+    > small[data-is-empty="true"] {
+        @include medium-text; color: $warning-color;
+        margin-block: 0.25rem; text-align: left; text-wrap: balance;
+        font-style: oblique; opacity: 0.6;
+
+        @include bp-min($medium) {
+            text-wrap: pretty;
+        }
+    }
+
+    &:has([data-no-requirement="true"]) {
+        opacity: 0.5;
+    }
+}
+.root > button[data-add-more="true"] {
+    display: flex; align-items: center; gap: 0.25rem;
+    padding: 0.9rem 1.5rem;
+    text-align: left;
+}
+.root > span[data-required="true"] {
+    @include medium-text; position: relative;
+    text-align: left; padding-inline-start: 0;
+    padding-block-end: 0.25rem;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+
+    &[data-general] {
+        padding-inline-start: 0.75rem;
+    }
+
+    &::before {
+        @include medium-text;
+        position: absolute; inset: -4px auto auto 0;
+        content: '*'; color: $error-color;
+
+        @include bp-min($medium) {
+            font-size: 1.3rem;
+        }
+    }
+}
+.root[data-form-inputs="true"] {
+    gap: 1.75rem;
+}
+.root[data-requirements="true"] {
+    padding-block-end: 0.75rem; border-block-end: none;
+}
+.root[data-role-specific="true"]:not(:last-of-type) {
+    padding-block-end: 0; border-block-end: none;
+}
+.root[data-role-specific="true"]:last-of-type {
+    padding-block-end: 0.75rem;
+}
+
+// Checkbox group
+.root > div[single-checkbox] > label {
+    @include font-smoothing;
+    padding-block: 0; margin: 0; align-items: flex-start;
+    font-weight: $font-weight-regular;
+
+    > span {
+        @include regular-text; transform: translateY(-2px);
+    }
+
+}
+
+
+.root ul {
+    @include bare-list;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    place-content: flex-start;
+}
+.root header:not([class]) {
+    max-inline-size: 520px; margin-block: 3.5rem 1.5rem
+}
+.root header h2 {
+    @include h2;
+}
+.root header strong {
+    color: $blue-medium;
+}
+.root p:not([class]):last-of-type {
+    text-transform: uppercase;
+    font-size: 18px; font-weight: $font-weight-medium;
+    color: $blue-medium; margin-block-start: 2.5rem;
+}
+
+/**
+* Role Button
+*/
+.root ul > div {
+    min-block-size: 3rem;
+}
+.root ul > div > label {
+    @include single-toggle;
+    display: flex; justify-content: space-between;
+    min-block-size: inherit;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    background-color: $grey-light;
+    margin: 0;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+
+    @include hover {
+        background-color: rgba($grey-lighter, 0.18);
+    }
+
+    &[data-attention-point="true"] {
+        background-color: rgba($grey-lighter, 0.12);
+
+        &:not([data-is-checked="true"]) {
+            @include hover {
+                background-color: rgba($grey-lighter, 0.18);
+            }
+        }
+    }
+}
+.root ul > div > label span {
+    @include medium-text;
+    color: $grey-lightest; font-size: 14px;
+    font-weight: $font-weight-medium;
+}
+
+.root ul > div > label:has(input[checked]) {
+    background-color: $blue;
+    color: $white; font-weight: $font-weight-medium;
+    border-color: $blue;
+
+    transition: all 250ms ease-in;
+}
+.root ul > div > label:has(input[checked]) > span {
+    color: $white;
+}
+.root ul > div > label[aria-hidden='true'] {
+    opacity: 0;
+    visibility: hidden;
+}

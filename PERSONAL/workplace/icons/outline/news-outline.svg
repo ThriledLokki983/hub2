@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>news-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="news" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M26.914,-1.70530257e-13 C28.066,-1.70530257e-13 29,0.954 29,2.132 L29,29.866 C29,31.044 28.066,32 26.914,32 L5.086,32 C3.934,32 3,31.044 3,29.866 L3,2.132 C3,0.954 3.934,-1.70530257e-13 5.086,-1.70530257e-13 L26.914,-1.70530257e-13 Z M27,29.866 L27,2.132 C27,2.046 26.944,2 26.914,2 L5.086,2 C5.056,2 5,2.046 5,2.132 L5,29.866 C5,29.954 5.056,30 5.086,30 L26.914,30 C26.944,30 27,29.954 27,29.866 Z M8,13.9994 L8,11.9994 L24,11.9994 L24,13.9994 L8,13.9994 Z M8,19.9994 L8,17.9994 L24,17.9994 L24,19.9994 L8,19.9994 Z M8,7.9994 L8,5.9994 L16,5.9994 L16,7.9994 L8,7.9994 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

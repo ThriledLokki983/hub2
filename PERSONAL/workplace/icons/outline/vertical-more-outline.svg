@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>vertical-more-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="vertical-more" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M18,28 C18,26.8951112 17.1048888,26 16,26 C14.8951112,26 14,26.8951112 14,28 C14,29.1048888 14.8951112,30 16,30 C17.1048888,30 18,29.1048888 18,28 L18,28 Z M18,4 C18,2.89511112 17.1048888,2 16,2 C14.8951112,2 14,2.89511112 14,4 C14,5.10488888 14.8951112,6 16,6 C17.1048888,6 18,5.10488888 18,4 L18,4 Z M18,16 C18,14.8951112 17.1048888,14 16,14 C14.8951112,14 14,14.8951112 14,16 C14,17.1048888 14.8951112,18 16,18 C17.1048888,18 18,17.1048888 18,16 L18,16 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

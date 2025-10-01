@@ -1,0 +1,137 @@
+
+
+.ap-accordion-content {
+    transition: all .5s linear;
+}
+
+.ap-accordion-content.hide {
+    height: 0;
+}
+
+.ap-accordion-content.open {
+    height: auto;
+}
+
+
+.ap-accordion {
+    border-radius: $border-radius;
+    overflow: visible;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    // &.expanded .ap-accordion-toggle {
+    //     padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+    // }
+
+    .ap-accordion-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: $border-radius;
+        position: relative;
+
+        &.ap-accordion-cursor-default .ap-accordion-toggle-icon-container {
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .ap-accordion-title {
+            height: 0.5rem;
+            line-height: 0.5rem;
+            // letter-spacing: $letter-spacing-1;
+            user-select: none;
+            color: $text-color;
+            margin-right: 0.75rem;
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .Appkit4-icon {
+            transform: rotate(0);
+            transition: transform 0.3s;
+            color: $text-color;
+
+            &::before {
+                font-weight: 500;
+            }
+
+            &.rotate {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .ap-accordion-content {
+        padding: 0 1rem 0.75rem 0.75rem;
+        color: $text-color;
+        line-height: 0.5rem;
+        transition: height 0.3s;
+        // opacity: 1;
+        // visibility: visible;
+        // display: block;
+        // box-sizing: border-box;
+
+        &.hidden {
+            // height: 0;
+            // opacity: 0;
+            // visibility: hidden;
+            display: none;
+            padding-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .ap-accordion-text {
+            display: inline-block;
+            line-height: 0.5rem;
+        }
+    }
+
+    .ap-accordion-cursor-default {
+        cursor: default;
+    }
+}
+
+.ap-accordion-demo-wrapper {
+    width: rem(564px);
+}
+
+.ap-accordion-group-container {
+    padding: 0;
+    margin: 0;
+}
+
+.react-slidedown {
+    height: 0;
+    transition-property: none;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    display: none;
+}
+
+.react-slidedown.transitioning {
+    overflow-y: hidden;
+}
+
+.react-slidedown.closed {
+    display: none;
+}

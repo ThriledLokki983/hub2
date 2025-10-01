@@ -1,0 +1,148 @@
+@import '../../styles/utils';
+
+.root {
+    container: tablist-wrapper / inline-size;
+    position: relative;
+}
+
+/**
+ * Tablist
+ */
+.root__tablist {
+    overflow-x: auto; margin: 0; padding: 0; list-style-type: none;
+    display: flex; inline-size: 100%; max-inline-size: 100%;
+    border-bottom: 2px solid transparent; margin-block-end: 0rem;
+
+    &:has(div[data-split="true"]) {
+        overflow: visible; z-index: 1;
+    }
+
+    > li {
+        margin: 0;
+    }
+
+    @include bp-min($small) {
+        overflow-x: hidden;
+    }
+}
+.root__tablist > div,
+.root__tablist > li {
+    border-bottom: 2px solid transparent;
+    padding: 0.6rem;
+
+    @include bp-min($tiny) {
+        padding: 0.6rem 1.2rem;
+    }
+}
+.root__tablist > li:has(a[aria-selected="true"]) {
+    border-color: $primary-color;
+}
+.root__tablist > div,
+.root__tablist > li > a {
+    position: relative; height: 100%; outline: none;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; text-decoration: none; user-select: none;
+    font-size: 0.9375em; line-height: 1.15;
+    color: $text-color-light;
+    transition: background 0.15s ease;
+
+    &[data-hovered],
+    &[data-focused] {
+        color: rgba($primary-color, 0.9); cursor: pointer;
+    }
+
+    &[data-selected] {
+        border-color: $primary-color;
+    }
+
+    &[data-disabled] {
+        color: $primary-color; cursor: not-allowed;
+        &[data-selected] {
+            border-color: rgba($primary-color, 0.5);
+        }
+    }
+
+    &[data-focus-visible]:after {
+        content: ''; position: absolute;
+        border: calc($border-radius / 2) solid rgba($primary-color-regular, 0.4);
+        inset: $border-radius; border-radius: $border-radius;
+    }
+
+    @include hover {
+        transition: background 0.05s ease;
+    }
+}
+.root__tablist > div > span,
+.root__tablist > li > a > span {
+    @include regular-text;
+}
+.root__tablist > div > span,
+.root__tablist > li > a > span {
+    @include ui-font;
+    display: inline-block;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+.root__tablist > div > strong,
+.root__tablist > li > a > strong {
+    @include small-text;
+}
+.root__tablist > div > strong,
+.root__tablist > li > a > strong {
+    @include ui-font;
+    margin-left: 0.4rem; font-weight: $font-weight-regular;
+    display: inline-block; min-width: 1.35em; padding: 0.125rem 0.55rem;
+    background-color: $grey-light; border-radius: 100px;
+    color: $grey-lightest; line-height: 1.35em; text-align: center;
+
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+.root__tablist > div[data-selected="true"],
+.root__tablist > li > a[aria-selected="true"] span,
+.root__tablist > li > a[aria-selected="true"] strong {
+    z-index: 1; color: $blue;
+}
+
+/**
+ * Tabs
+*/
+.root__tabs {
+    margin: 0;
+}
+.root__tabs > ul {
+    @include bare-list;
+}
+
+/**
+ * Title
+*/
+.root__title {
+    @include table-columns;
+}
+.root__title {
+    margin: 1rem 0 0; align-items: center;
+
+    &[data-is-editing="true"] {
+        padding-inline: 0.5rem; padding-block-end: 0.25rem
+    }
+}
+.root__title > span {
+    @include medium-text;
+}
+.root__title > span {
+    text-transform: uppercase; font-weight: $font-weight-bold; color: $blue-medium;
+
+    @container tablist-wrapper (inline-size <= 720px) {
+        @include line-clamp(1);
+    }
+}
+
+/**
+* Extra
+*/
+.root__search {
+    margin-block: 0.75rem;
+    display: flex; align-items: center; gap: 1rem;
+}
+.root__search > div:first-child {
+    inline-size: 70%;
+}

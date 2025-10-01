@@ -1,0 +1,195 @@
+@import '../../styles/utils';
+
+.root {
+    --theme-border: hsl(220 50% 75%);
+    --ontheme: #f5f8fe;
+
+    --border: 1px solid var(--theme-border);
+
+    display: inline-flex; color: $white; fill: $white;
+    border-radius: $border-radius; background: $primary-color;
+    touch-action: manipulation; user-select: none;
+    -webkit-tap-highlight-color: transparent; min-block-size: 2.625rem;
+
+    & > button {
+        block-size: 2.625rem; min-block-size: 2.625rem; min-inline-size: auto;
+        border-end-start-radius: $border-radius; border-start-start-radius: $border-radius;
+        display: flex; align-items: center; place-content: center;
+
+        & > svg {
+            fill: $white; stroke: $white;
+        }
+    }
+
+    & svg {
+        box-sizing: content-box;
+        stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    &[data-disabled="true"] > * {
+        cursor: not-allowed; pointer-events: none; opacity: 0.5;
+    }
+
+    &:is[disabled] > * {
+        cursor: not-allowed; pointer-events: none; opacity: 0.5;
+    }
+}
+
+.root[data-variant="secondary"] {
+    background: $white; color: $primary-color;
+
+    & > button {
+        background: $white; color: $blue;   padding: 10px 21px;
+        border-top-right-radius: 0; border-bottom-right-radius: 0;
+        border: 1px solid $blue;
+
+        &:is(:hover,:focus-within) {
+            background: rgba($blue, 0.05);
+        }
+    }
+
+    > .root__popup {
+        border: 1px solid $blue;
+        border-left: none;
+
+        > svg {
+            fill: $blue;
+        }
+
+        &:is(:hover,:focus-within) {
+            background: rgba($blue, 0.05);
+        }
+
+        &:focus,
+        &[aria-expanded="true"] {
+            outline: none;
+        }
+
+        &:active,
+        &[aria-expanded="true"] {
+            background: rgba($blue, 0.05);
+        }
+    }
+}
+
+.root__popup {
+    inline-size: 4.5ch; block-size: 2.625rem;
+    cursor: pointer; position: relative; color: $white;
+    display: inline-flex; align-items: center;
+    justify-content: center; border-inline-start: var(--border);
+    border-start-end-radius: $border-radius; border-end-end-radius: $border-radius;
+
+    > svg {
+        fill: $white;
+    }
+
+    &:is(:hover,:focus-within) {
+        background: $primary-color-dark;
+    }
+
+    /* fixes iOS trying to be helpful */
+    &:focus,
+    &[aria-expanded="true"] {
+        outline: none;
+    }
+
+    &:active,
+    &[aria-expanded="true"] {
+        background: $primary-color-dark;
+    }
+
+    &:focus-within,
+    &[aria-expanded="true"] {
+        > svg {
+            transform: rotateZ(.5turn);
+            transition: transform 300ms ease;
+        }
+        > ul {
+            min-block-size: 4ch;
+            opacity: 1; pointer-events: auto; min-inline-size: 144px;
+            transform: translateY(0); inset: 105% 0 auto auto;
+            z-index: 999; padding: 0.75ch; margin: 0;
+
+            transition:
+                opacity 300ms ease,
+                transform 200ms ease;
+        }
+    }
+}
+
+
+/**************************************
+    Dropdown Content
+**************************************/
+.root__list {
+    --shadow: 220 70% 15%;
+    --shadow-strength: 1%;
+
+    opacity: 0; pointer-events: none;
+    position: absolute; inset: 100% 0 auto auto;
+
+    list-style-type: none; border-radius: $border-radius;
+    background: $white; color: $text-color; padding: 0.75ch;
+    overflow: hidden; font-size: .9em; display: flex; flex-direction: column;
+    transform: translateY(-5px); transition: transform 100ms ease;
+
+    box-shadow:
+        0 -2px 5px 0 hsl(var(--shadow) / calc(var(--shadow-strength) + 5%)),
+        0 1px 1px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 10%)),
+        0 2px 2px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 12%)),
+        0 5px 5px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 13%)),
+        0 9px 9px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 14%)),
+        0 16px 16px -2px hsl(var(--shadow) / calc(var(--shadow-strength) + 20%));
+
+    /* fixes iOS trying to be helpful */
+    &:focus {
+        outline: none
+    }
+
+    li {
+        background-color: transparent; inline-size: 100%;
+
+
+        > button {
+            display: flex; align-items: flex-start; justify-content: flex-start; gap: 0.5ch;
+            inline-size: 100%; text-wrap: nowrap; padding: 0.65rem 0.5rem !important;
+
+            > span {
+                display: flex; flex-direction: column; gap: 0; font-weight: 500;
+                line-height: normal; align-items: flex-start; text-align: start;
+
+                > small {
+                    opacity: 0.7; font-weight: 400;
+                }
+            }
+
+            > svg {
+                margin-block-start: 0.25rem; block-size: 1.1rem; inline-size: 1.1rem;
+
+                &[data-approve="true"] {
+                    fill: $success-color; stroke: $success-color;
+                }
+
+                &[data-decline="true"] {
+                    fill: $error-color; stroke: $error-color;
+                }
+            }
+        }
+    }
+
+    @media (width <= 400px) {
+        left: -200%;
+    }
+
+    & svg {
+        fill: $white; stroke: var(--theme);
+
+        @media (prefers-color-scheme: dark) {
+            stroke: var(--theme-border);
+        }
+    }
+}
+
+.root__list > li > button > span > small {
+    @include small-text;
+}

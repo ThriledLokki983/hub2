@@ -1,0 +1,121 @@
+@import '../../styles/utils';
+
+.root {
+    --bg-clr: $error-color-light;
+    --clr: $error-color-dark;
+    --border-clr: transparent;
+    --inn-bg-clr: transparent;
+    --inn-hover-clr: transparent;
+
+    z-index: z(toast); position: fixed; top: 0; right: 0; left: 0;
+    display: block; max-width: 480px; padding: ($gutter * 0.5) $gutter;
+    background: $error-color-light; color: $error-color-dark;
+    transition: all 0.3s;
+
+    @include bp-min($medium) {
+        top: $gutter-site * 1.5; right: $gutter-site * 1.5; left: auto; min-width: 320px;
+        padding: ($gutter * 0.75) $gutter; border-radius: $border-radius;
+        box-shadow: 0 0 15px 5px rgba($white, 0.25);
+    }
+
+    &[data-orientation="left"] {
+        right: auto; left: $gutter-site * 1.5;
+    }
+}
+.root[aria-hidden="true"] {
+    transform: translate3d(0, -100%, 0); opacity: 0; visibility: hidden;
+}
+body[data-has-modal="true"] .root {
+    @include bp-min($medium) {
+        box-shadow: $box-shadow;
+    }
+}
+
+/**
+ * Inner
+ */
+.root__inner {
+    position: relative; inline-size: 100%; block-size: 100%;
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+
+/**
+ * Content
+ */
+.root__content {
+    flex: 1 1 auto; padding-right: 15px;
+    @include bp-min($small) {
+        padding-right: 1.5rem;
+    }
+}
+.root__content > h3 {
+    margin-bottom: 0.15em;
+}
+.root__content > p {
+    @include medium-text;
+}
+.root__content > p {
+    line-height: 1.25;
+}
+.root__content > p:last-child {
+    margin-bottom: 0;
+}
+
+/**
+ * Button
+ */
+.root__inner > button {
+    @include bare-button;
+}
+.root__inner > button {
+    @include ui-font; flex: 0 0 auto; margin-right: 0.75rem;
+    min-inline-size: 42px; min-block-size: 42px;
+    padding: 0.5rem; border-radius: $border-radius;
+    color: inherit; font-size: inherit; line-height: 0;
+    background-color: darken($error-color-light, 3);
+    @include bp-min($small) {
+        margin-right: -0.25rem;
+    }
+    @include hover {
+        background-color: darken($error-color-light, 5);
+    }
+}
+.root__inner > button[data-has-label="true"] {
+    align-self: center; padding: 0.5rem 1.25rem;
+}
+
+/**
+ * Variation: message
+ */
+.root[data-type="message"] {
+    background: $success-color-light; color: $success-color;
+    &[data-has-button="true"] .root__content {
+        border-color: rgba($primary-color, 0.5);
+    }
+    .root__inner > button {
+        background-color: darken($success-color-light, 10);
+        @include hover {
+            background-color: darken($success-color-light, 15);
+        }
+    }
+}
+
+// Info
+.root[data-type="info"] {
+    --bg-clr: #FFECBD;
+    --clr: #EB8C00;
+    --bd-clr: rgba(210, 215, 226, 0.5);
+    --inn-bg-clr: darken(#FFECBD, 10);
+    --inner-hover-clr: darken(#FFECBD, 15);
+
+    background: $warning-color-light; color: $warning-color;
+    &[data-has-button="true"] .root__content {
+        border-color: rgba($primary-color, 0.5);
+    }
+    .root__inner > button {
+        background-color: darken($warning-color-light, 10);
+        @include hover {
+            background-color: darken($warning-color-light, 15);
+        }
+    }
+}

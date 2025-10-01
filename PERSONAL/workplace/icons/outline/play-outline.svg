@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>play-outline-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="play-outline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,2 C8.27106018,2.0073504 2.0073504,8.27106018 2,16 C2,23.7319865 8.2680135,30 16,30 C23.7319865,30 30,23.7319865 30,16 C30,8.2680135 23.7319865,2 16,2 Z M16,8.48703823e-15 C24.836556,1.16450059e-14 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 C7.163444,32 6.31593543e-15,24.836556 7.10542736e-15,16 C7.89491929e-15,7.163444 7.163444,2.96059473e-15 16,5.32907052e-15 Z M10.5555556,26.3777778 L10.5555556,6.06666667 L25.8044444,16.2222222 L10.5555556,26.3777778 Z M12.5555556,9.8 L12.5555556,22.6666667 L22.1955556,16.2222222 L12.5555556,9.8 Z" id="Combined-Shape" fill="#2D2D2D" fill-rule="nonzero"></path>
+    </g>
+</svg>

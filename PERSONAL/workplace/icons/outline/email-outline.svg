@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>email-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="email" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30,4.0003 C31.104,4.0003 32,4.89496667 32,6.0003 L32,26.0003 C32,27.1043 31.104,28.0003 30,28.0003 L2,28.0003 C0.896,28.0003 0,27.1043 0,26.0003 L0,6.0003 C0,4.89496667 0.896,4.0003 2,4.0003 L30,4.0003 Z M30,26.0003 L30,10.7069667 L16,17.4336333 L2,10.7069667 L2,26.0003 L30,26.0003 Z M30,8.4883 L30,6.0003 L2,6.0003 L2,8.48696667 L16,15.2149667 L30,8.4883 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

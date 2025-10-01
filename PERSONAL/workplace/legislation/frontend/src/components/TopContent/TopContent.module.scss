@@ -1,0 +1,136 @@
+@import '../../styles/utils';
+
+.root {
+    grid-column: span 2; position: relative;
+    display: flex; flex-direction: column;
+
+    padding-block: var(--content-padding-all, var(--sp-c));
+    padding-inline: calc(var(--content-padding-all, var(--sp-c)) / 2) 0.25rem;
+
+    &[data-is-editing="true"] {
+        padding-block:
+            var(--content-padding-all, var(--sp-c))
+            calc(var(--content-padding-all, var(--sp-c)) * 0.25);
+    }
+
+    &[data-header-content="true"][data-details-page="true"] {
+        padding-block-end: 0; background-color: hsl(0, 0%, 95%);
+        position: sticky; top: 0; z-index: 999;
+    }
+
+    &[data-show-guide="true"] {
+        > h3 {
+            z-index: 9999; background-color: $white;
+            padding: 1.25rem 3rem 1rem 1rem; border-radius: $border-radius;
+            transform: scale(1.03) translate3d(-16px, 20px, 15px);
+            inline-size: fit-content;
+
+            transition: var(--tour-transition);
+
+            > span[data-role-based="true"] {
+                top: 2rem;
+            }
+        }
+    }
+
+    > div[data-text-n-btn="true"] {
+        display: flex; align-items: flex-start; justify-content: space-between;
+        gap: 1rem; padding-block: 1rem;
+
+        > p,
+        > div[data-btn-set="true"] {
+            margin: 0;
+        }
+
+        > div[data-btn-set="true"] > button {
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+    }
+}
+.root > div[data-add-btn="true"] {
+    position: relative;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+
+    > p {
+        margin: 0;
+    }
+
+    > div {
+        margin: 0;
+    }
+}
+.root > div[data-add-btn="true"] > div[data-btn-set] a {
+    min-inline-size: auto; padding-inline: 0.75rem !important;
+}
+.root > div[data-add-btn="true"] > button,
+.root > div[data-add-btn="true"] > div[data-btn-set] a,
+.root > div[data-add-btn="true"] > div[data-btn-set] > button {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding-inline: min(2rem, 3rem);
+}
+
+.root h3 {
+    @include h3;
+}
+.root h3 {
+    font-size: 32px; color: $grey-darker; padding: 0.5rem 0;
+}
+.root > p {
+    @include large-text;
+}
+.root > p {
+    position: relative; color: $grey-darker;
+    font-size: 18px; margin-block: 0; line-height: 32px;
+}
+
+// Notifications
+.root__alert {
+    z-index: 1; position: absolute;
+    inset: 0 0 auto auto; inline-size: 30vw;
+}
+
+
+/********************************
+ * Top Content Section
+ ********************************/
+.root > div[data-top-content] {
+    display: flex; justify-content: space-between; align-items: center;
+}
+.root > div[data-top-content] > span {
+    @include medium-text;
+}
+.root > div[data-top-content] > span {
+    color: lighten($text-color-light, 10%); font-size: 20px;
+    margin-block: 0; display: flex; align-items: center;
+
+    &::before {
+        --size: 13px;
+        content: '';
+        display: inline-block; margin-inline-end: 10px;
+        inline-size: var(--size); block-size: var(--size); border-radius: 100px;
+        background-color: lighten($text-color-light, 8%);
+        box-shadow:
+            inset 0 0 0 .0625rem lighten($text-color-light, 20%),
+            0 0 0 .2rem lighten($text-color-light, 25%);
+    }
+
+    &[data-is-draft="true"] {
+        color: lighten($error-color, 10%);
+
+        &::before {
+            background-color: lighten($error-color, 10%);
+            box-shadow: inset 0 0 0 .0625rem lighten($error-color, 20%),
+                0 0 0 .2rem lighten($error-color, 25%);
+        }
+    }
+
+    &[data-is-published="true"] {
+        color: lighten($success-color, 10%);
+
+        &::before {
+            background-color: lighten($success-color, 10%);
+            box-shadow: inset 0 0 0 .0625rem lighten($success-color, 20%),
+                0 0 0 .2rem lighten($success-color, 25%);
+        }
+    }
+}

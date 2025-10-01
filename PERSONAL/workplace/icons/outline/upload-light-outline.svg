@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>download-light-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="download-light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.71436151,9.13388064 C9.3226421,9.52560005 8.6876021,9.52560005 8.29588268,9.13388064 C7.90416327,8.74216122 7.90416327,8.10712122 8.29588268,7.71540181 L16.0126214,0 L23.7280232,7.71540181 C24.1197426,8.10712122 24.1197426,8.74216122 23.7280232,9.13388064 C23.532832,9.32907188 23.2761421,9.42800443 23.0194523,9.42800443 C22.7627624,9.42800443 22.5060726,9.32907188 22.3108813,9.13388064 L17.0153162,3.83831547 L17.0153162,22.1729231 L15.0099267,22.1729231 L15.0099267,3.83831547 L9.71436151,9.13388064 Z M7,32 L7,30 L25,30 L25,32 L7,32 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

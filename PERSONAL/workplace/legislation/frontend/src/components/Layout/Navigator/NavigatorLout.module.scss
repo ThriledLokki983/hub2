@@ -1,0 +1,39 @@
+@import '../../../styles/utils';
+
+/**
+* Legislation main layout
+*/
+.root {
+    @include grid-container;
+    position: relative;
+}
+.root[data-show-guide="true"] {
+    backdrop-filter: var(--bd-filter);
+}
+
+.root > aside[data-show-guide="true"],
+.root > aside[data-show-guide="true"] > header,
+.root > aside[data-show-guide="true"] > [data-aside-button] {
+    background-color: var(--aside-tour-color);
+}
+
+.root > section[data-main-content="true"] {
+    padding: var(--content-padding-all, var(--sp-c));
+    grid-column: auto;
+
+    &[data-navigator-accordion="true"] {
+        overflow: clip; position: relative;
+        padding: calc(var(--content-padding-all, var(--sp-c)) * 0.01);
+
+        &[data-show-guide="true"] {
+            overflow: initial;
+        }
+    }
+}
+
+.root > aside {
+    background-color: transparent;
+    padding-block: 0;
+    box-shadow: none;
+    transition: transform 0.25s ease-in;
+}

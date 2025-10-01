@@ -1,0 +1,143 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative; display: flex;
+}
+.root[data-is-pill="true"] {
+    position: relative; inline-size: fit-content;
+    border-radius: $border-radius-x-large;
+}
+.root[data-is-pill="true"] > .root__checkbox {
+    display: none;
+}
+label.root__checkboxlabel {
+    @include medium-text;
+}
+.root[data-is-pill="true"] > .root__checkbox + .root__checkboxlabel {
+    padding: 0.9rem 1.5rem; margin: 0;
+    display: flex; align-items: center; justify-content: center;
+    background-color: transparent; inline-size: fit-content; block-size: auto;
+    border: 1px solid rgba($text-color-light, 0.5); border-radius: $border-radius-x-large;
+
+    transition: background-color 200ms ease-in, color 200ms ease-in;
+
+    &[data-checked="true"] {
+        background-color: $blue; border-color: $blue;
+        color: $white; border: 1px solid $blue;
+    }
+
+    &[data-filter-name="in effect"],
+    &[data-filter-name="pending"] {
+        text-transform: capitalize;
+    }
+}
+
+.root[data-requirements-check="true"] {
+    > .root__checkbox {
+        inline-size: 3rem;
+    }
+
+    > .root__checkboxlabel {
+        text-align: start; font-weight: $font-weight-light;
+
+        @include bp-min($medium) {
+            font-size: 1rem !important; color: $text-color-light;
+        }
+    }
+}
+
+.root__checkbox {
+    position: relative; display: block; cursor: pointer;
+    margin: 0;padding: 0; inline-size: 1.1rem; block-size: 1.1rem;
+
+    &[data-checked="true"] {
+        > span svg {
+            color: $blue;
+        }
+    }
+
+    > span svg {
+        inline-size: 1.1rem; block-size: 1.1rem;
+    }
+
+    > div[data-hidden-accessibility="true"] {
+        clip: rect(0 0 0 0); block-size: 1.1rem; inline-size: 1.1rem;
+        overflow: hidden; padding: 0; position: absolute; border: 0;
+
+        input {
+            padding: initial; border: initial; appearance: checkbox;
+            -webkit-appearance: checkbox; cursor: default; transform: scale(0);
+        }
+    }
+}
+.root__deselected {
+    color: $text-color-light; opacity: 0.2;
+}
+
+.root__outline {
+    display: none; color: $text-color-light;
+}
+.root__selected {
+    position: absolute;
+    top: 0; left: 0; color: $blue; font-size: 0.6rem;
+}
+.root__indeterminate {
+    position: absolute;
+    top: 0; left: 0; color: $blue; font-size: 0.6rem;
+}
+
+.root__checkbox[data-indeterminate="true"],
+.root__checkbox[data-checked="true"] {
+    [data-checkbox-deselected-fill] {
+        display: none;
+    }
+
+    [data-checkbox-backdrop-outline] {
+        display: inline-flex;
+    }
+}
+
+.root__checkbox[data-disabled="true"] {
+    cursor: not-allowed;
+
+    input {
+        cursor: not-allowed;
+    }
+
+    > span[data-checkbox-deselected-fill="true"] {
+        opacity: 0.5;
+    }
+}
+
+.root__checkbox[data-focus="true"] {
+    outline: auto 2px Highlight; /* Firefox */
+    // outline: auto 5px -webkit-focus-ring-color; /* Webkit, Safari */
+    outline-offset: 1px;
+}
+
+.root__checkbox + .root__checkboxlabel {
+    padding-left: 0.75rem; display: block; margin: 0; cursor: pointer;
+    text-transform: none; color: rgba($text-color, 0.85);
+
+    &[data-is-filter="false"] {
+        font-weight: $font-weight-regular; font-size: 0.9rem;
+    }
+
+    &[data-is-filter="true"] {
+        @include line-clamp(1);
+        inline-size: 310px;
+    }
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+
+    &:empty {
+        display: none;
+    }
+
+    &[data-filter-name="in effect"],
+    &[data-filter-name="pending"] {
+        text-transform: capitalize;
+    }
+}

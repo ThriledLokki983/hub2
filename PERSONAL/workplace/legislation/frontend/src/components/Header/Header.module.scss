@@ -1,0 +1,232 @@
+@import '../../styles/utils';
+
+.root {
+    --header-shadow: 0px 1px 0px 0px hsl(0, 0%, 95%);
+
+    z-index: z(site-header);
+    display: flex; flex-direction: column;
+    position: relative;
+    text-decoration: none;
+    background-color: $background-color;
+    box-shadow: var(--header-shadow);
+}
+.root[data-show-guide="true"] {
+    background-color: unset; opacity: 0.7;
+
+    > * {
+        user-select: none; pointer-events: none;
+    }
+}
+.root[data-show-guide="true"] > section[data-content][data-header] {
+    backdrop-filter: var(--bd-filter);
+}
+
+/**
+* Inner Content
+*/
+.root__inner {
+    position: relative;
+    block-size: 100%; inline-size: 100%;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+    padding-block: calc($gutter-site * 0.25) 0;
+    padding-inline: calc($gutter-site * 0.25);
+
+    @include bp-min($medium) {
+        flex-wrap: nowrap;
+    }
+}
+.root[data-is-access="true"] .root__inner {
+    > div:last-of-type {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    > nav::after {
+        border-left: none;
+    }
+}
+
+/**
+* Logo
+*/
+.root__logo {
+    position: relative;
+    text-decoration: none;
+    display: flex; align-items: flex-end; gap: 0.5rem;
+}
+.root[data-is-access="true"] .root__logo {
+    pointer-events: none;
+    user-select: none;
+}
+.root__logo span {
+    @include medium-text;
+    color: $logo-text;
+
+    @include bp-min($medium) {
+        font-size: 1rem;
+    }
+
+    small {
+        opacity: 0.5;
+    }
+}
+.root__logo > svg {
+    block-size: 20px; inline-size: 50px;
+}
+
+
+/**
+* Navigation
+*/
+.root__nav {
+    order: 1; flex: 1;
+    position: relative;
+
+    @include bp-min($medium) {
+        order: 0;
+        flex: 1 1 auto;
+        block-size: 100%;
+        margin-inline: 3rem 1rem;
+
+        &::before,
+        &::after {
+            position: absolute; top: 15%;
+            content: '';
+            height: 70%;
+            width: 1px;
+            border-left: 1px solid $border-color;
+        }
+
+        &::before {
+            left: -1.5rem;
+        }
+
+        &::after {
+            right: 0.25rem;
+        }
+    }
+
+
+}
+.root[data-onboarding="true"] .root__nav ul {
+    visibility: hidden; opacity: 0;
+
+}
+.root__nav ul {
+    display: flex; justify-content: space-around; align-items: center; gap: 0.75rem;
+    padding: 0; list-style-type: none;
+    margin: 0;
+    border-bottom: 2px solid $border-color;
+
+    @include bp-min($medium) {
+        block-size: inherit;
+        justify-content: flex-start;
+        border-bottom: 2px solid transparent;
+    }
+}
+
+.root__nav ul li {
+    position: relative;
+    flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 2px solid transparent;
+
+    @include bp-min($medium) {
+        flex: none;
+        block-size: inherit;
+
+        &:not(:last-of-type) {
+            margin-inline-end: 1rem;
+        }
+    }
+}
+.root__nav ul li:has([aria-current="page"])::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; left: 0;
+    inline-size: 100%;
+    border-bottom: 2px solid $blue;
+}
+
+.root__nav ul li a {
+    block-size: inherit;
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    text-decoration: none;
+    color: $text-color-light;
+    transition: $transition-layout;
+}
+.root__nav ul li a svg {
+    inline-size: 1.3rem; block-size: 1.2rem;
+}
+.root__nav ul li a > span {
+    @include large-text;
+}
+.root__nav ul li a[aria-current="page"] {
+    color: $blue;
+}
+
+
+/**
+ * Profile
+ */
+.root__profile {
+    position: relative;
+    display: flex; align-items: center; width: 100%;
+}
+.root__profile > * {
+    flex: 0 0 auto;
+}
+.root__profile [dropdown-menu] {
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+
+/**
+ * Profile avatar
+ * Note: this is also used and imported in `AccessListItem`.
+ */
+.root__profileavatar {
+    @include bare-button; @include ui-font;
+    display: flex; align-items: center;
+    width: 100%; padding: 0;
+    font-size: inherit; letter-spacing: inherit;
+    cursor: pointer;
+}
+.root__profileavatar > span {
+    @include avatar(40px);
+    transition: box-shadow 0.1s;
+}
+.root__profileavatar:hover,
+.root__profileavatar:focus-visible {
+    & > span {
+        box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.12);
+    }
+    & > strong {
+        color: $primary-color-dark;
+    }
+}
+.root__profileavatar[aria-expanded="true"] > span {
+    box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.12);
+}
+.root__profileavatar > span > span {
+    display: block;
+}
+.root__profileavatar > strong {
+    margin: 0; flex: 0 0 auto;
+    @include ui-font; color: $primary-color;
+    transition: color 0.1s;
+}
+.root__profileavatar + svg {
+    rotate: 90deg;
+    margin-inline-start: -0.25rem;
+    fill: $blue;
+}
+
+// Profile Info Group
+.root__profileinfo {
+    display: flex; align-items: center; gap: 1.25rem;
+}
+.root__profileinfo > .root__profiletype {
+    @include small-text;
+    background-color: $blue; padding: 0.15rem 1.5rem; border-radius: 1rem;
+    color: $white;
+}

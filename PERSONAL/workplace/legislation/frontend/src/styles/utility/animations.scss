@@ -1,0 +1,84 @@
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.4;
+    }
+}
+
+@keyframes detect-scroll{
+    from,
+    to {
+        // stylelint-disable-next-line
+        --can-scroll: ;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes resize-width {
+    from {
+        width: 100%;
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        width: 0;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vanish {
+    from {
+        display: inline-block;
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+
+
+@keyframes slide-from-right {
+    from {
+        opacity: 0;
+        transform: translateX(75px);
+    }
+}
+
+@keyframes slide-to-left {
+    to {
+        opacity: 0;
+        transform: translateX(-75px);
+    }
+}
+
+::view-transition-old {
+    animation: 350ms both slide-to-left ease;
+}
+
+::view-transition-new {
+    animation: 350ms both slide-from-right ease;
+}

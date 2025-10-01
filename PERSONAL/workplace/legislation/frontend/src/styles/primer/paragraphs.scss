@@ -1,0 +1,45 @@
+p {
+    @include font-smoothing;
+    margin: 0 0 1.25em;
+
+    &[data-center] {
+        text-align: center
+    }
+}
+p button {
+    @include bare-button;
+    padding: 0; color: inherit;
+    text-decoration: underline;
+}
+p button:hover {
+    text-decoration: none;
+}
+
+small {
+    @include medium-text;
+    display: inline-block;
+}
+
+span {
+    @include font-smoothing;
+}
+
+// get any span with a class that includes 'icon'
+span[class*="icon"],
+span.appkit-icon {
+    @include icon-font;
+    &::before {
+        @include icon-font;
+        font-weight: $font-weight-regular;
+    }
+}
+
+strong {
+    @include font-smoothing;
+    font-weight: 700;
+}
+
+
+mark {
+    background-color: rgb(255, 236, 189, 0.75);
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>menu-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,17 L32,17 L32,15.0013333 L0,15.0013333 L0,17 Z M0,9 L32,9 L32,7 L0,7 L0,9 Z M0,25 L32,25 L32,23 L0,23 L0,25 Z" id="Menu-View-Outline" fill="#212121"></path>
+    </g>
+</svg>

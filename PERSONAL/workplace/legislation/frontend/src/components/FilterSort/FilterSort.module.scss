@@ -1,0 +1,71 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: flex; align-items: center;
+}
+
+.root > div:first-of-type input {
+    border-top-right-radius: 0; border-bottom-right-radius: 0;
+    border: 1px solid $input-border-color;
+    border-right: 1px solid transparent;
+    box-shadow: none;
+
+    @include hover {
+        background: $whitish;
+    }
+    &:focus-visible {
+        background: $white;
+        box-shadow:
+            inset 0 0 0 .0625rem $input-focus-color,
+            0 0 0 0.25rem rgba(65, 83, 133, 0.12);
+    }
+
+    &:focus ~ svg,
+    &:focus-visible ~ svg {
+        fill: $blue !important;
+        transform: rotate(-180deg) translateY(3px);
+    }
+}
+.root > div:first-of-type input ~ svg {
+    transform: rotate(0) translateY(0);
+
+    transition: transform 250ms ease-in;
+}
+.root > div:first-of-type + button + span {
+    position: absolute; right: 3rem;
+    block-size: 2rem;
+    border: 0.0625rem solid rgba(140, 140, 140, 0.15);
+}
+.root > div:first-of-type + button {
+    border-top-left-radius: 0; border-bottom-left-radius: 0;
+    border: 1px solid $input-border-color; border-left: none;
+    transform: translateX(-1px);
+    max-block-size: 2.5rem;
+}
+.root > div:first-of-type + button[data-active-sort="false"] > svg {
+    rotate: 0;
+    transition: all 0.3s ease;
+}
+.root > div:first-of-type + button[data-active-sort="true"] {
+    background-color: $blue-light;
+    border: 0.5px solid $blue; border-left: none;
+    color: $blue-light;
+    opacity: 0.75;
+    box-shadow: 0 0 0 0.15rem rgba(65, 83, 133, 0.12);
+
+    > svg {
+        fill: $blue;
+        rotate: -180deg;
+        transition: all 0.3s ease;
+
+        @include hover {
+            fill: $blue-dark;
+        }
+    }
+}
+
+.root > button {
+    min-inline-size: 2rem;
+    padding: 0.625rem 1rem !important;
+}

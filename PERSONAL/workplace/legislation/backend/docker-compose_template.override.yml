@@ -1,0 +1,15 @@
+services:
+  backend:
+    platform: linux/amd64
+    command:
+      - make
+      - run-dev-native
+    environment:
+      DATABASE_URL: mysql://root:[PASSWORD]@host.docker.internal:3306/pln
+
+  mysql:
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: PASSWORD # pragma: allowlist secret
+    profiles:
+      - donotstart

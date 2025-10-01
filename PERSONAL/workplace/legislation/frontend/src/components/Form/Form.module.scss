@@ -1,0 +1,45 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    min-block-size: 100%;
+    display: flex; flex-direction: column;
+
+    > div[data-hidden="true"] {
+        display: none;
+    }
+}
+.root + div[data-project-create="true"][data-btn-set="true"] {
+    display: flex; justify-content: center; gap: 1rem; margin-block: 1rem;
+
+    > button {
+        min-inline-size: 30%;
+    }
+}
+.root:not([data-drawer]) div[data-close-set] {
+    display: none;
+}
+
+.root > div[data-content-wrapper="true"] {
+    position: relative;
+    flex: unset;
+
+    &:not([data-hidden="true"]) {
+        flex: 1;
+    }
+}
+
+.root div[data-is-disabled="true"] {
+    pointer-events: none;
+
+    // input[readonly],
+    // textarea[readonly] {
+    //     opacity: 0.5;
+    // }
+}
+
+input[readonly],
+textarea[readonly] {
+    opacity: 0.5;
+
+}

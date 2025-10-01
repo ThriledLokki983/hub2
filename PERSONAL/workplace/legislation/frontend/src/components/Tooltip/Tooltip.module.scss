@@ -1,0 +1,81 @@
+@import '../../styles/utils';
+
+.root {
+    box-shadow: 0 8px 20px rgba(0 0 0 / 0.1);
+    border-radius: 4px; background-color: rgba(0 0 0 / 0.75);
+    color: $white; forced-color-adjust: none;
+    outline: none; padding: 2px 8px; min-inline-size: 10rem;
+    /* fixes FF gap */
+    transform: translate3d(0, 0, 0);
+
+    .root__arrow {
+        fill: rgba(0 0 0 / 0.75);
+    }
+
+    &[data-placement=top] {
+        --origin: translateY(4px);
+        margin-bottom: 8px;
+    }
+
+    &[data-placement=bottom] {
+        margin-top: 8px;
+        --origin: translateY(-4px);
+        & .root__arrow svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &[data-placement=right] {
+        margin-left: 8px;
+        --origin: translateX(-4px);
+        & .root__arrow svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    &[data-placement=left] {
+        margin-right: 8px;
+        --origin: translateX(4px);
+        & .root__arrow svg {
+            transform: rotate(-90deg);
+        }
+    }
+
+    & .root__arrow svg {
+        display: block;
+        fill: var(--highlight-background);
+    }
+
+    &[data-entering] {
+        animation: slide 200ms;
+    }
+
+    &[data-exiting] {
+        animation: slide 200ms reverse ease-in;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: var(--origin);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.tooltip__content {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px;
+    min-inline-size: 10rem;
+    padding: 8px;
+    font-size: 14px;
+
+    > span,
+    > p {
+        text-align: left;
+    }
+}

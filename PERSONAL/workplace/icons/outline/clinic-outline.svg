@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>clinic-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="clinic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16.00015,2.00045 L32.00015,18.00045 L27,18.00045 L27,30 L5,30 L5,18.00045 L0.00015,18.00045 L16.00015,2.00045 Z M15.99915,5 L5,15.99845 L7,15.99845 L7,28 L25,28 L25,15.99845 L27,15.99845 L15.99915,5 Z M15.00015,12.00025 L17.00015,12.00025 L17.00015,17.00025 L22.00015,17.00025 L22.00015,19.00025 L17.00015,19.00025 L17.00015,24.00025 L15.00015,24.00025 L15.00015,19.00025 L10.00015,19.00025 L10.00015,17.00025 L15.00015,17.00025 L15.00015,12.00025 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

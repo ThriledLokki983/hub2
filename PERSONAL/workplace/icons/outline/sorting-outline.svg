@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>sorting-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="sorting" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9.7896,5 L11.2042667,6.41333333 L5.63226667,11.9866667 L32.0002667,11.9866667 L32.0002667,13.9866667 L0.804266667,13.9866667 L9.7896,5 Z M0,17.9864 L31.1973333,17.9864 L22.2093333,26.9730667 L20.796,25.5597333 L26.3693333,19.9864 L0,19.9864 L0,17.9864 Z" id="Combined-Shape" fill="#212121" transform="translate(16.000133, 15.986533) rotate(-270.000000) translate(-16.000133, -15.986533) "></path>
+    </g>
+</svg>

@@ -1,0 +1,123 @@
+@import '../../styles/utils';
+
+.root {
+    z-index: z(dropdown-menu); overflow: hidden;
+    position: absolute; top: 100%; right: 0.25em;
+    padding: 8px; background: $white; border-radius: 8px;
+    box-shadow: $box-shadow; display: flex; flex-direction: column;
+
+    min-inline-size: 200px; min-block-size: 170px;
+    transition: all 0.15s;
+}
+.root[aria-hidden="true"] {
+    transform: translateY(10px);
+    opacity: 0; visibility: hidden;
+}
+
+.root > [data-btn-set] {
+    margin-block-start: auto;
+    gap: 0.15rem;
+
+    > a,
+    button[data-logout="true"] {
+        padding: 0.4375rem 0.5rem;
+    }
+}
+
+.root > [data-btn-set] > button[data-logout="true"],
+.root > [data-btn-set] > a[data-logout="true"] {
+    display: flex; align-items: center; gap: 0.35rem;
+    inline-size: 100%;
+    margin-inline: 0 0.75rem;
+    color: rgba($text-color-light, 0.8); text-align: left;
+    font-weight: $font-weight-regular; justify-content: flex-start;
+}
+
+/**
+ * Intro (used in `Header`)
+ */
+.root > p:first-child {
+    display: flex; align-items: center; gap: 0.3rem;
+    margin: 0.55rem 0.5rem 0.35rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.25;
+
+    > svg {
+        color: rgba($text-color-light, 0.8);
+    }
+}
+.root > p:first-child > span {
+    @include font-smoothing;
+    font-size: 0.9375em;
+}
+
+/**
+ * Actions
+ */
+.root > ul {
+    @include bare-list;
+}
+.root > ul > li > button,
+.root > ul > li > a {
+    @include bare-button;
+    display: flex; width: 100%; padding: 0.75rem;
+    border-radius: 0.25rem;
+    white-space: nowrap; font-size: inherit; text-decoration: none;
+    transition: background-color 0.05s;
+}
+.root > ul > li > button:hover,
+.root > ul > li > button:focus-visible,
+.root > ul > li > a:hover,
+.root > ul > li > a:focus-visible {
+    background: $whitish;
+}
+.root > ul > li > button[disabled],
+.root > ul > li > a[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+.root > ul > li > button > svg,
+.root > ul > li > a > svg {
+    flex: 0 0 auto; margin: 1px 0.45rem 0 0;
+    width: 16px; height: 16px;
+}
+
+/**
+ * Specifics: Header/Profile
+ */
+.root[data-type="header-profile"] > ul > li[data-inner-avatar="true"]:first-child {
+    padding-block-start: 0.85rem;
+    border-top: 1px solid $whitish;
+}
+.root[data-type="header-profile"] > ul > li:nth-last-child(2) {
+    padding: 0.5rem 0;
+    border-top: 1px solid $whitish;
+    border-bottom: 1px solid $whitish;
+}
+.root[data-type="header-profile"] > ul > li:nth-last-child(2),
+.root[data-type="header-profile"] > ul > li:last-child {
+    margin-block-start: 0.35rem;
+}
+.root[data-type="header-profile"] > ul > li > button[data-is-fetching="true"] > svg {
+    animation: dropdown-fetching 0.75s linear infinite;
+}
+.root[data-type="header-profile"] > aside {
+    margin: 8px -8px -8px;
+    padding: 0.65rem calc(0.75rem + 8px);
+    background: $whitish; color: rgba($text-color-light, 0.8);
+    font-size: 0.725rem;
+}
+@keyframes dropdown-fetching {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**
+ * Specifics: Meet/View
+ */
+.root[data-type="meet-view"] > ul > li:first-child,
+.root[data-type="meet-view"] > ul > li:nth-child(2) {
+    margin-bottom: 0.5rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid $whitish;
+}

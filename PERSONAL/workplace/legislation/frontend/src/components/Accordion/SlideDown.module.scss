@@ -1,0 +1,52 @@
+@import '../../styles/utils';
+
+.root__slidedown {
+    height: 0; transition-property: none; display: none;
+    transition-duration: .3s; transition-timing-function: ease-in-out;
+}
+
+.root__slidedown ul {
+    @include bare-list;
+
+    li[data-hide-value="true"] {
+        visibility: hidden; height: 0; width: 0;
+        display: none;
+    }
+}
+.root__slidedown ul > li:not(:last-of-type) {
+    padding-block-end: 0.5rem;
+}
+.root__slidedown ul > li:last-of-type {
+    padding-block-end: 1.25rem;
+}
+
+/**
+ * Checkbox
+ */
+.root__slidedown li[data-checkbox="true"] label {
+    display: flex; align-items: center;
+    margin: 0; block-size: 100%; background: transparent;
+}
+.root__slidedown ul > li[data-empty="true"] {
+    @include small-text;
+}
+.root__slidedown li[data-empty="true"] {
+    color: rgba($grey-lighter, 0.5); margin-inline-start: 0.5rem;
+}
+
+.root__transitioning {
+    overflow-y: hidden;
+}
+
+.root__closed {
+    display: none; margin-block-end: 0;
+}
+
+/**
+* Special case
+*/
+ul[data-role-view="true"] .root__slidedown {
+    background-color: $white; padding-inline: 1.25rem;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}

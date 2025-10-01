@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>time-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="time" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,0 C24.836,0 32,7.164 32,16 C32,24.836 24.836,32 16,32 C7.16266667,32 0,24.836 0,16 C0,7.164 7.16266667,0 16,0 Z M16,30 C23.72,30 30,23.72 30,16 C30,8.28 23.72,2 16,2 C8.28,2 2,8.28 2,16 C2,23.72 8.28,30 16,30 Z M17.0006667,15.0001333 L25.9206667,15.0001333 L25.9206667,17.0001333 L15.0006667,17.0001333 L15.0006667,6.08013333 L17.0006667,6.08013333 L17.0006667,15.0001333 Z" id="Combined-Shape" fill="#212121"></path>
+    </g>
+</svg>

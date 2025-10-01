@@ -1,0 +1,21 @@
+@import '../../styles/utils';
+
+.root {
+    --avatar-size: 40px;
+
+    @include avatar;
+    position: relative;
+
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    line-height: var(--avatar-size);
+    font-size: calc(var(--avatar-size) / 2.5);
+
+    @include hover {
+        cursor: pointer;
+    }
+}
+
+.root[data-has-card="false"] {
+    cursor: not-allowed;
+}

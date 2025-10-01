@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>volume-off-outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="volume-off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7,11.0263749 C7,9.92764141 7.8954305,9.03694194 9,9.03694194 L12.1395122,9.03694194 L23.4266378,1.17974328 C23.5947015,1.06275067 23.7948696,1 24,1 C24.5522847,1 25,1.44534973 25,1.99471647 L25,30.005198 C25,30.2092446 24.936916,30.4083551 24.819302,30.5755309 C24.5026428,31.0256281 23.8791258,31.1351573 23.4266378,30.8201712 L12.1395122,22.9629725 L9,22.9629725 C7.8954305,22.9629725 7,22.0722731 7,20.9735396 L7,11.0263749 Z M23,3.90493924 L12.7698223,11 L9,11 L9,21 L12.7698223,21 L23,28.0949752 L23,3.90493924 Z" id="ic_ol_volume_off_32" fill="#212121"></path>
+    </g>
+</svg>

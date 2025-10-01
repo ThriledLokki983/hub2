@@ -1,0 +1,46 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    display: inline-block;
+
+    &[data-details="true"] {
+        inline-size: 100%; block-size: 60%;
+        display: flex; place-content: center; place-items: center;
+        grid-column: span 2; gap: 1rem;
+
+        > span {
+            @include h1;
+            color: $blue;
+
+            @include bp-min($medium) {
+                font-size: 6rem;
+            }
+        }
+    }
+}
+
+.root__dot {
+    display: inline-block;
+
+    animation-name: moveDot;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+    margin-left: 0.2em;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+@keyframes moveDot {
+    from {
+        transform: translate3d(0, -0.3em, 0);
+    }
+    to {
+        transform: translate3d(0, 0.3em, 0);
+    }
+}

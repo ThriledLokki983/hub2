@@ -1,0 +1,94 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+.root__article > p:not([class]) {
+    @include regular-text;
+
+}
+.root__article {
+    margin-block-start: 2rem; inline-size: auto; block-size: auto; overflow: auto;
+
+    &[data-index="2"],
+    &[data-index="3"] {
+        overflow: unset;
+    }
+
+    > p {
+        margin-block-end: 3rem; font-weight: $font-weight-medium; color: $text-color-light;
+        opacity: 0.8;
+    }
+
+    > form {
+        position: relative; padding-block-end: 15rem; block-size: auto;
+
+        &[data-project-edit="true"] {
+            block-size: calc(100dvh - 217px - 75px);
+            min-block-size: unset; padding-block-end: 8rem;
+
+            &[data-tab="3"] {
+                padding-block-end: 2rem;  block-size: calc(100vh - 217px - 85px);
+            }
+
+            &[data-tab="2"] {
+                block-size: auto; overflow: unset;
+            }
+        }
+
+        input,
+        textarea {
+            background-color: $white !important;
+        }
+    }
+
+    &[data-tab="1"] > form {
+        &[data-project-edit="true"] {
+            block-size: calc(100dvh - 317px - 150px); padding-block-end: 4rem;
+        }
+    }
+
+    > div[alert-bar] {
+        margin-block: 0 0.5rem;
+        // inline-size: 59.25%; margin-inline-start: auto;
+    }
+
+    &:has( > div[alert-bar]) {
+        > div[data-intro-container="true"] {
+            margin-block-end: 0rem;
+        }
+    }
+
+    > div[data-intro-container="true"] {
+        display: flex; justify-content: space-between; align-items: flex-start;
+        margin-block-end: 2rem;
+
+        > div[data-btn-set] {
+            margin: 0; inline-size: 20rem; justify-content: flex-end;
+
+            > button {
+                display: flex; align-items: center; justify-content: center;
+                background-color: $white; color: $blue;
+
+                transition: all 0.3s ease-in-out;
+
+                > svg {
+                    margin-inline-end: 0.5rem;
+                }
+
+                @include hover {
+                    background-color: rgba($text-color-light, 0.6); color: $white;
+                }
+            }
+        }
+    }
+}
+
+/********************************
+ * Hidden Content
+ ********************************/
+section[data-hidden="true"] {
+    opacity: 0; visibility: hidden; display: none;
+    block-size: 0; inline-size: 0; pointer-events: none;
+}

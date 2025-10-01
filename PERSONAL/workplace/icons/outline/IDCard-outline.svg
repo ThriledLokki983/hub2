@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>IDCard-outline-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="IDCard-outline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28.0180822,7.10542736e-15 C28.5603804,7.10542736e-15 29,0.439619577 29,0.981917808 L29,31.0180822 C29,31.5603804 28.5603804,32 28.0180822,32 L4.98191781,32 C4.43961958,32 4,31.5603804 4,31.0180822 L4,0.981917808 C4,0.439619577 4.43961958,7.10542736e-15 4.98191781,7.10542736e-15 L28.0180822,7.10542736e-15 Z M26.9594521,29.9726027 L26.9594521,1.97260274 L5.95945205,1.97260274 L5.95945205,29.9726027 L26.9594521,29.9726027 Z M14,4 L20,4 L20,6 L14,6 L14,4 Z" id="Combined-Shape" fill="#2D2D2D" fill-rule="nonzero"></path>
+    </g>
+</svg>

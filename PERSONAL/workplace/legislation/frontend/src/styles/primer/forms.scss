@@ -1,0 +1,118 @@
+@import '../utils';
+
+input:not([type]),
+input[type="search"],
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="file"],
+textarea,
+select {
+    @include body-font;
+    appearance: none; field-sizing: content;
+    display: block; width: 100%; max-inline-size: 100%; min-block-size: 42px;
+    padding: 0.75rem 0.75rem 0.5rem;
+    background: $white; border-radius: $border-radius;
+    border: 0; outline: 0; box-shadow: inset 0 0 0 .0625rem $input-border-color;
+    font-size: 16px; color: $text-color-light; line-height: normal;
+    transition: box-shadow 0.3s, background 0.3s;
+    &:hover {
+        background: $whitish;
+    }
+    &:focus-visible {
+        background: $white;
+        box-shadow:
+            inset 0 0 0 .0625rem $input-focus-color,
+            0 0 0 .25rem rgba($input-focus-color, 0.12);
+    }
+    &[hidden],
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    &:user-invalid,
+    &[data-invalid="true"] {
+        box-shadow:
+            inset 0 0 0 .0625rem $error-color,
+            0 0 0 .25rem rgba($error-color, 0.12);
+    }
+}
+
+select {
+    appearance: menulist-button;
+}
+
+textarea {
+    resize: vertical; line-height: 1.35;
+    @include bp-min($large) {
+        font-size: 15px;
+    }
+}
+
+label {
+    margin-bottom: 0.5em; display: block;
+    color: $text-color; line-height: normal; cursor: pointer;
+    @include font-smoothing;
+}
+
+fieldset {
+    margin: 0 0 1.25rem; padding: 0;
+    outline: 0; border: 0;
+}
+
+fieldset > legend {
+    @include h4;
+    margin-bottom: 1em; padding: 0;
+}
+
+
+input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    inline-size: 18px; block-size: 18px; margin: 0;
+    border: 0; border-radius: 4px;
+    background-color: $white;
+    outline: 0; box-shadow: inset 0 0 0 .125rem $grey-dark; cursor: pointer;
+    &:checked {
+        background: url('../assets/icons/checkbox-selected-fill.svg') no-repeat $white;
+        background-size: cover; background-position: center;
+        box-shadow: inset 0 0 0 .1rem $input-focus-color;
+    }
+    &:focus-visible {
+        background-color: $white;
+        box-shadow:
+            inset 0 0 0 .1rem $input-focus-color,
+            0 0 0 .1rem rgba($input-focus-color, 0.12);
+    }
+    &:hover {
+        background-color: $white;
+    }
+}
+input[type="checkbox"] + label {
+    color: inherit;
+}
+
+small[hidden] {
+    display: none;
+}
+
+/* defensive styles */
+textarea {
+    min-block-size: 7lh; max-block-size: 200svh;
+    min-inline-size: fit-content; max-inline-size: 100%;
+}
+
+/* defensive styles */
+select {
+    min-inline-size: 5ch;
+}

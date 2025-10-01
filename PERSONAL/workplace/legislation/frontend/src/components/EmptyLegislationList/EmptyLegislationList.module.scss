@@ -1,0 +1,46 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+    padding-block-start: 1rem;
+    list-style-type: none;
+}
+
+.root > span.root__empty {
+    position: absolute;
+    list-style-type: none;
+    z-index: 9999;
+}
+.root:has( div[data-show-guide="true"]) {
+    padding: 1.8rem 2rem;
+    transition: var(--tour-transition);
+}
+
+.root > div[data-show-guide="true"]:first-of-type {
+    z-index: 999;
+    position: absolute; inset: 0;
+    border-radius: $border-radius;
+    background-color: $white; min-block-size: 5rem;
+
+    transition: var(--tour-transition);
+}
+
+/**
+* Empty State
+*/
+.root__empty {
+    @include medium-text;
+    color: $blue-medium;
+    padding-inline-start: 0.5rem;
+    font-style: italic;
+    list-style-type: none;
+
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+.root__empty strong {
+    color: $blue-medium;
+    padding-inline: 5px;
+    text-decoration: underline;
+}

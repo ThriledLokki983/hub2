@@ -1,0 +1,55 @@
+services:
+  backend:
+    platform: ${PLATFORM:-linux/x86_64}
+    build:
+      context: .
+      args:
+        PIPENV_OPTIONS: --dev
+    command: >
+      sh -c "${CMD_RUN_SERVER:-make run-dev}"
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+      - ./conf/google:/secrets/google
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-mysql://root:productlegislationnavigator_pwd@mysql:3306/productlegislationnavigator} # pragma: allowlist secret
+      DB_HOST: ${DB_HOST:-mysql}
+      DJANGO_SECRET_KEY: dev123 # pragma: allowlist secret
+      DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE:-core.settings.dev} # pragma: allowlist secret
+      SENTRY_DSN: ${SENTRY_DSN:-} # pragma: allowlist secret
+      EMAIL_HOST_PASSWORD: ${EMAIL_HOST_PASSWORD:-} # pragma: allowlist secret
+      AZURE_ACCOUNT_NAME: ${AZURE_ACCOUNT_NAME:-} # pragma: allowlist secret
+      AZURE_CONNECTION_STRING: ${AZURE_CONNECTION_STRING:-} # pragma: allowlist secret
+      QUERY_COUNT_MIDDLEWARE_INFO: ${QUERY_COUNT_MIDDLEWARE_INFO:-}
+      QUERY_COUNT_MIDDLEWARE_TIME: ${QUERY_COUNT_MIDDLEWARE_TIME:-}
+      ASICS_AAD_TENANT_ID: ${ASICS_AAD_TENANT_ID:-}
+      ASICS_AAD_CLIENT_ID: ${ASICS_AAD_CLIENT_ID:-}
+      ASICS_AAD_CLIENT_SECRET: ${ASICS_AAD_CLIENT_SECRET:-}
+      PYTHONUNBUFFERED: 1
+      DEBUG: ${DEBUG}
+  mysql:
+    platform: ${PLATFORM:-linux/x86_64}
+    image: mysql:8
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: productlegislationnavigator_pwd # pragma: allowlist secret
+      MYSQL_DATABASE: productlegislationnavigator # pragma: allowlist secret
+  background-runner:
+    platform: ${PLATFORM:-linux/x86_64}
+    build: .
+    command:
+      - make
+      - background-runner
+    ports:
+      - 8001:8001
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: mysql://root:productlegislationnavigator_pwd@mysql:3306/productlegislationnavigator # pragma: allowlist secret
+      DJANGO_SECRET_KEY: dev123 # pragma: allowlist secret
+      DJANGO_SETTINGS_MODULE: ${DJANGO_SETTINGS_MODULE:-core.settings.dev} # pragma: allowlist secret

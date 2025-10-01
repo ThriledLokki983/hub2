@@ -1,0 +1,84 @@
+@import '../../styles/utils';
+
+
+/**
+* Projects Card
+*/
+.root {
+    position: relative;
+    block-size: 100%; inline-size: 100%;
+}
+
+.root__card {
+    text-decoration: none;
+    position: relative; list-style-type: none; block-size: inherit;
+    display: flex; flex-direction: column; gap: 0.75rem;
+    border-radius: $border-radius; background-color: $white;
+    box-shadow: $box-shadow-ultra; padding: 1.25rem;
+}
+.root__card > div:first-of-type {
+    block-size: 5.375rem;
+    display: flex; align-items: flex-end;
+}
+.root__card > div:first-of-type > svg {
+    inline-size: 5.375rem; block-size: 5.375rem; border-radius: $border-radius;
+    background-color: $white;
+}
+.root__card > div:first-of-type > img {
+    inline-size: 5.375rem; block-size: 5.375rem; border-radius: $border-radius;
+    background-color: $white; object-fit: cover;
+}
+.root__card > div:last-of-type {
+    display: flex; flex-direction: column;
+    block-size: -webkit-fill-available;
+}
+.root__card > div:last-of-type > h4 {
+    @include line-clamp(1);
+
+    @include bp-min($medium) {
+        font-size: 1.25rem;
+    }
+}
+.root__card > div:last-of-type > span {
+    @include line-clamp(2);
+    color: $text-color-light;
+
+    @include bp-min($medium) {
+        text-wrap: pretty;
+    }
+}
+.root__card > div:last-of-type > span[data-link]:last-of-type {
+    @include link;
+    color: $blue; font-weight: 400;
+    text-decoration: none;
+    margin-block-start: auto;
+
+    transition: all 250ms ease-in-out;
+
+    @include hover {
+        text-decoration: underline;
+        color: $blue-dark;
+    }
+}
+
+/**
+* Projects Card - Tag
+*/
+.root__tag {
+    line-height: normal;
+    margin-inline-start: 0.5rem;
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    padding: 0.25rem 0.65rem; border-radius: $border-radius-x-large;
+    background-color: $blue; color: $white;
+
+    > small {
+        @include small-text;
+
+        @include bp-min($medium) {
+            font-size: 0.8rem !important;
+        }
+    }
+}
+.root__tag > svg {
+    inline-size: 0.8rem; block-size: 0.8rem;
+}

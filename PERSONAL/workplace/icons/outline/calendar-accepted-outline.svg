@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>calendar-accepted-outline-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="calendar-accepted-outline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30,10 L30,12 L30,30 C30,31.104 29.104,32 28,32 L4,32 C2.896,32 2,31.104 2,30 L2,4 L7,4 L7,0 L9,0 L9,4 L23,4 L23,0 L25,0 L25,4 L30,4 L30,10 Z M4,10 L28,10 L28,6 L4,6 L4,10 Z M4,30 L28,30 L28,12 L4,12 L4,30 Z M9.56585966,20.322938 L13.1062782,23.8633566 L21.9696348,15 L23.5354945,16.5658597 L13.1062782,27 L8,21.8887977 L9.56585966,20.322938 Z" id="Icon/Calender-accepted/Outline" fill="#212121"></path>
+    </g>
+</svg>

@@ -1,0 +1,70 @@
+@import '../../styles/utils';
+
+/**
+* TeamMember Item
+*/
+.root {
+    display: flex; align-items: center; justify-content: space-between;
+
+    &[data-type="details"] > div > div {
+        pointer-events: none; user-select: none;
+
+        svg {
+            display: none;
+        }
+    }
+
+}
+.root__info {
+    flex: 1 1 60%; flex-wrap: wrap; gap: 0.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+
+    > p,
+    > span {
+        text-align: left;
+        margin: 0; padding-block: 0.5rem; padding-inline-start: 1.25rem;
+        border: 1px solid $grey-light; border-radius: $border-radius;
+
+        transition: all 0.25s ease-in-out;
+    }
+
+    > p {
+        block-size: 2.85rem; inline-size: 95%;
+    }
+
+    > span {
+        flex: 1 1 auto; margin-inline-end: 0.5rem;
+        background-color: rgba($text-color-light, 0.1);
+        text-transform: capitalize; color: rgba($text-color-light, 0.9);
+
+        transition: all 0.25s ease-in-out;
+    }
+}
+.root[data-type="details"] .root__info > p {
+    border-color: rgba($text-color-light, 0.1);
+}
+.root[data-type="details"] .root__info > span {
+    background-color: $white;
+}
+.root > button {
+    flex: 1 1 auto;
+    min-inline-size: 2.5rem; padding: 0.25rem 0.75rem !important;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba($text-color-light, 0.95) !important;
+
+    > svg {
+        inline-size: 1.15rem; block-size: 1.25rem;
+    }
+}
+
+
+.root__dropdown {
+    flex: 1 1 auto;
+
+    > div:first-of-type {
+        display: flex; align-items: center; justify-content: space-between;
+        background-color: rgba($text-color-light, 0.1); border-radius: $border-radius;
+        inline-size: 100%; min-block-size: 2.625rem;
+
+    }
+}

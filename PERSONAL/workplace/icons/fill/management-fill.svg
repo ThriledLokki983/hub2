@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>management-fill-fill</title>
+    <desc>Created with Sketch.</desc>
+    <g id="management-fill" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Management_Fill_RGB_Dark-Grey" transform="translate(0.000000, 1.000000)" fill="#2D2D2D" fill-rule="nonzero">
+            <path d="M-5.68434189e-14,14 L5.68434189e-14,28.0027739 C5.68434189e-14,29.112344 0.888888889,30 2,30 L30,30 C31.1111111,30 32,29.112344 32,28.0027739 L32,14 L-5.68434189e-14,14 Z" id="Path"></path>
+            <path d="M30.0074487,6.02609851 L23,6 L23,2 C23,0.8954305 22.1045695,-8.4579856e-14 21,-8.43769499e-14 L11,-8.43769499e-14 C9.8954305,-8.3192989e-14 9,0.8954305 9,2 L9,6.03351955 L3.40787911e-28,6.03351955 L-5.68434189e-14,12 L32,12 L32,8.02608463 C32,6.92442293 31.1091028,6.0302015 30.0074487,6.02609851 Z M20,6 L12,6 L12,3 L20,3 L20,6 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
