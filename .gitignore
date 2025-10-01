@@ -19,6 +19,8 @@ PERSONAL/workplace/**/node_modules/
 !PERSONAL/my_site/**
 !PERSONAL/my-new-site/
 !PERSONAL/my-new-site/**
+!PERSONAL/Aboafo/
+!PERSONAL/Aboafo/**
 !PERSONAL/2025/
 PERSONAL/2025/*
 !PERSONAL/2025/FRANK/
