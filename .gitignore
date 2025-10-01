@@ -18,6 +18,14 @@ PERSONAL/2025/*
 PERSONAL/2025/FRANK/*
 !PERSONAL/2025/FRANK/portfolio_frank/
 
+# Include workspace projects gradually
+!workspace/
+workspace/*
+!workspace/vibe-coding/
+workspace/vibe-coding/*
+!workspace/vibe-coding/README.md
+!workspace/vibe-coding/react/
+
 # But exclude large files even from included directories
 **/node_modules/
 **/*.jpg
