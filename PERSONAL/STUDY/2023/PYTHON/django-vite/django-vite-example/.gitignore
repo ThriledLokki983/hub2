@@ -1,0 +1,10 @@
+.vscode
+.idea
+
+.venv
+node_modules
+*sqlite*
+
+static/dist
+
+__pycache__

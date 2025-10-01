@@ -23,6 +23,8 @@ PERSONAL/workplace/**/node_modules/
 !PERSONAL/Aboafo/**
 !PERSONAL/STUDY/
 PERSONAL/STUDY/*
+!PERSONAL/STUDY/2023/
+!PERSONAL/STUDY/2023/**
 !PERSONAL/STUDY/2025/
 !PERSONAL/STUDY/2025/**
 !PERSONAL/STUDY/RESOURCES/
@@ -72,6 +74,18 @@ workspace/PLAYGROUND/*
 **/bin/
 **/obj/
 **/*.pyc
+**/*.po
+**/*.mo
+**/*.snap
+**/*.sqlite3
+**/*.db
+**/*.safetensors
+**/*.bin
+**/*.pkl
+**/*.joblib
+**/*.h5
+**/*.pt
+**/*.pth
 **/*.jpg
 **/*.jpeg
 **/*.png
