@@ -97,6 +97,7 @@ workspace/PLAYGROUND/*
 **/*.dmg
 **/*.exe
 **/*.msi
+**/*.fig
 **/yarn.lock
 **/package-lock.json
 **/*.log
