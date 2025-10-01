@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+*:focus-visible {
+	outline: 2px solid var(--color-shades-dark);
+	outline-offset: 4px;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1rem;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	//border: 1px solid red; // just for debugging - it helps sometimes
+}
+
+html,
+body {
+	height: 100%;
+	position: relative;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	line-height: var(--line-h);
+	font-family: var(--font-primary);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+	font-family: var(--font-primary);
+	overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+	color: var(--clr-black);
+	align-self: flex-start;
+	font-size: var(--product-card-title-font-size);
+	text-transform: uppercase;
+	font-weight: var(--font-black);
+	font-family: var(--font-primary);
+}
+
+h2 {
+	font-size: calc(var(--product-card-title-font-size) * 0.55);
+}
+
+h3 {
+	font-size: calc(var(--product-card-title-font-size) * 0.45);
+}
+
+h4 {
+	font-family: var(--font-secondary);
+	color: var(--clr-black);
+	font-weight: var(--font-bold);
+	font-size: 1.5rem;
+}
+
+p {
+	font-family: var(--font-secondary);
+	overflow-wrap: break-word;
+	font-family: var(--font-secondary);
+	font-weight: var(--font-light);
+	color: var(--clr-black);
+	font-size: var(--paragraph-font-size);
+	line-height: 1.7;
+	padding-block-end: 2rem;
+	max-width: 90%;
+
+	a {
+		color: var(--secondary-color);
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+::selection {
+	background-color: var(--selection-color);
+	color: var(--clr-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+strong {
+	display: contents;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+section {
+	&:not(:first-child) {
+		margin-block-start: var(--section-space-s, 4rem);
+	}
+}
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+
+

@@ -1,0 +1,245 @@
+@use "../abstract" as ab;
+
+.details {
+	&__left {
+		padding-block-start: 2rem;
+
+		@include ab.respond(425px) {
+			width: 95%;
+			margin-inline: auto;
+
+			.product-card-title-primary.t-c-black {
+				span {
+					text-align: left;
+				}
+			}
+		}
+
+		.reload {
+			display: flex;
+			align-items: center;
+			margin-block-start: 2rem;
+			margin-inline-end: 4rem;
+			justify-content: flex-end;
+			gap: 1rem;
+
+			svg {
+				stroke: var(--clr-grey);
+				fill: var(--clr-grey);
+				cursor: pointer;
+			}
+
+			span {
+				color: var(--clr-grey);
+				font-size: 1.5rem;
+				font-style: italic;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__lists {
+		&--header {
+			margin-block-start: 3rem;
+			margin-block-end: 1rem;
+
+			.column-title {
+				color: var(--clr-grey);
+				font-size: 1.5rem;
+				font-style: italic;
+				font-family: var(--font-secondary);
+				padding-block-end: 1rem;
+
+				@include ab.respond(600px) {
+					display: none;
+				}
+			}
+		}
+
+		&--item {
+			list-style-type: none;
+			margin-block-start: 2rem;
+			padding-block-end: 2rem;
+
+			.price-per-pack span:first-child {
+				display: none;
+			}
+
+			@include ab.respond(600px) {
+				gap: 0.7rem;
+				margin-inline: auto;
+
+				.product-img {
+					justify-content: space-between;
+				}
+
+				.price-per-pack span:first-child {
+					display: flex;
+					font-weight: 500;
+				}
+
+				.price-per-pack {
+					display: flex;
+					justify-content: space-between !important;
+				}
+
+				display: flex !important;
+				flex-direction: column;
+
+				.form__group {
+					width: 100%;
+					justify-content: space-between !important;
+					order: 2;
+				}
+			}
+
+			.product-img {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+
+				figure {
+					max-width: 7rem;
+					height: 7rem;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				&-details {
+					@include ab.flex-column-content();
+
+					.name {
+						font-size: 2rem;
+						font-family: var(--font-primary);
+						text-transform: uppercase;
+						font-weight: var(--font-black);
+						color: var(--primary-color);
+					}
+
+					.number,
+					.size {
+						color: var(--clr-grey);
+						font-size: 1.2rem;
+					}
+
+					@include ab.respond(375px) {
+						span {
+							text-align: end;
+							text-align: right;
+						}
+					}
+				}
+			}
+
+			.form__group {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 1rem;
+
+				svg {
+					stroke: var(--clr-grey);
+					fill: var(--clr-grey);
+					cursor: pointer;
+				}
+
+				input {
+					max-width: 7rem;
+					font-size: 1.5rem;
+					font-family: var(--font-secondary);
+					font-weight: var(--font-light);
+				}
+			}
+
+			.price-per-pack {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				span {
+					font-size: 1.5rem;
+					font-family: var(--font-secondary);
+					font-weight: var(--font-light);
+				}
+			}
+		}
+	}
+
+	.right {
+		.lists {
+			&-item {
+				list-style-type: disc;
+
+				span::before {
+					content: "• ";
+					color: var(--clr-grey-dark);
+				}
+			}
+		}
+	}
+}
+
+.item__content .more__info > summary {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.item__content .more__info > summary > svg {
+	transition: transform 0.3s ease-in-out;
+}
+
+.item__header > .product-card-title-primary {
+	@include ab.respond(425px){
+		span {
+	text-align: left;
+}
+	}
+}
+
+.item__content .more__info > p {
+	font-size: 1.6rem;
+	padding-block-start: 1rem;
+}
+
+.more__info[open] > summary > svg {
+	transform: rotate(180deg);
+}
+
+.more__info:not([open]) > summary > svg {
+	transform: rotate(0deg);
+}
+
+
+.zoom-image {
+	transition: width 0.3s ease-in-out;;
+}
+
+img.zoom-image {
+	max-width: unset;
+}
+
+.icon.right,
+.icon.left {
+	transition: all 0.3s ease-in-out;
+}
+
+.item__content__left picture {
+	transition: all 0.3s ease-in-out;
+}
+
+
+.calculate__price {
+	@include ab.respond(425px){
+		a.btn.primary {
+			padding-inline: 1rem;
+			width: 100%;
+		}
+	}
+}

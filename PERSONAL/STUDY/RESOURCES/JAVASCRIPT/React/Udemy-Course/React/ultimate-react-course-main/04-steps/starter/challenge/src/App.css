@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	background-color: #282c34;
+}
+
+.App {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 10rem 1fr;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;;
+	width: 30%;
+	margin-inline: auto;
+	margin-block-end: 2rem;
+}
+
+.block > span {
+	color: #61dafb;
+}
+
+.block > p {
+	width: 100%;
+	color: white;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.btn {
+	background-color: #61dafb;
+	color: #282c34;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+
+.range-slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	background: #2c3e50;
+	outline: none;
+	padding: 0;
+	margin: 0;
+}
+
+.range-slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #61dafb;
+	cursor: pointer;
+	transition: background .25s ease-in-out;
+}
+
+.range-slider:hover {
+	background: rgba(97, 218, 251, 0.2);
+}
+
+.range-slider:focus > .range-slider::-webkit-slider-thumb {
+	box-shadow: 0 0 0 3px red, 0 0 0 6px teal;
+}
+
+.text-input {
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 1px solid #2c3e50;
+	width: 70%;
+	font-size: 16px;
+}
+
+.text-input:focus {
+	border: none;
+	outline: 1px solid #2c3e50;
+}
+
+.btn[disabled] {
+	background: #eee;
+	opacity: 0.5;
+}

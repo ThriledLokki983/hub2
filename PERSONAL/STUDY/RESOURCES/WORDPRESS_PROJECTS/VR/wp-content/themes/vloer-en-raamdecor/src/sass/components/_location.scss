@@ -1,0 +1,80 @@
+@use '../abstract' as ab;
+
+.location {
+	z-index: 10;
+
+	.product-card-title-primary {
+		margin-block-end: 0;
+	}
+
+	h2 {
+		text-align: center;
+		// margin-block-start: 5rem;
+
+		@include ab.respond(600px) {
+			margin-block-start: 2.5rem;
+		}
+	}
+
+	picture {
+		position: relative;
+
+		img {
+			width: 100%;
+			aspect-ratio: 18/4.3;
+			object-fit: contain;
+			object-position: top;
+
+			@include ab.respond(600px) {
+				aspect-ratio: 0.95;
+			}
+		}
+
+		.description {
+			// position: absolute;
+			// right: 15%;
+			// top: -2rem;
+			background: var(--clr-white);
+			padding: 2.5rem 3rem;
+			width: 100%;
+
+			h2 {
+				margin: 0;
+				padding-block-end: 2rem;
+			}
+
+			p {
+				padding-block-end: 3.5rem;
+			}
+
+			.product-card-title-primary {
+				span,
+				h2 {
+					text-align: left;
+				}
+
+				h2 {
+					font-size: var(--section-title-font-size);
+				}
+			}
+			.paragraph {
+				line-height: 1.5;
+				font-size: 16px;
+			}
+		}
+
+		@include ab.respond(600px) {
+			.description {
+				position: unset;
+				padding: 2rem;
+				margin-block-end: 2.5rem;
+			}
+		}
+	}
+}
+
+.location.container--full.cart {
+	@include ab.respond(960px) {
+		display: none;
+	}
+}

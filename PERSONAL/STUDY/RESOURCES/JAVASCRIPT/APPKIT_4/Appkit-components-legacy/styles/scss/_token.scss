@@ -1,0 +1,66 @@
+@import '../../../node_modules/sass-rem/_rem.scss';
+
+@import './variables';
+@import './mixin';
+
+
+$spacing-tokens: (
+  (spacing-1, rem(2px)),
+  (spacing-2, rem(4px)),
+  (spacing-3, rem(8px)),
+  (spacing-4, rem(12px)),
+  (spacing-5, rem(16px)),
+  (spacing-6, rem(20px)),
+  (spacing-7, rem(24px)),
+  (spacing-8, rem(48px)),
+);
+
+$typography-tokens: (
+    (typography-1, #{rem(12px)}/#{rem(14px)}),
+    (typography-2, #{rem(14px)}/#{rem(20px)}),
+    (typography-3, #{rem(16px)}/#{rem(24px)}),
+    (typography-4, #{rem(20px)}/#{rem(24px)}),
+    (typography-5, #{rem(24px)}/#{rem(32px)}),
+    (typography-6, #{rem(48px)}/#{rem(48px)}),
+);
+
+$font-weight-tokens: (
+    (font-weight-1, 400),
+    (font-weight-2, 500),
+    (font-weight-3, 700),
+);
+
+$border-radius-tokens: (
+    (border-radius-1, rem(2px)),
+    (border-radius-2, rem(4px)),
+    (border-radius-3, rem(8px)),
+);
+
+$level-tokens: (
+    (level-1, 0 rem(2px) rem(4px) rem(-2px) rgba($color-background-tertiary-rgb, $opacity-4)),
+    (level-2, 0 rem(4px) rem(8px) rem(-2px) rgba($color-background-tertiary-rgb, $opacity-4), 0 0 rem(1px) 0 rgba($color-background-tertiary-rgb, $opacity-2)),
+    (level-3, 0 rem(8px) rem(16px) rem(-2px) rgba($color-background-tertiary-rgb, $opacity-4), 0 0 rem(1px) 0 rgba($color-background-tertiary-rgb, $opacity-2)),
+);
+
+$blur-tokens: (
+    (blur-1, blur(rem(2px))),
+    (blur-2, blur(rem(8px))),
+);
+
+$opacity-tokens: (
+    (opacity-1, .04),
+    (opacity-2, .08),
+    (opacity-3, .12),
+    (opacity-4, .24),
+    (opacity-5, .32),
+    (opacity-6, .48),
+    (opacity-7, 1),
+);
+
+$tokens: ($spacing-tokens, $typography-tokens, $font-weight-tokens, $border-radius-tokens, $level-tokens, $blur-tokens, $opacity-tokens);
+
+:root, ::before, ::after {
+    @each $token in $tokens {
+        @include setToken($token);
+    }
+}

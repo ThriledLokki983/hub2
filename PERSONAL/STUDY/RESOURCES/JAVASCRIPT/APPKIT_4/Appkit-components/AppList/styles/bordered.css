@@ -1,0 +1,35 @@
+.ap-list-bordered {
+  box-shadow: var(--level-1);
+  border-radius: var(--border-radius-3);
+}
+.ap-list-bordered .ap-list-header {
+  padding-right: var(--spacing-4);
+  padding-left: var(--spacing-4);
+}
+.ap-list-bordered .ap-list-footer {
+  padding-right: var(--spacing-4);
+  padding-left: var(--spacing-4);
+}
+.ap-list-bordered .ap-list-item {
+  padding-right: var(--spacing-4);
+  padding-left: var(--spacing-4);
+}
+.ap-list-bordered .ap-list-pagination {
+  margin: 0.625rem 0.625rem;
+}
+.ap-list-bordered.ap-list-sm .ap-list-item {
+  padding: var(--spacing-3);
+}
+.ap-list-bordered.ap-list-sm .ap-list-header,
+.ap-list-bordered.ap-list-sm .ap-list-footer {
+  padding: 0.625rem;
+}
+.ap-list-bordered.ap-list-lg .ap-list-item {
+  padding: 0.625rem;
+}
+.ap-list-bordered.ap-list-lg .ap-list-header,
+.ap-list-bordered.ap-list-lg .ap-list-footer {
+  padding: 0.625rem;
+}
+
+/*# sourceMappingURL=bordered.css.map */

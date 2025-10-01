@@ -1,0 +1,126 @@
+@import '../../styles/partials';
+
+.toast {
+    position: relative;
+
+    width: calc(100vw - #{2 * sp(xs)});
+    margin: sp(xs) sp(xs) 0 sp(xs);
+
+    padding: sp(xxs) sp(xxxl) sp(xxs) sp(xxs);
+
+    border-style: solid;
+    border-width: 1px 1px 1px 8px;
+    border-radius: rem(6);
+
+    box-shadow: 11px 8px 10px 0 $box-shadow;
+
+    background-color: $c-notification-general-background;
+    color: $c-notification-general-text;
+    border-color: $c-notification-general-border;
+
+    z-index: 1300;
+
+    @include bp(tablet) {
+        width: rem(720);
+        margin: sp(s) auto 0 auto;
+
+        padding: sp(xl) sp(xxxl) sp(xl) sp(l);
+
+        border-width: 1px 1px 1px 14px;
+        border-radius: rem(10);
+    }
+
+    animation-duration: $notification-time;
+    animation-name: closeNotification;
+    animation-timing-function: ease-in;
+
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+
+    &--hidden {
+        display: none;
+    }
+
+    &--visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+        animation-name: openNotification;
+    }
+
+    &--info {
+        background-color: $c-notification-info-background;
+        color: $c-notification-info-text;
+        border-color: $c-notification-info-border;
+    }
+
+    &--success {
+        background-color: $c-notification-success-background;
+        color: $c-notification-success-text;
+        border-color: $c-notification-success-border;
+    }
+
+    &--warning {
+        background-color: $c-notification-warning-background;
+        color: $c-notification-warning-text;
+        border-color: $c-notification-warning-border;
+    }
+
+    &--error {
+        background-color: $c-notification-error-background;
+        color: $c-notification-error-text;
+        border-color: $c-notification-error-border;
+    }
+
+    &__content {
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        &__text {
+            flex: 1 1 100%;
+            font-weight: 400;
+        }
+
+        &__icon {
+            flex: 0 0 auto;
+            margin-right: sp(xs);
+        }
+    }
+
+    &__button {
+        position: absolute;
+
+        top: sp(xxs);
+        right: sp(xxs);
+    }
+}
+
+@keyframes openNotification {
+    from {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes closeNotification {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+        opacity: 0;
+    }
+}

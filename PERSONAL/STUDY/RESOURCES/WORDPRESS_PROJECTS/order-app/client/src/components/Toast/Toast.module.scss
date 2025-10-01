@@ -1,0 +1,126 @@
+// @import '../../styles/partials';
+
+.toast {
+    position: relative;
+
+    width: calc(100vw - #{2 * 10px});
+    margin: 10px 10px 0 10px;
+
+    padding: 20px 22px 20px 20px;
+
+    border-style: solid;
+    border-width: 1px 1px 1px 8px;
+    border-radius: 0.6rem;
+
+    box-shadow: 11px 8px 10px 0 rgba(152, 157, 179, 0.45);
+
+    background-color: #f4f4f4;
+    color: #2e2e2e;
+    border-color:#dadada;
+
+    z-index: 1300;
+
+    @media (min-width: 600px) {
+        width: 45rem;
+        margin: 5px auto 0 auto;
+
+        padding: 8px 22px 8px 12px;
+
+        border-width: 1px 1px 1px 14px;
+        border-radius: 0.8rem;
+    }
+
+    animation-duration: 0.3s;
+    animation-name: closeNotification;
+    animation-timing-function: ease-in;
+
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+
+    &--hidden {
+        display: none;
+    }
+
+    &--visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+        animation-name: openNotification;
+    }
+
+    &--info {
+        background-color: #dbedff;
+        color: #2e2e2e;
+        border-color: #7c9ab8;
+    }
+
+    &--success {
+        background-color: #baf9dd;
+        color: #2e2e2e;
+        border-color: #50b748;
+    }
+
+    &--warning {
+        background-color: #ffe7c3;
+        color: #2e2e2e;
+        border-color: #f3981f;
+    }
+
+    &--error {
+        color: #2e2e2e;
+        background-color: #fff0f3;
+        border-color: #e70021;
+    }
+
+    &__content {
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        &__text {
+            flex: 1 1 100%;
+            font-weight: 400;
+        }
+
+        &__icon {
+            flex: 0 0 auto;
+            margin-right: 10px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@keyframes openNotification {
+    from {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes closeNotification {
+    from {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+        opacity: 0;
+    }
+}

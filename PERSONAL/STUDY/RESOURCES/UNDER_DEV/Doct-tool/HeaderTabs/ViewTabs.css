@@ -1,0 +1,61 @@
+.header-tab-bar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.header-tab-bar .header-tab-mui-close-icon-button-root {
+  padding: 6px;
+  margin-left: 5px;
+}
+.header-tab-bar .header-tab-mui-close-icon-button-root:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.header-tab-bar .header-tab-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header-tab-bar .header-tab-content button {
+  padding: 0 !important;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.header-tab-bar .header-tab-content .icon-close-fill {
+  font-size: 8px;
+  margin: 0 !important;
+}
+.header-tab-bar .Mui-selected .header-tab-mui-tab-wrapper {
+  color: #d04a02;
+}
+.header-tab-bar .header-tab-mui-tab-root {
+  min-width: auto;
+}
+.header-tab-bar .header-tab-mui-tab-wrapper {
+  text-transform: initial;
+}
+.header-tab-bar .header-tab-mui-tabs-indicator {
+  background-color: #d04a02;
+}
+.header-tab-bar .header-tab-mui-tabs-indicator.just-closed {
+  /* Prevents the indicator from animating when a tab was closed */
+  transition: none;
+}
+.header-tab-bar .header-tab-button-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.header-tab-bar .header-tab-button-container .icon-plus-fill {
+  font-size: 12px;
+}
+.header-tab-bar .header-tab-unsaved {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+/*# sourceMappingURL=ViewTabs.css.map */

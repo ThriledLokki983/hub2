@@ -1,0 +1,43 @@
+.slick-track {
+	transition: all 0.3ss ease-in-out;
+}
+
+.slick-list.draggable {
+	overflow-x: clip;
+	overflow-y: initial;
+}
+
+@media only screen and (max-width: 600px) {
+	.slider-container {
+		display: inline-flex;
+		overflow: hidden;
+		scrollbar-width: none;
+		transform: translateX(0);
+		will-change: transform;
+		transition: transform 0.3s ease-out;
+		cursor: grab;
+	}
+
+	.slider-image {
+		// display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.slider img {
+		transition: all 0.3s ease-in-out;
+		user-select: none;
+	}
+
+	.support__content--list-item.slick-slide[aria-hidden='false'] {
+		width: 100%;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.support__content--list.slick-initialized.slick-slider
+		> button.slick-arrow {
+		display: none !important;
+	}
+}

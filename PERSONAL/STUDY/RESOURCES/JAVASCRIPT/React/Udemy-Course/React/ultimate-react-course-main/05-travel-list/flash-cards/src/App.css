@@ -1,0 +1,86 @@
+
+.app {
+	text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.app-header {
+	background-color: #282c34;
+	min-height: 7rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.app-header > h2 {
+	margin-block: 1.5rem;
+	font-weight: 700;
+}
+
+.app-link {
+	color: #61dafb;
+}
+
+@keyframes app-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+
+.app-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	width: 90%;
+	margin-inline: auto;
+	margin-block: 3rem;
+	padding: 0;
+}
+
+.app-list > li {
+	list-style: none;
+	flex: 1;
+	flex-basis: calc(30% - 1.5rem);
+}
+
+.app-card {
+	display: grid;
+	place-items: center;
+	min-width: 350px;
+	height: 230px;
+	padding: 10px 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border: 0.5px solid rgba(0, 0, 0, 0.1);
+
+	transition: box-shadow .2s ease-in-out;
+}
+
+.app-card.selected {
+	background: rgba(8, 11, 19, 0.8);
+	backdrop-filter: blur(0.4);
+	color: #fff;
+}
+
+.app-card:hover {
+	cursor: pointer;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app-card > span {
+	font-size: 18px;
+	font-weight: 500;
+}
+

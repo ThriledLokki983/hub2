@@ -1,0 +1,116 @@
+@use '../abstract/' as ab;
+
+.hero {
+	width: var(--main-hero-width);
+	margin-inline: auto;
+	margin-block-start: 0rem;
+	// position: relative;
+	transition: all 0.5s ease-in-out;
+
+	&__image-box {
+		width: inherit;
+		margin-inline: auto;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+
+		&--img {
+			grid-column: 1/-1;
+			grid-row: 1/-1;
+			width: 100%;
+			object-fit: cover;
+			aspect-ratio: 2.5/1;
+
+			@include ab.respond(960px) {
+				aspect-ratio: 1.8/1;
+			}
+		}
+	}
+
+	&__button-box {
+		position: absolute;
+		bottom: 35%;
+		left: 10%;
+
+		button:not(:last-child) {
+			margin-right: 1.5rem;
+		}
+
+		&-text {
+			max-width: 60%;
+			font-size: var(--hero-title-font-size);
+			font-family: MyriadRegular, sans-serif;
+			color: var(--text-color-white);
+
+			@media only screen and (max-width: 700px) {
+				max-width: 80%;
+			}
+		}
+	}
+
+	&__overlay {
+		display: grid;
+		grid-column: 5/8;
+		grid-row: 2/4;
+		height: fit-content;
+		width: 100%;
+		// position: relative;
+		inset: auto;
+
+		background-color: var(--overlay-background);
+		padding-block-start: 4rem;
+		padding-inline: 4rem;
+
+		h1 {
+			font-family: var(--font-secondary);
+			font-size: var(--heading);
+			line-height: 1.2;
+			margin-block-end: 1.5rem;
+		}
+
+		p {
+			font-family: var(--font-regular);
+		}
+
+		.header__top--btn {
+			justify-content: flex-end;
+			transform: translate(6.5rem, 2rem);
+		}
+
+		@include ab.respond(1200px) {
+			grid-column: 5/9;
+			transform: translateY(-10rem);
+
+			.header__top--btn {
+				justify-content: flex-end;
+				transform: translate(4rem, 2rem);
+			}
+		}
+	}
+
+	@include ab.respond(960px) {
+		display: flex;
+		flex-direction: column;
+		position: inherit;
+
+		&__image-box {
+			display: unset;
+			position: unset;
+		}
+
+		&__overlay {
+			background-color: transparent;
+			display: unset;
+			padding: 2rem;
+
+			&__content {
+				padding: 2rem;
+			}
+
+			.header__top--btn {
+				justify-content: unset;
+				transform: unset;
+			}
+		}
+	}
+}

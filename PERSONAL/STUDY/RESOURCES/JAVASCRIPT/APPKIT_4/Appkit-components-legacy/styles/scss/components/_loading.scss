@@ -1,0 +1,212 @@
+.ap-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --linearLoadingWidth: 148px;
+  --circularLoadingWidth: 24px;
+  --rotateDegree: 135deg;
+  --circularLoadingCompactWidth: 16px;
+  
+  .ap-loading-linear {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: $height-17;
+      border-radius: $border-radius-1;
+      overflow: hidden;
+      vertical-align: middle;
+
+      .linear-bar-inner {
+        width:100%;
+        height: $height-17;
+        opacity: $opacity-4;
+        background-color: $color-background-primary;
+      }
+
+      .linear-bar-bg {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: $height-17;
+        top: 0;
+        border-radius: $border-radius-1;
+        background-color: $color-background-primary;;
+        animation: progress $transition-2 linear;
+      }
+
+      &.bounces {
+        .linear-bar-bg {
+          width: $width-18;
+          height: $height-17;
+          background-color: $color-background-primary;
+          animation: bounce $transition-2 linear infinite;
+        }
+      }
+
+      &.compact {
+        height: 2px;
+        border-radius: rem(1px);
+
+        .linear-bar-bg {
+          border-radius: rem(1px);
+        }
+
+      .linear-bar-inner {
+        height: 2px;
+      }
+
+      .linear-bar-bg {
+         height: 2px;
+      }
+    }
+  }
+
+  .ap-loading-circular {
+      width: var(--circularLoadingWidth);
+      height: var(--circularLoadingWidth);
+      border-radius: 50%;
+      background-color: rgba($color-background-primary-rgb, $opacity-4);
+
+      &.animation.loading {
+        animation: loading 1s infinite linear;
+      }
+
+      .mask, .circle  .progress-bar {
+          width: var(--circularLoadingWidth);
+          height: var(--circularLoadingWidth);
+          position: absolute;
+          border-radius: 50%;
+      }
+
+      .mask .progress-bar {
+          clip: rect(0px, calc(var(--circularLoadingWidth) / 2), var(--circularLoadingWidth), 0px);
+          background-color: $color-background-primary;
+      }
+
+      .circle .mask {
+          clip: rect(0px, var(--circularLoadingWidth), var(--circularLoadingWidth), calc(var(--circularLoadingWidth) / 2));
+      }
+
+      .mask.ap-circular-full,
+      .circle .progress-bar {
+        animation: fill ease-in-out 1s;
+        transform: rotate(var--(rotateDegree));
+      }
+        
+      .inside-circle {
+          width: calc(var(--circularLoadingWidth) - 6px);
+          height: calc(var(--circularLoadingWidth) - 6px);
+          border-radius: 50%;
+          background: $color-background-alt;
+          text-align: center;
+          margin-top: rem(3px);
+          margin-left: rem(3px);
+          position: absolute;
+          z-index: $z-index-99;
+      }
+
+      &.compact {
+        width: var(--circularLoadingCompactWidth);
+        height:var(--circularLoadingCompactWidth);
+        border-radius: 50%;
+        background-color: rgba($color-background-primary-rgb, $opacity-4);
+
+        &.animation {
+          animation: loading 1s infinite linear;
+        }
+
+        .mask, .circle  .progress-bar {
+            width: var(--circularLoadingCompactWidth);
+            height: var(--circularLoadingCompactWidth);
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .mask .progress-bar {
+            clip: rect(0px, calc(var(--circularLoadingCompactWidth) / 2), var(--circularLoadingCompactWidth), 0px);
+            background-color: $color-background-primary;
+          }
+
+        .circle .mask {
+            clip: rect(0px, var(--circularLoadingCompactWidth), var(--circularLoadingCompactWidth), calc(var(--circularLoadingCompactWidth) / 2));
+        }
+
+        .mask.ap-circular-full,
+        .circle .progress-bar {
+          animation: fill ease-in-out 1s;
+          transform: rotate(var--(rotateDegree));
+        }
+          
+        .inside-circle {
+          width: calc(var(--circularLoadingCompactWidth) - 4px);
+          height: calc(var(--circularLoadingCompactWidth) - 4px);
+          border-radius: 50%;
+          background: $color-background-alt;
+          text-align: center;
+          margin-top: $spacing-1;
+          margin-left: $spacing-1;
+          position: absolute;
+          z-index: $z-index-99;
+        }
+      }
+  }
+
+}
+
+@keyframes progress {
+  0% {
+    width: 0px;
+  }
+  30% {
+    width: rem(5px);
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    transform: translateX(0px) scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: translateX(calc(var(--linearLoadingWidth) - 46px)) scale(1, 1);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: translateX(calc(var(--linearLoadingWidth) - 46px)) scale(1, 1);
+    animation-timing-function: linear;
+  }
+  85% {
+    transform: translateX(0px) scale(1, 1);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(0px) scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes fill{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotateDegree));
+  }
+}
+
+@keyframes loading {
+  0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,112 @@
+@use "../base/mixin" as ab;
+
+
+.dots {
+  margin-block-end: 3.5rem;
+
+  &__dot {
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--clr-green-light);
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all var(--review-and-review-btn-transition);
+
+    @include ab.respond(750px) {
+      height: 0.8rem;
+      width: 0.8rem;
+    }
+  }
+}
+
+.dots__dot.active {
+  background-color: var(--clr-green);
+  transform: rotate(-10deg);
+}
+
+.btn {
+  padding: var(--btn-large);
+  color: var(--clr-white);
+  font-size: var(--top-header-button-font-size);
+  font-family: var(--font-primary);
+  font-weight: var(--font-black);
+  border-radius: 0;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: auto;
+
+  transition: var(--btn-transition);
+
+  &:hover {
+    background: var(--clr-white);
+  }
+}
+
+.primary {
+  background: var(--primary-color);
+
+  &:hover {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color-hover);
+    background: var(--primary-color-hover);
+  }
+}
+
+.secondary {
+  background: var(--secondary-color);
+
+  &:hover {
+    color: var(--secondary-color);
+    background: var(--secondary-color-hover);
+    border: 1px solid transparent;
+  }
+}
+
+.tertiary {
+  background: var(--tertiary-color);
+
+  &:hover {
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    background: var(--tertiary-color);
+  }
+}
+
+.green {
+  background: var(--clr-green);
+
+  &:hover {
+    color: var(--clr-green);
+    background: var(--clr-green-hover);
+    border: 1px solid var(--clr-green-hover);
+  }
+}
+
+.black {
+  width: fit-content;
+  background: var(--clr-black);
+
+  &:hover {
+    color: var(--clr-black);
+    border: 1px solid var(--clr-black-hover);
+    background: var(--clr-black-hover);
+  }
+}
+
+.red {
+  background: var(--tertiary-color);
+
+  &:hover {
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color-hover);
+    background: var(--tertiary-color-hover);
+  }
+}
+
+.small {
+  padding: var(--btn-small);
+  font-size: var(--btn-small-font-size);
+}

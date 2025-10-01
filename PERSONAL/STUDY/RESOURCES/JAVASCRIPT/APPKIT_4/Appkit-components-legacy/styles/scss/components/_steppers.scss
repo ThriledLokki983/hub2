@@ -1,0 +1,150 @@
+.ap-progress-stepper-wrapper {
+    display: inline-flex;
+    padding-top: $spacing-3;
+    padding-left: 0;
+
+    .ap-progress-stepper + .ap-progress-stepper {
+        margin-left: $spacing-2;
+    }
+
+    .ap-progress-stepper {
+        position: relative;
+
+        &-bar {
+            height: $height-17;
+            border-radius: $border-radius-1;
+            background-color: $color-text-disabled;
+            position: absolute;
+            left: 0;
+            top: calc(-1 * $spacing-3);
+            width: 100%;
+
+            &-inner {
+                display: block;
+                height: 100%;
+                width: 0;
+                border-radius: $border-radius-1;
+                background-color: $color-background-primary;
+                transition: all .15s linear;
+
+                &.bar-active {
+                    width: 100%;
+                }
+    
+                &.bar-warning {
+                    background-color: $color-background-danger;
+                }
+            }
+        }
+
+        &-btn {
+            width: 100%;
+            height: $height-10;
+            border-radius: $border-radius-2;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 $spacing-3;
+
+            &.normal-step-selected:hover {
+                background-color: $color-background-hover;
+                cursor: pointer;
+            }
+
+            &.warning-step-selected {
+                background-color: rgba($color-background-danger-rgb, $opacity-4);
+                cursor: pointer;
+            }
+
+            &.warning-step-readonly {
+                background-color: rgba($color-background-danger-rgb, $opacity-4);
+            }
+
+            &.upcoming-step-selected:hover {
+                background-color: $color-background-hover;
+                cursor: pointer;
+            }
+
+            .Appkit4-icon {
+                font-size: $typography-text-size-1;
+                height: $height-1;
+                width: $width-1;
+                line-height: $typography-line-height-16;
+            }
+
+            .normal-status {
+                color: $color-background-primary;
+            }
+            
+            .warning-status {
+                color: $color-text-error;
+            }
+
+            .upcoming-status {
+                opacity: $opacity-6;
+                color: $color-text-body;
+            }
+
+            .upcoming-status-text {
+                opacity: $opacity-6;
+                color: $color-text-body;
+                font-weight: normal;
+            }
+
+            &-text {
+                margin-left: $spacing-2;
+                font-size: $typography-text-size-3;
+                font-weight: $font-weight-2;
+                line-height: $typography-line-height-3;
+                letter-spacing: $letter-spacing-1;
+                color: $color-background-tertiary;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &.is-vertical-stepper {
+        flex-direction: column;
+        padding-left: $spacing-3 !important;
+        padding-top: 0 !important;
+
+        .ap-progress-stepper + .ap-progress-stepper {
+            margin-top: $spacing-2;
+            margin-left: 0;
+        }
+
+        .ap-progress-stepper {
+            display: flex;
+
+            &-bar {
+                height: 100%;
+                width: rem(4px);
+                left: calc(-1 * $spacing-3);
+                top: 0;
+    
+                &-inner {
+                    height: 0;
+                    width: 100%;
+    
+                    &.bar-active {
+                        height: 100%;
+                    }
+                }
+            }
+
+            &-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: auto;
+                max-width: rem(160px);
+                margin-top: 0;
+                padding: 0 $spacing-3;
+            }
+        }
+    }
+}

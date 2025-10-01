@@ -1,0 +1,30 @@
+.inputContainer {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 20% 80%;
+}
+
+label {
+	margin: 0 0 6px 0;
+	font-size: 1.1rem;
+	align-self: center;
+}
+
+input {
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid #777;
+	background-color: #eee;
+	outline: none;
+	font-size: 1.1rem;
+	box-sizing: border-box;
+	margin: 0 0 8px 0;
+}
+
+.error {
+	color: red;
+}
+
+form > .inputContainer:not(:last-child) {
+	margin-bottom: 1rem;
+}

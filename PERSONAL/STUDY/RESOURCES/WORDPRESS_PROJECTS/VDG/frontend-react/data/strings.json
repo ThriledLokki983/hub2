@@ -1,0 +1,698 @@
+{
+    "calendar": {
+        "type": {
+            "lesson": {
+                "name": "Les",
+                "icon": "books"
+            },
+            "exam": {
+                "name": "Examen",
+                "icon": "award"
+            },
+            "meeting": {
+                "name": "Bespreking",
+                "icon": "persons-linked"
+            },
+            "conversation": {
+                "name": "Gesprek",
+                "icon": "person-speech-bubble"
+            },
+            "holiday": {
+                "name": "Vakantie",
+                "icon": "calendar"
+            }
+        },
+        "coursePlanner": {
+            "title": "Voor blok {blockNumber} is keuzemoment {moment} beschikbaar"
+        }
+    },
+    "eduarteAttendance": {
+        "teacher": {
+            "abbrTitle": "Hoe vaak was de student aanwezig?",
+            "tooltip": "Hier staat binnenkort de presentie van de student. Tot die tijd wordt je nog even omgeleid naar Eduarte.",
+            "view": "https://talnet.educus.nl/app/deelnemer/Maandoverzicht/{studentId}",
+            "enter": "https://talnet-docent.educus.nl/dashboard"
+        },
+        "student": {
+            "abbrTitle": "Hoe vaak was je aanwezig?",
+            "tooltip": "Hier staat binnenkort jouw presentie. Tot die tijd wordt je nog even omgeleid naar Eduarte.",
+            "view": "https://talnet-student.educus.nl/presentie"
+        }
+    },
+    "eduarteCalendar": {
+        "title": "Agenda",
+        "linkTitle": "Eduarte",
+        "url": "https://talnet.educus.nl/app/deelnemer/Agenda/{studentId}/"
+    },
+    "rating": {
+        "overview": {
+            "loading": {
+                "title": "Cursussen ophalen",
+                "tagLine": ""
+            },
+            "emptyList": {
+                "title": "Geen cursussen gevonden.",
+                "tagLine": "Gebruik bovenstaande knop om filters aan te passen."
+            }
+        },
+        "feedback": {
+            "unsaved": {
+                "buttonTitle": "Feedback is nog niet opgeslagen!",
+                "warning": "Let op!\nEr zijn niet opgeslagen feedback wijzigingen. Weet u zeker dat u de pagina wil verlaten?",
+                "reset": "Terugzetten"
+            },
+            "empty": {
+                "buttonTitle": "Nog geen feedback ingevoerd"
+            },
+            "saveButton": "Opslaan",
+            "resetButton": "Terugzetten",
+            "emptyWarning": "Feedback mag niet leeg zijn"
+        },
+        "published": {
+            "published": {
+                "buttonTitle": "Gepubliceerd",
+                "multiButtonTitle": "Alle resultaten gepubliceerd"
+            },
+            "unpublished": {
+                "buttonTitle": "Niet gepubliceerd",
+                "multiButtonTitle": "Geen resultaten gepubliceerd"
+            },
+            "publishable": {
+                "buttonTitle": "Publiceer beoordeling",
+                "multiButtonTitle": "Publiceer beoordelingen"
+            }
+        },
+        "closed": {
+            "modal": {
+                "content": "Wanneer een cursus wordt afgesloten kan dit niet meer ongedaan gemaakt worden. Dit kan in uitzonderlijke gevallen wanneer de student na meerdere pogingen en aantoonbare inzet de lesstof niet voldoende beheerst. Deze cursus wordt dan niet meer opnieuw ingepland.",
+                "closeButton": "Afsluiten",
+                "cancelButton": "Annuleren"
+            },
+            "closed": {
+                "buttonTitle": "Afgesloten"
+            },
+            "closable": {
+                "buttonTitle": "Cursus afsluiten"
+            }
+        },
+        "status": {
+            "Voldaan": {
+                "name": "Voldaan",
+                "tagColor": "green"
+            },
+            "NietVoldaan": {
+                "name": "Niet voldaan",
+                "tagColor": "red"
+            },
+            "Afgesloten": {
+                "name": "Afgesloten",
+                "tagColor": "blue"
+            },
+            "Blanco": {
+                "name": "Volgend",
+                "tagColor": "blue"
+            },
+            "Onbekend": {
+                "name": "?",
+                "tagColor": "blue"
+            }
+        },
+        "competenceScores": {
+            "0": {
+                "name": "N.T.B.",
+                "color": "gray",
+                "nameLong": "Nog te beoordelen"
+            },
+            "1": {
+                "name": "Niet aangetoond",
+                "color": "gray"
+            },
+            "2": {
+                "name": "Onvoldoende",
+                "color": "orange"
+            },
+            "3": {
+                "name": "Voldoende",
+                "color": "green"
+            },
+            "4": {
+                "name": "Goed",
+                "color": "blue"
+            },
+            "unknown": {
+                "name": "Onbekend"
+            },
+            "invalid": {
+                "name": "Niet behandeld"
+            }
+        },
+        "tableHeaders": {
+            "student": {
+                "courses": {
+                    "title": "Cursussen"
+                },
+                "block": {
+                    "title": "Blok"
+                },
+                "teacher": {
+                    "title": "Docent"
+                },
+                "courseInfo": {
+                    "title": "Cursusinformatie"
+                },
+                "attendance": {
+                    "title": "Presentie",
+                    "tooltip": "Hoe vaak was je aanwezig?"
+                },
+                "feedback": {
+                    "title": "Feedback",
+                    "tooltip": "Toelichting bij je beoordeling"
+                },
+                "status": {
+                    "title": "Voortgang",
+                    "tooltip": "Heb je de cursus voldaan?"
+                },
+                "published": {
+                    "title": "Publicatie",
+                    "tooltip": "Is je beoordeling gepubliceerd?"
+                },
+                "closed": {
+                    "title": "Afgesloten",
+                    "tooltip": "Is de cursus afgesloten?"
+                }
+            },
+            "teacher": {
+                "courses": {
+                    "title": "Cursussen"
+                },
+                "block": {
+                    "title": "Blok"
+                },
+                "teacher": {
+                    "title": "Docent"
+                },
+                "courseInfo": {
+                    "title": "Cursusinformatie"
+                },
+                "attendance": {
+                    "title": "Presentie",
+                    "tooltip": "Hoe vaak was student aanwezig?\nKlik op de aanwezigheid om deze in Eduarte te bekijken."
+                },
+                "feedback": {
+                    "title": "Feedback",
+                    "tooltip": "Toelichting bij de beoordeling"
+                },
+                "status": {
+                    "title": "Voldaan",
+                    "tooltip": "Student heeft de cursus (niet) voldaan"
+                },
+                "published": {
+                    "title": "Publicatie",
+                    "tooltip": "Is de huidige beoordelingsstatus zichtbaar voor de student?"
+                },
+                "closed": {
+                    "title": "Afgesloten",
+                    "tooltip": "Student heeft de cursus afgesloten"
+                }
+            }
+        }
+    },
+    "progress": {
+        "student": {
+            "pageTitle": {
+                "scheduledCourse": "Cursusinformatie",
+                "default": "Studievoortgang"
+            },
+            "progress": {
+                "title": "Voortgang",
+                "path": "/voortgang"
+            },
+            "courses": {
+                "title": "Cursussen",
+                "linkTemplate": "/voortgang/cursus/{groupCourseId}",
+                "scheduledCourseLinkTemplate": "/voortgang/cursus/{courseId}/{blockId}",
+                "currentBlockTitle": "Huidige cursussen",
+                "previousBlockTitle": "Cursussen uit de vorige periode",
+                "currentBlockEmptyTagLine": "Je volgt geen cursussen in het huidige blok.",
+                "noCourseInfoWarning": "Voor deze cursus is nog geen informatie zichtbaar. Dit volgt uiterlijk 4 weken voor aanvang van de cursus."
+            },
+            "overview": {
+                "title": "Beoordelingsoverzicht",
+                "linkTitle": "beoordelingsoverzicht",
+                "bpv": "Mijn BPV",
+                "path": "/voortgang/overzicht",
+                "noResultsTitle": "Geen resultaten",
+                "noResultsTagLine": "Gebruik bovenstaande knop om een ander jaar en/of fase te kiezen."
+            },
+            "route": {
+                "title": "Studieroute",
+                "linkTitle": "studieroute",
+                "path": "/voortgang/studieroute"
+            },
+            "competences": {
+                "title": "Competentieoverzicht",
+                "linkTitle": "competentieoverzicht",
+                "path": "/voortgang/competenties"
+            },
+            "competenceDetails": {
+                "path": "/voortgang/competenties/{choiceId}",
+                "futureCoursesTitle": "Toekomstige cursussen uit je vaste route waarin deze competentie voorkomt",
+                "pastCoursesTitle": "Gevolgde cursussen waarin deze competentie voorkomt"
+            },
+            "coursePlanner": {
+                "path": "/cursusplanner",
+                "title": "Cursusplanner",
+                "linkTitle": "Cursusplanner Blok {blockNumber}"
+            }
+        },
+        "teacher": {
+            "overview": {
+                "title": "Beoordelingsoverzicht {student}",
+                "bpv": "Mijn BPV",
+                "pageTitle": "Beoordelingsoverzicht",
+                "linkTitle": "Beoordelingsoverzicht",
+                "path": "/student/{studentId}/voortgang/overzicht",
+                "noResultsForYearTitle": "Er zijn voor student nog geen cursussen beoordeeld dit jaar",
+                "noResultsForYearTagLine": "Gebruik bovenstaande knop om een ander jaar te kiezen."
+            }
+        },
+        "coach": {
+            "pageTitle": {
+                "scheduledCourse": "Cursusinformatie",
+                "bpv": "Mijn BPV"
+            },
+            "courses": {
+                "title": "Studievoortgang",
+                "linkTemplate": "/coaching/{studentId}/voortgang/cursus/{groupCourseId}",
+                "scheduledCourseLinkTemplate": "/coaching/{studentId}/voortgang/cursus/{courseId}/{blockId}",
+                "currentBlockTitle": "Huidige cursussen",
+                "previousBlockTitle": "Cursussen uit de vorige periode",
+                "currentBlockEmptyTagLine": "Geen cursussen in de huidige periode.",
+                "noCourseInfoWarning": "Voor deze cursus is nog geen informatie zichtbaar. Dit volgt uiterlijk 4 weken voor aanvang van de cursus."
+            },
+            "overview": {
+                "title": "Beoordelingsoverzicht",
+                "bpv": "Mijn BPV",
+                "linkTitle": "beoordelingsoverzicht",
+                "path": "/coaching/{studentId}/voortgang/overzicht",
+                "noResultsTitle": "Geen resultaten",
+                "noResultsTagLine": "Gebruik bovenstaande knop om een ander jaar en/of fase te kiezen."
+            },
+            "route": {
+                "title": "Studieroute",
+                "linkTitle": "studieroute",
+                "path": "/coaching/{studentId}/voortgang/studieroute"
+            },
+            "competences": {
+                "title": "Competentieoverzicht",
+                "linkTitle": "competentieoverzicht",
+                "path": "/coaching/{studentId}/voortgang/competenties"
+            },
+            "competenceDetails": {
+                "path": "/coaching/{studentId}/voortgang/competenties/{choiceId}",
+                "futureCoursesTitle": "Toekomstige cursussen uit de vaste route van student waarin deze competentie voorkomt",
+                "pastCoursesTitle": "Door student gevolgde cursussen waarin deze competentie voorkomt"
+            },
+            "coursePlanner": {
+                "path": "/coaching/{studentId}/cursusplanner",
+                "title": "Cursusplanner",
+                "linkTitle": "Cursusplanner Blok {blockNumber}"
+            }
+        },
+        "secondcoach": {
+            "pageTitle": {
+                "scheduledCourse": "Cursusinformatie"
+            },
+            "courses": {
+                "title": "Studievoortgang",
+                "linkTemplate": "/tweede-coach/{studentId}/voortgang/cursus/{groupCourseId}",
+                "scheduledCourseLinkTemplate": "/tweede-coach/{studentId}/voortgang/cursus/{courseId}/{blockId}",
+                "currentBlockTitle": "Huidige cursussen",
+                "previousBlockTitle": "Cursussen uit de vorige periode",
+                "currentBlockEmptyTagLine": "Geen cursussen in de huidige periode.",
+                "noCourseInfoWarning": "Voor deze cursus is nog geen informatie zichtbaar. Dit volgt uiterlijk 4 weken voor aanvang van de cursus."
+            },
+            "overview": {
+                "title": "Beoordelingsoverzicht",
+                "bpv": "Mijn BPV",
+                "linkTitle": "beoordelingsoverzicht",
+                "path": "/tweede-coach/{studentId}/voortgang/overzicht",
+                "noResultsTitle": "Geen resultaten",
+                "noResultsTagLine": "Gebruik bovenstaande knop om een ander jaar en/of fase te kiezen."
+            },
+            "route": {
+                "title": "Studieroute",
+                "linkTitle": "studieroute",
+                "path": "/tweede-coach/{studentId}/voortgang/studieroute"
+            },
+            "competences": {
+                "title": "Competentieoverzicht",
+                "linkTitle": "competentieoverzicht",
+                "path": "/tweede-coach/{studentId}/voortgang/competenties"
+            },
+            "competenceDetails": {
+                "path": "/tweede-coach/{studentId}/voortgang/competenties/{choiceId}",
+                "futureCoursesTitle": "Toekomstige cursussen uit de vaste route van student waarin deze competentie voorkomt",
+                "pastCoursesTitle": "Door student gevolgde cursussen waarin deze competentie voorkomt"
+            },
+            "coursePlanner": {
+                "path": "/coaching/{studentId}/cursusplanner",
+                "title": "Cursusplanner",
+                "linkTitle": "Cursusplanner Blok {blockNumber}"
+            }
+        },
+        "mentor": {
+            "pageTitle": {
+                "scheduledCourse": "Cursusinformatie"
+            },
+            "courses": {
+                "title": "Studievoortgang",
+                "linkTemplate": "/mentoraat/{studentId}/voortgang/cursus/{groupCourseId}",
+                "scheduledCourseLinkTemplate": "/mentoraat/{studentId}/voortgang/cursus/{courseId}/{blockId}",
+                "currentBlockTitle": "Huidige cursussen",
+                "previousBlockTitle": "Cursussen uit vorige periode",
+                "currentBlockEmptyTagLine": "Geen cursussen in de huidige periode.",
+                "noCourseInfoWarning": "Voor deze cursus is nog geen informatie zichtbaar. Dit volgt uiterlijk 4 weken voor aanvang van de cursus."
+            },
+            "overview": {
+                "title": "Beoordelingsoverzicht",
+                "bpv": "Mijn BPV",
+                "linkTitle": "beoordelingsoverzicht",
+                "path": "/mentoraat/{studentId}/voortgang/overzicht",
+                "noResultsTitle": "Geen resultaten",
+                "noResultsTagLine": "Gebruik bovenstaande knop om een ander jaar en/of fase te kiezen."
+            },
+            "route": {
+                "title": "Studieroute",
+                "linkTitle": "studieroute",
+                "path": "/mentoraat/{studentId}/voortgang/studieroute"
+            },
+            "competences": {
+                "title": "Competentieoverzicht",
+                "linkTitle": "competentieoverzicht",
+                "path": "/mentoraat/{studentId}/voortgang/competenties"
+            },
+            "competenceDetails": {
+                "path": "/mentoraat/{studentId}/voortgang/competenties/{choiceId}",
+                "futureCoursesTitle": "Toekomstige cursussen uit de vaste route van student waarin deze competentie voorkomt",
+                "pastCoursesTitle": "Door student gevolgde cursussen waarin deze competentie voorkomt"
+            }
+        }
+    },
+    "coaching": {
+        "coach": {
+            "path": "/coaching",
+            "apiPrefix": "coach",
+            "title": "Mijn coachstudenten",
+            "traineeList": {
+                "title": "Studenten",
+                "subtitle": "Klik op een student om gespreksverslagen en studievoortgang in te zien."
+            },
+            "attendanceOverview": {
+                "title": "Presentieoverzicht",
+                "linkTitle": "presentieoverzicht"
+            },
+            "recentReports": {
+                "title": "Recente gespreksverslagen"
+            },
+            "allReports": {
+                "title": "Alle gespreksverslagen"
+            },
+            "reportDetails": {
+                "hasRead": "Gemarkeerd als gelezen",
+                "hasNotRead": "Markeer als gelezen",
+                "mark": "Markeer",
+                "hasResponse": "Je reactie op het verslag",
+                "hasNoResponse": "Reageren op verslag",
+                "responsePlaceholder": "Type hier je reactie",
+                "newResponse": "reactie is opgestuurd",
+                "updatedResponse": "reactie is geupdate",
+                "submitResponse": "Reactie opsturen",
+                "updateResponse": "Reactie updaten"
+            }
+        },
+        "secondcoach": {
+            "path": "/tweede-coach",
+            "apiPrefix": "mentor",
+            "title": "Overige coachstudenten",
+            "traineeList": {
+                "title": "Studenten",
+                "subtitle": "Klik op een student om gespreksverslagen en studievoortgang in te zien."
+            },
+            "attendanceOverview": {
+                "title": "Presentieoverzicht",
+                "linkTitle": "presentieoverzicht"
+            },
+            "recentReports": {
+                "title": "Recente gespreksverslagen"
+            },
+            "allReports": {
+                "title": "Alle gespreksverslagen"
+            },
+            "reportDetails": {
+                "hasRead": "Gemarkeerd als gelezen",
+                "hasNotRead": "Nog niet gemarkeerd als gelezen",
+                "hasResponse": "Reactie van coach op het verslag",
+                "hasNoResponse": "Coach heeft nog niet gereageerd"
+            }
+        },
+        "mentor": {
+            "path": "/mentoraat",
+            "apiPrefix": "mentor",
+            "title": "Studenten uit mijn team",
+            "traineeList": {
+                "title": "Studenten"
+            },
+            "attendanceOverview": {
+                "title": "Presentieoverzicht",
+                "linkTitle": "presentieoverzicht"
+            },
+            "recentReports": {
+                "title": "Gespreksverslagen"
+            },
+            "allReports": {
+                "title": "Alle gespreksverslagen"
+            },
+            "reportDetails": {
+                "hasRead": "Gemarkeerd als gelezen",
+                "hasNotRead": "Nog niet gemarkeerd als gelezen",
+                "hasResponse": "Reactie van coach op het verslag",
+                "hasNoResponse": "Coach heeft nog niet gereageerd"
+            }
+        },
+        "student": {
+            "path": "/coaching",
+            "reportDetails": {
+                "hasNoResponse": "Je coach heeft nog niet gereageerd."
+            },
+            "attendanceOverview": {
+                "title": "Presentieoverzicht",
+                "linkTitle": "presentieoverzicht"
+            }
+        }
+    },
+    "coursePlanner": {
+        "firstMoment": {
+            "student": {
+                "pageTitle": "Cursusplanner",
+                "breadcrumbsTitle": "Cursusplanner Blok {blockNumber}",
+                "path": "/cursusplanner",
+                "loadMeterLabel": "Totaal cursusuren per week voor Blok {blockNumber}",
+                "unsavedRequestsWarning": "Let op! \nEr zijn wijzigingen niet opgeslagen. Weet je zeker dat je de pagina wil verlaten?",
+                "choiceTypes": {
+                    "gepland": {
+                        "title": "Verplichte cursussen voor Blok {blockNumber}",
+                        "notification": "Onderstaande cursussen staan voor jou gepland binnen de standaard route en kunnen niet aangepast worden."
+                    },
+                    "versnellend": {
+                        "title": "Cursussen binnen jouw diplomaprofiel/specialiatie",
+                        "subtitle": "Versnellen",
+                        "icon": "stopwatch-speed"
+                    },
+                    "verbredend": {
+                        "title": "Cursussen uit een ander diplomaprofiel/specialisatie",
+                        "subtitle": "Verbreden",
+                        "icon": "books"
+                    },
+                    "vertragend": {
+                        "notification": "Let op!||Er zijn automatisch cursussen voor je ingepland die je eerder niet behaald hebt."
+                    },
+                    "masterClasses": {
+                        "title": "Vrije keuzevakken"
+                    },
+                    "previous": {
+                        "title": "Gekozen cursussen die tijdens het vorige keuzemoment niet geroosterd zijn"
+                    }
+                },
+                "bag": {
+                    "title": "{timeRemaining} resterend",
+                    "subtitle": "om te versnellen en/of te verbreden",
+                    "warning": "Jouw aanvraag wordt over {timeRemaining} automatisch ingediend.",
+                    "list": {
+                        "studentTitle": "Door jou geselecteerde cursussen",
+                        "coachTitle": "Door jouw coach geselecteerde cursussen",
+                        "empty": "Je hebt nog geen cursussen aangevraagd."
+                    },
+                    "button": {
+                        "default": "Selectie wijzigen",
+                        "empty": "Extra cursussen kiezen"
+                    }
+                },
+                "bagAwaiting": {
+                    "title": "{timeRemaining} resterend",
+                    "subtitle": "voor je coach om je keuzes goed te keuren",
+                    "warning": "De keuzes worden over {timeRemaining} ingediend.",
+                    "list": {
+                        "studentTitle": "Door jou geselecteerde cursussen",
+                        "coachTitle": "Door jouw coach geselecteerde cursussen",
+                        "empty": "Er zijn geen cursussen aangevraagd."
+                    }
+                },
+                "basket": {
+                    "title": "Door jou geselecteerde cursussen",
+                    "button": "Selectie opslaan",
+                    "empty": "Klik op een cursus om deze toe te voegen",
+                    "theirChoices": "Door jouw coach geselecteerd"
+                },
+                "actions": {
+                    "choose": "Cursus toevoegen"
+                }
+            },
+            "coach": {
+                "pageTitle": "Cursusplanner",
+                "breadcrumbsTitle": "Cursusplanner Blok {blockNumber}",
+                "path": "{rootPath}/{studentId}/cursusplanner",
+                "loadMeterLabel": "Totaal cursusuren per week voor Blok {blockNumber}",
+                "unsavedRequestsWarning": "Let op! \nEr zijn wijzigingen niet opgeslagen. Weet je zeker dat je de pagina wil verlaten?",
+                "choiceTypes": {
+                    "gepland": {
+                        "title": "Verplichte cursussen voor {student} in Blok {blockNumber}",
+                        "notification": "Gebruik de schuifknop om cursussen aan of uit te zetten."
+                    },
+                    "versnellend": {
+                        "title": "Cursussen binnen diplomaprofiel/specialisatie van {student}",
+                        "subtitle": "Versnellen",
+                        "icon": "stopwatch-speed"
+                    },
+                    "verbredend": {
+                        "title": "Cursussen uit een ander diplomaprofiel/specialisatie",
+                        "subtitle": "verbreden",
+                        "icon": "books"
+                    },
+                    "vertragend": {
+                        "notification": "Let op!||Er zijn automatisch cursussen ingepland voor {student} die eerder niet behaald zijn."
+                    },
+                    "masterClasses": {
+                        "title": "Vrije keuzevakken"
+                    }
+                },
+                "bag": {
+                    "title": "{timeRemaining} resterend",
+                    "subtitle": "om de aanvraag van {student} te accorderen/wijzigen. Na {timeRemaining} wordt de aanvraag definitief",
+                    "warning": "De keuzes worden over {timeRemaining} automatisch ingediend.",
+                    "list": {
+                        "studentTitle": "Door {student} geselecteerde cursussen",
+                        "coachTitle": "Door jou voor {student} geselecteerd",
+                        "empty": "Er zijn geen cursussen voor {student} aangevraagd."
+                    },
+                    "button": {
+                        "default": "Selectie wijzigen",
+                        "empty": "Extra cursussen kiezen"
+                    }
+                },
+                "bagAwaiting": {
+                    "title": "{timeRemaining} resterend",
+                    "subtitle": "voor {student} om keuzes te maken",
+                    "warning": "Over {timeRemaining} kunnen de keuzes goedgekeurd worden.",
+                    "list": {
+                        "studentTitle": "Door {student} geselecteerde cursussen",
+                        "coachTitle": "Door jou voor {student} geselecteerd",
+                        "empty": "Er zijn geen cursussen door {student} aangevraagd."
+                    }
+                },
+                "basket": {
+                    "title": "Voor {student} geselecteerd",
+                    "button": "Selectie opslaan",
+                    "empty": "Klik op een cursus om deze toe te voegen",
+                    "theirChoices": "Door {student} gekozen"
+                },
+                "actions": {
+                    "choose": "Cursus toevoegen"
+                }
+            }
+        },
+        "secondMoment": {
+            "student": {
+                "available": {
+                    "title": "Alle beschikbare keuzes",
+                    "info": "Selecteer hier extra cursussen om aan je rooster toe te voegen",
+                    "modalTitle": "Beschikbare cursussen op dit tijdstip",
+                    "course": {
+                        "duration": {
+                            "single": "{duration} lesuur",
+                            "multiple": "{duration} lesuren"
+                        },
+                        "seats": {
+                            "withPeriod": {
+                                "single": "{seats} plek beschikbaar ({weekday} {start})",
+                                "multiple": "{seats} plekken beschikbaar ({weekday} {start})"
+                            },
+                            "withoutPeriod": {
+                                "single": "{seats} plek beschikbaar",
+                                "multiple": "{seats} plekken beschikbaar"
+                            }
+                        },
+                        "add": "Toevoegen op dit tijdstip"
+                    }
+                },
+                "notScheduled": {
+                    "title": "Keuzemoment 2",
+                    "content": "Hier moet een tekst komen over keuzemoment twee en wellicht een korte uitleg over welke vakken niet ingeroosterd zijn? Uitleggen dat de student deze het volgend keuzemoment weer kan kiezen?",
+                    "subTitle": "Niet geroosterde cursussen"
+                },
+                "roster": {
+                    "title": "Rooster",
+                    "periodColumnTitle": "Lesuur",
+                    "warningBarDesktop": "Je keuze wordt na {timeLeft} automatisch en definitief aan je rooster toegevoegd.",
+                    "warningBarMobile": "Je hebt nog {timeLeft} dagen om extra cursussen te kiezen.",
+                    "view": "Bekijk op de rooster",
+                    "course": {
+                        "delete": "Verwijderen van dit tijdstip"
+                    }
+                },
+                "popover": {
+                    "availableCourseTitle": "Beschikbare cursussen op dit tijdstip",
+                    "allAvailableCoursesTitle": "Alle beschikbare cursussen die je kan toevoegen aan blok {blockNumber}",
+                    "courseInfo": "Cursusinformatie",
+                    "bigPopoverTitle": "Voeg {courseName} toe op een van de beschikbare plekken door op het plusje te klikken"
+                }
+            }
+        }
+    },
+    "bpv": {
+        "student": {
+            "path": "/mijn-bpv",
+            "noInternship": "/mijn-bpv/stages",
+            "pageTitle": "Mijn BPV"
+        },
+        "teacher": {
+            "path": "/mijn-bpv",
+            "pageTitle": "Mijn BPV"
+        },
+        "body": {
+            "title": "Je hebt nog geen stages",
+            "content": "Je hebt nog geen stage gelopen. Zodra je aan je eerste stage bent begonnen, verschijnt hier meer informatie over jouw BPV.",
+            "startInternshipTitle": "Gefeliciteerd! Je bent klaar om op stage te gaan",
+            "startInternshipContent": "Je hebt voldoende cursussen en competenties behaald zodat je op stage kan."
+        },
+        "footer": {
+            "title": "Vind hier je stageplaats",
+            "content": "Heb je nog geen stage, maar je wil binnenkort op stage? Neem dan een kijkje in het aanbod van mediastages.nl"
+        },
+        "links": {
+            "noInternship": "/",
+            "bodySmall": "Stage aanvragen",
+            "bodyLarge": "Leerdoelen formulier downloaden"
+        }
+    }
+}

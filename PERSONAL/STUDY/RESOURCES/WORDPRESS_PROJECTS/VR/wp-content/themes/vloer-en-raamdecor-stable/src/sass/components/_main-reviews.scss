@@ -1,0 +1,164 @@
+@use '../abstract' as ab;
+
+.main__reviews {
+	width: 100%;
+	background: var(--clr-green-lightest);
+	margin-block-end: var(--section-space-l);
+
+	//   Remove margin bottom to sit on the inspiratie section
+	@include ab.respond(375px) {
+		margin-block-end: 0;
+	}
+
+	.main__reviews--content h2.section--title {
+		align-self: center;
+	}
+
+	&--content {
+		@include ab.default-layout;
+		@include ab.flex-column-content();
+		place-items: center;
+		padding: 5rem 10rem;
+
+		@include ab.respond(750px) {
+			padding: 2rem;
+		}
+
+		.section--title {
+			color: var(--clr-green);
+
+			@include ab.respond(375px) {
+				display: none;
+			}
+		}
+
+		.main__review--list {
+			position: relative;
+			width: 100%;
+			min-height: 15rem;
+			margin: 0 auto;
+			overflow: hidden;
+
+			@include ab.respond(750px) {
+				min-height: 20rem;
+			}
+		}
+
+		.review-item {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: transform var(--review-and-review-btn-transition);
+		}
+
+		&--review-text {
+			@include ab.flex-column-content();
+			position: relative;
+			font-size: var(--review-text-font-size);
+			width: 65%;
+			margin-inline: auto;
+			margin-block-start: 2rem;
+			font-style: italic;
+			color: var(--clr-green);
+			height: fit-content;
+			font-weight: var(--font-medium);
+
+			@include ab.respond(860px) {
+				width: 80%;
+			}
+
+			@include ab.respond(750px) {
+				width: 100%;
+				text-align: center;
+				// padding-inline: 1rem;
+
+				&::after {
+					@include ab.quote-styles('\201D');
+					bottom: 0;
+					right: 0;
+
+					@include ab.respond(500px) {
+						bottom: -1.8rem;
+						right: 0.8rem;
+					}
+				}
+			}
+
+			.reviewer {
+				position: relative;
+				@include ab.flex-end-content();
+				gap: 1rem;
+				align-items: center;
+				font-size: 1.4rem;
+				margin-block-start: 0.5rem;
+				font-style: normal;
+
+				@include ab.respond(1100px) {
+					margin-block-start: 0rem;
+					font-size: 1.2rem;
+				}
+
+				@include ab.respond(750px) {
+					justify-content: center;
+					align-items: center;
+					margin-block-start: 1.5rem;
+				}
+
+				&::after {
+					@include ab.quote-styles('\201D');
+					top: -2.5rem;
+					right: -6rem;
+
+					@include ab.respond(750px) {
+						display: none;
+						// right: 0;
+					}
+				}
+			}
+
+			&::before {
+				@include ab.quote-styles();
+				top: -2.5rem;
+				left: -6rem;
+
+				transition: var(--transition-fast);
+
+				@include ab.respond(1100px) {
+					top: -1.5rem;
+				}
+
+				@include ab.respond(750px) {
+					left: 0rem;
+					top: 0rem;
+				}
+
+				@include ab.respond(500px) {
+					left: -0.7rem;
+					top: -0.7rem;
+				}
+			}
+		}
+	}
+
+	&--controls {
+		@include ab.default-layout;
+		@include ab.flex-column-content();
+		place-items: center;
+		padding: 0 10rem 5rem 10rem;
+		margin-block-start: -3rem;
+
+		@include ab.respond(750px) {
+			padding: 0 2rem 2rem 2rem;
+			margin-block-start: 0rem;
+		}
+	}
+}
+
+body:not(.home) {
+	.main__reviews {
+		margin-block-end: 0rem !important;
+	}
+}

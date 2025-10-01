@@ -1,0 +1,52 @@
+@use "../abstract" as ab;
+
+.rating {
+  place-items: center;
+  margin-block-end: var(--section-space-l);
+
+  h2 {
+    margin-block-end: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    p {
+      max-width: 100%;
+      font-family: var(--font-primary);
+      font-weight: var(--font-medium);
+      padding-block-end: 0.5rem;
+
+      span {
+        font-weight: var(--font-black);
+        font-size: var(--product-card-text-main-font-size);
+      }
+
+      @include ab.respond(960px) {
+        max-width: 95%;
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      @include ab.respond(600px) {
+        max-width: 90%;
+      }
+    }
+
+    &--footer {
+      @include ab.flex-space-content;
+      place-items: center;
+      justify-content: center;
+      gap: 2rem;
+
+      &-stars {
+        svg {
+          @include ab.rating-stars(2rem);
+        }
+      }
+    }
+  }
+}
+
+.rating .section--title {
+  align-self: center;
+}

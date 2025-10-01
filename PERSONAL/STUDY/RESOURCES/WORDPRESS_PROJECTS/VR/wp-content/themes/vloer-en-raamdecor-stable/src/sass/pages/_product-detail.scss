@@ -1,0 +1,111 @@
+.details {
+  &.main.container {
+    margin-block-start: 84px;
+  }
+  .item__info {
+    margin-block-start: 0;
+    .product-card-title-primary {
+      margin-block-end: 0;
+    }
+  }
+
+    .modulo__installation {
+    .product-card-title-primary {
+      margin-block-end: 0;
+      padding-top: 67px;
+    }
+  }
+  .product-text {
+    color: var(--primary-color);
+
+    .metre {
+      color: var(--primary-color);
+    }
+  }
+
+  .single_add_to_cart_button.button.btn.primary {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    margin-top: 28px;
+    background-color: var(--primary-color);
+
+    .icon {
+      height: 8px;
+    }
+  }
+
+  .cart:not(.show) {
+    display: none;
+  }
+
+
+  .flaticon-right-arrow:before {
+    visibility:visible;
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+
+  .flaticon-back:before {
+    visibility:visible;
+    content: '\f053';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+
+  .wpgs-for .slick-arrow {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .wpgs-nav.slick-initialized {
+    width: 305px !important;
+    margin: 0 auto;
+  }
+
+  .wpgs-nav .slick-prev {
+    margin-left: -5px;
+    transform: translate(0, 0);
+  }
+
+  .wpgs-nav .slick-prev::before {
+    visibility:visible;
+    content: '\f053';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+
+  .wpgs-nav .slick-next {
+    margin-right: -15px;
+    transform: translate(0, 0);
+  }
+
+  .wpgs-nav .slick-next::before {
+    visibility:visible;
+    content: '\f054';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+
+  .zoomtoo-container:after {
+    visibility:visible;
+    content: '\f00e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    color: #000;
+    right: 22px;
+    bottom: 22px;
+    font-size: 32px;
+  }
+
+  .zoomtoo-container:after:hover {
+    color: #000;
+  }
+}
+
+.single-product.woocommerce span.onsale {
+  display: none !important;
+}

@@ -1,0 +1,65 @@
+@use '../abstract/' as ab;
+
+.btn {
+	padding: 2rem 3rem;
+	background-color: var(--clr-white);
+	border: 1px solid var(--primary-color);
+	font-size: var(--btn-text);
+	color: var(--primary-color);
+	display: flex;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	align-items: center;
+	// flex-wrap: wrap;
+	justify-content: center;
+	padding: 1.5rem 2rem;
+	transition: all 0.2s ease-in-out;
+
+	@include ab.respond(600px) {
+		padding: 1.3rem 0.5rem;
+	}
+
+	.icon {
+		stroke: var(--primary-color);
+		fill: var(--primary-color);
+		stroke-width: 3rem;
+		height: 0.8rem;
+		margin-right: 0.5rem;
+		width: 1rem;
+		margin-inline-start: 0.5rem;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	span {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&:hover {
+		background-color: var(--tertiary-color);
+		color: var(--clr-white);
+		border: 1px solid var(--tertiary-color);
+
+		span {
+			transform: translateX(-0.5rem);
+		}
+
+		.icon {
+			stroke: var(--clr-white);
+			fill: var(--clr-white);
+			transform: translateX(0.5rem);
+		}
+	}
+}
+
+.btn.bn {
+	border: none;
+}
+
+.btn.bn.primary {
+	border: 1px solid transparent;
+
+	&:hover {
+		background-color: var(--tertiary-color);
+	}
+}

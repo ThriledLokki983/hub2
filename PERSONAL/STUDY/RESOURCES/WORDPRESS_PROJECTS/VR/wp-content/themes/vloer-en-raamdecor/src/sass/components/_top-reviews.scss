@@ -1,0 +1,39 @@
+@use '../abstract' as ab;
+
+.header-reviews {
+	@include ab.flex-right-content();
+	padding-inline-end: 3rem;
+
+	transition: padding-inline-end 0.25s ease-in-out;
+
+	@include ab.respond(960px) {
+		padding-inline-end: 7rem;
+		transform: translateY(-7px);
+	}
+
+	&__icon-box {
+		display: flex;
+		gap: 0.5rem;
+		margin-right: 0.7rem;
+
+		svg {
+			@include ab.rating-stars();
+		}
+	}
+
+	&__text {
+		span {
+			font-family: var(--font-primary);
+			font-weight: var(--font-bold);
+			font-size: 1.1rem;
+
+			@include ab.respond(960px) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	@include ab.respond(768px) {
+		// display: none;
+	}
+}

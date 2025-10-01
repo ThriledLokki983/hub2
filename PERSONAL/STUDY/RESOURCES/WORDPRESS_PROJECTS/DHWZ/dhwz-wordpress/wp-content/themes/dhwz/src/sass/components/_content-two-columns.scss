@@ -1,0 +1,14 @@
+@use '../abstract/' as ab;
+
+.content-two-columns {
+  @include ab.container;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 5rem;
+
+  @include ab.respond(1230px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,62 @@
+.ap-list-rtl {
+  direction: rtl;
+  text-align: right;
+}
+.ap-list-rtl .ap-list-item {
+  direction: rtl;
+}
+.ap-list-rtl .ap-list-pagination {
+  text-align: left;
+}
+.ap-list-rtl .ap-list-item-meta-avatar {
+  margin-right: 0;
+  margin-left: 0.625rem;
+}
+.ap-list-rtl .ap-list-item-action {
+  margin-right: var(--spacing-8);
+  margin-left: 0;
+}
+.ap-list.ap-list-rtl .ap-list-item-action > li:first-child {
+  padding-right: 0;
+  padding-left: 0.625rem;
+}
+.ap-list-rtl .ap-list-item-action-split {
+  right: auto;
+  left: 0;
+}
+.ap-list-rtl .ap-list-vertical .ap-list-item-extra {
+  margin-right: 2.5rem;
+  margin-left: 0;
+}
+.ap-list-rtl .ap-list-vertical .ap-list-item-action {
+  margin-right: auto;
+}
+.ap-list-rtl .ap-list-vertical .ap-list-item-action > li:first-child {
+  padding-right: 0;
+  padding-left: 0.625rem;
+}
+.ap-list-rtl .ap-list:not(.ap-list-vertical) .ap-list-item-no-flex .ap-list-item-action {
+  float: left;
+}
+
+@media screen and (max-width: 500px) {
+  .ap-list-rtl .ap-list-item-action {
+    margin-right: var(--spacing-7);
+    margin-left: 0;
+  }
+  .ap-list-rtl .ap-list-vertical .ap-list-item-extra {
+    margin-right: var(--spacing-7);
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 300px) {
+  .ap-list-rtl .ap-list-item-action {
+    margin-right: 22px;
+    margin-left: 0;
+  }
+  .ap-list-rtl .ap-list-vertical .ap-list-item-extra {
+    margin: auto auto var(--spacing-5);
+  }
+}
+
+/*# sourceMappingURL=rtl.css.map */

@@ -1,0 +1,5 @@
+# .gitignore
+node_modules
+.vscode
+.cache
+.DS_Store

@@ -1,0 +1,147 @@
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0 0 15px;
+}
+
+.input-content {
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.input-content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.input-content > * {
+		width: 100%;
+	}
+}
+
+.input-validate-message span {
+	width: 80%;
+	margin-left: 20%;
+	padding-bottom: 5px;
+	color: red;
+}
+
+/* label {
+	margin: 0 0 6px 0;
+	font-size: 1.1rem;
+	flex: 0.2;
+} */
+
+input,
+select {
+	padding: 10px;
+	border: none;
+	/* border-bottom: 1px solid #777; */
+	background-color: #eee;
+	outline: none;
+	font-size: 1.1rem;
+	box-sizing: border-box;
+	flex: 0.8;
+}
+
+.error {
+	color: rgb(5, 4, 4);
+}
+
+.form__field {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 2rem;
+	align-items: center;
+}
+
+.form__field--label {
+	flex: 0.2;
+}
+
+.radio__group {
+	display: inline-block !important;
+	margin-bottom: 2rem;
+}
+
+.form__field .radio__group {
+	flex: 0.8;
+	gap: 2rem;
+	width: -webkit-fill-available;
+}
+
+.form__field--label .label {
+	font-size: 1.8rem;
+}
+
+.radio__input {
+	display: inline-block;
+	margin-right: 2rem;
+}
+.radio__input--input {
+	display: none;
+}
+.radio__input--input:checked {
+	display: none;
+}
+.radio__input--label {
+	width: 8rem;
+	height: 5rem;
+	font-size: 1.7rem;
+	border: 1px solid rgba(51, 51, 51, 0.3);
+	border-radius: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	margin: 0;
+}
+.radio__input--input:checked ~ .radio__input--label {
+	background-color: #0e1a41;
+	color: #fff;
+}

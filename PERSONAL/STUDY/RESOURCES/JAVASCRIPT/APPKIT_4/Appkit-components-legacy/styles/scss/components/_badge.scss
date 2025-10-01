@@ -1,0 +1,90 @@
+@mixin outlinedColorStyle($backgroundColor, $boxShadow, $color) {
+    background-color: $backgroundColor;
+    color: $color;
+    @if $boxShadow {
+        box-shadow: 0 0 0 $border-1 $boxShadow;
+    }
+}
+
+.ap-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-5;
+    padding: $spacing-2 $spacing-4;  
+    
+    &.gesture {
+        cursor: pointer;
+    }
+
+    span {
+        font-size: $typography-text-size-2;
+        font-weight: $font-weight-2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        line-height: $typography-line-height-16;
+        letter-spacing: $letter-spacing-1;
+        text-align: center;
+    }
+
+    &.ap-badge-round {
+        border-radius: 50%;
+        min-width: $width-3;
+        padding: $spacing-2;
+        &.ap-badge-lg {
+            min-width: $typography-text-size-6;
+            height: $height-10;
+            font-size: $typography-text-size-3;
+        }
+    }
+    &.ap-badge-lg {
+        height: $typography-text-size-6;
+        line-height: $typography-text-size-6;
+
+        span {
+            font-size: $typography-text-size-3;
+            line-height: $typography-line-height-3;
+        }
+    }
+
+    &.ap-badge-primary {
+        @include outlinedColorStyle($color-background-primary, false, $color-background-secondary);
+    }
+
+    &.ap-badge-primary-outlined {
+        @include outlinedColorStyle(rgba($color-background-primary-rgb, $opacity-3), $color-background-primary, $color-background-primary);
+    }
+
+    &.ap-badge-danger {
+        @include outlinedColorStyle($states-error-05, false, $color-background-secondary);
+    }
+
+    &.ap-badge-danger-outlined {
+        @include outlinedColorStyle(rgba($states-error-05, $opacity-3), $states-error-05, $states-error-05);
+    }
+
+    &.ap-badge-warning {
+        @include outlinedColorStyle($states-warning-05, false, $neutral-20);
+    }
+
+    &.ap-badge-warning-outlined {
+        @include outlinedColorStyle(rgba($states-warning-05, $opacity-3), $states-warning-05, $color-text-heading);
+    }
+
+    &.ap-badge-success {
+        @include outlinedColorStyle($states-success-06, false, $color-background-secondary);
+    }
+
+    &.ap-badge-success-outlined {
+        @include outlinedColorStyle(rgba($states-success-06, $opacity-3), $states-success-06, $states-success-06);
+    }
+
+    &.ap-badge-info {
+        @include outlinedColorStyle($neutral-02, false, $neutral-20);
+    }
+
+    &.ap-badge-info-outlined {
+        @include outlinedColorStyle($neutral-02, $neutral-17, $neutral-17);
+    }
+}

@@ -1,0 +1,99 @@
+@use '../abstract' as ab;
+
+.mob-menu {
+	display: none;
+
+	@include ab.respond(960px) {
+		display: flex;
+		background-color: var(--primary-color);
+		padding: 0.8rem 0;
+		position: absolute;
+		right: 0;
+	}
+}
+
+.menu__icon {
+	--btn-large: 1.82rem clamp(1rem, 10%, 2.5rem);
+
+	cursor: pointer;
+	display: inline-block;
+	padding: var(--btn-large);
+	position: relative;
+
+	.navicon {
+		background: var(--clr-white);
+		display: grid;
+		height: 0.35rem;
+		position: relative;
+		width: 3rem;
+		border-radius: 0.3rem;
+		transition: var(--transition-fast);
+
+		&::before,
+		&::after {
+			background: var(--clr-white);
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			transition: all 0.25s ease-in-out;
+			width: 100%;
+		}
+
+		&::before {
+			top: 10px;
+			border-radius: 0.3rem;
+		}
+
+		&::after {
+			top: -10px;
+			border-radius: 0.3rem;
+		}
+	}
+
+		@include ab.respond(730px) {
+			--btn-large: 1.7rem clamp(1rem, 10%, 2.5rem);
+		}
+
+		@include ab.respond(550px) {
+			--btn-large: 1.6rem clamp(1rem, 10%, 2.5rem);
+		}
+}
+
+/* menu btn */
+
+.menu__btn {
+	display: none;
+}
+
+.menu__btn:checked ~ .menu {
+	max-height: fit-content;
+	padding-block-end: 2rem;
+}
+
+.menu__btn:checked ~ .menu li {
+	text-align: left;
+	width: 100%;
+}
+
+.menu__btn:checked .login li:last-child a {
+	text-align: center;
+	width: 100%;
+}
+
+.menu__btn:checked ~ .menu__icon .navicon {
+	background: transparent;
+}
+
+.menu__btn:checked ~ .menu__icon .navicon:before {
+	transform: rotate(-45deg);
+}
+
+.menu__btn:checked ~ .menu__icon .navicon:after {
+	transform: rotate(45deg);
+}
+
+.menu__btn:checked ~ .menu__icon:not(.steps) .navicon:before,
+.menu__btn:checked ~ .menu__icon:not(.steps) .navicon:after {
+	top: 0;
+}

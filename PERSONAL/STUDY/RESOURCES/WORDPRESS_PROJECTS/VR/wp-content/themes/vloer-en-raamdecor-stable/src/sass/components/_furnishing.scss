@@ -1,0 +1,175 @@
+@use '../abstract' as ab;
+
+.furnishing {
+	@include ab.default-layout;
+	@include ab.grid-layout(4);
+	grid-auto-rows: 1fr;
+	margin-block-end: var(--section-space-l);
+
+	@include ab.respond(960px) {
+		margin-block-start: 0 !important;
+	}
+
+	.photo {
+		figure {
+			height: 100%;
+		}
+	}
+
+	@include ab.respond(375px) {
+		margin-block: 0 !important;
+	}
+
+	@include ab.respond(960px) {
+		margin-block-start: 0 !important;
+		width: 100%;
+		display: flex !important;
+		flex-direction: column-reverse;
+
+		&__content,
+		.product-card-title-primary,
+		.photo {
+			max-width: 95%;
+			margin-inline: auto;
+		}
+
+		.photo {
+			margin-top: 4rem;
+		}
+
+		.photo {
+			.product-card-title-primary {
+				max-width: 100%;
+				padding-inline: 0rem !important;
+			}
+		}
+
+		.text {
+			// padding-inline: 1rem;
+
+			p {
+				@include ab.respond(600px) {
+					font-size: var(--min-font-size);
+				}
+			}
+		}
+	}
+
+	@include ab.respond(600px) {
+		&__content,
+		.product-card-title-primary,
+		.photo {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.photo {
+			margin-top: 2rem;
+		}
+
+		&__content {
+			p,
+			h2 {
+				max-width: 95%;
+				padding-inline-start: 1rem;
+			}
+		}
+	}
+
+	@include ab.respond(375px) {
+		width: 100%;
+	}
+
+	.text {
+		p {
+			max-width: 100%;
+		}
+	}
+}
+
+.product-card-title-primary {
+	margin-block-end: 2rem;
+
+	@include ab.respond(600px) {
+		margin-block-start: 0.5rem;
+		margin-block-end: 2rem;
+
+		span,
+		h2 {
+			padding-inline-start: 1rem;
+			text-align: left !important;
+		}
+	}
+
+	span {
+		color: var(--clr-black);
+		font-size: var(--product-card-text-main-font-size-3);
+	}
+
+	h2 {
+		color: var(--clr-black);
+		font-size: var(--product-card-title-main-font-size-3);
+		line-height: 1.2;
+	}
+}
+
+.photo {
+	//height: 100%;
+
+	img {
+		height: inherit;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	@include ab.respond(960px) {
+		.product-card-title-primary {
+			padding-inline: 1rem;
+
+			span,
+			h2 {
+				text-align: left;
+			}
+		}
+
+		p {
+			padding-inline: 1rem;
+			max-width: 95%;
+
+			&:first-of-type {
+				padding-block-start: 2rem;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+	figure {
+		 height: auto !important;
+
+		@include ab.respond(960px) {
+			aspect-ratio: 16/6;
+			object-fit: cover;
+			width: 100%;
+		}
+
+		@include ab.respond(600px) {
+			aspect-ratio: 10/6;
+		}
+
+		@include ab.respond(375px) {
+			aspect-ratio: 1;
+		}
+
+		img {
+			width: 100%;
+			// height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.furnishing__content p:first-child {
+	display: none;
+}

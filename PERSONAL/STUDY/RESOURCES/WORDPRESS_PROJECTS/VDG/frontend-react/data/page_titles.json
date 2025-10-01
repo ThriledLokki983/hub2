@@ -1,0 +1,85 @@
+{
+    "pageNotFound": "404 Pagina niet gevonden",
+    "calendar": "Agenda",
+    "contact": "Contact",
+    "rating": "Beoordelen",
+    "rateGroup": "Beoordelen {course} {group} Periode {block}",
+    "coaching": {
+        "overview": {
+            "coach": "Mijn coachstudenten",
+            "secondcoach": "Overige coachstudenten",
+            "mentor": "Studenten uit mijn team",
+            "student": "Studiecoaching"
+        },
+        "newReport": {
+            "student": "Nieuw gespreksverslag"
+        },
+        "report": {
+            "coach": "Gespreksverslag {topic}",
+            "secondcoach": "Gespreksverslag {topic}",
+            "mentor": "Gespreksverslag {topic}",
+            "student": "Gespreksverslag {topic}"
+        },
+        "allReports": {
+            "coach": "Alle gespreksverslagen",
+            "secondcoach": "Alle gespreksverslagen",
+            "mentor": "Alle gespreksverslagen"
+        },
+        "studentDetails": {
+            "coach": "{student}",
+            "secondcoach": "{student}",
+            "mentor": "{student}"
+        }
+    },
+    "progress": {
+        "progress": {
+            "student": "Studievoortgang"
+        },
+        "course": {
+            "student": "Cursus {course}",
+            "coach": "{student} | Cursus {course}",
+            "secondcoach": "{student} | Cursus {course}",
+            "mentor": "{student} | Cursus {course}"
+        },
+        "scheduledCourse": {
+            "student": "Cursus {course}",
+            "coach": "Cursus {course}",
+            "secondcoach": "Cursus {course}",
+            "mentor": "Cursus {course}"
+        },
+        "competenceDetails": {
+            "student": "Competentie {criterium}",
+            "coach": "{student} | Competentie {criterium}",
+            "secondcoach": "{student} | Competentie {criterium}",
+            "mentor": "{student} | Competentie {criterium}"
+        },
+        "competences": {
+            "student": "Competentieoverzicht",
+            "coach": "{student} | Competentieoverzicht",
+            "secondcoach": "{student} | Competentieoverzicht",
+            "mentor": "{student} | Competentieoverzicht"
+        },
+        "route": {
+            "student": "Studieroute",
+            "coach": "{student} | Studieroute",
+            "secondcoach": "{student} | Studieroute",
+            "mentor": "{student} | Studieroute"
+        },
+        "overview": {
+            "student": "Beoordelingsoverzicht",
+            "teacher": "{student} | Beoordelingsoverzicht",
+            "coach": "{student} | Beoordelingsoverzicht",
+            "secondcoach": "{student} | Beoordelingsoverzicht",
+            "mentor": "{student} | Beoordelingsoverzicht"
+        }
+    },
+    "coursePlanner": {
+        "firstMoment": {
+            "student": "Cursusplanner Blok {blockNumber}",
+            "coach": "{student} | Cursusplanner Blok {blockNumber}"
+        },
+        "secondMoment": {
+            "student": "Cursusplanner keuzemoment 2 Blok {blockNumber}"
+        }
+    }
+}

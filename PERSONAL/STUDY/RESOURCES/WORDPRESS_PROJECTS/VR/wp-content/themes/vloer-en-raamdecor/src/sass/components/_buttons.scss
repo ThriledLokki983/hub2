@@ -1,0 +1,119 @@
+@use '../abstract' as ab;
+
+.dots {
+	margin-block-end: 3.5rem;
+
+	&__dot {
+		border: none;
+		border-radius: 0.2rem;
+		background-color: var(--clr-green-light);
+		height: 1rem;
+		width: 1rem;
+		margin-right: 1rem;
+		cursor: pointer;
+		transition: all var(--review-and-review-btn-transition);
+
+		@include ab.respond(750px) {
+			height: 0.8rem;
+			width: 0.8rem;
+		}
+	}
+}
+
+.dots__dot.active {
+	background-color: var(--clr-green);
+	transform: rotate(-10deg);
+}
+
+.btn {
+	background-color: var(--background);
+	padding: var(--btn-large);
+	color: var(--color, var(--clr-white));
+	font-size: var(--top-header-button-font-size);
+	font-family: var(--font-primary);
+	font-weight: var(--font-bold);
+	border-radius: 0;
+	border: 1px solid transparent;
+	text-transform: uppercase;
+	cursor: pointer;
+	width: auto;
+
+	transition: var(--btn-transition);
+
+	@include ab.on-hover() {
+		background-color: var(--background-hover);
+		color: var(--color-hover);
+		border: 1px solid var(--border-hover);
+	}
+}
+
+.primary {
+	--background: var(--primary-color);
+
+	@include ab.on-hover() {
+		--background-hover: var(--primary-color-hover);
+		--color-hover: var(--primary-color);
+		--border-hover: var(--primary-color-hover);
+	}
+}
+
+.secondary {
+	--background: var(--secondary-color);
+
+	@include ab.on-hover() {
+		--background-hover: var(--secondary-color-hover);
+		--color-hover: var(--secondary-color);
+		--border-hover: transparent;
+	}
+}
+
+.tertiary {
+	--background: var(--tertiary-color);
+
+	@include ab.on-hover() {
+		--background-hover: var(--tertiary-color);
+		--color-hover: var(--tertiary-color);
+		--border-hover: var(--tertiary-color);
+	}
+}
+
+.green {
+	--background: var(--clr-green);
+
+	@include ab.on-hover() {
+		--background-hover: var(--clr-green-hover);
+		--color-hover: var(--clr-green);
+		--border-hover: var(--clr-green-hover);
+	}
+}
+
+.black {
+	width: fit-content;
+	--background: var(--clr-black);
+
+	@include ab.on-hover() {
+		--background-hover: var(--clr-black-hover);
+		--color-hover: var(--clr-black);
+		--border-hover: var(--clr-black-hover);
+	}
+}
+
+.red {
+	--background: var(--tertiary-color);
+
+	@include ab.on-hover() {
+		--background-hover: var(--tertiary-color-hover);
+		--color-hover: var(--tertiary-color);
+		--border-hover: transparent;
+	}
+}
+
+.small {
+	padding: var(--btn-small);
+	font-size: var(--btn-small-font-size);
+	width: fit-content;
+}
+
+.inline-block {
+	display: inline-block;
+}

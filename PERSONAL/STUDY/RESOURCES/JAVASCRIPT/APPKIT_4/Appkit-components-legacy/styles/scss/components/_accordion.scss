@@ -1,0 +1,137 @@
+
+
+.ap-accordion-content {
+    transition: all .5s linear;
+}
+
+.ap-accordion-content.hide {
+    height: 0;
+}
+
+.ap-accordion-content.open {
+    height: auto;
+}
+
+
+.ap-accordion {
+    border-radius: $border-radius-2;
+    overflow: visible;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color $transition-0;
+
+    &:not(:last-child) {
+        margin-bottom: $spacing-2;
+    }
+
+    &:hover {
+        background-color: $color-background-hover;
+    }
+
+    // &.expanded .ap-accordion-toggle {
+    //     padding: $spacing-4 $spacing-4 $spacing-2 $spacing-4;
+    // }
+
+    .ap-accordion-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing-4;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: $border-radius-2;
+        position: relative;
+
+        &.ap-accordion-cursor-default .ap-accordion-toggle-icon-container {
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .ap-accordion-title {
+            height: $typography-line-height-3;
+            line-height: $typography-line-height-3;
+            letter-spacing: $letter-spacing-1;
+            user-select: none;
+            color: $color-text-heading;
+            margin-right: $spacing-4;
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .Appkit4-icon {
+            transform: rotate(0);
+            transition: transform $transition-0;
+            color: $color-text-body;
+            
+            &::before {
+                font-weight: $font-weight-2;
+            }
+
+            &.rotate {
+                transform: rotate($degree-1);
+            }
+        }
+    }
+
+    .ap-accordion-content {
+        padding: 0 $spacing-8 $spacing-4 $spacing-4;
+        color: $color-text-body;
+        line-height: $typography-line-height-3;
+        transition: height $transition-0;
+        // opacity: 1;
+        // visibility: visible;
+        // display: block;
+        // box-sizing: border-box;
+
+        &.hidden {
+            // height: 0;
+            // opacity: 0;
+            // visibility: hidden;
+            display: none;
+            padding-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .ap-accordion-text {
+            display: inline-block;
+            line-height: $typography-line-height-3;
+        }
+    }
+
+    .ap-accordion-cursor-default {
+        cursor: default;
+    }
+}
+
+.ap-accordion-demo-wrapper {
+    width: rem(564px);
+}
+
+.ap-accordion-group-container {
+    padding: 0;
+    margin: 0;
+}
+
+.react-slidedown {
+    height: 0;
+    transition-property: none;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    display: none;
+}
+
+.react-slidedown.transitioning {
+    overflow-y: hidden;
+}
+
+.react-slidedown.closed {
+    display: none;
+}

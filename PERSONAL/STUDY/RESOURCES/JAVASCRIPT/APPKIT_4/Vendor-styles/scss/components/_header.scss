@@ -1,0 +1,119 @@
+.ap-header {
+  position: relative;
+  height: $height-11;
+  padding: $spacing-4 $spacing-4 $spacing-4 $spacing-6;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: rem(650px);
+  z-index: $z-index-99;
+  background-color: rgba($color-background-selected-rgb, $opacity-6); // 243, 243, 243, 0.48
+  backdrop-filter: blur(rem(20px));
+  -webkit-backdrop-filter: blur(rem(20px));
+
+  &.solid {
+    background-color: $color-background-container;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 0 rem(1px) 0 $color-background-default;
+  }
+
+  .ap-header-heading {
+    display: flex;
+    align-items: center;
+    height: $height-5; // 40px
+
+    .ap-header-logo {
+      margin-right: $spacing-2;
+      width: $width-5;
+      height: $height-5; // 40px
+      mask-image: url('../../images/pwc-logo-dark.svg');
+      -webkit-mask-image: url('../../images/pwc-logo-dark.svg');
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-mask-position: center;
+      background-color: $color-text-heading;
+      cursor: pointer;
+    }
+
+    .ap-header-title {
+      font-size: $typography-text-size-3;
+      line-height: $typography-line-height-2; // 20px
+      white-space: nowrap;
+      color: $color-text-heading;
+    }
+
+    .ap-header-subtitle {
+      color: $color-text-heading;
+      display: flex;
+      align-items: center;
+
+      .ap-header-subtitle-divider {
+        width: rem(1px);
+        height: $height-3; // 24px
+        margin: 0 $spacing-4;
+        opacity: $opacity-5; // .32
+        background-color: $color-text-heading;
+      }
+    }
+
+  }
+
+  .ap-header-content {
+    position: absolute;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .ap-header-options {
+    display: flex;
+    column-gap: $spacing-4;
+    align-items: center;
+  }
+
+  .ap-header-options-item {
+    position: relative;
+    display: flex;
+    column-gap: $spacing-2;
+    align-items: center;
+    height: $height-5; // 40px
+    color: $color-text-heading;
+    border-radius: $border-radius-2; // 4px
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($color-background-hover-selected-rgb, $opacity-6); // rgba(232, 232, 232, 0.48)
+      backdrop-filter: blur(rem(20px));
+      -webkit-backdrop-filter: blur(rem(20px));
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+      padding: $spacing-3 $spacing-3 $spacing-3 $spacing-4;
+    }
+
+    &.has-icon.has-label:not(.reverse) {
+      padding: $spacing-3 $spacing-4 $spacing-3 $spacing-3;
+    }
+    &.has-icon:not(.has-label) {
+      padding: $spacing-3;
+    }
+    &.has-label:not(.has-icon) {
+      padding: $spacing-3 $spacing-4;
+    }
+
+    .ap-header-options-icon-wrapper {
+      width: $width-3;
+      height: $height-3;
+    }
+
+    .ap-header-options-label {
+      line-height: $typography-line-height-3;
+    }
+  }
+
+}

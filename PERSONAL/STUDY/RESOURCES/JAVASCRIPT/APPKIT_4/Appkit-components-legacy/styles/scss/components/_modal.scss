@@ -1,0 +1,257 @@
+.ap-modal-live-static {
+    position: relative;
+    background-color: $color-background-container;
+    box-shadow: $box-shadow-3;
+    border-radius: $border-radius-3;
+    font-size: $typography-text-size-3;
+    width: rem(540px);
+    margin: 0 auto;
+
+    .ap-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        padding: $spacing-4 $spacing-4 $spacing-4 $spacing-6;
+
+        .ap-badge {
+            margin-right: $spacing-3;
+        }
+
+        .ap-modal-title {
+            font-size: $spacing-6;
+            font-weight: $font-weight-2;
+            line-height: $typography-line-height-4;
+            letter-spacing: $letter-spacing-1;
+            color: $color-text-heading;
+            margin-right: auto;
+        }
+
+        .ap-modal-header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .ap-modal-header-icon {
+            position: relative;
+            width: $width-6;
+            height: $height-5;
+            padding: $spacing-3;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $color-background-hover;
+                border-radius: $border-radius-2;
+                cursor: pointer;
+            }
+
+            &.ap-modal-header-more {
+                margin-right: $spacing-2;
+            }
+        }
+    }
+
+    .ap-modal-body {
+        padding: 0 $spacing-6 $spacing-6 $spacing-6;
+        min-height: rem(92px);
+
+        &.ap-modal-body-only {
+            padding-bottom: $spacing-6;
+            min-height: rem(92px);
+        }
+
+        p {
+            margin: 0;
+            font-size: $typography-text-size-3;
+            line-height: $typography-line-height-4;
+            letter-spacing: $letter-spacing-1;
+            color: $color-text-body;
+        }
+    }
+
+    .ap-modal-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: $spacing-3 $spacing-6 $spacing-6 $spacing-6;
+        margin-top: calc(-1 * $spacing-3);
+        overflow: auto;
+        min-height: $height-11;
+
+        &-customize {
+            display: flex;
+        }
+
+        // .ap-button-secondary {
+        //     margin-right: $spacing-3;
+        // }
+    }
+}
+
+
+//static modal css
+
+modal {
+    /* modals are hidden by default */
+    font-family: 'PwC Helvetica Neue';
+    display: none;
+}
+
+.ap-modal-wrapper {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    z-index: 2000;
+    backdrop-filter: blur(2px);
+    background-color: rgba($color-background-default-inverse-rgb, $opacity-5);
+    overflow: auto;
+    opacity: 0;
+    transition: all .3s;
+
+    &.show {
+        opacity: 1;
+    }
+
+    * {
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+    }
+}
+
+.ap-modal {
+    position: relative;
+    background-color: $color-background-container;
+    box-shadow: $box-shadow-3;
+    border-radius: $border-radius-3;
+    font-size: $typography-text-size-3;
+    // width: rem(540px);
+    // margin: 0 auto;
+    transition: margin .3s;
+    max-height: 100vh;
+    max-width: 100%;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.ap-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: $spacing-4 $spacing-4 $spacing-4 $spacing-6;
+
+    .ap-badge {
+        margin-right: $spacing-3;
+    }
+
+    .ap-modal-title {
+        font-size: $spacing-6;
+        font-weight: $font-weight-2;
+        line-height: $typography-line-height-4;
+        letter-spacing: $letter-spacing-1;
+        color: $color-text-heading;
+        margin-right: auto;
+    }
+
+    .ap-modal-header-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .ap-modal-header-close-wrapper {
+        display: flex;
+        align-items: center;
+        padding: $spacing-2;
+        margin: calc(-1 * $spacing-2);
+        overflow: hidden;
+
+        .ap-modal-header-close {
+            &:focus {
+
+                // &.keyboard-focus {
+                //     outline: auto 2px Highlight;
+                //     /* Firefox */
+                //     outline: auto 5px -webkit-focus-ring-color;
+                //     /* Webkit, Safari */
+                // }
+            }
+        }
+
+    }
+
+
+    .ap-modal-header-icons-focus {
+        // &>:first-child:focus {
+        //     // outline: -webkit-focus-ring-color auto rem(5px);
+        //     // outline: auto 2px Highlight; /* Firefox */
+        //     // outline: auto 5px -webkit-focus-ring-color; /* Webkit, Safari */
+        //     // outline-offset: $spacing-1;
+        // }
+    }
+
+    .ap-modal-header-icon {
+        position: relative;
+        width: $width-6;
+        height: $height-5;
+        padding: $spacing-3;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $color-background-hover;
+            border-radius: $border-radius-2;
+            cursor: pointer;
+        }
+
+        &.ap-modal-header-more {
+            margin-right: $spacing-2;
+        }
+
+        .Appkit4-icon {
+            color: $color-text-heading;
+        }
+    }
+}
+
+.ap-modal-body {
+    padding: 0 $spacing-6 $spacing-6 $spacing-6;
+
+    p {
+        margin: 0;
+        font-size: $typography-text-size-3;
+        line-height: $typography-line-height-4;
+        letter-spacing: $letter-spacing-1;
+        color: $color-text-body;
+    }
+}
+
+.ap-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $spacing-6 $spacing-6 $spacing-6;
+    overflow: auto;
+
+    .ap-button-secondary {
+        margin-right: $spacing-3;
+    }
+
+    &-customize {
+        display: flex;
+    }
+}
+
+.ap-modal-wrapper.show .ap-modal {
+    margin-top: 0;
+}
+
+// @media (min-width: 768px) {
+//     .ap-modal {
+//         max-width: rem(540px);
+//     }
+// }

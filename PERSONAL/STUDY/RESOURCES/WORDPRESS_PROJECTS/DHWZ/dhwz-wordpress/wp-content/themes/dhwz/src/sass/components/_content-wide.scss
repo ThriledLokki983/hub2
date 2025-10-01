@@ -1,0 +1,17 @@
+@use '../abstract/' as ab;
+
+.content-wide {
+	@include ab.container;
+}
+
+// this will give you two columns for easy readability
+.content-wide.wysiwyg {
+	columns: 1;
+}
+
+@media (min-width: 960px) {
+	.content-wide.wysiwyg {
+		columns: 2;
+		column-gap: 2rem;
+	}
+}

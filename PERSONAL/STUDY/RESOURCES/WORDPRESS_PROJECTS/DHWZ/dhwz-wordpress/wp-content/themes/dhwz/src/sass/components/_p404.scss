@@ -1,0 +1,6 @@
+@use '../abstract/' as ab;
+
+.p404 {
+  @include ab.container;
+  margin-top: var(--auto-margin-top);
+}

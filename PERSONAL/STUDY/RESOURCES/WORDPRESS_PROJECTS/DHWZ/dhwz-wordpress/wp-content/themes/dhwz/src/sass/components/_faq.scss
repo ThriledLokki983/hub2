@@ -1,0 +1,44 @@
+.faq {
+  position: relative;
+  margin-bottom: 15px;
+  max-width: 600px;
+  padding: 15px;
+  border: 2px solid #094FA3;
+}
+
+.faq:last-child {
+  margin-bottom: 0;
+}
+
+.faq-title {
+  color: #094FA3;
+  cursor: pointer;
+  font-family: var(--font-tertiary);
+  font-size: var(--paragraph);
+}
+
+.faq-title:hover {
+  color: #F8991F;
+}
+
+.faq-content {
+  margin-top: 16px;
+  display: none;
+}
+
+.faq-content p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-arrow {
+  top: 17px;
+  right: 15px;
+  position: absolute;
+  font-size: 35px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.faq-arrow:hover {
+  color: #F8991F;
+}

@@ -1,0 +1,237 @@
+@use '../abstract' as ab;
+
+.inspiration {
+	container-type: inline-size;
+	container-name: inspiration_container;
+
+	@include ab.respond(550px) {
+		margin-block-start: 0 !important;
+	}
+
+	@include ab.flex-column-content();
+	place-items: center;
+	margin-block-end: var(--section-space-l);
+
+	@include ab.respond(960px) {
+		margin-block-end: 0 !important;
+	}
+
+	@include ab.respond(375px) {
+		.section--title {
+			display: none;
+		}
+
+		margin-block: 0 !important;
+	}
+
+	h2 {
+		margin-block-end: var(--section-space-m);
+	}
+
+	&__content {
+		width: 100%;
+		background: var(--primary-color-light);
+		min-height: 550px;
+
+		ul li {
+			list-style-type: none;
+		}
+	}
+
+	&__scroller {
+		container-type: inline-size;
+		container-name: inspiration;
+
+		display: grid;
+		grid-auto-columns: 400px;
+		grid-gap: 0;
+		grid-auto-flow: column;
+		overflow-x: hidden;
+		overflow-y: initial;
+		overscroll-behavior-inline: contain;
+		scroll-behavior: smooth;
+		z-index: 1;
+		height: 550px;
+
+		@include ab.respond(425px) {
+			height: 650px;
+		}
+
+		&--item {
+			background-color: transparent;
+			cursor: pointer;
+			height: fit-content;
+
+			.more-info {
+				&__content {
+					transition: all 0.3s ease-in-out;
+					position: relative;
+
+					button {
+						display: block;
+					}
+				}
+			}
+
+			@include ab.on-hover() {
+				figure {
+					height: auto;
+				}
+			}
+
+			@include ab.on-hover() {
+				figure img {
+					aspect-ratio: 11/7.5;
+					object-fit: cover;
+
+					@include ab.respond(425px) {
+						aspect-ratio: 1;
+					}
+				}
+			}
+
+			@include ab.on-hover() {
+				figure figcaption {
+					background-color: #fff;
+					visibility: visible;
+					opacity: 1;
+					transform: translateY(0%);
+				}
+			}
+
+			figure {
+				inline-size: 100%;
+				margin: 0;
+				height: 400px;
+				transition: all 0.3s ease-in-out;
+			}
+
+			figure img {
+				cursor: grabbing;
+				inline-size: 100%;
+				aspect-ratio: 1;
+				object-fit: cover;
+				transition: all 0.3s ease-in-out;
+			}
+
+			figure figcaption {
+				background-color: transparent;
+				inline-size: fit-content;
+				padding-block-start: 2rem;
+				padding-block-end: 3rem;
+				padding-inline: 2rem;
+				visibility: hidden;
+				opacity: 0;
+				transform: translateY(-100%);
+				transition: transform 0.2s ease-out 0.1s,
+					opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s;
+			}
+
+			figure figcaption div,
+			figure figcaption p {
+				width: 100%;
+			}
+		}
+	}
+
+	&__controls {
+		padding-block-end: var(--section-space-l);
+		display: grid;
+		place-items: center;
+		z-index: 2;
+
+		@media (min-width: 960px) {
+			transform: translateY(-2rem);
+		}
+
+		@include ab.respond(750px) {
+			margin-block-start: -3rem;
+
+			.button-group {
+				margin-block-start: 2rem;
+			}
+		}
+
+		.button-group {
+			z-index: 2;
+			width: var(--container-width);
+			margin-inline: auto;
+			margin-block-end: var(--section-space-l);
+			display: flex;
+			justify-content: space-between;
+
+			button {
+				--btn-large: 1.6rem 1.6rem;
+
+				display: flex;
+				place-items: center;
+
+				svg {
+					fill: var(--clr-white);
+
+					transition: fill 0.3s ease-out;
+				}
+
+				@include ab.on-hover() {
+					svg {
+						fill: var(--primary-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+li[role='presentation'] {
+	display: none;
+}
+
+.inspiration > h2.section--title {
+	align-self: center;
+}
+
+.caption--title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 4px;
+}
+.caption--title span {
+	font-size: 1.4rem;
+}
+.caption--title h2 {
+	margin: 0;
+	font-weight: var(--font-black);
+	font-size: 2.5rem;
+}
+.caption--title span,
+.caption--title h2 {
+	color: var(--primary-color);
+}
+
+.caption--text {
+	font-size: 1.4rem;
+	flex: 1;
+	line-height: 1.4;
+	font-family: var(--font-secondary);
+	color: var(--clr-black);
+}
+
+.active figure {
+	height: auto;
+}
+.active figure img {
+	aspect-ratio: 11/7.5;
+	opacity: 0.9;
+}
+.active figure figcaption {
+	background-color: #fff;
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0%);
+}
+
+// this is to take away the scroll bar that appears on firefox when the slider comes into view
+.slick-track {
+	overflow: hidden;
+}

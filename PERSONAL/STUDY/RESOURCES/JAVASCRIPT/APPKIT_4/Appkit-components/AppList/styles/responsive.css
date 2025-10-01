@@ -1,0 +1,27 @@
+@media screen and (max-width: 100px) {
+  .ap-list-item-action {
+    margin-left: 1.5rem;
+  }
+  .ap-list-vertical .ap-list-item-extra {
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (max-width: 200px) {
+  .ap-list-item {
+    flex-wrap: wrap;
+  }
+  .ap-list-item-action {
+    margin-left: var(--spacing-4);
+  }
+  .ap-list-vertical .ap-list-item {
+    flex-wrap: wrap-reverse;
+  }
+  .ap-list-vertical .ap-list-item-main {
+    min-width: 220px;
+  }
+  .ap-list-vertical .ap-list-item-extra {
+    margin: auto auto var(--spacing-5);
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

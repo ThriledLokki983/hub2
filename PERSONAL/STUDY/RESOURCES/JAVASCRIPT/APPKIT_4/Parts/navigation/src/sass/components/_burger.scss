@@ -1,0 +1,45 @@
+// Reset button styling
+.burger{
+	all: unset;
+	display: var(--nav-button-display, flex);
+	flex-direction: var(--nav-list-layout, column);
+	position: relative;
+	z-index: 1;
+
+	.burger__line:first-child,
+	.burger__line:last-child,
+	.burger__line:nth-child(2) {
+		display: block;
+		height: 0.15rem;
+		margin-bottom: 0.25rem;
+		width: 1.5rem;
+		background-color: var(--color-shades-dark);
+		transition: all 0.6s var(--transition-animation);
+	}
+
+	.burger__line:last-child {
+		height: 0.18rem;
+	}
+
+	&[aria-expanded='true'] {
+		.burger__line:first-child {
+			transform: rotate(45deg);
+			transform-origin: 20% 0%;
+			height: 0.2rem;
+		}
+
+		.burger__line:nth-child(2) {
+			opacity: 0;
+		}
+
+		.burger__line:last-child {
+			transform: rotate(-45deg);
+			transform-origin: 0% 0%;
+		}
+	}
+
+	&:focus, &:focus-visible {
+		// outline: 2px solid var(--color-shades-dark);
+    	// outline-offset: 2px;
+	}
+}

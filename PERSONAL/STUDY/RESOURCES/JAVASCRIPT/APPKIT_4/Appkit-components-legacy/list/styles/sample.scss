@@ -1,0 +1,58 @@
+.ap-list {
+  .sample3 {
+    .ap-list-item .Appkit4-icon::before {
+      color: $color-text-heading;
+      opacity: $opacity-4;
+    }
+
+    .ap-list-item.selected .Appkit4-icon::before {
+      color: $color-text-warning; // original #FFCC00
+      border-width: 0;
+      opacity: $opacity-7;
+    }
+  }
+
+  .sample5 {
+    .ap-list-item {
+      padding-left: $spacing-3;
+    }
+  }
+
+  .sample6 {
+    .ap-list-item {
+      padding-left: $spacing-3;
+    }
+  }
+
+  .sample7 {
+    .ap-list-item {
+      padding-left: $spacing-3;
+    }
+  }
+
+  .sample9 {
+    .ap-list-item {
+      padding: 0;
+
+      .ap-list-avatar-container {
+        padding: 4px;
+      }
+    }
+  }
+
+  .sample10 {
+    .ap-list-item {
+      padding: $spacing-3;
+
+      .ap-list-avatar-container {
+        padding: $spacing-2;
+      }
+    }
+  }
+
+  .sample11 {
+    .ap-list-item {
+      padding: $spacing-3 $spacing-4;
+    }
+  }
+}

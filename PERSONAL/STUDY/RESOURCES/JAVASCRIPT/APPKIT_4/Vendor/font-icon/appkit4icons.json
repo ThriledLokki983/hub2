@@ -1,0 +1,4018 @@
+{
+  "icons": [
+    {
+      "name": "icon-add-user-outline",
+      "id": "icon-add-user-outline",
+      "created": 1,
+      "unicode": "e801"
+    },
+    {
+      "name": "icon-airplane-outline",
+      "id": "icon-airplane-outline",
+      "created": 1,
+      "unicode": "e802"
+    },
+    {
+      "name": "icon-apparel-outline",
+      "id": "icon-apparel-outline",
+      "created": 1,
+      "unicode": "e803"
+    },
+    {
+      "name": "icon-archive-alt-outline",
+      "id": "icon-archive-alt-outline",
+      "created": 1,
+      "unicode": "e804"
+    },
+    {
+      "name": "icon-arrow-decrease-outline",
+      "id": "icon-arrow-decrease-outline",
+      "created": 1,
+      "unicode": "e805"
+    },
+    {
+      "name": "icon-accessible-outline",
+      "id": "icon-accessible-outline",
+      "created": 1,
+      "unicode": "e806"
+    },
+    {
+      "name": "icon-arrow-up-outline",
+      "id": "icon-arrow-up-outline",
+      "created": 1,
+      "unicode": "e807"
+    },
+    {
+      "name": "icon-arrow-down-outline",
+      "id": "icon-arrow-down-outline",
+      "created": 1,
+      "unicode": "e808"
+    },
+    {
+      "name": "icon-alert-outline",
+      "id": "icon-alert-outline",
+      "created": 1,
+      "unicode": "e809"
+    },
+    {
+      "name": "icon-arrow-increase-outline",
+      "id": "icon-arrow-increase-outline",
+      "created": 1,
+      "unicode": "e80a"
+    },
+    {
+      "name": "icon-archive-outline",
+      "id": "icon-archive-outline",
+      "created": 1,
+      "unicode": "e80b"
+    },
+    {
+      "name": "icon-arrow-left-outline",
+      "id": "icon-arrow-left-outline",
+      "created": 1,
+      "unicode": "e80c"
+    },
+    {
+      "name": "icon-atm-outline",
+      "id": "icon-atm-outline",
+      "created": 1,
+      "unicode": "e80d"
+    },
+    {
+      "name": "icon-arrow-right-outline",
+      "id": "icon-arrow-right-outline",
+      "created": 1,
+      "unicode": "e80f"
+    },
+    {
+      "name": "icon-audience-outline",
+      "id": "icon-audience-outline",
+      "created": 1,
+      "unicode": "e813"
+    },
+    {
+      "name": "icon-battery-medium-outline",
+      "id": "icon-battery-medium-outline",
+      "created": 1,
+      "unicode": "e815"
+    },
+    {
+      "name": "icon-battery-low-outline",
+      "id": "icon-battery-low-outline",
+      "created": 1,
+      "unicode": "e816"
+    },
+    {
+      "name": "icon-bargraph-outline",
+      "id": "icon-bargraph-outline",
+      "created": 1,
+      "unicode": "e817"
+    },
+    {
+      "name": "icon-avatar-outline",
+      "id": "icon-avatar-outline",
+      "created": 1,
+      "unicode": "e818"
+    },
+    {
+      "name": "icon-art-themes-outline",
+      "id": "icon-art-themes-outline",
+      "created": 1,
+      "unicode": "e819"
+    },
+    {
+      "name": "icon-battery-high-outline",
+      "id": "icon-battery-high-outline",
+      "created": 1,
+      "unicode": "e81a"
+    },
+    {
+      "name": "icon-automobile-outline",
+      "id": "icon-automobile-outline",
+      "created": 1,
+      "unicode": "e81c"
+    },
+    {
+      "name": "icon-boat-outline",
+      "id": "icon-boat-outline",
+      "created": 1,
+      "unicode": "e81d"
+    },
+    {
+      "name": "icon-brightness-outline",
+      "id": "icon-brightness-outline",
+      "created": 1,
+      "unicode": "e81e"
+    },
+    {
+      "name": "icon-calculator-outline",
+      "id": "icon-calculator-outline",
+      "created": 1,
+      "unicode": "e81f"
+    },
+    {
+      "name": "icon-calendar-accepted-outline",
+      "id": "icon-calendar-accepted-outline",
+      "created": 1,
+      "unicode": "e820"
+    },
+    {
+      "name": "icon-beaker-outline",
+      "id": "icon-beaker-outline",
+      "created": 1,
+      "unicode": "e821"
+    },
+    {
+      "name": "icon-bridge-chart-outline",
+      "id": "icon-bridge-chart-outline",
+      "created": 1,
+      "unicode": "e822"
+    },
+    {
+      "name": "icon-box-open-outline",
+      "id": "icon-box-open-outline",
+      "created": 1,
+      "unicode": "e823"
+    },
+    {
+      "name": "icon-bar-chart-outline",
+      "id": "icon-bar-chart-outline",
+      "created": 1,
+      "unicode": "e824"
+    },
+    {
+      "name": "icon-box-outline",
+      "id": "icon-box-outline",
+      "created": 1,
+      "unicode": "e825"
+    },
+    {
+      "name": "icon-bubble-plot-outline",
+      "id": "icon-bubble-plot-outline",
+      "created": 1,
+      "unicode": "e826"
+    },
+    {
+      "name": "icon-business-services-printer-outline",
+      "id": "icon-business-services-printer-outline",
+      "created": 1,
+      "unicode": "e827"
+    },
+    {
+      "name": "icon-bus-public-transportation-outline",
+      "id": "icon-bus-public-transportation-outline",
+      "created": 1,
+      "unicode": "e828"
+    },
+    {
+      "name": "icon-bot-outline",
+      "id": "icon-bot-outline",
+      "created": 1,
+      "unicode": "e829"
+    },
+    {
+      "name": "icon-building-outline",
+      "id": "icon-building-outline",
+      "created": 1,
+      "unicode": "e82a"
+    },
+    {
+      "name": "icon-call-outline",
+      "id": "icon-call-outline",
+      "created": 1,
+      "unicode": "e82b"
+    },
+    {
+      "name": "icon-camera-outline",
+      "id": "icon-camera-outline",
+      "created": 1,
+      "unicode": "e82c"
+    },
+    {
+      "name": "icon-capital-outline",
+      "id": "icon-capital-outline",
+      "created": 1,
+      "unicode": "e82d"
+    },
+    {
+      "name": "icon-camera-mic-speakers-outline",
+      "id": "icon-camera-mic-speakers-outline",
+      "created": 1,
+      "unicode": "e82e"
+    },
+    {
+      "name": "icon-change-outline",
+      "id": "icon-change-outline",
+      "created": 1,
+      "unicode": "e82f"
+    },
+    {
+      "name": "icon-calendar-declined-outline",
+      "id": "icon-calendar-declined-outline",
+      "created": 1,
+      "unicode": "e830"
+    },
+    {
+      "name": "icon-calendar-outline",
+      "id": "icon-calendar-outline",
+      "created": 1,
+      "unicode": "e831"
+    },
+    {
+      "name": "icon-chevron-double-down-outline",
+      "id": "icon-chevron-double-down-outline",
+      "created": 1,
+      "unicode": "e832"
+    },
+    {
+      "name": "icon-circle-delete-outline",
+      "id": "icon-circle-delete-outline",
+      "created": 1,
+      "unicode": "e833"
+    },
+    {
+      "name": "icon-carers-space-outline",
+      "id": "icon-carers-space-outline",
+      "created": 1,
+      "unicode": "e834"
+    },
+    {
+      "name": "icon-center-map-outline",
+      "id": "icon-center-map-outline",
+      "created": 1,
+      "unicode": "e836"
+    },
+    {
+      "name": "icon-circle-checkmark-outline",
+      "id": "icon-circle-checkmark-outline",
+      "created": 1,
+      "unicode": "e837"
+    },
+    {
+      "name": "icon-circle-more-outline",
+      "id": "icon-circle-more-outline",
+      "created": 1,
+      "unicode": "e838"
+    },
+    {
+      "name": "icon-circle-percent-outline",
+      "id": "icon-circle-percent-outline",
+      "created": 1,
+      "unicode": "e839"
+    },
+    {
+      "name": "icon-circle-minus-outline",
+      "id": "icon-circle-minus-outline",
+      "created": 1,
+      "unicode": "e83b"
+    },
+    {
+      "name": "icon-circuit-board-box-outline",
+      "id": "icon-circuit-board-box-outline",
+      "created": 1,
+      "unicode": "e83c"
+    },
+    {
+      "name": "icon-clinic-outline",
+      "id": "icon-clinic-outline",
+      "created": 1,
+      "unicode": "e83d"
+    },
+    {
+      "name": "icon-cloud-outline",
+      "id": "icon-cloud-outline",
+      "created": 1,
+      "unicode": "e83f"
+    },
+    {
+      "name": "icon-circle-plus-outline",
+      "id": "icon-circle-plus-outline",
+      "created": 1,
+      "unicode": "e840"
+    },
+    {
+      "name": "icon-comment-outline",
+      "id": "icon-comment-outline",
+      "created": 1,
+      "unicode": "e841"
+    },
+    {
+      "name": "icon-cogs-outline",
+      "id": "icon-cogs-outline",
+      "created": 1,
+      "unicode": "e842"
+    },
+    {
+      "name": "icon-convert-outline",
+      "id": "icon-convert-outline",
+      "created": 1,
+      "unicode": "e843"
+    },
+    {
+      "name": "icon-compass-outline",
+      "id": "icon-compass-outline",
+      "created": 1,
+      "unicode": "e844"
+    },
+    {
+      "name": "icon-contacts-outline",
+      "id": "icon-contacts-outline",
+      "created": 1,
+      "unicode": "e845"
+    },
+    {
+      "name": "icon-confirmed-outline",
+      "id": "icon-confirmed-outline",
+      "created": 1,
+      "unicode": "e846"
+    },
+    {
+      "name": "icon-circle-save-outline",
+      "id": "icon-circle-save-outline",
+      "created": 1,
+      "unicode": "e847"
+    },
+    {
+      "name": "icon-configuration-outline",
+      "id": "icon-configuration-outline",
+      "created": 1,
+      "unicode": "e848"
+    },
+    {
+      "name": "icon-community-outline",
+      "id": "icon-community-outline",
+      "created": 1,
+      "unicode": "e849"
+    },
+    {
+      "name": "icon-data-outline",
+      "id": "icon-data-outline",
+      "created": 1,
+      "unicode": "e84a"
+    },
+    {
+      "name": "icon-credit-card-payment-outline",
+      "id": "icon-credit-card-payment-outline",
+      "created": 1,
+      "unicode": "e84b"
+    },
+    {
+      "name": "icon-credit-card-outline",
+      "id": "icon-credit-card-outline",
+      "created": 1,
+      "unicode": "e84c"
+    },
+    {
+      "name": "icon-debt-free-outline",
+      "id": "icon-debt-free-outline",
+      "created": 1,
+      "unicode": "e84d"
+    },
+    {
+      "name": "icon-copy-outline",
+      "id": "icon-copy-outline",
+      "created": 1,
+      "unicode": "e84e"
+    },
+    {
+      "name": "icon-cost-dollar-outline",
+      "id": "icon-cost-dollar-outline",
+      "created": 1,
+      "unicode": "e84f"
+    },
+    {
+      "name": "icon-dial-high-outline",
+      "id": "icon-dial-high-outline",
+      "created": 1,
+      "unicode": "e850"
+    },
+    {
+      "name": "icon-database-outline",
+      "id": "icon-database-outline",
+      "created": 1,
+      "unicode": "e851"
+    },
+    {
+      "name": "icon-desktop-outline",
+      "id": "icon-desktop-outline",
+      "created": 1,
+      "unicode": "e852"
+    },
+    {
+      "name": "icon-delete-outline",
+      "id": "icon-delete-outline",
+      "created": 1,
+      "unicode": "e853"
+    },
+    {
+      "name": "icon-dial-low-outline",
+      "id": "icon-dial-low-outline",
+      "created": 1,
+      "unicode": "e854"
+    },
+    {
+      "name": "icon-dining-outline",
+      "id": "icon-dining-outline",
+      "created": 1,
+      "unicode": "e855"
+    },
+    {
+      "name": "icon-dial-medium-outline",
+      "id": "icon-dial-medium-outline",
+      "created": 1,
+      "unicode": "e856"
+    },
+    {
+      "name": "icon-doc-outline",
+      "id": "icon-doc-outline",
+      "created": 1,
+      "unicode": "e857"
+    },
+    {
+      "name": "icon-desk-chair-outline",
+      "id": "icon-desk-chair-outline",
+      "created": 1,
+      "unicode": "e858"
+    },
+    {
+      "name": "icon-disability-insurance-outline",
+      "id": "icon-disability-insurance-outline",
+      "created": 1,
+      "unicode": "e859"
+    },
+    {
+      "name": "icon-door-closed-outline",
+      "id": "icon-door-closed-outline",
+      "created": 1,
+      "unicode": "e85a"
+    },
+    {
+      "name": "icon-digital-transformation-outline",
+      "id": "icon-digital-transformation-outline",
+      "created": 1,
+      "unicode": "e85b"
+    },
+    {
+      "name": "icon-door-opened-outline",
+      "id": "icon-door-opened-outline",
+      "created": 1,
+      "unicode": "e85c"
+    },
+    {
+      "name": "icon-document-text-outline",
+      "id": "icon-document-text-outline",
+      "created": 1,
+      "unicode": "e85d"
+    },
+    {
+      "name": "icon-display-power-outline",
+      "id": "icon-display-power-outline",
+      "created": 1,
+      "unicode": "e85e"
+    },
+    {
+      "name": "icon-down-chevron-outline",
+      "id": "icon-down-chevron-outline",
+      "created": 1,
+      "unicode": "e85f"
+    },
+    {
+      "name": "icon-down-chevron-circle-outline",
+      "id": "icon-down-chevron-circle-outline",
+      "created": 1,
+      "unicode": "e860"
+    },
+    {
+      "name": "icon-download-cloud-outline",
+      "id": "icon-download-cloud-outline",
+      "created": 1,
+      "unicode": "e861"
+    },
+    {
+      "name": "icon-duplicate-outline",
+      "id": "icon-duplicate-outline",
+      "created": 1,
+      "unicode": "e862"
+    },
+    {
+      "name": "icon-downtrend-outline",
+      "id": "icon-downtrend-outline",
+      "created": 1,
+      "unicode": "e863"
+    },
+    {
+      "name": "icon-download-outline",
+      "id": "icon-download-outline",
+      "created": 1,
+      "unicode": "e864"
+    },
+    {
+      "name": "icon-download-light-outline",
+      "id": "icon-download-light-outline",
+      "created": 1,
+      "unicode": "e865"
+    },
+    {
+      "name": "icon-edit-outline",
+      "id": "icon-edit-outline",
+      "created": 1,
+      "unicode": "e866"
+    },
+    {
+      "name": "icon-education-outline",
+      "id": "icon-education-outline",
+      "created": 1,
+      "unicode": "e867"
+    },
+    {
+      "name": "icon-elevator-outline",
+      "id": "icon-elevator-outline",
+      "created": 1,
+      "unicode": "e868"
+    },
+    {
+      "name": "icon-email-outline",
+      "id": "icon-email-outline",
+      "created": 1,
+      "unicode": "e869"
+    },
+    {
+      "name": "icon-end-process-outline",
+      "id": "icon-end-process-outline",
+      "created": 1,
+      "unicode": "e86a"
+    },
+    {
+      "name": "icon-engagement-outline",
+      "id": "icon-engagement-outline",
+      "created": 1,
+      "unicode": "e86b"
+    },
+    {
+      "name": "icon-open-in-new-outline",
+      "id": "icon-open-in-new-outline",
+      "created": 1,
+      "unicode": "e86c"
+    },
+    {
+      "name": "icon-exit-outline",
+      "id": "icon-exit-outline",
+      "created": 1,
+      "unicode": "e86d"
+    },
+    {
+      "name": "icon-expand-outline",
+      "id": "icon-expand-outline",
+      "created": 1,
+      "unicode": "e86e"
+    },
+    {
+      "name": "icon-expand-chevron-outline",
+      "id": "icon-expand-chevron-outline",
+      "created": 1,
+      "unicode": "e86f"
+    },
+    {
+      "name": "icon-extension-outline",
+      "id": "icon-extension-outline",
+      "created": 1,
+      "unicode": "e870"
+    },
+    {
+      "name": "icon-family-outline",
+      "id": "icon-family-outline",
+      "created": 1,
+      "unicode": "e871"
+    },
+    {
+      "name": "icon-female-symbol-outline",
+      "id": "icon-female-symbol-outline",
+      "created": 1,
+      "unicode": "e872"
+    },
+    {
+      "name": "icon-file-outline",
+      "id": "icon-file-outline",
+      "created": 1,
+      "unicode": "e873"
+    },
+    {
+      "name": "icon-filter-outline",
+      "id": "icon-filter-outline",
+      "created": 1,
+      "unicode": "e874"
+    },
+    {
+      "name": "icon-fire-exit-outline",
+      "id": "icon-fire-exit-outline",
+      "created": 1,
+      "unicode": "e875"
+    },
+    {
+      "name": "icon-fire-extinguisher-outline",
+      "id": "icon-fire-extinguisher-outline",
+      "created": 1,
+      "unicode": "e876"
+    },
+    {
+      "name": "icon-firehose-outline",
+      "id": "icon-firehose-outline",
+      "created": 1,
+      "unicode": "e877"
+    },
+    {
+      "name": "icon-firstaid-outline",
+      "id": "icon-firstaid-outline",
+      "created": 1,
+      "unicode": "e878"
+    },
+    {
+      "name": "icon-flag-outline",
+      "id": "icon-flag-outline",
+      "created": 1,
+      "unicode": "e879"
+    },
+    {
+      "name": "icon-fnb-outline",
+      "id": "icon-fnb-outline",
+      "created": 1,
+      "unicode": "e87a"
+    },
+    {
+      "name": "icon-folder-closed-outline",
+      "id": "icon-folder-closed-outline",
+      "created": 1,
+      "unicode": "e87b"
+    },
+    {
+      "name": "icon-folder-opened-outline",
+      "id": "icon-folder-opened-outline",
+      "created": 1,
+      "unicode": "e87c"
+    },
+    {
+      "name": "icon-folder-add-outline",
+      "id": "icon-folder-add-outline",
+      "created": 1,
+      "unicode": "e87d"
+    },
+    {
+      "name": "icon-folder-delete-outline",
+      "id": "icon-folder-delete-outline",
+      "created": 1,
+      "unicode": "e87e"
+    },
+    {
+      "name": "icon-gameroom-outline",
+      "id": "icon-gameroom-outline",
+      "created": 1,
+      "unicode": "e87f"
+    },
+    {
+      "name": "icon-gender-neutral-outline",
+      "id": "icon-gender-neutral-outline",
+      "created": 1,
+      "unicode": "e881"
+    },
+    {
+      "name": "icon-globe-map-outline",
+      "id": "icon-globe-map-outline",
+      "created": 1,
+      "unicode": "e882"
+    },
+    {
+      "name": "icon-globe-outline",
+      "id": "icon-globe-outline",
+      "created": 1,
+      "unicode": "e883"
+    },
+    {
+      "name": "icon-governance-outline",
+      "id": "icon-governance-outline",
+      "created": 1,
+      "unicode": "e884"
+    },
+    {
+      "name": "icon-grid-view-outline",
+      "id": "icon-grid-view-outline",
+      "created": 1,
+      "unicode": "e885"
+    },
+    {
+      "name": "icon-grow-revenue-outline",
+      "id": "icon-grow-revenue-outline",
+      "created": 1,
+      "unicode": "e886"
+    },
+    {
+      "name": "icon-growth-outline",
+      "id": "icon-growth-outline",
+      "created": 1,
+      "unicode": "e887"
+    },
+    {
+      "name": "icon-hand-outline",
+      "id": "icon-hand-outline",
+      "created": 1,
+      "unicode": "e888"
+    },
+    {
+      "name": "icon-hand-wave-outline",
+      "id": "icon-hand-wave-outline",
+      "created": 1,
+      "unicode": "e889"
+    },
+    {
+      "name": "icon-help-question-outline",
+      "id": "icon-help-question-outline",
+      "created": 1,
+      "unicode": "e88a"
+    },
+    {
+      "name": "icon-view-off-outline",
+      "id": "icon-view-off-outline",
+      "created": 1,
+      "unicode": "e88b"
+    },
+    {
+      "name": "icon-home-outline",
+      "id": "icon-home-outline",
+      "created": 1,
+      "unicode": "e88c"
+    },
+    {
+      "name": "icon-horizontal-more-outline",
+      "id": "icon-horizontal-more-outline",
+      "created": 1,
+      "unicode": "e88d"
+    },
+    {
+      "name": "icon-hospital-outline",
+      "id": "icon-hospital-outline",
+      "created": 1,
+      "unicode": "e88e"
+    },
+    {
+      "name": "icon-hub-outline",
+      "id": "icon-hub-outline",
+      "created": 1,
+      "unicode": "e88f"
+    },
+    {
+      "name": "icon-idcard-outline",
+      "id": "icon-idcard-outline",
+      "created": 1,
+      "unicode": "e890"
+    },
+    {
+      "name": "icon-image-outline",
+      "id": "icon-image-outline",
+      "created": 1,
+      "unicode": "e891"
+    },
+    {
+      "name": "icon-immersive-technology-outline",
+      "id": "icon-immersive-technology-outline",
+      "created": 1,
+      "unicode": "e892"
+    },
+    {
+      "name": "icon-infinity-outline",
+      "id": "icon-infinity-outline",
+      "created": 1,
+      "unicode": "e893"
+    },
+    {
+      "name": "icon-information-outline",
+      "id": "icon-information-outline",
+      "created": 1,
+      "unicode": "e894"
+    },
+    {
+      "name": "icon-jewelry-outline",
+      "id": "icon-jewelry-outline",
+      "created": 1,
+      "unicode": "e895"
+    },
+    {
+      "name": "icon-junk-outline",
+      "id": "icon-junk-outline",
+      "created": 1,
+      "unicode": "e896"
+    },
+    {
+      "name": "icon-keyboard-outline",
+      "id": "icon-keyboard-outline",
+      "created": 1,
+      "unicode": "e897"
+    },
+    {
+      "name": "icon-labs-outline",
+      "id": "icon-labs-outline",
+      "created": 1,
+      "unicode": "e898"
+    },
+    {
+      "name": "icon-layout-outline",
+      "id": "icon-layout-outline",
+      "created": 1,
+      "unicode": "e899"
+    },
+    {
+      "name": "icon-leader-outline",
+      "id": "icon-leader-outline",
+      "created": 1,
+      "unicode": "e89a"
+    },
+    {
+      "name": "icon-left-chevron-circle-outline",
+      "id": "icon-left-chevron-circle-outline",
+      "created": 1,
+      "unicode": "e89b"
+    },
+    {
+      "name": "icon-left-chevron-outline",
+      "id": "icon-left-chevron-outline",
+      "created": 1,
+      "unicode": "e89c"
+    },
+    {
+      "name": "icon-library-outline",
+      "id": "icon-library-outline",
+      "created": 1,
+      "unicode": "e89d"
+    },
+    {
+      "name": "icon-library-reports-outline",
+      "id": "icon-library-reports-outline",
+      "created": 1,
+      "unicode": "e89e"
+    },
+    {
+      "name": "icon-life-insurance-outline",
+      "id": "icon-life-insurance-outline",
+      "created": 1,
+      "unicode": "e89f"
+    },
+    {
+      "name": "icon-lightbulb-outline",
+      "id": "icon-lightbulb-outline",
+      "created": 1,
+      "unicode": "e8a0"
+    },
+    {
+      "name": "icon-like-outline",
+      "id": "icon-like-outline",
+      "created": 1,
+      "unicode": "e8a1"
+    },
+    {
+      "name": "icon-link-outline",
+      "id": "icon-link-outline",
+      "created": 1,
+      "unicode": "e8a2"
+    },
+    {
+      "name": "icon-link-broken-outline",
+      "id": "icon-link-broken-outline",
+      "created": 1,
+      "unicode": "e8a3"
+    },
+    {
+      "name": "icon-link-unlinked-outline",
+      "id": "icon-link-unlinked-outline",
+      "created": 1,
+      "unicode": "e8a4"
+    },
+    {
+      "name": "icon-list-view-outline",
+      "id": "icon-list-view-outline",
+      "created": 1,
+      "unicode": "e8a5"
+    },
+    {
+      "name": "icon-list-bar-view-outline",
+      "id": "icon-list-bar-view-outline",
+      "created": 1,
+      "unicode": "e8a6"
+    },
+    {
+      "name": "icon-location-locked-outline",
+      "id": "icon-location-locked-outline",
+      "created": 1,
+      "unicode": "e8a8"
+    },
+    {
+      "name": "icon-location-outline",
+      "id": "icon-location-outline",
+      "created": 1,
+      "unicode": "e8a9"
+    },
+    {
+      "name": "icon-lockclosed-locked-outline",
+      "id": "icon-lockclosed-locked-outline",
+      "created": 1,
+      "unicode": "e8aa"
+    },
+    {
+      "name": "icon-lockers-outline",
+      "id": "icon-lockers-outline",
+      "created": 1,
+      "unicode": "e8ab"
+    },
+    {
+      "name": "icon-lockopen-unlock-outline",
+      "id": "icon-lockopen-unlock-outline",
+      "created": 1,
+      "unicode": "e8ac"
+    },
+    {
+      "name": "icon-log-out-outline",
+      "id": "icon-log-out-outline",
+      "created": 1,
+      "unicode": "e8ad"
+    },
+    {
+      "name": "icon-login-outline",
+      "id": "icon-login-outline",
+      "created": 1,
+      "unicode": "e8ae"
+    },
+    {
+      "name": "icon-male-symbol-outline",
+      "id": "icon-male-symbol-outline",
+      "created": 1,
+      "unicode": "e8af"
+    },
+    {
+      "name": "icon-man-outline",
+      "id": "icon-man-outline",
+      "created": 1,
+      "unicode": "e8b0"
+    },
+    {
+      "name": "icon-management-outline",
+      "id": "icon-management-outline",
+      "created": 1,
+      "unicode": "e8b1"
+    },
+    {
+      "name": "icon-man-and-woman-outline",
+      "id": "icon-man-and-woman-outline",
+      "created": 1,
+      "unicode": "e8b2"
+    },
+    {
+      "name": "icon-manufacturer-outline",
+      "id": "icon-manufacturer-outline",
+      "created": 1,
+      "unicode": "e8b3"
+    },
+    {
+      "name": "icon-marketing-outline",
+      "id": "icon-marketing-outline",
+      "created": 1,
+      "unicode": "e8b4"
+    },
+    {
+      "name": "icon-meeting-outline",
+      "id": "icon-meeting-outline",
+      "created": 1,
+      "unicode": "e8b5"
+    },
+    {
+      "name": "icon-meeting-room-outline",
+      "id": "icon-meeting-room-outline",
+      "created": 1,
+      "unicode": "e8b6"
+    },
+    {
+      "name": "icon-menu-outline",
+      "id": "icon-menu-outline",
+      "created": 1,
+      "unicode": "e8b7"
+    },
+    {
+      "name": "icon-menu-view-outline",
+      "id": "icon-menu-view-outline",
+      "created": 1,
+      "unicode": "e8b8"
+    },
+    {
+      "name": "icon-microphone-outline",
+      "id": "icon-microphone-outline",
+      "created": 1,
+      "unicode": "e8b9"
+    },
+    {
+      "name": "icon-minimize-outline",
+      "id": "icon-minimize-outline",
+      "created": 1,
+      "unicode": "e8ba"
+    },
+    {
+      "name": "icon-mortgage-outline",
+      "id": "icon-mortgage-outline",
+      "created": 1,
+      "unicode": "e8bc"
+    },
+    {
+      "name": "icon-mortgage-payment-outline",
+      "id": "icon-mortgage-payment-outline",
+      "created": 1,
+      "unicode": "e8bd"
+    },
+    {
+      "name": "icon-move-outline",
+      "id": "icon-move-outline",
+      "created": 1,
+      "unicode": "e8be"
+    },
+    {
+      "name": "icon-neighborhood-outline",
+      "id": "icon-neighborhood-outline",
+      "created": 1,
+      "unicode": "e8bf"
+    },
+    {
+      "name": "icon-network-outline",
+      "id": "icon-network-outline",
+      "created": 1,
+      "unicode": "e8c0"
+    },
+    {
+      "name": "icon-network-port-outline",
+      "id": "icon-network-port-outline",
+      "created": 1,
+      "unicode": "e8c1"
+    },
+    {
+      "name": "icon-news-outline",
+      "id": "icon-news-outline",
+      "created": 1,
+      "unicode": "e8c2"
+    },
+    {
+      "name": "icon-news-report-outline",
+      "id": "icon-news-report-outline",
+      "created": 1,
+      "unicode": "e8c3"
+    },
+    {
+      "name": "icon-note-outline",
+      "id": "icon-note-outline",
+      "created": 1,
+      "unicode": "e8c4"
+    },
+    {
+      "name": "icon-notebook-outline",
+      "id": "icon-notebook-outline",
+      "created": 1,
+      "unicode": "e8c5"
+    },
+    {
+      "name": "icon-noteplus-outline",
+      "id": "icon-noteplus-outline",
+      "created": 1,
+      "unicode": "e8c6"
+    },
+    {
+      "name": "icon-notification-outline",
+      "id": "icon-notification-outline",
+      "created": 1,
+      "unicode": "e8c7"
+    },
+    {
+      "name": "icon-notpublished-outline",
+      "id": "icon-notpublished-outline",
+      "created": 1,
+      "unicode": "e8c8"
+    },
+    {
+      "name": "icon-office-outline",
+      "id": "icon-office-outline",
+      "created": 1,
+      "unicode": "e8c9"
+    },
+    {
+      "name": "icon-oilpipeline-outline",
+      "id": "icon-oilpipeline-outline",
+      "created": 1,
+      "unicode": "e8ca"
+    },
+    {
+      "name": "icon-oilplatform-outline",
+      "id": "icon-oilplatform-outline",
+      "created": 1,
+      "unicode": "e8cb"
+    },
+    {
+      "name": "icon-oiltank-outline",
+      "id": "icon-oiltank-outline",
+      "created": 1,
+      "unicode": "e8cc"
+    },
+    {
+      "name": "icon-open-in-new-window-outline",
+      "id": "icon-open-in-new-window-outline",
+      "created": 1,
+      "unicode": "e8cd"
+    },
+    {
+      "name": "icon-paper-outline",
+      "id": "icon-paper-outline",
+      "created": 1,
+      "unicode": "e8ce"
+    },
+    {
+      "name": "icon-paper-airplane-outline",
+      "id": "icon-paper-airplane-outline",
+      "created": 1,
+      "unicode": "e8cf"
+    },
+    {
+      "name": "icon-paperclip-outline",
+      "id": "icon-paperclip-outline",
+      "created": 1,
+      "unicode": "e8d0"
+    },
+    {
+      "name": "icon-parks-outdoors-outline",
+      "id": "icon-parks-outdoors-outline",
+      "created": 1,
+      "unicode": "e8d1"
+    },
+    {
+      "name": "icon-partership-outline",
+      "id": "icon-partership-outline",
+      "created": 1,
+      "unicode": "e8d2"
+    },
+    {
+      "name": "icon-particulates-outline",
+      "id": "icon-particulates-outline",
+      "created": 1,
+      "unicode": "e8d3"
+    },
+    {
+      "name": "icon-pause-outline",
+      "id": "icon-pause-outline",
+      "created": 1,
+      "unicode": "e8d4"
+    },
+    {
+      "name": "icon-payment-outline",
+      "id": "icon-payment-outline",
+      "created": 1,
+      "unicode": "e8d5"
+    },
+    {
+      "name": "icon-pdf-outline",
+      "id": "icon-pdf-outline",
+      "created": 1,
+      "unicode": "e8d6"
+    },
+    {
+      "name": "icon-pencil-outline",
+      "id": "icon-pencil-outline",
+      "created": 1,
+      "unicode": "e8d7"
+    },
+    {
+      "name": "icon-person-outline",
+      "id": "icon-person-outline",
+      "created": 1,
+      "unicode": "e8d8"
+    },
+    {
+      "name": "icon-physician-outline",
+      "id": "icon-physician-outline",
+      "created": 1,
+      "unicode": "e8d9"
+    },
+    {
+      "name": "icon-pie-chart-outline",
+      "id": "icon-pie-chart-outline",
+      "created": 1,
+      "unicode": "e8da"
+    },
+    {
+      "name": "icon-placeholder-outline",
+      "id": "icon-placeholder-outline",
+      "created": 1,
+      "unicode": "e8db"
+    },
+    {
+      "name": "icon-platform-outline",
+      "id": "icon-platform-outline",
+      "created": 1,
+      "unicode": "e8dc"
+    },
+    {
+      "name": "icon-play-outline",
+      "id": "icon-play-outline",
+      "created": 1,
+      "unicode": "e8dd"
+    },
+    {
+      "name": "icon-powerbi-outline",
+      "id": "icon-powerbi-outline",
+      "created": 1,
+      "unicode": "e8df"
+    },
+    {
+      "name": "icon-power-button-outline",
+      "id": "icon-power-button-outline",
+      "created": 1,
+      "unicode": "e8e0"
+    },
+    {
+      "name": "icon-power-plant-outline",
+      "id": "icon-power-plant-outline",
+      "created": 1,
+      "unicode": "e8e1"
+    },
+    {
+      "name": "icon-powerport-plug-outlet-outline",
+      "id": "icon-powerport-plug-outlet-outline",
+      "created": 1,
+      "unicode": "e8e2"
+    },
+    {
+      "name": "icon-ppt-outline",
+      "id": "icon-ppt-outline",
+      "created": 1,
+      "unicode": "e8e3"
+    },
+    {
+      "name": "icon-prescription-outline",
+      "id": "icon-prescription-outline",
+      "created": 1,
+      "unicode": "e8e4"
+    },
+    {
+      "name": "icon-printer-outline",
+      "id": "icon-printer-outline",
+      "created": 1,
+      "unicode": "e8e5"
+    },
+    {
+      "name": "icon-productivity-outline",
+      "id": "icon-productivity-outline",
+      "created": 1,
+      "unicode": "e8e6"
+    },
+    {
+      "name": "icon-profitability-outline",
+      "id": "icon-profitability-outline",
+      "created": 1,
+      "unicode": "e8e7"
+    },
+    {
+      "name": "icon-projector-outline",
+      "id": "icon-projector-outline",
+      "created": 1,
+      "unicode": "e8e8"
+    },
+    {
+      "name": "icon-purpose-outline",
+      "id": "icon-purpose-outline",
+      "created": 1,
+      "unicode": "e8e9"
+    },
+    {
+      "name": "icon-qrcode-outline",
+      "id": "icon-qrcode-outline",
+      "created": 1,
+      "unicode": "e8ea"
+    },
+    {
+      "name": "icon-query-outline",
+      "id": "icon-query-outline",
+      "created": 1,
+      "unicode": "e8eb"
+    },
+    {
+      "name": "icon-radio-outline",
+      "id": "icon-radio-outline",
+      "created": 1,
+      "unicode": "e8ec"
+    },
+    {
+      "name": "icon-rating-outline",
+      "id": "icon-rating-outline",
+      "created": 1,
+      "unicode": "e8ed"
+    },
+    {
+      "name": "icon-realestate-outline",
+      "id": "icon-realestate-outline",
+      "created": 1,
+      "unicode": "e8ee"
+    },
+    {
+      "name": "icon-redo-outline",
+      "id": "icon-redo-outline",
+      "created": 1,
+      "unicode": "e8ef"
+    },
+    {
+      "name": "icon-refresh-outline",
+      "id": "icon-refresh-outline",
+      "created": 1,
+      "unicode": "e8f0"
+    },
+    {
+      "name": "icon-return-outline",
+      "id": "icon-return-outline",
+      "created": 1,
+      "unicode": "e8f1"
+    },
+    {
+      "name": "icon-revenue-outline",
+      "id": "icon-revenue-outline",
+      "created": 1,
+      "unicode": "e8f2"
+    },
+    {
+      "name": "icon-right-chevron-circle-outline",
+      "id": "icon-right-chevron-circle-outline",
+      "created": 1,
+      "unicode": "e8f3"
+    },
+    {
+      "name": "icon-right-chevron-outline",
+      "id": "icon-right-chevron-outline",
+      "created": 1,
+      "unicode": "e8f4"
+    },
+    {
+      "name": "icon-save-outline",
+      "id": "icon-save-outline",
+      "created": 1,
+      "unicode": "e8f5"
+    },
+    {
+      "name": "icon-savemoney-outline",
+      "id": "icon-savemoney-outline",
+      "created": 1,
+      "unicode": "e8f6"
+    },
+    {
+      "name": "icon-savings-outline",
+      "id": "icon-savings-outline",
+      "created": 1,
+      "unicode": "e8f7"
+    },
+    {
+      "name": "icon-screen-mirroring-outline",
+      "id": "icon-screen-mirroring-outline",
+      "created": 1,
+      "unicode": "e8f8"
+    },
+    {
+      "name": "icon-search-outline",
+      "id": "icon-search-outline",
+      "created": 1,
+      "unicode": "e8f9"
+    },
+    {
+      "name": "icon-serenity-space-outline",
+      "id": "icon-serenity-space-outline",
+      "created": 1,
+      "unicode": "e8fa"
+    },
+    {
+      "name": "icon-service-outline",
+      "id": "icon-service-outline",
+      "created": 1,
+      "unicode": "e8fb"
+    },
+    {
+      "name": "icon-setting-outline",
+      "id": "icon-setting-outline",
+      "created": 1,
+      "unicode": "e8fc"
+    },
+    {
+      "name": "icon-share-outline",
+      "id": "icon-share-outline",
+      "created": 1,
+      "unicode": "e8fd"
+    },
+    {
+      "name": "icon-ship-outline",
+      "id": "icon-ship-outline",
+      "created": 1,
+      "unicode": "e8fe"
+    },
+    {
+      "name": "icon-shopping-bag-outline",
+      "id": "icon-shopping-bag-outline",
+      "created": 1,
+      "unicode": "e8ff"
+    },
+    {
+      "name": "icon-shopping-cart-outline",
+      "id": "icon-shopping-cart-outline",
+      "created": 1,
+      "unicode": "e900"
+    },
+    {
+      "name": "icon-shopping-basket-outline",
+      "id": "icon-shopping-basket-outline",
+      "created": 1,
+      "unicode": "e901"
+    },
+    {
+      "name": "icon-shower-outline",
+      "id": "icon-shower-outline",
+      "created": 1,
+      "unicode": "e902"
+    },
+    {
+      "name": "icon-shuttlebus-outline",
+      "id": "icon-shuttlebus-outline",
+      "created": 1,
+      "unicode": "e903"
+    },
+    {
+      "name": "icon-signpost-outline",
+      "id": "icon-signpost-outline",
+      "created": 1,
+      "unicode": "e904"
+    },
+    {
+      "name": "icon-sorting-ascendant-outline",
+      "id": "icon-sorting-ascendant-outline",
+      "created": 1,
+      "unicode": "e905"
+    },
+    {
+      "name": "icon-sorting-descendant-outline",
+      "id": "icon-sorting-descendant-outline",
+      "created": 1,
+      "unicode": "e906"
+    },
+    {
+      "name": "icon-sorting-outline",
+      "id": "icon-sorting-outline",
+      "created": 1,
+      "unicode": "e907"
+    },
+    {
+      "name": "icon-spark-line-outline",
+      "id": "icon-spark-line-outline",
+      "created": 1,
+      "unicode": "e908"
+    },
+    {
+      "name": "icon-speedometer-outline",
+      "id": "icon-speedometer-outline",
+      "created": 1,
+      "unicode": "e909"
+    },
+    {
+      "name": "icon-spider-chart-outline",
+      "id": "icon-spider-chart-outline",
+      "created": 1,
+      "unicode": "e90a"
+    },
+    {
+      "name": "icon-spinner-outline",
+      "id": "icon-spinner-outline",
+      "created": 1,
+      "unicode": "e90b"
+    },
+    {
+      "name": "icon-star-outline",
+      "id": "icon-star-outline",
+      "created": 1,
+      "unicode": "e90c"
+    },
+    {
+      "name": "icon-stewardship-outline",
+      "id": "icon-stewardship-outline",
+      "created": 1,
+      "unicode": "e90d"
+    },
+    {
+      "name": "icon-survey-checkmark-outline",
+      "id": "icon-survey-checkmark-outline",
+      "created": 1,
+      "unicode": "e90e"
+    },
+    {
+      "name": "icon-survey-outline",
+      "id": "icon-survey-outline",
+      "created": 1,
+      "unicode": "e90f"
+    },
+    {
+      "name": "icon-table-data-outline",
+      "id": "icon-table-data-outline",
+      "created": 1,
+      "unicode": "e910"
+    },
+    {
+      "name": "icon-table-data-compressed-outline",
+      "id": "icon-table-data-compressed-outline",
+      "created": 1,
+      "unicode": "e911"
+    },
+    {
+      "name": "icon-tag-outline",
+      "id": "icon-tag-outline",
+      "created": 1,
+      "unicode": "e912"
+    },
+    {
+      "name": "icon-talent-outline",
+      "id": "icon-talent-outline",
+      "created": 1,
+      "unicode": "e913"
+    },
+    {
+      "name": "icon-tanker-outline",
+      "id": "icon-tanker-outline",
+      "created": 1,
+      "unicode": "e914"
+    },
+    {
+      "name": "icon-target-outline",
+      "id": "icon-target-outline",
+      "created": 1,
+      "unicode": "e915"
+    },
+    {
+      "name": "icon-telecom-outline",
+      "id": "icon-telecom-outline",
+      "created": 1,
+      "unicode": "e916"
+    },
+    {
+      "name": "icon-thermometer-outline",
+      "id": "icon-thermometer-outline",
+      "created": 1,
+      "unicode": "e917"
+    },
+    {
+      "name": "icon-thumb-down-outline",
+      "id": "icon-thumb-down-outline",
+      "created": 1,
+      "unicode": "e918"
+    },
+    {
+      "name": "icon-thumb-up-outline",
+      "id": "icon-thumb-up-outline",
+      "created": 1,
+      "unicode": "e919"
+    },
+    {
+      "name": "icon-ticket-outline",
+      "id": "icon-ticket-outline",
+      "created": 1,
+      "unicode": "e91a"
+    },
+    {
+      "name": "icon-time-outline",
+      "id": "icon-time-outline",
+      "created": 1,
+      "unicode": "e91b"
+    },
+    {
+      "name": "icon-toggle-outline",
+      "id": "icon-toggle-outline",
+      "created": 1,
+      "unicode": "e91c"
+    },
+    {
+      "name": "icon-touchscreen-outline",
+      "id": "icon-touchscreen-outline",
+      "created": 1,
+      "unicode": "e91d"
+    },
+    {
+      "name": "icon-train-railway-outline",
+      "id": "icon-train-railway-outline",
+      "created": 1,
+      "unicode": "e91e"
+    },
+    {
+      "name": "icon-transform-outline",
+      "id": "icon-transform-outline",
+      "created": 1,
+      "unicode": "e91f"
+    },
+    {
+      "name": "icon-truck-outline",
+      "id": "icon-truck-outline",
+      "created": 1,
+      "unicode": "e920"
+    },
+    {
+      "name": "icon-truck-connected-outline",
+      "id": "icon-truck-connected-outline",
+      "created": 1,
+      "unicode": "e921"
+    },
+    {
+      "name": "icon-typography-fonts-outline",
+      "id": "icon-typography-fonts-outline",
+      "created": 1,
+      "unicode": "e922"
+    },
+    {
+      "name": "icon-umbrella-outline",
+      "id": "icon-umbrella-outline",
+      "created": 1,
+      "unicode": "e923"
+    },
+    {
+      "name": "icon-up-chevron-circle-outline",
+      "id": "icon-up-chevron-circle-outline",
+      "created": 1,
+      "unicode": "e924"
+    },
+    {
+      "name": "icon-up-chevron-outline",
+      "id": "icon-up-chevron-outline",
+      "created": 1,
+      "unicode": "e925"
+    },
+    {
+      "name": "icon-upload-light-outline",
+      "id": "icon-upload-light-outline",
+      "created": 1,
+      "unicode": "e926"
+    },
+    {
+      "name": "icon-upload-outline",
+      "id": "icon-upload-outline",
+      "created": 1,
+      "unicode": "e927"
+    },
+    {
+      "name": "icon-uptrend-outline",
+      "id": "icon-uptrend-outline",
+      "created": 1,
+      "unicode": "e928"
+    },
+    {
+      "name": "icon-venn-ab-horizontal-outline",
+      "id": "icon-venn-ab-horizontal-outline",
+      "created": 1,
+      "unicode": "e929"
+    },
+    {
+      "name": "icon-venn-ab-vertical-outline",
+      "id": "icon-venn-ab-vertical-outline",
+      "created": 1,
+      "unicode": "e92a"
+    },
+    {
+      "name": "icon-venn-abc-outline",
+      "id": "icon-venn-abc-outline",
+      "created": 1,
+      "unicode": "e92b"
+    },
+    {
+      "name": "icon-venn-abc-reversed-outline",
+      "id": "icon-venn-abc-reversed-outline",
+      "created": 1,
+      "unicode": "e92c"
+    },
+    {
+      "name": "icon-vertical-more-outline",
+      "id": "icon-vertical-more-outline",
+      "created": 1,
+      "unicode": "e92d"
+    },
+    {
+      "name": "icon-video-outline",
+      "id": "icon-video-outline",
+      "created": 1,
+      "unicode": "e92e"
+    },
+    {
+      "name": "icon-video-conference-outline",
+      "id": "icon-video-conference-outline",
+      "created": 1,
+      "unicode": "e92f"
+    },
+    {
+      "name": "icon-view-outline",
+      "id": "icon-view-outline",
+      "created": 1,
+      "unicode": "e930"
+    },
+    {
+      "name": "icon-visitor-outline",
+      "id": "icon-visitor-outline",
+      "created": 1,
+      "unicode": "e931"
+    },
+    {
+      "name": "icon-volume-off-outline",
+      "id": "icon-volume-off-outline",
+      "created": 1,
+      "unicode": "e932"
+    },
+    {
+      "name": "icon-volume-on-outline",
+      "id": "icon-volume-on-outline",
+      "created": 1,
+      "unicode": "e933"
+    },
+    {
+      "name": "icon-volume-up-outline",
+      "id": "icon-volume-up-outline",
+      "created": 1,
+      "unicode": "e934"
+    },
+    {
+      "name": "icon-wait-outline",
+      "id": "icon-wait-outline",
+      "created": 1,
+      "unicode": "e935"
+    },
+    {
+      "name": "icon-walking-workstation-outline",
+      "id": "icon-walking-workstation-outline",
+      "created": 1,
+      "unicode": "e936"
+    },
+    {
+      "name": "icon-wallet-outline",
+      "id": "icon-wallet-outline",
+      "created": 1,
+      "unicode": "e937"
+    },
+    {
+      "name": "icon-waterdrop-outline",
+      "id": "icon-waterdrop-outline",
+      "created": 1,
+      "unicode": "e938"
+    },
+    {
+      "name": "icon-wealth-outline",
+      "id": "icon-wealth-outline",
+      "created": 1,
+      "unicode": "e939"
+    },
+    {
+      "name": "icon-webcast-studio-outline",
+      "id": "icon-webcast-studio-outline",
+      "created": 1,
+      "unicode": "e93a"
+    },
+    {
+      "name": "icon-weight-outline",
+      "id": "icon-weight-outline",
+      "created": 1,
+      "unicode": "e93b"
+    },
+    {
+      "name": "icon-wifi-outline",
+      "id": "icon-wifi-outline",
+      "created": 1,
+      "unicode": "e93c"
+    },
+    {
+      "name": "icon-windmill-outline",
+      "id": "icon-windmill-outline",
+      "created": 1,
+      "unicode": "e93d"
+    },
+    {
+      "name": "icon-woman-outline",
+      "id": "icon-woman-outline",
+      "created": 1,
+      "unicode": "e93e"
+    },
+    {
+      "name": "icon-workflow-outline",
+      "id": "icon-workflow-outline",
+      "created": 1,
+      "unicode": "e93f"
+    },
+    {
+      "name": "icon-xbrl-outline",
+      "id": "icon-xbrl-outline",
+      "created": 1,
+      "unicode": "e940"
+    },
+    {
+      "name": "icon-xls-outline",
+      "id": "icon-xls-outline",
+      "created": 1,
+      "unicode": "e941"
+    },
+    {
+      "name": "icon-plus-outline",
+      "id": "icon-plus-outline",
+      "created": 1,
+      "unicode": "e942"
+    },
+    {
+      "name": "icon-minus-outline",
+      "id": "icon-minus-outline",
+      "created": 1,
+      "unicode": "e943"
+    },
+    {
+      "name": "icon-close-outline",
+      "id": "icon-close-outline",
+      "created": 1,
+      "unicode": "e944"
+    },
+    {
+      "name": "icon-check-mark-outline",
+      "id": "icon-check-mark-outline",
+      "created": 1,
+      "unicode": "e945"
+    },
+    {
+      "name": "icon-check-hook-outline",
+      "id": "icon-check-hook-outline",
+      "created": 1,
+      "unicode": "e946"
+    },
+    {
+      "name": "icon-arrow-down-fill",
+      "id": "icon-arrow-down-fill",
+      "created": 1,
+      "unicode": "e947"
+    },
+    {
+      "name": "icon-alert-fill",
+      "id": "icon-alert-fill",
+      "created": 1,
+      "unicode": "e948"
+    },
+    {
+      "name": "icon-arrow-decrease-fill",
+      "id": "icon-arrow-decrease-fill",
+      "created": 1,
+      "unicode": "e949"
+    },
+    {
+      "name": "icon-arrow-increase-fill",
+      "id": "icon-arrow-increase-fill",
+      "created": 1,
+      "unicode": "e94a"
+    },
+    {
+      "name": "icon-archive-alt-fill",
+      "id": "icon-archive-alt-fill",
+      "created": 1,
+      "unicode": "e94b"
+    },
+    {
+      "name": "icon-add-user-fill",
+      "id": "icon-add-user-fill",
+      "created": 1,
+      "unicode": "e94c"
+    },
+    {
+      "name": "icon-arrow-right-fill",
+      "id": "icon-arrow-right-fill",
+      "created": 1,
+      "unicode": "e94d"
+    },
+    {
+      "name": "icon-arrow-left-fill",
+      "id": "icon-arrow-left-fill",
+      "created": 1,
+      "unicode": "e94e"
+    },
+    {
+      "name": "icon-airplane-fill",
+      "id": "icon-airplane-fill",
+      "created": 1,
+      "unicode": "e950"
+    },
+    {
+      "name": "icon-arrow-up-fill",
+      "id": "icon-arrow-up-fill",
+      "created": 1,
+      "unicode": "e951"
+    },
+    {
+      "name": "icon-apparel-fill",
+      "id": "icon-apparel-fill",
+      "created": 1,
+      "unicode": "e952"
+    },
+    {
+      "name": "icon-arrowdown-fill",
+      "id": "icon-arrowdown-fill",
+      "created": 1,
+      "unicode": "e954"
+    },
+    {
+      "name": "icon-atm-fill",
+      "id": "icon-atm-fill",
+      "created": 1,
+      "unicode": "e957"
+    },
+    {
+      "name": "icon-audience-fill",
+      "id": "icon-audience-fill",
+      "created": 1,
+      "unicode": "e959"
+    },
+    {
+      "name": "icon-bar-chart-fill",
+      "id": "icon-bar-chart-fill",
+      "created": 1,
+      "unicode": "e95a"
+    },
+    {
+      "name": "icon-battery-high-fill",
+      "id": "icon-battery-high-fill",
+      "created": 1,
+      "unicode": "e95b"
+    },
+    {
+      "name": "icon-battery-low-fill",
+      "id": "icon-battery-low-fill",
+      "created": 1,
+      "unicode": "e95c"
+    },
+    {
+      "name": "icon-automobile-fill",
+      "id": "icon-automobile-fill",
+      "created": 1,
+      "unicode": "e95d"
+    },
+    {
+      "name": "icon-bot-fill",
+      "id": "icon-bot-fill",
+      "created": 1,
+      "unicode": "e95e"
+    },
+    {
+      "name": "icon-battery-medium-fill",
+      "id": "icon-battery-medium-fill",
+      "created": 1,
+      "unicode": "e95f"
+    },
+    {
+      "name": "icon-bridge-chart-fill",
+      "id": "icon-bridge-chart-fill",
+      "created": 1,
+      "unicode": "e960"
+    },
+    {
+      "name": "icon-art-themes-fill",
+      "id": "icon-art-themes-fill",
+      "created": 1,
+      "unicode": "e961"
+    },
+    {
+      "name": "icon-boat-fill",
+      "id": "icon-boat-fill",
+      "created": 1,
+      "unicode": "e962"
+    },
+    {
+      "name": "icon-avatar-fill",
+      "id": "icon-avatar-fill",
+      "created": 1,
+      "unicode": "e963"
+    },
+    {
+      "name": "icon-beaker-fill",
+      "id": "icon-beaker-fill",
+      "created": 1,
+      "unicode": "e964"
+    },
+    {
+      "name": "icon-calculator-fill",
+      "id": "icon-calculator-fill",
+      "created": 1,
+      "unicode": "e965"
+    },
+    {
+      "name": "icon-box-fill",
+      "id": "icon-box-fill",
+      "created": 1,
+      "unicode": "e966"
+    },
+    {
+      "name": "icon-brightness-fill",
+      "id": "icon-brightness-fill",
+      "created": 1,
+      "unicode": "e967"
+    },
+    {
+      "name": "icon-business-services-printer-fill",
+      "id": "icon-business-services-printer-fill",
+      "created": 1,
+      "unicode": "e968"
+    },
+    {
+      "name": "icon-building-fill",
+      "id": "icon-building-fill",
+      "created": 1,
+      "unicode": "e969"
+    },
+    {
+      "name": "icon-calendar-declined-fill",
+      "id": "icon-calendar-declined-fill",
+      "created": 1,
+      "unicode": "e96a"
+    },
+    {
+      "name": "icon-bus-public-transportation-fill",
+      "id": "icon-bus-public-transportation-fill",
+      "created": 1,
+      "unicode": "e96c"
+    },
+    {
+      "name": "icon-camera-fill",
+      "id": "icon-camera-fill",
+      "created": 1,
+      "unicode": "e96d"
+    },
+    {
+      "name": "icon-calendar-accepted-fill",
+      "id": "icon-calendar-accepted-fill",
+      "created": 1,
+      "unicode": "e96e"
+    },
+    {
+      "name": "icon-call-fill",
+      "id": "icon-call-fill",
+      "created": 1,
+      "unicode": "e96f"
+    },
+    {
+      "name": "icon-bubble-plot-fill",
+      "id": "icon-bubble-plot-fill",
+      "created": 1,
+      "unicode": "e971"
+    },
+    {
+      "name": "icon-calendar-fill",
+      "id": "icon-calendar-fill",
+      "created": 1,
+      "unicode": "e972"
+    },
+    {
+      "name": "icon-carers-space-fill",
+      "id": "icon-carers-space-fill",
+      "created": 1,
+      "unicode": "e973"
+    },
+    {
+      "name": "icon-change-fill",
+      "id": "icon-change-fill",
+      "created": 1,
+      "unicode": "e974"
+    },
+    {
+      "name": "icon-capital-fill",
+      "id": "icon-capital-fill",
+      "created": 1,
+      "unicode": "e975"
+    },
+    {
+      "name": "icon-chevron-double-down-fill",
+      "id": "icon-chevron-double-down-fill",
+      "created": 1,
+      "unicode": "e978"
+    },
+    {
+      "name": "icon-circle-checkmark-fill",
+      "id": "icon-circle-checkmark-fill",
+      "created": 1,
+      "unicode": "e979"
+    },
+    {
+      "name": "icon-circle-delete-fill",
+      "id": "icon-circle-delete-fill",
+      "created": 1,
+      "unicode": "e97a"
+    },
+    {
+      "name": "icon-clinic-fill",
+      "id": "icon-clinic-fill",
+      "created": 1,
+      "unicode": "e97b"
+    },
+    {
+      "name": "icon-circle-minus-fill",
+      "id": "icon-circle-minus-fill",
+      "created": 1,
+      "unicode": "e97c"
+    },
+    {
+      "name": "icon-circle-plus-fill",
+      "id": "icon-circle-plus-fill",
+      "created": 1,
+      "unicode": "e97f"
+    },
+    {
+      "name": "icon-circle-more-fill",
+      "id": "icon-circle-more-fill",
+      "created": 1,
+      "unicode": "e980"
+    },
+    {
+      "name": "icon-comment-fill",
+      "id": "icon-comment-fill",
+      "created": 1,
+      "unicode": "e981"
+    },
+    {
+      "name": "icon-cogs-fill",
+      "id": "icon-cogs-fill",
+      "created": 1,
+      "unicode": "e982"
+    },
+    {
+      "name": "icon-circle-save-fill",
+      "id": "icon-circle-save-fill",
+      "created": 1,
+      "unicode": "e983"
+    },
+    {
+      "name": "icon-cloud-fill",
+      "id": "icon-cloud-fill",
+      "created": 1,
+      "unicode": "e984"
+    },
+    {
+      "name": "icon-community-fill",
+      "id": "icon-community-fill",
+      "created": 1,
+      "unicode": "e986"
+    },
+    {
+      "name": "icon-compass-fill",
+      "id": "icon-compass-fill",
+      "created": 1,
+      "unicode": "e987"
+    },
+    {
+      "name": "icon-configuration-fill",
+      "id": "icon-configuration-fill",
+      "created": 1,
+      "unicode": "e988"
+    },
+    {
+      "name": "icon-confirmed-fill",
+      "id": "icon-confirmed-fill",
+      "created": 1,
+      "unicode": "e989"
+    },
+    {
+      "name": "icon-cost-dollar-fill",
+      "id": "icon-cost-dollar-fill",
+      "created": 1,
+      "unicode": "e98a"
+    },
+    {
+      "name": "icon-contacts-fill",
+      "id": "icon-contacts-fill",
+      "created": 1,
+      "unicode": "e98b"
+    },
+    {
+      "name": "icon-data-fill",
+      "id": "icon-data-fill",
+      "created": 1,
+      "unicode": "e98c"
+    },
+    {
+      "name": "icon-credit-card-payment-fill",
+      "id": "icon-credit-card-payment-fill",
+      "created": 1,
+      "unicode": "e98e"
+    },
+    {
+      "name": "icon-delete-fill",
+      "id": "icon-delete-fill",
+      "created": 1,
+      "unicode": "e990"
+    },
+    {
+      "name": "icon-desktop-fill",
+      "id": "icon-desktop-fill",
+      "created": 1,
+      "unicode": "e991"
+    },
+    {
+      "name": "icon-database-fill",
+      "id": "icon-database-fill",
+      "created": 1,
+      "unicode": "e993"
+    },
+    {
+      "name": "icon-digital-transformation-fill",
+      "id": "icon-digital-transformation-fill",
+      "created": 1,
+      "unicode": "e994"
+    },
+    {
+      "name": "icon-dial-low-fill",
+      "id": "icon-dial-low-fill",
+      "created": 1,
+      "unicode": "e995"
+    },
+    {
+      "name": "icon-convert-fill",
+      "id": "icon-convert-fill",
+      "created": 1,
+      "unicode": "e996"
+    },
+    {
+      "name": "icon-dial-high-fill",
+      "id": "icon-dial-high-fill",
+      "created": 1,
+      "unicode": "e997"
+    },
+    {
+      "name": "icon-dial-medium-fill",
+      "id": "icon-dial-medium-fill",
+      "created": 1,
+      "unicode": "e999"
+    },
+    {
+      "name": "icon-dining-fill",
+      "id": "icon-dining-fill",
+      "created": 1,
+      "unicode": "e99c"
+    },
+    {
+      "name": "icon-door-opened-fill",
+      "id": "icon-door-opened-fill",
+      "created": 1,
+      "unicode": "e99d"
+    },
+    {
+      "name": "icon-doc-fill",
+      "id": "icon-doc-fill",
+      "created": 1,
+      "unicode": "e99e"
+    },
+    {
+      "name": "icon-download-fill",
+      "id": "icon-download-fill",
+      "created": 1,
+      "unicode": "e99f"
+    },
+    {
+      "name": "icon-door-closed-fill",
+      "id": "icon-door-closed-fill",
+      "created": 1,
+      "unicode": "e9a0"
+    },
+    {
+      "name": "icon-down-chevron-circle-fill",
+      "id": "icon-down-chevron-circle-fill",
+      "created": 1,
+      "unicode": "e9a2"
+    },
+    {
+      "name": "icon-download-light-fill",
+      "id": "icon-download-light-fill",
+      "created": 1,
+      "unicode": "e9a3"
+    },
+    {
+      "name": "icon-down-chevron-fill",
+      "id": "icon-down-chevron-fill",
+      "created": 1,
+      "unicode": "e9a4"
+    },
+    {
+      "name": "icon-education-fill",
+      "id": "icon-education-fill",
+      "created": 1,
+      "unicode": "e9a5"
+    },
+    {
+      "name": "icon-edit-fill",
+      "id": "icon-edit-fill",
+      "created": 1,
+      "unicode": "e9a6"
+    },
+    {
+      "name": "icon-duplicate-fill",
+      "id": "icon-duplicate-fill",
+      "created": 1,
+      "unicode": "e9a7"
+    },
+    {
+      "name": "icon-email-fill",
+      "id": "icon-email-fill",
+      "created": 1,
+      "unicode": "e9a8"
+    },
+    {
+      "name": "icon-end-process-fill",
+      "id": "icon-end-process-fill",
+      "created": 1,
+      "unicode": "e9a9"
+    },
+    {
+      "name": "icon-elevator-fill",
+      "id": "icon-elevator-fill",
+      "created": 1,
+      "unicode": "e9aa"
+    },
+    {
+      "name": "icon-engagement-fill",
+      "id": "icon-engagement-fill",
+      "created": 1,
+      "unicode": "e9ab"
+    },
+    {
+      "name": "icon-open-in-new-fill",
+      "id": "icon-open-in-new-fill",
+      "created": 1,
+      "unicode": "e9ac"
+    },
+    {
+      "name": "icon-error-fill",
+      "id": "icon-error-fill",
+      "created": 1,
+      "unicode": "e9ad"
+    },
+    {
+      "name": "icon-expand-fill",
+      "id": "icon-expand-fill",
+      "created": 1,
+      "unicode": "e9af"
+    },
+    {
+      "name": "icon-extension-fill",
+      "id": "icon-extension-fill",
+      "created": 1,
+      "unicode": "e9b0"
+    },
+    {
+      "name": "icon-family-fill",
+      "id": "icon-family-fill",
+      "created": 1,
+      "unicode": "e9b1"
+    },
+    {
+      "name": "icon-female-symbol-fill",
+      "id": "icon-female-symbol-fill",
+      "created": 1,
+      "unicode": "e9b2"
+    },
+    {
+      "name": "icon-file-fill",
+      "id": "icon-file-fill",
+      "created": 1,
+      "unicode": "e9b3"
+    },
+    {
+      "name": "icon-filter-fill",
+      "id": "icon-filter-fill",
+      "created": 1,
+      "unicode": "e9b4"
+    },
+    {
+      "name": "icon-fire-exit-fill",
+      "id": "icon-fire-exit-fill",
+      "created": 1,
+      "unicode": "e9b5"
+    },
+    {
+      "name": "icon-fire-extinguisher-fill",
+      "id": "icon-fire-extinguisher-fill",
+      "created": 1,
+      "unicode": "e9b6"
+    },
+    {
+      "name": "icon-firehose-fill",
+      "id": "icon-firehose-fill",
+      "created": 1,
+      "unicode": "e9b7"
+    },
+    {
+      "name": "icon-firstaid-fill",
+      "id": "icon-firstaid-fill",
+      "created": 1,
+      "unicode": "e9b8"
+    },
+    {
+      "name": "icon-flag-fill",
+      "id": "icon-flag-fill",
+      "created": 1,
+      "unicode": "e9b9"
+    },
+    {
+      "name": "icon-fnb-fill",
+      "id": "icon-fnb-fill",
+      "created": 1,
+      "unicode": "e9ba"
+    },
+    {
+      "name": "icon-folder-closed-fill",
+      "id": "icon-folder-closed-fill",
+      "created": 1,
+      "unicode": "e9bb"
+    },
+    {
+      "name": "icon-folder-opened-fill",
+      "id": "icon-folder-opened-fill",
+      "created": 1,
+      "unicode": "e9bc"
+    },
+    {
+      "name": "icon-folder-add-fill",
+      "id": "icon-folder-add-fill",
+      "created": 1,
+      "unicode": "e9bd"
+    },
+    {
+      "name": "icon-folder-delete-fill",
+      "id": "icon-folder-delete-fill",
+      "created": 1,
+      "unicode": "e9be"
+    },
+    {
+      "name": "icon-foodbeverage-fill",
+      "id": "icon-foodbeverage-fill",
+      "created": 1,
+      "unicode": "e9bf"
+    },
+    {
+      "name": "icon-gameroom-fill",
+      "id": "icon-gameroom-fill",
+      "created": 1,
+      "unicode": "e9c0"
+    },
+    {
+      "name": "icon-gantt-chart-fill",
+      "id": "icon-gantt-chart-fill",
+      "created": 1,
+      "unicode": "e9c1"
+    },
+    {
+      "name": "icon-gender-neutral-fill",
+      "id": "icon-gender-neutral-fill",
+      "created": 1,
+      "unicode": "e9c2"
+    },
+    {
+      "name": "icon-globe-fill",
+      "id": "icon-globe-fill",
+      "created": 1,
+      "unicode": "e9c3"
+    },
+    {
+      "name": "icon-globe-map-fill",
+      "id": "icon-globe-map-fill",
+      "created": 1,
+      "unicode": "e9c4"
+    },
+    {
+      "name": "icon-governance-fill",
+      "id": "icon-governance-fill",
+      "created": 1,
+      "unicode": "e9c5"
+    },
+    {
+      "name": "icon-grid-view-fill",
+      "id": "icon-grid-view-fill",
+      "created": 1,
+      "unicode": "e9c6"
+    },
+    {
+      "name": "icon-grow-revenue-fill",
+      "id": "icon-grow-revenue-fill",
+      "created": 1,
+      "unicode": "e9c7"
+    },
+    {
+      "name": "icon-growth-fill",
+      "id": "icon-growth-fill",
+      "created": 1,
+      "unicode": "e9c8"
+    },
+    {
+      "name": "icon-hand-fill",
+      "id": "icon-hand-fill",
+      "created": 1,
+      "unicode": "e9c9"
+    },
+    {
+      "name": "icon-hb-3qtr-lft-fill",
+      "id": "icon-hb-3qtr-lft-fill",
+      "created": 1,
+      "unicode": "e9ca"
+    },
+    {
+      "name": "icon-hb-3qtr-rt-fill",
+      "id": "icon-hb-3qtr-rt-fill",
+      "created": 1,
+      "unicode": "e9cb"
+    },
+    {
+      "name": "icon-hb-empty-fill",
+      "id": "icon-hb-empty-fill",
+      "created": 1,
+      "unicode": "e9cc"
+    },
+    {
+      "name": "icon-hb-full-dot-fill",
+      "id": "icon-hb-full-dot-fill",
+      "created": 1,
+      "unicode": "e9cd"
+    },
+    {
+      "name": "icon-hb-full-fill",
+      "id": "icon-hb-full-fill",
+      "created": 1,
+      "unicode": "e9ce"
+    },
+    {
+      "name": "icon-hb-half-btm-fill",
+      "id": "icon-hb-half-btm-fill",
+      "created": 1,
+      "unicode": "e9cf"
+    },
+    {
+      "name": "icon-hb-half-lft-fill",
+      "id": "icon-hb-half-lft-fill",
+      "created": 1,
+      "unicode": "e9d0"
+    },
+    {
+      "name": "icon-hb-half-rt-fill",
+      "id": "icon-hb-half-rt-fill",
+      "created": 1,
+      "unicode": "e9d1"
+    },
+    {
+      "name": "icon-hb-half-top-fill",
+      "id": "icon-hb-half-top-fill",
+      "created": 1,
+      "unicode": "e9d2"
+    },
+    {
+      "name": "icon-hb-qtr-lft-fill",
+      "id": "icon-hb-qtr-lft-fill",
+      "created": 1,
+      "unicode": "e9d3"
+    },
+    {
+      "name": "icon-hb-qtr-rt-fill",
+      "id": "icon-hb-qtr-rt-fill",
+      "created": 1,
+      "unicode": "e9d4"
+    },
+    {
+      "name": "icon-help-question-fill",
+      "id": "icon-help-question-fill",
+      "created": 1,
+      "unicode": "e9d5"
+    },
+    {
+      "name": "icon-horizontal-more-fill",
+      "id": "icon-horizontal-more-fill",
+      "created": 1,
+      "unicode": "e9d7"
+    },
+    {
+      "name": "icon-hospital-fill",
+      "id": "icon-hospital-fill",
+      "created": 1,
+      "unicode": "e9d8"
+    },
+    {
+      "name": "icon-hub-fill",
+      "id": "icon-hub-fill",
+      "created": 1,
+      "unicode": "e9d9"
+    },
+    {
+      "name": "icon-idcard-fill",
+      "id": "icon-idcard-fill",
+      "created": 1,
+      "unicode": "e9da"
+    },
+    {
+      "name": "icon-image-fill",
+      "id": "icon-image-fill",
+      "created": 1,
+      "unicode": "e9db"
+    },
+    {
+      "name": "icon-immersive-technology-fill",
+      "id": "icon-immersive-technology-fill",
+      "created": 1,
+      "unicode": "e9dc"
+    },
+    {
+      "name": "icon-infinity-fill",
+      "id": "icon-infinity-fill",
+      "created": 1,
+      "unicode": "e9dd"
+    },
+    {
+      "name": "icon-information-fill",
+      "id": "icon-information-fill",
+      "created": 1,
+      "unicode": "e9de"
+    },
+    {
+      "name": "icon-keyboard-fill",
+      "id": "icon-keyboard-fill",
+      "created": 1,
+      "unicode": "e9e0"
+    },
+    {
+      "name": "icon-labs-fill",
+      "id": "icon-labs-fill",
+      "created": 1,
+      "unicode": "e9e1"
+    },
+    {
+      "name": "icon-layout-fill",
+      "id": "icon-layout-fill",
+      "created": 1,
+      "unicode": "e9e2"
+    },
+    {
+      "name": "icon-leader-fill",
+      "id": "icon-leader-fill",
+      "created": 1,
+      "unicode": "e9e3"
+    },
+    {
+      "name": "icon-left-chevron-circle-fill",
+      "id": "icon-left-chevron-circle-fill",
+      "created": 1,
+      "unicode": "e9e4"
+    },
+    {
+      "name": "icon-left-chevron-fill",
+      "id": "icon-left-chevron-fill",
+      "created": 1,
+      "unicode": "e9e5"
+    },
+    {
+      "name": "icon-library-fill",
+      "id": "icon-library-fill",
+      "created": 1,
+      "unicode": "e9e6"
+    },
+    {
+      "name": "icon-library-reports-fill",
+      "id": "icon-library-reports-fill",
+      "created": 1,
+      "unicode": "e9e7"
+    },
+    {
+      "name": "icon-life-insurance-fill",
+      "id": "icon-life-insurance-fill",
+      "created": 1,
+      "unicode": "e9e8"
+    },
+    {
+      "name": "icon-lightbulb-fill",
+      "id": "icon-lightbulb-fill",
+      "created": 1,
+      "unicode": "e9e9"
+    },
+    {
+      "name": "icon-like-fill",
+      "id": "icon-like-fill",
+      "created": 1,
+      "unicode": "e9ea"
+    },
+    {
+      "name": "icon-link-fill",
+      "id": "icon-link-fill",
+      "created": 1,
+      "unicode": "e9eb"
+    },
+    {
+      "name": "icon-link-broken-fill",
+      "id": "icon-link-broken-fill",
+      "created": 1,
+      "unicode": "e9ec"
+    },
+    {
+      "name": "icon-link-unlinked-fill",
+      "id": "icon-link-unlinked-fill",
+      "created": 1,
+      "unicode": "e9ed"
+    },
+    {
+      "name": "icon-list-view-fill",
+      "id": "icon-list-view-fill",
+      "created": 1,
+      "unicode": "e9ee"
+    },
+    {
+      "name": "icon-location-fill",
+      "id": "icon-location-fill",
+      "created": 1,
+      "unicode": "e9ef"
+    },
+    {
+      "name": "icon-location-locked-fill",
+      "id": "icon-location-locked-fill",
+      "created": 1,
+      "unicode": "e9f0"
+    },
+    {
+      "name": "icon-lockclosed-locked-fill",
+      "id": "icon-lockclosed-locked-fill",
+      "created": 1,
+      "unicode": "e9f1"
+    },
+    {
+      "name": "icon-lockopen-unlock-fill",
+      "id": "icon-lockopen-unlock-fill",
+      "created": 1,
+      "unicode": "e9f3"
+    },
+    {
+      "name": "icon-login-fill",
+      "id": "icon-login-fill",
+      "created": 1,
+      "unicode": "e9f4"
+    },
+    {
+      "name": "icon-logout-fill",
+      "id": "icon-logout-fill",
+      "created": 1,
+      "unicode": "e9f5"
+    },
+    {
+      "name": "icon-male-symbol-fill",
+      "id": "icon-male-symbol-fill",
+      "created": 1,
+      "unicode": "e9f6"
+    },
+    {
+      "name": "icon-management-fill",
+      "id": "icon-management-fill",
+      "created": 1,
+      "unicode": "e9f8"
+    },
+    {
+      "name": "icon-man-and-woman-fill",
+      "id": "icon-man-and-woman-fill",
+      "created": 1,
+      "unicode": "e9f9"
+    },
+    {
+      "name": "icon-manufacturer-fill",
+      "id": "icon-manufacturer-fill",
+      "created": 1,
+      "unicode": "e9fa"
+    },
+    {
+      "name": "icon-marketing-fill",
+      "id": "icon-marketing-fill",
+      "created": 1,
+      "unicode": "e9fb"
+    },
+    {
+      "name": "icon-meeting-fill",
+      "id": "icon-meeting-fill",
+      "created": 1,
+      "unicode": "e9fc"
+    },
+    {
+      "name": "icon-meeting-room-fill",
+      "id": "icon-meeting-room-fill",
+      "created": 1,
+      "unicode": "e9fd"
+    },
+    {
+      "name": "icon-menu-fill",
+      "id": "icon-menu-fill",
+      "created": 1,
+      "unicode": "e9fe"
+    },
+    {
+      "name": "icon-menu-view-fill",
+      "id": "icon-menu-view-fill",
+      "created": 1,
+      "unicode": "e9ff"
+    },
+    {
+      "name": "icon-microphone-fill",
+      "id": "icon-microphone-fill",
+      "created": 1,
+      "unicode": "ea00"
+    },
+    {
+      "name": "icon-minimize-fill",
+      "id": "icon-minimize-fill",
+      "created": 1,
+      "unicode": "ea01"
+    },
+    {
+      "name": "icon-mortgage-fill",
+      "id": "icon-mortgage-fill",
+      "created": 1,
+      "unicode": "ea03"
+    },
+    {
+      "name": "icon-mortgage-payment-fill",
+      "id": "icon-mortgage-payment-fill",
+      "created": 1,
+      "unicode": "ea04"
+    },
+    {
+      "name": "icon-move-fill",
+      "id": "icon-move-fill",
+      "created": 1,
+      "unicode": "ea05"
+    },
+    {
+      "name": "icon-neighborhood-fill",
+      "id": "icon-neighborhood-fill",
+      "created": 1,
+      "unicode": "ea06"
+    },
+    {
+      "name": "icon-network-fill",
+      "id": "icon-network-fill",
+      "created": 1,
+      "unicode": "ea07"
+    },
+    {
+      "name": "icon-network-port-fill",
+      "id": "icon-network-port-fill",
+      "created": 1,
+      "unicode": "ea08"
+    },
+    {
+      "name": "icon-news-fill",
+      "id": "icon-news-fill",
+      "created": 1,
+      "unicode": "ea09"
+    },
+    {
+      "name": "icon-note-fill",
+      "id": "icon-note-fill",
+      "created": 1,
+      "unicode": "ea0b"
+    },
+    {
+      "name": "icon-notebook-fill",
+      "id": "icon-notebook-fill",
+      "created": 1,
+      "unicode": "ea0c"
+    },
+    {
+      "name": "icon-noteplus-fill",
+      "id": "icon-noteplus-fill",
+      "created": 1,
+      "unicode": "ea0d"
+    },
+    {
+      "name": "icon-notification-fill",
+      "id": "icon-notification-fill",
+      "created": 1,
+      "unicode": "ea0e"
+    },
+    {
+      "name": "icon-office-fill",
+      "id": "icon-office-fill",
+      "created": 1,
+      "unicode": "ea10"
+    },
+    {
+      "name": "icon-oilpipeline-fill",
+      "id": "icon-oilpipeline-fill",
+      "created": 1,
+      "unicode": "ea11"
+    },
+    {
+      "name": "icon-oilplatform-fill",
+      "id": "icon-oilplatform-fill",
+      "created": 1,
+      "unicode": "ea12"
+    },
+    {
+      "name": "icon-open-in-new-window-fill",
+      "id": "icon-open-in-new-window-fill",
+      "created": 1,
+      "unicode": "ea14"
+    },
+    {
+      "name": "icon-paper-airplane-fill",
+      "id": "icon-paper-airplane-fill",
+      "created": 1,
+      "unicode": "ea15"
+    },
+    {
+      "name": "icon-parks-outdoors-fill",
+      "id": "icon-parks-outdoors-fill",
+      "created": 1,
+      "unicode": "ea16"
+    },
+    {
+      "name": "icon-partership-fill",
+      "id": "icon-partership-fill",
+      "created": 1,
+      "unicode": "ea17"
+    },
+    {
+      "name": "icon-particulates-fill",
+      "id": "icon-particulates-fill",
+      "created": 1,
+      "unicode": "ea18"
+    },
+    {
+      "name": "icon-pause-fill",
+      "id": "icon-pause-fill",
+      "created": 1,
+      "unicode": "ea19"
+    },
+    {
+      "name": "icon-payment-fill",
+      "id": "icon-payment-fill",
+      "created": 1,
+      "unicode": "ea1a"
+    },
+    {
+      "name": "icon-pdf-fill",
+      "id": "icon-pdf-fill",
+      "created": 1,
+      "unicode": "ea1b"
+    },
+    {
+      "name": "icon-pencil-fill",
+      "id": "icon-pencil-fill",
+      "created": 1,
+      "unicode": "ea1c"
+    },
+    {
+      "name": "icon-person-fill",
+      "id": "icon-person-fill",
+      "created": 1,
+      "unicode": "ea1d"
+    },
+    {
+      "name": "icon-physician-fill",
+      "id": "icon-physician-fill",
+      "created": 1,
+      "unicode": "ea1e"
+    },
+    {
+      "name": "icon-pie-chart-fill",
+      "id": "icon-pie-chart-fill",
+      "created": 1,
+      "unicode": "ea1f"
+    },
+    {
+      "name": "icon-platform-fill",
+      "id": "icon-platform-fill",
+      "created": 1,
+      "unicode": "ea20"
+    },
+    {
+      "name": "icon-play-fill",
+      "id": "icon-play-fill",
+      "created": 1,
+      "unicode": "ea21"
+    },
+    {
+      "name": "icon-powerbi-fill",
+      "id": "icon-powerbi-fill",
+      "created": 1,
+      "unicode": "ea23"
+    },
+    {
+      "name": "icon-power-button-fill",
+      "id": "icon-power-button-fill",
+      "created": 1,
+      "unicode": "ea24"
+    },
+    {
+      "name": "icon-power-plant-fill",
+      "id": "icon-power-plant-fill",
+      "created": 1,
+      "unicode": "ea25"
+    },
+    {
+      "name": "icon-powerport-plug-outlet-fill",
+      "id": "icon-powerport-plug-outlet-fill",
+      "created": 1,
+      "unicode": "ea26"
+    },
+    {
+      "name": "icon-prescription-pharmacy-fill",
+      "id": "icon-prescription-pharmacy-fill",
+      "created": 1,
+      "unicode": "ea28"
+    },
+    {
+      "name": "icon-printer-fill",
+      "id": "icon-printer-fill",
+      "created": 1,
+      "unicode": "ea29"
+    },
+    {
+      "name": "icon-profitability-fill",
+      "id": "icon-profitability-fill",
+      "created": 1,
+      "unicode": "ea2b"
+    },
+    {
+      "name": "icon-projector-fill",
+      "id": "icon-projector-fill",
+      "created": 1,
+      "unicode": "ea2c"
+    },
+    {
+      "name": "icon-purpose-fill",
+      "id": "icon-purpose-fill",
+      "created": 1,
+      "unicode": "ea2d"
+    },
+    {
+      "name": "icon-qrcode-fill",
+      "id": "icon-qrcode-fill",
+      "created": 1,
+      "unicode": "ea2e"
+    },
+    {
+      "name": "icon-query-fill",
+      "id": "icon-query-fill",
+      "created": 1,
+      "unicode": "ea2f"
+    },
+    {
+      "name": "icon-radio-fill",
+      "id": "icon-radio-fill",
+      "created": 1,
+      "unicode": "ea30"
+    },
+    {
+      "name": "icon-rating-fill",
+      "id": "icon-rating-fill",
+      "created": 1,
+      "unicode": "ea31"
+    },
+    {
+      "name": "icon-ppt-fill",
+      "id": "icon-ppt-fill",
+      "created": 1,
+      "unicode": "ea27"
+    },
+    {
+      "name": "icon-realestate-fill",
+      "id": "icon-realestate-fill",
+      "created": 1,
+      "unicode": "ea32"
+    },
+    {
+      "name": "icon-refresh-fill",
+      "id": "icon-refresh-fill",
+      "created": 1,
+      "unicode": "ea33"
+    },
+    {
+      "name": "icon-revenue-fill",
+      "id": "icon-revenue-fill",
+      "created": 1,
+      "unicode": "ea34"
+    },
+    {
+      "name": "icon-right-chevron-circle-fill",
+      "id": "icon-right-chevron-circle-fill",
+      "created": 1,
+      "unicode": "ea35"
+    },
+    {
+      "name": "icon-right-chevron-fill",
+      "id": "icon-right-chevron-fill",
+      "created": 1,
+      "unicode": "ea36"
+    },
+    {
+      "name": "icon-save-fill",
+      "id": "icon-save-fill",
+      "created": 1,
+      "unicode": "ea37"
+    },
+    {
+      "name": "icon-savings-fill",
+      "id": "icon-savings-fill",
+      "created": 1,
+      "unicode": "ea39"
+    },
+    {
+      "name": "icon-screen-mirroring-fill",
+      "id": "icon-screen-mirroring-fill",
+      "created": 1,
+      "unicode": "ea3a"
+    },
+    {
+      "name": "icon-search-fill",
+      "id": "icon-search-fill",
+      "created": 1,
+      "unicode": "ea3b"
+    },
+    {
+      "name": "icon-serenity-space-fill",
+      "id": "icon-serenity-space-fill",
+      "created": 1,
+      "unicode": "ea3c"
+    },
+    {
+      "name": "icon-service-fill",
+      "id": "icon-service-fill",
+      "created": 1,
+      "unicode": "ea3d"
+    },
+    {
+      "name": "icon-setting-fill",
+      "id": "icon-setting-fill",
+      "created": 1,
+      "unicode": "ea3e"
+    },
+    {
+      "name": "icon-share-fill",
+      "id": "icon-share-fill",
+      "created": 1,
+      "unicode": "ea3f"
+    },
+    {
+      "name": "icon-shareios-fill",
+      "id": "icon-shareios-fill",
+      "created": 1,
+      "unicode": "ea40"
+    },
+    {
+      "name": "icon-shopping-bag-fill",
+      "id": "icon-shopping-bag-fill",
+      "created": 1,
+      "unicode": "ea42"
+    },
+    {
+      "name": "icon-shopping-cart-fill",
+      "id": "icon-shopping-cart-fill",
+      "created": 1,
+      "unicode": "ea43"
+    },
+    {
+      "name": "icon-shopping-basket-fill",
+      "id": "icon-shopping-basket-fill",
+      "created": 1,
+      "unicode": "ea44"
+    },
+    {
+      "name": "icon-shower-fill",
+      "id": "icon-shower-fill",
+      "created": 1,
+      "unicode": "ea45"
+    },
+    {
+      "name": "icon-signpost-fill",
+      "id": "icon-signpost-fill",
+      "created": 1,
+      "unicode": "ea47"
+    },
+    {
+      "name": "icon-sorting-ascendant-fill",
+      "id": "icon-sorting-ascendant-fill",
+      "created": 1,
+      "unicode": "ea48"
+    },
+    {
+      "name": "icon-sorting-descendant-fill",
+      "id": "icon-sorting-descendant-fill",
+      "created": 1,
+      "unicode": "ea49"
+    },
+    {
+      "name": "icon-sorting-fill",
+      "id": "icon-sorting-fill",
+      "created": 1,
+      "unicode": "ea4a"
+    },
+    {
+      "name": "icon-spark-line-fill",
+      "id": "icon-spark-line-fill",
+      "created": 1,
+      "unicode": "ea4b"
+    },
+    {
+      "name": "icon-speedometer-fill",
+      "id": "icon-speedometer-fill",
+      "created": 1,
+      "unicode": "ea4c"
+    },
+    {
+      "name": "icon-spider-chart-fill",
+      "id": "icon-spider-chart-fill",
+      "created": 1,
+      "unicode": "ea4d"
+    },
+    {
+      "name": "icon-stewardship-fill",
+      "id": "icon-stewardship-fill",
+      "created": 1,
+      "unicode": "ea4f"
+    },
+    {
+      "name": "icon-success-fill",
+      "id": "icon-success-fill",
+      "created": 1,
+      "unicode": "ea50"
+    },
+    {
+      "name": "icon-survey-checkmark-fill",
+      "id": "icon-survey-checkmark-fill",
+      "created": 1,
+      "unicode": "ea51"
+    },
+    {
+      "name": "icon-survey-fill",
+      "id": "icon-survey-fill",
+      "created": 1,
+      "unicode": "ea52"
+    },
+    {
+      "name": "icon-table-data-fill",
+      "id": "icon-table-data-fill",
+      "created": 1,
+      "unicode": "ea53"
+    },
+    {
+      "name": "icon-tag-fill",
+      "id": "icon-tag-fill",
+      "created": 1,
+      "unicode": "ea54"
+    },
+    {
+      "name": "icon-talent-fill",
+      "id": "icon-talent-fill",
+      "created": 1,
+      "unicode": "ea55"
+    },
+    {
+      "name": "icon-tanker-fill",
+      "id": "icon-tanker-fill",
+      "created": 1,
+      "unicode": "ea56"
+    },
+    {
+      "name": "icon-target-fill",
+      "id": "icon-target-fill",
+      "created": 1,
+      "unicode": "ea57"
+    },
+    {
+      "name": "icon-telecom-fill",
+      "id": "icon-telecom-fill",
+      "created": 1,
+      "unicode": "ea58"
+    },
+    {
+      "name": "icon-thermometer-fill",
+      "id": "icon-thermometer-fill",
+      "created": 1,
+      "unicode": "ea59"
+    },
+    {
+      "name": "icon-thumb-down-fill",
+      "id": "icon-thumb-down-fill",
+      "created": 1,
+      "unicode": "ea5a"
+    },
+    {
+      "name": "icon-thumb-up-fill",
+      "id": "icon-thumb-up-fill",
+      "created": 1,
+      "unicode": "ea5b"
+    },
+    {
+      "name": "icon-ticket-fill",
+      "id": "icon-ticket-fill",
+      "created": 1,
+      "unicode": "ea5c"
+    },
+    {
+      "name": "icon-time-fill",
+      "id": "icon-time-fill",
+      "created": 1,
+      "unicode": "ea5d"
+    },
+    {
+      "name": "icon-toggle-fill",
+      "id": "icon-toggle-fill",
+      "created": 1,
+      "unicode": "ea5e"
+    },
+    {
+      "name": "icon-touchscreen-fill",
+      "id": "icon-touchscreen-fill",
+      "created": 1,
+      "unicode": "ea5f"
+    },
+    {
+      "name": "icon-train-railway-fill",
+      "id": "icon-train-railway-fill",
+      "created": 1,
+      "unicode": "ea60"
+    },
+    {
+      "name": "icon-transform-fill",
+      "id": "icon-transform-fill",
+      "created": 1,
+      "unicode": "ea61"
+    },
+    {
+      "name": "icon-truck-fill",
+      "id": "icon-truck-fill",
+      "created": 1,
+      "unicode": "ea62"
+    },
+    {
+      "name": "icon-truck-connected-fill",
+      "id": "icon-truck-connected-fill",
+      "created": 1,
+      "unicode": "ea63"
+    },
+    {
+      "name": "icon-typography-fonts-fill",
+      "id": "icon-typography-fonts-fill",
+      "created": 1,
+      "unicode": "ea64"
+    },
+    {
+      "name": "icon-umbrella-fill",
+      "id": "icon-umbrella-fill",
+      "created": 1,
+      "unicode": "ea65"
+    },
+    {
+      "name": "icon-up-chevron-circle-fill",
+      "id": "icon-up-chevron-circle-fill",
+      "created": 1,
+      "unicode": "ea66"
+    },
+    {
+      "name": "icon-up-chevron-fill",
+      "id": "icon-up-chevron-fill",
+      "created": 1,
+      "unicode": "ea67"
+    },
+    {
+      "name": "icon-upload-fill",
+      "id": "icon-upload-fill",
+      "created": 1,
+      "unicode": "ea68"
+    },
+    {
+      "name": "icon-upload-light-fill",
+      "id": "icon-upload-light-fill",
+      "created": 1,
+      "unicode": "ea69"
+    },
+    {
+      "name": "icon-venn-ab-horizontal-fill",
+      "id": "icon-venn-ab-horizontal-fill",
+      "created": 1,
+      "unicode": "ea6b"
+    },
+    {
+      "name": "icon-venn-ab-vertical-fill",
+      "id": "icon-venn-ab-vertical-fill",
+      "created": 1,
+      "unicode": "ea6c"
+    },
+    {
+      "name": "icon-venn-abc-fill",
+      "id": "icon-venn-abc-fill",
+      "created": 1,
+      "unicode": "ea6d"
+    },
+    {
+      "name": "icon-venn-abc-reversed-fill",
+      "id": "icon-venn-abc-reversed-fill",
+      "created": 1,
+      "unicode": "ea6e"
+    },
+    {
+      "name": "icon-vertical-more-fill",
+      "id": "icon-vertical-more-fill",
+      "created": 1,
+      "unicode": "ea6f"
+    },
+    {
+      "name": "icon-video-fill",
+      "id": "icon-video-fill",
+      "created": 1,
+      "unicode": "ea70"
+    },
+    {
+      "name": "icon-video-conference-fill",
+      "id": "icon-video-conference-fill",
+      "created": 1,
+      "unicode": "ea71"
+    },
+    {
+      "name": "icon-view-fill",
+      "id": "icon-view-fill",
+      "created": 1,
+      "unicode": "ea72"
+    },
+    {
+      "name": "icon-visitor-fill",
+      "id": "icon-visitor-fill",
+      "created": 1,
+      "unicode": "ea73"
+    },
+    {
+      "name": "icon-volume-off-fill",
+      "id": "icon-volume-off-fill",
+      "created": 1,
+      "unicode": "ea74"
+    },
+    {
+      "name": "icon-volume-on-fill",
+      "id": "icon-volume-on-fill",
+      "created": 1,
+      "unicode": "ea75"
+    },
+    {
+      "name": "icon-volume-up-fill",
+      "id": "icon-volume-up-fill",
+      "created": 1,
+      "unicode": "ea76"
+    },
+    {
+      "name": "icon-wait-fill",
+      "id": "icon-wait-fill",
+      "created": 1,
+      "unicode": "ea77"
+    },
+    {
+      "name": "icon-walking-workstation-fill",
+      "id": "icon-walking-workstation-fill",
+      "created": 1,
+      "unicode": "ea78"
+    },
+    {
+      "name": "icon-wallet-fill",
+      "id": "icon-wallet-fill",
+      "created": 1,
+      "unicode": "ea79"
+    },
+    {
+      "name": "icon-warning-fill",
+      "id": "icon-warning-fill",
+      "created": 1,
+      "unicode": "ea7a"
+    },
+    {
+      "name": "icon-waterdrop-fill",
+      "id": "icon-waterdrop-fill",
+      "created": 1,
+      "unicode": "ea7b"
+    },
+    {
+      "name": "icon-wealth-fill",
+      "id": "icon-wealth-fill",
+      "created": 1,
+      "unicode": "ea7c"
+    },
+    {
+      "name": "icon-webcast-studio-fill",
+      "id": "icon-webcast-studio-fill",
+      "created": 1,
+      "unicode": "ea7d"
+    },
+    {
+      "name": "icon-weight-fill",
+      "id": "icon-weight-fill",
+      "created": 1,
+      "unicode": "ea7e"
+    },
+    {
+      "name": "icon-wifi-fill",
+      "id": "icon-wifi-fill",
+      "created": 1,
+      "unicode": "ea7f"
+    },
+    {
+      "name": "icon-windmill-fill",
+      "id": "icon-windmill-fill",
+      "created": 1,
+      "unicode": "ea80"
+    },
+    {
+      "name": "icon-workflow-fill",
+      "id": "icon-workflow-fill",
+      "created": 1,
+      "unicode": "ea82"
+    },
+    {
+      "name": "icon-xbrl-fill",
+      "id": "icon-xbrl-fill",
+      "created": 1,
+      "unicode": "ea83"
+    },
+    {
+      "name": "icon-xls-fill",
+      "id": "icon-xls-fill",
+      "created": 1,
+      "unicode": "ea84"
+    },
+    {
+      "name": "icon-check-mark-fill",
+      "id": "icon-check-mark-fill",
+      "created": 1,
+      "unicode": "ea85"
+    },
+    {
+      "name": "icon-close-fill",
+      "id": "icon-close-fill",
+      "created": 1,
+      "unicode": "ea86"
+    },
+    {
+      "name": "icon-home-fill",
+      "id": "icon-home-fill",
+      "created": 1,
+      "unicode": "ea88"
+    },
+    {
+      "name": "icon-minus-fill",
+      "id": "icon-minus-fill",
+      "created": 1,
+      "unicode": "ea89"
+    },
+    {
+      "name": "icon-plus-fill",
+      "id": "icon-plus-fill",
+      "created": 1,
+      "unicode": "ea8a"
+    },
+    {
+      "name": "icon-uptrend-fill",
+      "id": "icon-uptrend-fill",
+      "created": 1,
+      "unicode": "ea8b"
+    },
+    {
+      "name": "icon-3by3grid-outline",
+      "id": "icon-3by3grid-outline",
+      "created": 1,
+      "unicode": "e800"
+    },
+    {
+      "name": "icon-gantt-chart-outline",
+      "id": "icon-gantt-chart-outline",
+      "created": 1,
+      "unicode": "e80e"
+    },
+    {
+      "name": "icon-box-open-fill",
+      "id": "icon-box-open-fill",
+      "created": 1,
+      "unicode": "e810"
+    },
+    {
+      "name": "icon-exit-fill",
+      "id": "icon-exit-fill",
+      "created": 1,
+      "unicode": "e811"
+    },
+    {
+      "name": "icon-camera-mic-speakers-fill",
+      "id": "icon-camera-mic-speakers-fill",
+      "created": 1,
+      "unicode": "e812"
+    },
+    {
+      "name": "icon-circle-percent-fill",
+      "id": "icon-circle-percent-fill",
+      "created": 1,
+      "unicode": "e814"
+    },
+    {
+      "name": "icon-circuit-board-box-fill",
+      "id": "icon-circuit-board-box-fill",
+      "created": 1,
+      "unicode": "e81b"
+    },
+    {
+      "name": "icon-credit-card-fill",
+      "id": "icon-credit-card-fill",
+      "created": 1,
+      "unicode": "e835"
+    },
+    {
+      "name": "icon-debt-free-fill",
+      "id": "icon-debt-free-fill",
+      "created": 1,
+      "unicode": "e83a"
+    },
+    {
+      "name": "icon-desk-chair-fill",
+      "id": "icon-desk-chair-fill",
+      "created": 1,
+      "unicode": "e83e"
+    },
+    {
+      "name": "icon-digital-techtransformation-fill",
+      "id": "icon-digital-techtransformation-fill",
+      "created": 1,
+      "unicode": "e8bb"
+    },
+    {
+      "name": "icon-disability-insurance-fill",
+      "id": "icon-disability-insurance-fill",
+      "created": 1,
+      "unicode": "e8de"
+    },
+    {
+      "name": "icon-display-power-fill",
+      "id": "icon-display-power-fill",
+      "created": 1,
+      "unicode": "e94f"
+    },
+    {
+      "name": "icon-jewelry-fill",
+      "id": "icon-jewelry-fill",
+      "created": 1,
+      "unicode": "ea81"
+    },
+    {
+      "name": "icon-lockers-fill",
+      "id": "icon-lockers-fill",
+      "created": 1,
+      "unicode": "e953"
+    },
+    {
+      "name": "icon-man-fill",
+      "id": "icon-man-fill",
+      "created": 1,
+      "unicode": "e955"
+    },
+    {
+      "name": "icon-news-report-fill",
+      "id": "icon-news-report-fill",
+      "created": 1,
+      "unicode": "e956"
+    },
+    {
+      "name": "icon-notpublished-fill",
+      "id": "icon-notpublished-fill",
+      "created": 1,
+      "unicode": "e958"
+    },
+    {
+      "name": "icon-oiltank-fill",
+      "id": "icon-oiltank-fill",
+      "created": 1,
+      "unicode": "e96b"
+    },
+    {
+      "name": "icon-productivity-fill",
+      "id": "icon-productivity-fill",
+      "created": 1,
+      "unicode": "e970"
+    },
+    {
+      "name": "icon-savemoney-fill",
+      "id": "icon-savemoney-fill",
+      "created": 1,
+      "unicode": "e976"
+    },
+    {
+      "name": "icon-ship-fill",
+      "id": "icon-ship-fill",
+      "created": 1,
+      "unicode": "e97d"
+    },
+    {
+      "name": "icon-shuttlebus-fill",
+      "id": "icon-shuttlebus-fill",
+      "created": 1,
+      "unicode": "e97e"
+    },
+    {
+      "name": "icon-spinner-fill",
+      "id": "icon-spinner-fill",
+      "created": 1,
+      "unicode": "e985"
+    },
+    {
+      "name": "icon-woman-fill",
+      "id": "icon-woman-fill",
+      "created": 1,
+      "unicode": "ea8c"
+    },
+    {
+      "name": "icon-checkbox-selected-fill",
+      "id": "icon-checkbox-selected-fill",
+      "created": 1,
+      "unicode": "e880"
+    },
+    {
+      "name": "icon-checkbox-indeterminate-fill",
+      "id": "icon-checkbox-indeterminate-fill",
+      "created": 1,
+      "unicode": "e98d"
+    },
+    {
+      "name": "icon-checkbox-deselected-fill",
+      "id": "icon-checkbox-deselected-fill",
+      "created": 1,
+      "unicode": "e98f"
+    },
+    {
+      "name": "icon-radio-selected-fill",
+      "id": "icon-radio-selected-fill",
+      "created": 1,
+      "unicode": "e992"
+    },
+    {
+      "name": "icon-radio-deselected-fill",
+      "id": "icon-radio-deselected-fill",
+      "created": 1,
+      "unicode": "e998"
+    },
+    {
+      "name": "icon-arrow-right-small-outline",
+      "id": "icon-arrow-right-small-outline",
+      "created": 1,
+      "unicode": "e99a"
+    },
+    {
+      "name": "icon-arrow-left-small-outline",
+      "id": "icon-arrow-left-small-outline",
+      "created": 1,
+      "unicode": "e99b"
+    },
+    {
+      "name": "icon-arrow-increase-small-outline",
+      "id": "icon-arrow-increase-small-outline",
+      "created": 1,
+      "unicode": "e9a1"
+    },
+    {
+      "name": "icon-arrow-down-small-outline",
+      "id": "icon-arrow-down-small-outline",
+      "created": 1,
+      "unicode": "e9ae"
+    },
+    {
+      "name": "icon-arrow-decrease-small-outline",
+      "id": "icon-arrow-decrease-small-outline",
+      "created": 1,
+      "unicode": "e9d6"
+    },
+    {
+      "name": "icon-arrow-up-small-outline",
+      "id": "icon-arrow-up-small-outline",
+      "created": 1,
+      "unicode": "e9df"
+    },
+    {
+      "name": "icon-circle-empty-outline",
+      "id": "icon-circle-empty-outline",
+      "created": 1,
+      "unicode": "e9f2"
+    },
+    {
+      "name": "icon-circle-warning-outline",
+      "id": "icon-circle-warning-outline",
+      "created": 1,
+      "unicode": "e9f7"
+    },
+    {
+      "name": "icon-circle-radio-outline",
+      "id": "icon-circle-radio-outline",
+      "created": 1,
+      "unicode": "ea02"
+    },
+    {
+      "name": "icon-moon-outline",
+      "id": "icon-moon-outline",
+      "created": 1,
+      "unicode": "ea0a"
+    },
+    {
+      "name": "icon-center-map-fill",
+      "id": "icon-center-map-fill",
+      "created": 1,
+      "unicode": "e977"
+    },
+    {
+      "name": "icon-enter-left-outline",
+      "id": "icon-enter-left-outline",
+      "created": 1,
+      "unicode": "ed07"
+    },
+    {
+      "name": "icon-enter-right-outline",
+      "id": "icon-enter-right-outline",
+      "created": 1,
+      "unicode": "ed08"
+    },
+    {
+      "name": "icon-accessibility-outline",
+      "id": "icon-accessibility-outline",
+      "created": 1,
+      "unicode": "e8a7"
+    },
+    {
+      "name": "icon-accessibility-fill",
+      "id": "icon-accessibility-fill",
+      "created": 1,
+      "unicode": "ea0f"
+    },
+    {
+      "name": "icon-align-left-fill",
+      "id": "icon-align-left-fill",
+      "created": 1,
+      "unicode": "ed0f"
+    },
+    {
+      "name": "icon-align-right-fill",
+      "id": "icon-align-right-fill",
+      "created": 1,
+      "unicode": "ed10"
+    },
+    {
+      "name": "icon-bold-fill",
+      "id": "icon-bold-fill",
+      "created": 1,
+      "unicode": "ed11"
+    },
+    {
+      "name": "icon-bulleted-list-fill",
+      "id": "icon-bulleted-list-fill",
+      "created": 1,
+      "unicode": "ed12"
+    },
+    {
+      "name": "icon-caret-down-fill",
+      "id": "icon-caret-down-fill",
+      "created": 1,
+      "unicode": "ed13"
+    },
+    {
+      "name": "icon-font-italic-fill",
+      "id": "icon-font-italic-fill",
+      "created": 1,
+      "unicode": "ed14"
+    },
+    {
+      "name": "icon-font-fill",
+      "id": "icon-font-fill",
+      "created": 1,
+      "unicode": "ed15"
+    },
+    {
+      "name": "icon-font-size-fill",
+      "id": "icon-font-size-fill",
+      "created": 1,
+      "unicode": "ed16"
+    },
+    {
+      "name": "icon-font-strikethrough-fill",
+      "id": "icon-font-strikethrough-fill",
+      "created": 1,
+      "unicode": "ed17"
+    },
+    {
+      "name": "icon-font-underline-fill",
+      "id": "icon-font-underline-fill",
+      "created": 1,
+      "unicode": "ed18"
+    },
+    {
+      "name": "icon-hyperlink-broken-fill",
+      "id": "icon-hyperlink-broken-fill",
+      "created": 1,
+      "unicode": "ed19"
+    },
+    {
+      "name": "icon-hyperlink-fill",
+      "id": "icon-hyperlink-fill",
+      "created": 1,
+      "unicode": "ed1a"
+    },
+    {
+      "name": "icon-indent-fill",
+      "id": "icon-indent-fill",
+      "created": 1,
+      "unicode": "ed1b"
+    },
+    {
+      "name": "icon-insert-picture-fill",
+      "id": "icon-insert-picture-fill",
+      "created": 1,
+      "unicode": "ed1c"
+    },
+    {
+      "name": "icon-justify-fill",
+      "id": "icon-justify-fill",
+      "created": 1,
+      "unicode": "ed1d"
+    },
+    {
+      "name": "icon-numbered-list-fill",
+      "id": "icon-numbered-list-fill",
+      "created": 1,
+      "unicode": "ed1e"
+    },
+    {
+      "name": "icon-redo-alt-fill",
+      "id": "icon-redo-alt-fill",
+      "created": 1,
+      "unicode": "ed1f"
+    },
+    {
+      "name": "icon-reduce-indent-fill",
+      "id": "icon-reduce-indent-fill",
+      "created": 1,
+      "unicode": "ed20"
+    },
+    {
+      "name": "icon-undo-fill",
+      "id": "icon-undo-fill",
+      "created": 1,
+      "unicode": "ed21"
+    },
+    {
+      "name": "icon-align-center-fill",
+      "id": "icon-align-center-fill",
+      "created": 1,
+      "unicode": "ed0e"
+    },
+    {
+      "name": "icon-downtrend-fill",
+      "id": "icon-downtrend-fill",
+      "created": 1,
+      "unicode": "ea87"
+    },
+    {
+      "name": "icon-pin-outline",
+      "id": "icon-pin-outline",
+      "created": 1,
+      "unicode": "ea9b"
+    },
+    {
+      "name": "icon-unpin-outline",
+      "id": "icon-unpin-outline",
+      "created": 1,
+      "unicode": "ea9c"
+    }
+  ]
+}

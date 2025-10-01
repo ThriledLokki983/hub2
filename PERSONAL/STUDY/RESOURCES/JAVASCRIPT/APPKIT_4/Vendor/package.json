@@ -1,0 +1,9 @@
+{
+    "name": "@appkit4-dev/styles",
+    "version": "0.0.266",
+    "dependencies": {
+    },
+    "devDependencies": {
+    },
+    "sideEffects": false
+}

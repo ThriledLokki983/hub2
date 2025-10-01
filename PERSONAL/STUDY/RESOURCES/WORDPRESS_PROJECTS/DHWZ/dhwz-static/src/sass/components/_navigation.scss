@@ -1,0 +1,117 @@
+@use '../abstract/' as ab;
+
+@media (min-width: 960px) {
+	nav#primary-navigation  {
+		--nav-button-display: none;
+		--nav-position: static;
+	}
+
+	ul.nav__lists {
+		--nav-list-visibility: visible;
+		--nav-list-layout: row;
+		--nav-list-position: static;
+		--nav-list-padding: 0;
+		--nav-list-height: auto;
+		--nav-list-width: 100%;
+		--nav-list-shadow: none;
+	}
+}
+
+#primary-navigation {
+	align-self: flex-end;
+	// position: var(--nav-position, static);
+
+	.nav__lists {
+		display: flex;
+		gap: var(--nav-items-spacing);
+		padding-block-end: 1rem;
+		transform: translateX(0%);
+		flex-wrap: wrap;
+		min-height: var(--nav-list-height, 100vh);
+		list-style: none;
+
+		&--item {
+			border-bottom: 3px solid transparent;
+
+			a {
+				font-size: var(--paragraph);
+				color: var(--primary-color);
+				padding-inline: 0.5rem;
+				text-decoration: none;
+				font-family: 'MyriadRegular';
+				transition: border-bottom 0.2s ease-in-out 0s;
+				transition: all 0.2s ease-in-out 0s;
+			}
+
+			&:hover {
+				.nav__lists--item-link {
+					color: var(--secondary-color);
+					font-family: 'MyriadBold';
+				}
+
+				@media only screen and (min-width: 960px) {
+					div.sub__menu {
+						display: flex;
+						visibility: visible;
+						opacity: 1;
+						width: fit-content;
+						padding: 4rem 10rem;
+						inset: 3rem auto auto -35%;
+
+
+
+						a {
+							border-bottom: none;
+						}
+
+						&:hover {
+						visibility: visible;
+						opacity: 1;
+
+						}
+					}
+				}
+				// animation: animateBorderBottom 0.3s forwards;
+			}
+
+			&[data-expanded] {
+				@include ab.respond(960px){
+					border-bottom: 3px solid var(--secondary-color);
+					flex-direction: column;
+
+					svg.icon.mobile-icon {
+						transform: rotate(90deg);
+						fill: red;
+						stroke: red;
+					}
+
+				}
+			}
+
+			@include ab.respond(960px) {
+				&[data-expanded] {
+					display: inline-flex;
+					flex-wrap: wrap;
+				}
+			}
+		}
+
+		&[data-moveLeft] {
+			transform: translateX(-100%);
+			opacity: 1;
+			transition: all 0.3s ease-in-out;
+		}
+
+		@include ab.respond(960px) {
+			place-content: center;
+			// overflow: scroll;
+		}
+	}
+}
+
+@include ab.respond(960px){
+li.nav__lists--item.open[aria-expanded] {
+
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "name": "order-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "concurrently \"cd ./server && yarn run dev\" \"cd client && yarn run dev\"",
+    "start:docker": "concurrently \"cd ./server && docker-compose up --build\" \"cd client && yarn run dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

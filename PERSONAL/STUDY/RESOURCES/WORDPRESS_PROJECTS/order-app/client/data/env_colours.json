@@ -1,0 +1,421 @@
+{
+    "_DEFAULT_": {
+        "background": "white",
+        "text": "black",
+        "overlay": "blue-transparent",
+        "accent": "red",
+
+        "login-page-background": "red",
+        "login-page-text": "white",
+
+        "header-background": "white",
+        "header-text": "gray-darkest",
+        "header-logo": "red",
+
+        "footer-background": "red",
+        "footer-text": "white",
+
+        "nav-mobile-text": "blue",
+        "nav-desktop-text": "blue",
+        "nav-desktop-line": "red",
+
+        "nav-item-icon": "red",
+        "nav-item-icon-desktop": "red",
+
+        "avatar-background": "blue-light",
+        "avatar-text": "blue",
+
+        "badge-background": "blue-light",
+        "badge-text": "black",
+
+        "toggle-border": "blue",
+        "toggle-border-disabled": "gray",
+        "toggle-background": "white",
+
+        "actionwheel-background": "blue-lighter",
+        "actionwheel-border": "blue-light",
+        "actionwheel-text": "blue",
+        "actionwheel-focusring": "red",
+
+        "tooltip-background": "blue-darkest",
+        "tooltip-text": "white",
+
+        "popover-background": "white",
+        "popover-text": "purple-darkest",
+        "popover-header-text": "black",
+        "popover-header-mobile-text": "black",
+
+        "notification-general-background": "gray-lightest",
+        "notification-general-text": "black",
+        "notification-general-border": "gray",
+
+        "notification-info-background": "blue-light",
+        "notification-info-text": "black",
+        "notification-info-border": "blue",
+
+        "notification-success-background": "green-lighter",
+        "notification-success-text": "black",
+        "notification-success-border": "green",
+
+        "notification-warning-background": "orange-lighter",
+        "notification-warning-text": "black",
+        "notification-warning-border": "orange",
+
+        "notification-error-background": "red-lightest",
+        "notification-error-text": "black",
+        "notification-error-border": "red",
+
+        "button-default-background": "blue-lightest",
+        "button-default-text": "red",
+        "button-default-border": "red-lighter-2",
+
+        "button-default-active-background": "blue-lightest",
+        "button-default-active-text": "red",
+        "button-default-active-border": "red-lighter-2",
+
+        "button-default-hover-background": "red-lightest",
+        "button-default-hover-text": "red",
+        "button-default-hover-border": "red-lighter-2",
+
+        "button-default-disabled-background": "gray",
+        "button-default-disabled-text": "white",
+        "button-default-disabled-border": "gray",
+
+        "button-mini-active-background": "white",
+        "button-mini-active-text": "black",
+        "button-mini-active-border": "white",
+
+        "button-mini-disabled-background": "white",
+        "button-mini-disabled-text": "gray",
+        "button-mini-disabled-border": "white",
+
+        "button-mini-circle-disabled-background": "gray",
+        "button-mini-circle-disabled-text": "white",
+        "button-mini-circle-disabled-border": "gray",
+
+        "button-transparent-background": "transparent",
+        "button-transparent-text": "black",
+        "button-transparent-border": "transparent",
+
+        "button-transparent-hover-background": "transparent",
+        "button-transparent-hover-text": "black",
+        "button-transparent-hover-border": "transparent",
+
+        "button-transparent-focus-background": "transparent",
+        "button-transparent-focus-text": "black",
+
+        "button-transparent-active-background": "transparent",
+        "button-transparent-active-text": "black",
+        "button-transparent-active-border": "gray",
+
+        "button-transparent-disabled-background": "gray-lightest",
+        "button-transparent-disabled-text": "gray",
+        "button-transparent-disabled-border": "transparent",
+
+        "icon-button-blue-background": "blue-lighter",
+        "icon-button-blue-hover-background": "transparent",
+        "icon-button-blue-icon": "blue",
+        "icon-button-red-background": "red-lightest",
+        "icon-button-red-hover-background": "transparent",
+        "icon-button-red-icon": "red-darkest",
+        "icon-button-green-background": "blue-lighter",
+        "icon-button-green-hover-background": "transparent",
+        "icon-button-green-icon": "green",
+        "icon-button-transparent-background": "transparent",
+        "icon-button-transparent-hover-background": "transparent",
+        "icon-button-transparent-icon": "red",
+
+
+        "input-disabled-background": "gray-lighter",
+        "input-disabled-text": "gray-darker",
+        "input-disabled-border": "gray-darker",
+
+        "toggle-slider-track-background": "transparent",
+        "toggle-slider-track-border": "blue-darker",
+        "toggle-slider-track-background-checked": "green",
+        "toggle-slider-track-border-checked": "green",
+        "toggle-slider-knob-background": "blue-lighter",
+        "toggle-slider-knob-border": "blue-darker",
+        "toggle-slider-knob-background-checked": "white",
+        "toggle-slider-knob-border-checked": "green",
+
+
+        "input-placeholder-text": "gray-darker",
+
+        "calendar-border": "gray-lighter",
+        "calendar-label": "gray-darker",
+
+        "datepicker-weekday": "blue",
+        "datepicker-day-text": "black",
+        "datepicker-day-background": "transparent",
+        "datepicker-day-out-of-month-text": "gray-darker",
+        "datepicker-day-out-of-month-background": "transparent",
+
+        "warning-bar-info-background": "blue-lighter",
+        "warning-bar-info-text": "blue-darker",
+        "warning-bar-error-background": "red-lightest",
+        "warning-bar-error-text": "red-darkest",
+
+        "sidepanel-background": "blue-lighter",
+        "sidepanel-text": "black",
+
+        "t-abbr-line": "red-light",
+        "t-form-warning": "red",
+        "t-form-helptext": "gray-darker",
+        "t-page-title": "black",
+        "t-header-title": "blue-darkest",
+        "t-label": "black",
+
+        "profile-geen_profiel": "gray",
+        "profile-mediavormgever": "red-lighter",
+        "profile-av_specialist": "orange",
+        "profile-podium_evenementen": "purple-dark",
+        "profile-productie": "green",
+        "profile-avo": "blue-semi-light"
+    },
+
+    "STUDENT": {
+        "accent": "red",
+
+        "popover-header-background": "red-lighter",
+        "popover-header-mobile-background": "red-lightest",
+        "popover-border": "red-lighter",
+
+        "modal-background": "white",
+        "modal-border": "red-lighter-2",
+        "modal-title": "red",
+        "modal-text": "black",
+
+        "avatar-background": "red-lightest",
+        "avatar-text": "red",
+
+        "badge-background": "red-darkest",
+        "badge-text": "white",
+
+        "button-default-background": "blue-lightest",
+        "button-default-text": "red",
+        "button-default-border": "red-lighter-2",
+
+        "button-default-active-background": "blue-lightest",
+        "button-default-active-text": "red",
+        "button-default-active-border": "red-lighter-2",
+
+        "button-default-hover-background": "red-lightest",
+        "button-default-hover-text": "red",
+        "button-default-hover-border": "red-lighter-2",
+
+        "button-default-focus-background": "red-lighter-2",
+        "button-default-focus-text": "white",
+        "button-default-focus-border": "red-lighter-2",
+
+        "button-mini-background": "white",
+        "button-mini-text": "red",
+        "button-mini-border": "white",
+
+        "button-mini-hover-background": "white",
+        "button-mini-hover-text": "red-darkest",
+        "button-mini-hover-border": "white",
+
+        "button-mini-focus-background": "white",
+        "button-mini-focus-text": "red",
+        "button-mini-focus-border": "red",
+
+        "button-mini-circle-background": "red-lightest",
+        "button-mini-circle-text": "red",
+        "button-mini-circle-border": "red-lightest",
+
+        "button-mini-circle-active-background": "red-lightest",
+        "button-mini-circle-active-text": "black",
+        "button-mini-circle-active-border": "red-lightest",
+
+        "button-mini-circle-hover-background": "red-lighter-2",
+        "button-mini-circle-hover-text": "black",
+        "button-mini-circle-hover-border": "red-lighter-2",
+
+        "button-mini-circle-focus-background": "red-lightest",
+        "button-mini-circle-focus-text": "red",
+        "button-mini-circle-focus-border": "red",
+
+        "button-transparent-focus-border": "red",
+
+        "icon-button-background": "red-lightest",
+        "icon-button-hover-background": "transparent",
+        "icon-button-icon": "red",
+
+        "input-default-background": "white",
+        "input-default-text": "black",
+        "input-default-border": "red-lighter-2",
+
+        "input-focus-background": "white",
+        "input-focus-text": "black",
+        "input-focus-border": "red-lighter",
+
+        "sticky-footer-background": "red-lighter",
+        "sticky-footer-text": "white",
+        "sticky-footer-contrast-background": "red-lighter-2",
+        "sticky-footer-contrast-text": "white",
+
+        "table-header-background": "red",
+        "table-header-text": "white",
+        "table-body-background": "red-lighter-2",
+        "table-body-text": "black",
+
+        "homepage-tagline-text": "black",
+
+        "homepage-navtile-background": "red",
+        "homepage-navtile-text": "white",
+        "homepage-navtile-border": "red-darkest",
+        "homepage-navtile-inverted-background": "blue-lighter",
+        "homepage-navtile-inverted-text": "red",
+        "homepage-navtile-inverted-border": "blue-light",
+
+        "calendar-current-time": "red-darkest",
+        "calendar-event-background": "red-lighter",
+        "calendar-event-border": "white",
+        "calendar-event-text": "black",
+        "calendar-event-badge-background": "red-darkest",
+        "calendar-event-badge-text": "white",
+        "calendar-event-hover-border": "white",
+
+        "datepicker-day-today-text": "white",
+        "datepicker-day-today-background": "red",
+        "datepicker-day-active-text": "black",
+        "datepicker-day-active-background": "red-lighter-2",
+        "datepicker-event-dot": "red",
+        "datepicker-active-week-background": "red-lightest",
+
+        "progress-bar-background": "blue-lightest",
+        "progress-bar-bar": "red",
+
+        "filter-button-icon": "red",
+
+        "t-abbr-line": "black",
+        "t-form-helptext": "gray-darker",
+        "t-report-title": "red"
+    },
+
+    "TEACHER": {
+        "accent": "blue",
+
+        "header-background": "blue",
+        "header-text": "white",
+        "header-logo": "white",
+
+        "footer-background": "blue",
+
+        "nav-desktop-text": "white",
+        "nav-desktop-line": "blue-light",
+        "nav-item-icon": "blue-darkest",
+        "nav-item-icon-desktop": "white",
+
+        "popover-header-background": "blue-semi-light",
+        "popover-header-mobile-background": "blue-lighter",
+        "popover-border": "blue-semi-light",
+
+        "modal-background": "white",
+        "modal-border": "blue-light",
+        "modal-title": "black",
+        "modal-text": "black",
+
+        "button-default-background": "blue-lighter",
+        "button-default-text": "blue",
+        "button-default-border": "blue",
+
+        "button-default-active-background": "blue-lighter",
+        "button-default-active-text": "blue",
+        "button-default-active-border": "blue",
+
+        "button-default-hover-background": "blue",
+        "button-default-hover-text": "white",
+        "button-default-hover-border": "blue",
+
+        "button-default-focus-background": "blue-light",
+        "button-default-focus-text": "blue",
+        "button-default-focus-border": "blue",
+
+        "button-mini-background": "white",
+        "button-mini-text": "blue",
+        "button-mini-border": "white",
+
+        "button-mini-hover-background": "white",
+        "button-mini-hover-text": "blue-darkest",
+        "button-mini-hover-border": "white",
+
+        "button-mini-focus-background": "white",
+        "button-mini-focus-text": "blue",
+        "button-mini-focus-border": "blue",
+
+        "button-mini-circle-background": "blue-lighter",
+        "button-mini-circle-text": "blue",
+        "button-mini-circle-border": "blue-lighter",
+
+        "button-mini-circle-active-background": "blue-lighter",
+        "button-mini-circle-active-text": "black",
+        "button-mini-circle-active-border": "blue-lighter",
+
+        "button-mini-circle-hover-background": "blue-light",
+        "button-mini-circle-hover-text": "blue-darkest",
+        "button-mini-circle-hover-border": "blue-light",
+
+        "button-mini-circle-focus-background": "blue-lighter",
+        "button-mini-circle-focus-text": "blue",
+        "button-mini-circle-focus-border": "blue",
+
+        "button-transparent-focus-border": "blue",
+
+        "icon-button-background": "blue-lighter",
+        "icon-button-hover-background": "transparent",
+        "icon-button-icon": "blue",
+
+        "input-default-background": "white",
+        "input-default-text": "black",
+        "input-default-border": "blue-light",
+
+        "input-focus-background": "white",
+        "input-focus-text": "black",
+        "input-focus-border": "blue-semi-light",
+
+        "sticky-footer-background": "blue-darker",
+        "sticky-footer-text": "white",
+        "sticky-footer-contrast-background": "blue",
+        "sticky-footer-contrast-text": "white",
+
+        "table-header-background": "blue",
+        "table-header-text": "white",
+        "table-body-background": "blue-lighter",
+        "table-body-text": "black",
+
+        "homepage-tagline-text": "blue-darkest",
+
+        "homepage-navtile-background": "blue",
+        "homepage-navtile-text": "white",
+        "homepage-navtile-border": "blue-darker",
+        "homepage-navtile-inverted-background": "blue-lighter",
+        "homepage-navtile-inverted-text": "blue",
+        "homepage-navtile-inverted-border": "blue-light",
+
+        "calendar-current-time": "blue-darkest",
+        "calendar-event-background": "blue-semi-light",
+        "calendar-event-border": "white",
+        "calendar-event-text": "black",
+        "calendar-event-badge-background": "blue-darkest",
+        "calendar-event-badge-text": "white",
+        "calendar-event-hover-border": "white",
+
+        "datepicker-day-today-text": "white",
+        "datepicker-day-today-background": "blue-darkest",
+        "datepicker-day-active-text": "black",
+        "datepicker-day-active-background": "blue-semi-light",
+        "datepicker-event-dot": "blue-semi-light",
+        "datepicker-active-week-background": "blue-lighter",
+
+        "progress-bar-background": "blue-lightest",
+        "progress-bar-bar": "blue-darker",
+
+        "filter-button-icon": "blue-darkest",
+
+        "t-abbr-line": "blue-light",
+        "t-form-helptext": "blue-darker",
+        "t-report-title": "blue"
+    }
+}

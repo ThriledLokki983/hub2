@@ -1,0 +1,190 @@
+
+$slider-height: rem(2px);
+
+$slider-rail-background-color: rgba($color-background-tertiary-rgb, $opacity-3);
+$slider-track-background-color: $color-background-primary;
+
+@mixin label-text {
+  font-size: $typography-text-size-3;
+  line-height: $typography-line-height-3;
+  letter-spacing: $letter-spacing-1;
+}
+
+  .ap-slider-wrapper {
+    width: rem(336px);
+    box-shadow: $level-1;
+    padding: $spacing-4 $spacing-3 0;
+    border-radius: $border-radius-3;
+    background-color: $color-background-container;
+
+    &.with-input {
+      padding: $spacing-3 $spacing-3 0;
+
+      .ap-slider-header {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ap-slider {
+    position: relative;
+
+    &.disabled {
+      opacity: $opacity-6;
+      cursor: not-allowed;
+
+      .ap-slider-handle, .ap-slider-mark-text {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .ap-slider-horizontal {
+    height: rem(25px);
+    padding: rem(11px 0 12px 0);
+
+    &.has-interval {
+      height: rem(60px);
+    }
+
+    .ap-slider-handle {
+      margin-top: - ($height-1 / 2 - $slider-height + $slider-height / 2);
+    }
+  }
+
+  .ap-slider-rail {
+    position: absolute;
+    width: 100%;
+    height: $slider-height;
+    background: $color-text-disabled;
+    border-radius: $border-radius-1;
+  }
+
+  .ap-slider-track {
+    position: absolute;
+    height: $slider-height;
+    background: $slider-track-background-color;
+    border-radius: $border-radius-1;
+  }
+  
+  .ap-slider-handle-container {
+    width: calc(100% - 16px);
+    position: relative;
+
+    &.has-interval-tick {
+      width: calc(100% - 8px);
+    }
+  }
+
+  .ap-slider-handle {
+    position: absolute;
+    width: $height-1;
+    height: $width-1;
+    background: $color-background-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    // margin-left: calc(-1 * $spacing-3);
+  }
+
+  .ap-slider-mark {
+    position: absolute;
+    top: rem(28px);
+    left: 0;
+    width: calc(100% - 16px);
+  }
+
+  .ap-slider-tick-container {
+    position: absolute;
+    left: 0;
+    width: calc(100% - 8px);
+
+    .ap-slider-mark-tick {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $neutral-03;
+
+      &.active {
+        background-color: $color-background-primary;
+      }
+    }
+  }
+
+  .ap-slider-mark-text {
+    @include label-text;
+    position: absolute;
+    color: $color-text-light;
+    opacity: $opacity-6;
+    // transform: translateX(-50%);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.active {
+      opacity: $opacity-7;
+      color: $color-text-body;
+    }
+  }
+
+  .ap-slider-header {
+      display: flex;
+      align-items: center;
+      // flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: $spacing-2;
+      @include label-text;
+
+      .ap-slider-label {
+        color: $color-text-heading;
+        word-break: break-word;
+      }
+
+      .ap-slider-text {
+        color: $color-text-light;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+
+        .ap-field-demo-wrapper {
+          width: rem(56px);
+        }
+      }
+
+      .separator {
+        padding: 0 $spacing-3;
+      }
+      
+      .ap-field-wrapper {
+        height: 32px !important;
+      }
+
+      input {
+        width: 56px !important;
+        height: 32px !important;
+        text-align: center;
+        margin: 0 !important;
+        // color: $color-text-light !important;
+
+        &:not(:focus) {
+          color: $color-text-light !important;
+        }
+      }
+
+      .ap-slider-input-text {
+        margin: 0 $spacing-3;
+      }
+  }
+
+  .gradient .ap-slider-track {
+    background-image: linear-gradient(to right, #30d158 0%, #ff2d55 100%);
+  }
+
+  .gradient .ap-slider-handle-first {
+    background: #30d158;
+  }
+
+  .gradient .ap-slider-handle-last {
+    background: #ff2d55;
+  }

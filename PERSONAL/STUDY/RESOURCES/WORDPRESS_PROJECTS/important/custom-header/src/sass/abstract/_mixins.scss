@@ -1,0 +1,67 @@
+@mixin flex-end {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+// Media queries
+@mixin respond($breakpoint) {
+	@media only screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin absolute-btn {
+	button {
+		position: absolute;
+		right: 0;
+		bottom: 3rem;
+		letter-spacing: 0.4px;
+	}
+
+	@include respond(960px) {
+		button {
+			bottom: 4rem;
+		}
+	}
+}
+
+@mixin scaleUpOnHover {
+	img {
+		transform: translateZ(0);
+		transition: transform 0.45s ease-out;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.2) translateZ(0);
+		}
+
+		button.secondary {
+			color: var(--secondary-color);
+			background: var(--secondary-color-hover);
+			border: 1px solid var(--secondary-color-hover);
+		}
+
+		button.red {
+			color: var(--tertiary-color);
+			border: 1px solid var(--tertiary-color-hover);
+			background: var(--tertiary-color-hover);
+		}
+
+		button.primary {
+			color: var(--primary-color);
+			border: 1px solid var(--primary-color-hover);
+			background: var(--primary-color-hover);
+		}
+	}
+}
+
+/*
+* Create a grid layout with specified number of columns which will be passed in as a parameter
+*/
+@mixin grid-layout($columns: 3) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+	grid-gap: 2rem;
+}

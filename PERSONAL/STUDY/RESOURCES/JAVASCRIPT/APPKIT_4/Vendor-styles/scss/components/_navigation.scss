@@ -1,0 +1,211 @@
+.ap-navigation-wrapper {
+    // width: var(--navWidth);
+    height: 100vh;
+    background-color: transparent;
+    &:not(.solidnav) {
+        background-color: $color-background-container-alt;
+    }
+    // display: flex;
+    // flex-direction: column;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    // box-shadow: $shadow-border;
+    scrollbar-width: none;
+    position: relative;
+    // transition: all $transition-0 ease-in-out;
+
+    .ap-navigation-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing-4 $spacing-4 $spacing-4 $spacing-6;
+        width: 100%;
+
+        .ap-navigation-title-wrapper {
+            display: flex;
+            align-items: center;
+
+            .ap-navigation-logo {
+                margin-right: $spacing-2;
+                width: $width-5;
+                height: $height-5;
+                mask-image: url('../../images/PwC_logo_simplified.svg');
+                -webkit-mask-image: url('../../images/PwC_logo_simplified.svg');
+                mask-repeat: no-repeat;
+                -webkit-mask-repeat: no-repeat;
+                mask-position: center;
+                -webkit-mask-position: center;
+                background-color: $color-text-heading;
+                display: block;
+            }
+
+            .ap-navigation-title {
+                color: $color-text-heading;
+                line-height: $typography-line-height-3;
+                letter-spacing: normal;
+                display: block;
+                letter-spacing: $typography-letter-spacing-1;
+            }
+        }
+    }
+
+    .ap-navigation-content {
+        display: grid;
+        gap: $spacing-2;
+        padding: rem(28px) $spacing-4 rem(72px);
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding-bottom: rem(72px);
+
+        &::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ap-navigation-item {
+        display: flex;
+        align-items: center;
+        // column-gap: $spacing-2;
+        padding: $spacing-4 $spacing-4 $spacing-4 $spacing-3;
+        height: rem(48px);
+        line-height: $typography-line-height-7;
+        border-radius: $border-radius-2;
+        background-color: transparent;
+        color: $color-text-body;
+        position: relative;
+        &:focus-visible{
+            outline-offset: rem(-1px);
+        }
+        &:hover {
+            cursor: pointer;
+            backdrop-filter: blur(20px);
+            background-color: rgba($color-background-hover-selected-rgb, .48);
+        }
+        .itemContent{
+            margin-left:$spacing-2;
+            letter-spacing: $typography-letter-spacing-1;
+        }
+        .suffixIcon {
+            position: absolute;
+            top:rem(12px);
+            right:rem(12px);
+        }
+    }
+
+    .ap-navigation-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: rem(72px);
+        display: block;
+        width: 100%;
+        padding: $spacing-4;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background-color: rgba($color-background-container-alt-rgb, .48);
+
+        .ap-navigation-item {
+            &:hover{
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
+                background-color: rgba($color-background-hover-selected-rgb, 0.48);
+            }
+
+        }
+    }
+
+    &.collapse-nav {
+        // transition: all $transition-0 ease-in-out;
+
+        .ap-navigation-heading{
+            justify-content: center;
+            padding: $spacing-4 $spacing-5 0 $spacing-5;
+
+            .ap-navigation-title-wrapper {
+                .ap-navigation-logo{
+                    display: none;
+                }
+
+                .ap-navigation-title{
+                    display: none;
+                }
+
+
+            }
+        }
+
+        .ap-navigation-item{
+            width: $width-18;
+            padding: $spacing-4;
+            border-radius: $border-radius-2;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+
+            &:hover{
+                backdrop-filter: blur(20px);
+                background-color: rgba($color-background-hover-selected-rgb, .48);
+            }
+
+            .prefix-content{
+                height: rem(48px);
+                width: $width-18;
+
+                &:hover{
+                    // background-color: rgba($color-background-hover-selected-rgb, .48);
+                }
+            }
+
+            .itemContent{
+                display: none;
+            }
+
+            .suffixIcon{
+                display: none;
+            }
+        }
+    }
+
+    &.solid-nav {
+        box-shadow: 0 0 rem(1px) 0  $color-background-default;
+        background-color: $color-background-alt;
+
+        .ap-navigation-item {
+
+            &:hover{
+                background-color: $color-background-selected;
+            }
+        }
+
+        .ap-navigation-footer{
+            background-color: rgba($color-background-alt-rgb, 0.48);
+
+            .ap-navigation-item {
+                &:hover{
+                    background-color: rgba($color-background-selected-rgb, .48);
+                }
+            }
+
+        }
+    }
+
+
+}
+
+.ap-navigation-demo-wrapper {
+    background-color: var(--color-background-default);
+}
+
+.ap-navigation-wrapper .ap-navigation-footer {
+    position: absolute!important;
+}
+
+.ap-navigation-item.selected {
+    font-weight: $font-weight-2;
+    background-color: $color-background-hover-selected;
+}

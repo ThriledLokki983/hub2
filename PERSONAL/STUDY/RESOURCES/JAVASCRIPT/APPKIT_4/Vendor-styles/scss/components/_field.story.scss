@@ -1,0 +1,109 @@
+.ap-field-email-validation-error {
+  margin: rem(8px) 0 rem(12px) rem(8px);
+  height: rem(12px);
+  line-height: rem(12px);
+  font-size: rem(12px);
+  color: var(--color-text-error);
+}
+
+.ap-field-demo-wrapper {
+  width: rem(320px);
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 10px;
+  row-gap: 10px;
+}
+
+.ap-field-email-validation-suggestion {
+  margin: rem(8px) 0 rem(12px) rem(8px);
+  height: rem(12px);
+  line-height: rem(12px);
+  font-size: rem(12px);
+  color: var(--color-text-body);
+
+  span {
+    color: var(--color-background-primary);
+    font-weight: var(--font-weight-2);
+    cursor: pointer;
+  }
+}
+
+.ap-field-password .ap-field-password-creator>span.highlight {
+  color: var(--color-background-primary);
+}
+
+.ap-field-password {
+
+  .ap-field:not(.has-length),
+  .ap-field:not(:focus-within) {
+    .ap-field-password-creator {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+
+  .ap-field-password-creator {
+    position: absolute;
+    left: 0;
+    top: $spacing-8; // 48px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: $spacing-4; // 12px;
+    margin: $spacing-3 0; //8px 0;
+    color: rgba($color-text-light-rgb, $opacity-6); // #696969 .48;
+    transition: visibility $transition-0, opacity $transition-0, transform $transition-0;
+
+    &>span {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: $spacing-1; // 2px;
+
+      .icon-circle-checkmark-fill {
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+        font-size: 8px;
+
+        &::before {
+          font-weight: $font-weight-3;
+        }
+      }
+
+      .ap-field-password-condition {
+        line-height: 12px;
+        font-size: 12px;
+      }
+
+      &.highlight {
+        color: $color-background-primary;
+      }
+    }
+  }
+
+  .ap-field-password-condition-sr-only {
+    position: absolute;
+    left: 0;
+    top: $spacing-8; // 48px;
+    clip: rect(0 0 0 0);
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: no-wrap;
+  }
+
+}
+
+.ap-field-password .ap-field-password-condition-sr-only {
+  position: absolute;
+  left: 0;
+  top: rem(48px);
+  clip: rect(0 0 0 0);
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

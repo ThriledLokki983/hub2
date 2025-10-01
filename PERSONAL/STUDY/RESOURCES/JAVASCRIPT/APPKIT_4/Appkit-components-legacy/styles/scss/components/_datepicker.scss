@@ -1,0 +1,661 @@
+@mixin keyboard-outline {
+  z-index: 999;
+  outline: rem(1px) dotted #444;
+  outline: rem(5px) auto -webkit-focus-ring-color;
+
+  //https://stackoverflow.com/questions/28417056/how-to-target-only-ie-any-version-within-a-stylesheet
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    outline: rem(1px) solid #4d90fe;
+  }
+
+  //https://stackoverflow.com/questions/32940965/how-to-target-microsoft-edge-with-css?noredirect=1&lq=1
+  @supports (-ms-ime-align: auto) {
+    outline: rem(1px) solid #4d90fe;
+  }
+}
+
+
+.a-date-picker-header {
+  width: rem(320px);
+
+  &.no-outline {
+    .ap-field-icon-btn {
+      outline: none;
+    }
+  }
+}
+
+.a-react-date-picker-calendar,
+.a-date-range-picker-calendar,
+.a-date-range-picker-double-calendar {
+  padding: $spacing-3;
+  border-radius: $spacing-3;
+  box-shadow: $level-3;
+  background-color: $color-background-container;
+  position: absolute;
+  z-index: 99;
+  top: calc($spacing-8 + $spacing-3) !important;
+  right: 0;
+  cursor: default;
+  transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+  pointer-events: auto;
+  transform-origin: top right;
+
+  &.closed {
+    visibility: hidden;
+    opacity: 0;
+    // transform: translateY($spacing-4);
+    transform: scale(.1);
+  }
+
+  &.react-date-picker--closed {
+    visibility: hidden;
+    opacity: 0;
+    // transform: translateY($spacing-4);
+    transform: scale(.1);
+  }
+}
+
+
+.a-double-calendar-container {
+  display: flex;
+  overflow: hidden;
+  width: rem(648px);
+
+  .ap-datepicker-right {
+    margin-left: calc($spacing-8 - $spacing-3);
+  }
+
+  &.no-bottom-left-border-radius {
+    border-bottom-left-radius: 0px;
+  }
+
+  &.no-bottom-right-border-radius {
+    border-bottom-right-radius: 0px;
+  }
+
+  &.open {
+    z-index: 100;
+  }
+
+  .a-double-calendar-divider {
+    width: rem(10px);
+    background-color: $color-background-container;
+  }
+}
+
+.react-date-picker,
+.react-daterange-picker {
+  display: inline-flex;
+  position: relative;
+}
+
+.a-date-range-picker-double-calendar {
+  z-index: 100;
+  display: inline-flex;
+  // terry
+  position: absolute;
+
+  .a-double-calendar-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  &.closed {
+    visibility: hidden;
+    opacity: 0;
+    // transform: translateY($spacing-4);
+    transform: scale(.1);
+  }
+}
+
+@mixin date-cell($colors) {
+  padding: $spacing-3;
+  border-radius: $border-radius-2;
+  cursor: pointer;
+
+  &:not(.r-c-single-day--excluded):not(.disabled):not(.r-c-tile-rangeStart):not(.r-c-tile-rangeEnd):not(.r-c-tile-rangeBothEnds):not(.r-c-tile-within):not(.r-c-single-day--neighboringMonth):not(.r-c-tile-hoverEnd):not(.r-c-tile-hoverStart):hover {
+    background-color: $colors;
+  }
+}
+
+//utile class
+.a-date-inline-focusable {
+  &:focus {
+    @include keyboard-outline;
+  }
+
+  &.a-calendar-no-outline {
+    outline: none;
+  }
+}
+
+.keyboard-inner-highlight {
+  @include keyboard-outline;
+}
+
+.keyboard-date-view-inner-highlight {
+  .r-c-tile-init-focus {
+    @include keyboard-outline;
+  }
+}
+
+.no-need-outline-highlight {
+  outline: none !important;
+}
+
+.r-c-nav-next-button,
+.r-c-nav-prev-button,
+.react-calendar__month-view,
+.react-calendar__year-view,
+.react-calendar__decade-view {
+
+  //https://stackoverflow.com/questions/28417056/how-to-target-only-ie-any-version-within-a-stylesheet
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    &.keyboard-inner-highlight {
+      outline: auto 2px Highlight;
+      /* Firefox */
+      outline: auto 5px -webkit-focus-ring-color;
+      /* Webkit, Safari */
+      outline-offset: $spacing-1;
+    }
+  }
+}
+
+//---------------------------
+/* .a-calendar {
+
+  button:focus,
+  button:active {
+    outline: 0px !important;
+  }
+} */
+
+.a-date-range-picker-calendar-has-left-panel {
+  display: flex;
+  width: rem(474px);
+  box-shadow: $level-3;
+  border-radius: $spacing-3;
+  overflow: hidden;
+  padding: $spacing-3;
+
+  .react-calendar {
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 0;
+    width: 304px;
+  }
+}
+
+.a-clendar-left-menu {
+  width: rem(154px);
+  .a-calenar-menu-header {
+    font-size: rem(20px);
+    color: $color-text-heading;
+    height: $height-5;
+    font-weight: $font-weight-2;
+    display: flex;
+    align-items: center;
+    padding: $spacing-3;
+    margin-bottom:$spacing-2;
+  }
+  .a-clendar-left-menu-content{
+    display: grid;
+    grid-gap: $spacing-2;
+    .a-clendar-left-menu-content-item {
+      color: $color-text-body;
+      font-size: $typography-text-size-3;
+      height: 40px;
+      cursor: pointer;
+      padding: $spacing-3;
+      display: flex;
+      align-items: center;
+  
+      &.checked {
+        font-weight: $font-weight-2;
+      }
+    }
+  }
+
+  
+}
+
+//modify the third party
+.react-calendar {
+  .r-c-tile {
+    background-color: $color-background-container;
+    border-radius: $border-radius-2;
+    padding: $spacing-3;
+    color: $color-text-body;
+    height: rem(40px);
+    @include date-cell($color-background-hover);
+    &:focus-visible {
+      @include keyboard-outline;
+    }
+  }
+
+  .r-c-single-day--neighboringMonth {
+    background-color: $color-background-container !important;
+  }
+
+  .r-c-tile-now {
+    font-weight: $font-weight-2;
+  }
+
+  .r-c-tile-rangeBothEnds {
+    background-color: $color-background-primary;
+  }
+
+  .react-calendar__decade-view__years,
+  .react-calendar__year-view__months {
+    display: grid;
+    grid-gap: var(--spacing-2);
+    gap: var(--spacing-2);
+    grid-template-columns: 98px 100px 98px;
+
+    .r-c-single-month,
+    .r-c-single-year {
+      width: $width-11;
+      height: $height-9;
+      line-height: $height-5;
+      letter-spacing: $letter-spacing-1;
+      &:nth-of-type(3n-1) {
+        width: $width-12;
+      }
+    }
+
+    .r-c-tile-within,
+    .r-c-tile-range-bothEnds,
+    .r-c-tile-rangeStart,
+    .r-c-tile-rangeEnd {
+      background-color: $color-background-primary;
+      color: var(--color-text-tertiary);
+      font-weight: $font-weight-2;
+    }
+
+    .r-c-tile-rangeStart {
+      font-weight: $font-weight-2;
+
+      &:nth-of-type(3n-2) {
+        margin-left: 0;
+        margin-right: calc(-1 * $spacing-1);
+        padding-right: calc($spacing-3 + $spacing-1);
+        width: $width-12;
+        border-radius: $border-radius-2 0 0 $border-radius-2;
+      }
+
+      &:nth-of-type(3n) {
+        margin-left: 0;
+        margin-right: 0;
+        width: $width-11;
+        border-radius: $border-radius-2;
+      }
+
+      &:not(:nth-of-type(3n-2)):not(:nth-of-type(3n)) {
+        margin-left: 0;
+        margin-right: calc(-1 * $spacing-1);
+        padding-right: calc($spacing-3 + $spacing-1);
+        width: $width-13;
+        border-radius: $border-radius-2 0 0 $border-radius-2;
+      }
+    }
+
+    .r-c-tile-within {
+      &:nth-of-type(3n-2) {
+        margin-left: 0;
+        margin-right: calc(-1 * $spacing-1);
+        padding-right: calc($spacing-3 + $spacing-1);
+        width: $width-12;
+        border-radius: $border-radius-2 0 0 $border-radius-2;
+      }
+
+      &:nth-of-type(3n) {
+        margin-left: calc(-1 * $spacing-1);
+        margin-right: 0;
+        padding-left: calc($spacing-3 + $spacing-1);
+        width: $width-12;
+        border-radius: 0 $border-radius-2 $border-radius-2 0;
+      }
+
+      &:not(:nth-of-type(3n-2)):not(:nth-of-type(3n)) {
+        margin-left: calc(-1 * $spacing-1);
+        margin-right: calc(-1 * $spacing-1);
+        width: $width-14;
+        border-radius: 0;
+      }
+    }
+
+    .r-c-tile-range-bothEnds {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: $spacing-3  !important;
+      padding-right: $spacing-3  !important;
+      border-radius: $border-radius-2  !important;
+
+      &:nth-of-type(3n-2),
+      &:nth-of-type(3n) {
+        width: $width-11;
+      }
+
+      &:not(:nth-of-type(3n-2)):not(:nth-of-type(3n)) {
+        width: $width-12;
+      }
+    }
+
+    .r-c-tile-rangeEnd {
+      font-weight: $font-weight-2;
+
+      &:nth-of-type(3n-2) {
+        margin-left: 0;
+        margin-right: 0;
+        width: $width-11;
+        border-radius: $border-radius-2;
+      }
+
+      &:nth-of-type(3n) {
+        margin-left: calc(-1 * $spacing-1);
+        margin-right: 0;
+        padding-left: calc($spacing-3 + $spacing-1);
+        width: $width-12;
+        border-radius: 0 $border-radius-2 $border-radius-2 0;
+      }
+
+      &:not(:nth-of-type(3n-2)):not(:nth-of-type(3n)) {
+        margin-left: calc(-1 * $spacing-1);
+        margin-right: 0;
+        padding-left: calc($spacing-3 + $spacing-1);
+        width: $width-13;
+        border-radius: 0 $border-radius-2 $border-radius-2 0;
+      }
+    }
+  }
+
+  .react-calendar__month-view {
+    .r-c-weekdays {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: $spacing-2;
+      column-gap: $spacing-2;
+      margin-bottom: $spacing-2;
+    }
+
+    .r-c-days {
+      display: grid;
+      grid-template-columns: repeat(7, 2.5rem);
+      grid-gap: $spacing-2;
+      gap: $spacing-2;
+
+      .r-c-tile-selected-tile:not(.r-c-single-day--neighboringMonth):not(.r-c-single-day--excluded) {
+        color: $color-background-secondary;
+      }
+      .r-c-tile-selected-tile:not(.r-c-single-day--neighboringMonth){
+        background-color: $color-background-primary;
+        font-weight: $font-weight-2;
+      }
+      .r-c-tile-selected-tile.r-c-single-day--excluded {
+        color:rgba($color-text-tertiary-rgb, $opacity-3)
+      }
+
+      .r-c-single-day--neighboringMonth {
+        background-color: $color-background-container;
+      }
+
+      .r-c-tile-rangeStart,
+      .r-c-tile-hoverStart {
+        &:nth-of-type(7n) {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: $spacing-3;
+          width: $width-6;
+          border-radius: $border-radius-2;
+        }
+
+        &:not(:nth-of-type(7n)) {
+          margin-left: 0;
+          margin-right: calc(-1 * $spacing-1);
+          padding-right: calc($spacing-3 + $spacing-1);
+          width: $width-5;
+          border-radius: $border-radius-2 0 0 $border-radius-2;
+        }
+      }
+
+      .r-c-tile-active:not(.r-c-tile-rangeStart, .r-c-tile-rangeEnd, .r-c-tile-hoverStart, .r-c-tile-hoverEnd, .r-c-tile-rangeBothEnds),
+      .r-c-tile-hover-middle:not(.r-c-tile-hoverStart, .r-c-tile-hoverEnd) {
+        &:nth-of-type(7n-6) {
+          margin-left: 0;
+          margin-right: calc(-1 * $spacing-1);
+          padding-right: calc($spacing-3 + $spacing-1);
+          width: $width-5;
+          border-radius: $border-radius-2 0 0 $border-radius-2;
+        }
+
+        &:nth-of-type(7n) {
+          margin-left: calc(-1 * $spacing-1);
+          margin-right: 0;
+          padding-left: calc($spacing-3 + $spacing-1);
+          width: $width-5;
+          border-radius: 0 $border-radius-2 $border-radius-2 0;
+        }
+
+        &:not(:nth-of-type(7n-6)):not(:nth-of-type(7n)) {
+          margin-left: calc(-1 * $spacing-1);
+          margin-right: calc(-1 * $spacing-1);
+          width: $width-7;
+          border-radius: 0;
+        }
+      }
+
+      .r-c-tile-rangeEnd,
+      .r-c-tile-hoverEnd {
+        &:nth-of-type(7n-6) {
+          margin-left: 0;
+          margin-right: 0;
+          padding-right: $spacing-3;
+          width: $width-6;
+          border-radius: $border-radius-2;
+        }
+
+        &:not(:nth-of-type(7n-6)) {
+          margin-left: calc(-1 * $spacing-1);
+          margin-right: 0;
+          padding-left: calc($spacing-3 + $spacing-1);
+          width: $width-5;
+          border-radius: 0 $border-radius-2 $border-radius-2 0;
+        }
+      }
+    }
+  }
+
+
+  &.disable-bottom-radius {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  button {
+    margin: 0;
+    border: 0;
+    outline: none;
+
+    &:enabled {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .r-c-single-weekday {
+    font-weight: $font-weight-2;
+    font-size: $typography-text-size-3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $height-5;
+    color: $color-text-body;
+    width:40px;
+  }
+
+  .r-c-nav-bar {
+    height: $height-5;
+    margin-bottom: $spacing-2;
+    display: flex;
+    align-items: center;
+
+    .a-center-button-wrapper {
+      flex: 1 1 auto !important;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      &.second {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .a-center-button {
+        padding: $spacing-3;
+      }
+
+      .a-center-button,
+      .a-center-button-group {
+        font-size: $typography-text-size-4;
+        font-weight: $font-weight-2;
+        line-height: $typography-line-height-4;
+        color: $color-text-heading;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &.disabled {
+          cursor: default;
+        }
+        .ap-center-button-month{
+          margin-right: 4px;
+        }
+
+        .ap-center-button-year,
+        .ap-center-button-month {
+          padding: $spacing-3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: $height-5;
+          font-weight: $font-weight-2;
+          font-size: $typography-line-height-2;
+          line-height: $typography-line-height-4;
+          border-radius: $border-radius-2;
+          &:hover {
+            background-color: $color-background-hover;
+          }
+          &:focus-visible{
+            @include keyboard-outline;
+          }
+        }
+      }
+    }
+
+    .ap-nav-button-wrapper {
+      display: inline-flex;
+      .r-c-nav-prev-button  {
+        margin-right: $spacing-2;
+      }
+      .r-c-nav-next-button,
+      .r-c-nav-prev-button {
+        border-radius: $border-radius-2;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $typography-text-size-3;
+        color: $color-text-body;
+        padding: $spacing-3;
+        box-sizing: content-box;
+
+        &.disabled {
+          cursor: not-allowed;
+        }
+
+        &:hover {
+          background-color: $color-background-hover;
+        }
+      }
+    }
+
+
+
+    .a-nav-small-wrapper {
+      display: flex;
+    }
+  }
+
+  abbr {
+    text-decoration: none;
+    cursor: inherit;
+  }
+
+
+
+  .r-c-tile {
+    letter-spacing: $letter-spacing-1;
+
+    //the order of below does matter
+    //do not change!!
+    &:hover {
+      color: $color-text-body;
+    }
+
+    &.r-c-tile-key-nav {
+      //@include keyboard-outline;
+      z-index: 100;
+    }
+
+    &.r-c-tile-rangeBothEnds,
+    &.r-c-tile-rangeStart,
+    &.r-c-tile-rangeEnd,
+    &.r-c-tile-active {
+      background-color: $color-background-primary;
+      color: var(--color-text-tertiary);
+      font-weight: $font-weight-2;
+    }
+
+    &.r-c-tile-active {
+      background-color: $color-background-primary;
+      // &.r-c-single-day--excluded:disabled {
+      //   color: rgba($color-text-tertiary-rgb, $opacity-3);
+      // }
+
+      &.r-c-single-day--excluded:not(.r-c-single-day--neighboringMonth):disabled {
+        color: rgba($color-text-tertiary-rgb, $opacity-3);
+      }
+
+      
+
+
+    }
+
+
+    &:disabled {
+      cursor: not-allowed;
+      color: rgba($color-text-light-rgb, $opacity-6);
+      outline: none;
+    }
+
+    &:disabled:not(.r-c-single-day--neighboringMonth) {
+      color: rgba($color-text-light-rgb, $opacity-3);
+    }
+    &.r-c-tile-within.r-c-single-day--excluded:not(.r-c-single-day--neighboringMonth) {
+      color: rgba($color-text-tertiary-rgb, $opacity-3);
+    }
+
+    $beginRadius: rem(5px 0 0 5px);
+    $endRadius: rem(0 5px 5px 0);
+  }
+}
+
+.r-c-tile-week-number {
+  flex-grow: 1;
+}

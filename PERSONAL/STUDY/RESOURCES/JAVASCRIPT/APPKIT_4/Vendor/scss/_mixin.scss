@@ -1,0 +1,58 @@
+@mixin setColorToken ($tokens)  {
+  @each $name, $value in $tokens {
+    #{'--' + $name}: $value !important;
+    #{'--' + $name + '-rgb'}: hexToRGB($value) !important;
+  }
+}
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin setToken($tokens)  {
+  @each $name, $value in $tokens {
+    #{'--' + $name}: $value !important;
+  }
+}
+
+@mixin setModeToken($name, $tokens) {
+  [data-mode='#{$name}'],
+  [data-mode='#{$name}'] ::before,
+  [data-mode='#{$name}'] ::after {
+    @include setToken($tokens);
+  }
+}
+
+@mixin setMode($name, $tokens) {
+  [data-mode='#{$name}'],
+  [data-mode='#{$name}'] ::before,
+  [data-mode='#{$name}'] ::after {
+    @include setColorToken($tokens);
+  }
+}
+
+@mixin setTheme($name, $tokens) {
+  [data-theme='#{$name}'],
+  [data-theme='#{$name}'] ::before,
+  [data-theme='#{$name}'] ::after {
+    @include setColorToken($tokens);
+  }
+}
+
+@mixin setModeTheme($mode, $theme, $tokens) {
+  [data-mode='#{$mode}'][data-theme='#{$theme}'],
+  [data-theme='#{$theme}'] [data-mode='#{$mode}'] {
+    @include setColorToken($tokens);
+  }
+}
+
+@mixin setMultipleColors($value) {
+  background-color: $value;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+}

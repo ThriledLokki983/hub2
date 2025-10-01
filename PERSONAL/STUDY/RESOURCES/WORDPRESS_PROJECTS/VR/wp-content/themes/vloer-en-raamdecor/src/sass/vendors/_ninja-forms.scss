@@ -1,0 +1,70 @@
+@use '../abstract' as ab;
+
+.nf-before-form-content {
+	display: none;
+}
+
+.nf-form-content {
+	padding: 0px !important;
+	max-width: 90% !important;
+	margin-left: 0 !important;
+
+	@include ab.respond(960px) {
+		margin-inline: auto !important;
+	}
+
+	@include ab.respond(550px) {
+		max-width: 100% !important;
+	}
+}
+
+.submit-container {
+}
+
+input#nf-field-14 {
+	background: var(--primary-color);
+
+	@include ab.on-hover() {
+		color: var(--primary-color);
+		border: 1px solid var(--primary-color-hover);
+		background: var(--primary-color-hover);
+	}
+}
+
+.offerte {
+	max-width: 1000px;
+	margin-inline: auto;
+	margin-block-end: 2rem;
+
+	p {
+		max-width: 100%;
+	}
+}
+
+// woocommerce
+.woocommerce-product-gallery__trigger {
+	svg {
+		&::before,
+		&::after {
+			background: transparent !important;
+			border: none !important;
+		}
+	}
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+	bottom: 1em !important;
+	right: 1em !important;
+	top: auto !important;
+	width: 4rem !important;
+	height: 4rem !important;
+
+	&::before,
+	&::after {
+		content: none;
+	}
+}
+
+.details .zoomtoo-container:after {
+	content: url('./public/assets/icons/search-plus.svg') !important;
+}

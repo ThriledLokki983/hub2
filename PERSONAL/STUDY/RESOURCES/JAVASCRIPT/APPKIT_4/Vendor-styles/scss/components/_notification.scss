@@ -1,0 +1,701 @@
+@keyframes notificationMoveInCenter {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleY(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleY(1);
+  }
+}
+
+
+@keyframes notificationGlobalMoveIn {
+  0% {
+    transform: translateY(-100%);
+    position: absolute;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: 0;
+    position: absolute;
+  }
+}
+
+@keyframes notificationGlobalMoveOut {
+  0% {
+    transform: translateY(0%);
+    position: absolute;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-100%);
+    position: absolute;
+  }
+}
+
+
+
+
+@keyframes notificationMoveIn {
+  0% {
+    transform: translateY(100%);
+    position: absolute;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0)
+  }
+}
+
+@keyframes notificationMoveInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes notificationMoveInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+.fade-entered {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.99, 0.44, 0.44, 1.35);
+}
+
+
+
+@keyframes notificationMoveInLeftBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+    position: absolute;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    // position: absolute;
+  }
+}
+
+.fade {
+  width: 100%;
+}
+
+
+.ap-notifications-topHeader {
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  .fade-entered {
+
+    animation-name: notificationGlobalMoveIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .fade-exiting {
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-name: notificationGlobalMoveOut;
+  }
+
+
+}
+
+
+.ap-notifications-topLeft {
+  align-items: flex-start;
+  top: $spacing-6;
+  left: 0;
+
+  .fade-entered {
+    margin-left: auto;
+    animation-name: notificationMoveInLeft;
+  }
+
+  .fade-exiting {
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.64, 0.65, 0.57, 1.13);
+    animation-name: notificationMoveOut;
+  }
+}
+
+
+.ap-notifications-topRight {
+  align-items: flex-end;
+  top: $spacing-6;
+  right: 0;
+
+  .fade-entered {
+    margin-left: auto;
+    animation-name: notificationMoveInRight;
+  }
+
+  .fade-exiting {
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.64, 0.65, 0.57, 1.13);
+    animation-name: notificationMoveOut;
+  }
+}
+
+
+.ap-notifications-topCenter {
+  top: $spacing-6;
+  left: $border-radius-7;
+  transform: translateX(-50%);
+
+  .fade-entered {
+    animation-name: notificationMoveInCenter;
+  }
+
+  .fade-exiting {
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.64, 0.65, 0.57, 1.13);
+    animation-name: notificationMoveOut;
+  }
+}
+
+.ap-notifications-center {
+  top: $border-radius-7;
+  left: $border-radius-7;
+  transform: translateX(-50%, -50%);
+
+
+  .fade-entered {
+    animation-name: notificationMoveInCenter;
+  }
+
+
+  .fade-exiting {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.64, 0.65, 0.57, 1.13);
+    animation-name: notificationMoveOut;
+  }
+
+
+}
+
+
+
+@keyframes notificationMoveOutBottom {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(100%);
+
+  }
+}
+
+
+@keyframes notificationMoveOut {
+  0% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleY(1);
+    max-height: 100px;
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleY(0.8);
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.ap-notifications {
+  position: fixed;
+  z-index: 1000;
+
+  &.ap-notifications-static {
+    position: relative;
+    z-index: $z-index-99;
+  }
+}
+
+
+// .fade-entered {
+//   animation-duration: 0.5s;
+//   animation-timing-function: cubic-bezier(0.7, -0.7, 0.4, 1.4);
+// }
+
+
+
+
+.ap-notifications-bottomLeft,
+.ap-notifications-bottomCenter,
+.ap-notifications-bottomRight {
+  .fade-entered {
+    animation-name: notificationMoveIn;
+  }
+
+  .fade-exiting {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.7, -0.8, 0.4, 1.4);
+  }
+
+  .fade-exiting {
+
+    animation-name: notificationMoveOutBottom;
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: translateY(0)
+  }
+
+  80% {
+    transform: translateY(15%)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    position: absolute;
+    transform: translate3d(0, rem(0px), 0)
+  }
+
+  60% {
+    opacity: 1;
+    position: absolute;
+    transform: translate3d(0, rem(25px), 0)
+  }
+
+  // 75% {
+  //     transform: translate3d(0, rem(-10px), 0)
+  // }
+
+  90% {
+    position: absolute;
+    transform: translate3d(0, rem(5px), 0)
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+  }
+}
+
+
+.ap-notifications-bottomLeft {
+  bottom: $spacing-6;
+  left: 0;
+}
+
+
+
+.ap-notifications-bottomRight {
+  bottom: $spacing-6;
+  right: 0;
+}
+
+.ap-notifications-topCenter {
+  top: $spacing-6;
+}
+
+.ap-notifications-bottomCenter {
+  bottom: $spacing-6;
+  left: $border-radius-7;
+  transform: translateX(-50%);
+}
+
+.ap-notifications-center {
+  left: $border-radius-7;
+  top: $border-radius-7;
+  min-width: 20vw;
+  transform: translate(-50%, -50%);
+}
+
+.ap-notifications-topHeader {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+_::-webkit-full-page-media,
+_:future,
+.ap-notification .a-circle {
+  stroke-width: 12px !important;
+  stroke-dasharray: 38px !important;
+}
+
+// _::-webkit-full-page-media, _:future, .ap-notifications-topHeader .ap-notification .a-countdown-wrapper .a-circle, 
+// .ap-notifications-static-topHeader .ap-notification .a-countdown-wrapper .a-circle {
+//   stroke-width: 12px !important;
+//     stroke-dasharray: 38px !important;
+// }
+
+
+.ap-notification {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: rem(360px);
+  max-width: calc(100vw - 24px * 2);
+  max-height: rem(720px);
+  margin: $spacing-10;
+  padding: $spacing-4 $spacing-4 $spacing-4 $spacing-5;
+  border-radius: $border-radius-3;
+  box-shadow: $box-shadow-3;
+  background-color: $color-background-container;
+  // overflow-y: auto;
+  overflow-y: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
+
+  &.ap-notice {
+    background-color: $color-background-container-alt;
+    box-shadow: none;
+
+    .ap-notification-icon-close:hover {
+      background-color: $color-background-hover-selected;
+    }
+  }
+
+  &.has-icon {
+    padding: $spacing-4;
+  }
+
+  &-warning {
+    .ap-notification-hyperlink {
+      color: $color-background-tertiary;
+    }
+  }
+
+  .ap-notification-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: $color-text-heading;
+    letter-spacing: $typography-letter-spacing-1;
+    margin-right: $spacing-36;
+    width: calc(100% - 32px);
+    word-wrap: break-word;
+  }
+
+  .ap-notification-message {
+    font-size: $typography-text-size-3;
+    font-weight: $font-weight-2;
+    line-height: $typography-line-height-3;
+  }
+
+  .ap-notification-description {
+    line-height: $typography-line-height-3;
+    color: $color-text-body;
+    outline: none;
+  }
+
+  .ap-notification-hyperlink {
+    color: $color-text-primary;
+    line-height: $typography-line-height-4;
+    // font-weight: $font-weight-2;
+    cursor: pointer;
+  }
+
+  .height {
+    min-height: $spacing-7;
+  }
+}
+
+
+
+.ap-notifications-topHeader,
+.ap-notifications-static-topHeader {
+
+  .ap-notification {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: $height-7;
+    max-width: 100%;
+    max-height: $height-7;
+    margin: rem(0px);
+    border-radius: 0;
+    box-shadow: none;
+    padding: $spacing-4 $spacing-2;
+    background-color: $neutral-20;
+
+    .ap-notification-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin-right: rem(0px);
+      width: 100%;
+      font-size: $typography-text-size-3;
+      line-height: $height-3;
+      letter-spacing: $letter-spacing-1;
+      text-align: center;
+      color: $neutral-01;
+
+      .ap-notification-message {
+        font-weight: normal;
+      }
+
+      .ap-notification-description {
+        color: $neutral-01;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+      }
+
+      .ap-notification-toggle {
+        margin-left: $spacing-1;
+
+        .Appkit4-icon {
+          transform: rotate(0);
+          transition: transform $transition-0;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &.roate {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+    }
+
+    .ap-notification-icon-close:hover {
+      background-color: transparent;
+
+      &::after {
+        @include setMultipleColors(rgba(0, 0, 0, $opacity-3));
+      }
+    }
+
+    .height {
+      color: $neutral-01;
+    }
+
+    &.success {
+      background-color: $color-background-success;
+    }
+
+    &.warning {
+      background-color: $color-background-warning;
+
+      .ap-notification-content {
+        color: $neutral-17;
+
+        .ap-notification-description {
+          color: $neutral-17;
+        }
+      }
+
+      .height {
+        font-weight: normal;
+        color: $neutral-17;
+      }
+
+      .a-countdown-wrapper {
+        .a-circle {
+          stroke: $neutral-17;
+        }
+      }
+    }
+
+    &.error {
+      background-color: $color-background-danger;
+    }
+
+    .a-countdown-wrapper {
+      svg {
+        transform: rotate(-90deg);
+      }
+
+      &.a-circle-hide {
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      &.a-circle-show {
+        opacity: 1;
+        z-index: 999;
+      }
+
+      .a-circle {
+        fill: transparent;
+        stroke: $color-background-secondary;
+        stroke-width: rem(12px);
+        stroke-dasharray: rem(38px);
+        stroke-dashoffset: rem(38px);
+      }
+    }
+  }
+
+
+}
+
+.ap-notifications-static-topHeader {
+
+  position: relative;
+  z-index: 10;
+
+  .ap-notification {
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.ap-notification-icon {
+  margin-right: $spacing-2;
+
+  &.icon-warning-fill {
+    color: $color-text-warning;
+  }
+
+  &.icon-success-fill {
+    color: $color-text-success;
+  }
+
+  &.icon-error-fill {
+    color: $color-text-error;
+
+    &::before {
+      font-size: $typography-text-size-3;
+    }
+  }
+}
+
+.ap-notification-icon-close {
+  position: absolute;
+  top: $spacing-2;
+  right: $spacing-2;
+  padding: $spacing-3;
+  background: transparent;
+  color: $color-text-heading;
+
+  &:hover {
+    cursor: pointer;
+    border-radius: $border-2;
+    background-color: $color-background-hover;
+  }
+}
+
+
+.Appkit4-icon::before {
+  font-weight: $font-weight-2;
+}
+
+
+
+.ap-notification-content-dialog {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  opacity: 0;
+  max-height: rem(0px);
+  overflow: hidden;
+  // display: none;
+  transition: all $transition-0 linear;
+  visibility: hidden;
+
+  &.open {
+    opacity: $opacity-7;
+    // display: block;
+    visibility: visible;
+    transform-origin: top center;
+    max-height: rem(359px);
+    border: solid $border-1 $color-background-border;
+    background-color: $neutral-01;
+    overflow: visible;
+    animation: bounceInDown $transition-1 ease-in backwards;
+  }
+
+  .ap-padding-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-6 0;
+  }
+
+  .ap-notification-image-box {
+    width: rem(284px);
+    height: rem(191px);
+    border-radius: $border-2;
+    background-color: $neutral-02;
+  }
+
+  .ap-notification-text-box {
+    margin: $spacing-6 0;
+    width: rem(417px);
+    height: $height-7;
+    font-size: $typography-text-size-3;
+    line-height: $typography-line-height-3;
+    letter-spacing: $letter-spacing-1;
+    text-align: center;
+    color: $neutral-14;
+  }
+
+  .ap-notification-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .ap-button-secondary.leftbtn {
+      margin-right: $spacing-3;
+    }
+  }
+}
+
+.search-result {
+  border: 0;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: rem(1px);
+  margin-bottom: rem(-1px);
+  margin-right: rem(-1px);
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: rem(1px);
+}

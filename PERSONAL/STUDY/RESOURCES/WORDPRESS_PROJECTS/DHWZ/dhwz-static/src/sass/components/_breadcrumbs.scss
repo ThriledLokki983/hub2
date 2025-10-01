@@ -1,0 +1,63 @@
+@use '../abstract/' as ab;
+
+.breadcrumbs {
+	@include ab.container;
+	margin-block-start: 2rem !important;
+	padding-inline-start: 3.5rem;
+
+	@include ab.respond(960px) {
+		padding-inline-start: 0rem;
+	}
+
+	&__lists {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&--item {
+			list-style: none;
+
+			a {
+				text-decoration: underline;
+				text-transform: lowercase;
+				font-size: var(--nav-font-size);
+				color: var(--primary-color);
+
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+				&:not(:last-child) {
+					margin-right: 0.5rem;
+				}
+			}
+
+			span {
+				font-size: 2rem;
+			}
+
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+
+			&:last-child {
+				a {
+					text-decoration: none;
+					color: var(--secondary-color);
+					text-transform: capitalize;
+					transition: text-decoration 0.4s ease-in-out;
+
+					&::after {
+						content: '';
+					}
+				}
+
+				&:hover {
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

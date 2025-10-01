@@ -1,0 +1,99 @@
+body:not(.home) {
+  .breadcrumbs-container {
+    // Mobile only
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-inline-start: 25rem;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-right: 29px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    li {
+      list-style-type: none;
+      margin-right: 0.5rem;
+
+      svg {
+        stroke: var(--primary-color);
+        stroke-width: 3rem;
+        height: 0.8rem;
+        width: 1rem;
+      }
+
+      a {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        cursor: pointer;
+        font-weight: var(--font-regular);
+        text-transform: uppercase;
+      }
+
+      &:last-of-type a {
+        font-weight: var(--font-bold);
+      }
+    }
+
+    .number-of-products {
+      font-size: 15px;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      font-weight: var(--font-bold);
+    }
+
+    .number-of-products {
+      width: 124px;
+    }
+
+    @media (min-width: 960px) {
+      background: var(--primary-color-light);
+      cursor: default;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      inset: auto 0 auto 0;
+      padding-block: 2rem;
+      position: absolute;
+      z-index: 1;
+
+      li {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        list-style-type: none;
+
+        svg {
+          stroke: var(--primary-color);
+          stroke-width: 3rem;
+          height: 0.8rem;
+          margin-right: 0.5rem;
+          width: 1rem;
+        }
+
+        a {
+          color: var(--primary-color);
+          cursor: pointer;
+          font-size: 1.6rem;
+          font-weight: var(--font-regular);
+          text-transform: uppercase;
+        }
+
+        &:last-of-type a {
+          font-weight: var(--font-bold);
+        }
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      padding-inline-start: 15rem;
+      .number-of-products {
+        display: none;
+      }
+    }
+  }
+}

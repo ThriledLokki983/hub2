@@ -1,0 +1,159 @@
+@use '../abstract' as ab;
+
+//Polyfill for container queries
+@supports not (container-type: inline-size) {
+	.inspiration__scroller,
+	.collection__items--item,
+	.loader {
+		display: flex;
+	}
+}
+
+@keyframes show-loader {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+// INSPIRATION:
+@container inspiration_container (max-width: 550px) {
+	.inspiration {
+		.section--title {
+			display: none;
+		}
+	}
+}
+
+@container inspiration (max-width: 550px) {
+	.inspiration__scroller--item {
+		figure {
+			height: auto;
+		}
+		figure img {
+			aspect-ratio: 8/7.5;
+			opacity: 0.9;
+		}
+		figure figcaption {
+			background-color: #fff;
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+}
+
+.collection__items--item {
+}
+
+@container collection (max-width: 550px) {
+	.collection__items--item-link-info {
+		.product-card-title-secondary {
+			span {
+				font-size: 1cqb;
+			}
+			h2 {
+				font-size: 2cqb;
+			}
+		}
+
+		.product-text {
+			font-size: 1cqb;
+		}
+	}
+}
+
+@container collection_lists_item (max-width: 550px) {
+	picture.collection__lists-item-link--img .hero__big--overlay {
+		padding: 1.5rem !important;
+		top: 2rem !important;
+
+		span {
+			font-size: 1cqb !important;
+		}
+
+		h1 {
+			font-size: 2.1cqb !important;
+
+			span {
+				font-size: 2.1cqb !important;
+			}
+		}
+	}
+}
+
+// REVIEWS
+@container container__full (max-width: 550px) {
+	.main__reviews {
+		margin-block-end: 0;
+	}
+}
+
+// HERO
+@container hero_container (max-width: 960px) {
+	.hero__lists--item__big--overlay-heading {
+		font-size: 2cqb;
+	}
+}
+
+@container hero_container (max-width: 500px) {
+	.hero__lists--item__big--overlay-heading {
+		font-size: 1.5cqb;
+	}
+}
+
+@container hero_container (max-width: 550px) {
+	.hero {
+		// article {
+		// 	flex: none;
+		// }
+
+		.hero__lists--item__big {
+		}
+
+		.hero__lists--item__small {
+			display: inline-block;
+		}
+	}
+}
+
+// CATEGORIES
+@container categories_container (max-width: 550px) {
+	.categories__header--container-left .hero__big--img > .hero__big--overlay {
+		top: 5rem;
+		padding: 1.5rem !important;
+
+		span {
+			font-size: 1cqb;
+		}
+
+		h1 {
+			font-size: 2.1cqb;
+		}
+	}
+}
+
+// Container
+@container container__small (max-width: 550px) {
+	p:not(.small-text) {
+		padding-inline: 1rem;
+	}
+}
+
+// category hero
+@container category_hero (max-width: 550px) {
+	.floor__type--right {
+		gap: 0rem;
+		margin-block-end: 2rem;
+	}
+}
+
+// results
+@container results (max-width: 600px) {
+	.modulo__select > .select__results > .collection__items {
+		@include ab.grid-layout(2);
+	}
+}

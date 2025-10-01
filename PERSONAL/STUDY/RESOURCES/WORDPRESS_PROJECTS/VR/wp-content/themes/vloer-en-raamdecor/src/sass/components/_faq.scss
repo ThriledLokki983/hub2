@@ -1,0 +1,106 @@
+@use '../abstract' as ab;
+
+.faq {
+	background-color: var(--secondary-color-light);
+
+	&__content {
+		@include ab.default-layout;
+		@include ab.flex-column-content();
+		place-items: center;
+		margin-block: var(--section-space-l);
+
+		h2 {
+			color: var(--secondary-color);
+			margin-block-end: 5rem;
+
+			@include ab.respond(425px) {
+				margin-block-end: 2rem;
+			}
+		}
+
+		&--list {
+			width: 100%;
+			margin-block-end: var(--section-space-l);
+
+			&-item {
+				@include ab.flex-start-content;
+				align-items: center;
+				padding: 1.5rem 0.5rem;
+				border-bottom: 1px solid var(--faq-border-color);
+
+				&:last-child {
+					border-bottom: 1px solid var(--faq-border-color);
+				}
+
+				&:first-child {
+					border-top: 1px solid var(--faq-border-color);
+				}
+
+				details {
+					p {
+						padding: 0.5rem 0 0 2.5rem;
+						font-size: 1.5rem;
+						max-width: 75%;
+						color: var(--secondary-color);
+						transition: all 0.3s ease-in-out;
+
+						@include ab.respond(600px) {
+							max-width: 90%;
+						}
+					}
+				}
+
+				details > summary {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+					list-style: none;
+					cursor: pointer;
+
+					font-family: var(--font-secondary);
+					font-size: 1.8rem;
+					font-weight: var(--font-semi-bold);
+					color: var(--secondary-color);
+
+					svg {
+						width: 1.3rem;
+						height: 1.3rem;
+						stroke-width: 7rem;
+						stroke-linecap: round;
+						stroke-linejoin: round;
+						fill: var(--secondary-color);
+						stroke: var(--secondary-color);
+						transition: transform 0.2s ease-out;
+					}
+
+					@include ab.respond(750px) {
+						font-size: var(--min-font-size);
+					}
+				}
+			}
+		}
+
+		@include ab.respond(960px) {
+			width: 95%;
+		}
+	}
+}
+
+// SVG animation
+.faq__item[open] > summary > svg {
+	transform: rotate(90deg);
+}
+
+.faq__item:not([open]) > summary > svg,
+.faq__item[data-expanded='false'] > summary > svg {
+	transform: rotate(0deg);
+}
+
+details:focus,
+summary:focus {
+	outline: none;
+}
+
+.faq__content .section--title {
+	align-self: center;
+}

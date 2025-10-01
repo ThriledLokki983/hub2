@@ -1,0 +1,358 @@
+.ap-fileupload {
+    display: inline-flex;
+    width: 100%;
+    user-select: none;
+
+    &.ap-fileupload-modal {
+        background-color: $color-background-container;
+        box-shadow: $box-shadow-3;
+        border-radius: $border-radius-3;
+        padding: $spacing-4 $spacing-4 $spacing-6 $spacing-6;
+
+    }
+
+    .ap-fileupload-wrapper {
+        position: relative;
+        width: 100%;
+        letter-spacing: $typography-letter-spacing-1;
+
+        .ap-fileupload-title {
+            align-items: center;
+            color: $color-text-heading;
+            display: flex;
+            font-weight: $font-weight-2;
+            justify-content: space-between;
+            line-height: $typography-line-height-3;
+            letter-spacing: $letter-spacing-1;
+            word-break: break-word;
+
+            &-close {
+                .Appkit4-icon {
+                    color: $color-text-heading;
+                }
+            }
+
+            &.title-inline {
+                font-size: rem(16.5px);
+            }
+
+            &.title-modal {
+                font-size: $typography-text-size-4;
+                margin-bottom: $spacing-4;
+            }
+
+            a {
+                cursor: pointer;
+            }
+
+            &-close {
+                background-color: transparent;
+                cursor: pointer;
+                width: $width-6;
+                height: $height-5;
+                padding: $spacing-3;
+                border-radius: $border-radius-2;
+                font-size: $typography-text-size-3;
+
+                &:hover {
+                    background-color: $color-background-hover;
+                }
+            }
+        }
+
+        .ap-fileupload-instruction {
+            font-size: $typography-text-size-3;
+            font-weight: normal;
+            line-height: $typography-line-height-3;
+            letter-spacing: $letter-spacing-1;
+            color: $color-text-body;
+            word-break: break-word;
+
+            &.instruction-inline {
+                margin-bottom: rem(14px);
+            }
+
+            &.instruction-modal {
+                margin-bottom: $spacing-4;
+                margin-right: $spacing-3;
+            }
+
+            &.instruction-modal-button {
+                color: $color-text-body;
+                margin-bottom: $spacing-6;
+                margin-right: $spacing-3;
+            }
+        }
+
+        .ap-fileupload-content-wrapper {
+            height: $height-112;
+            position: relative;
+            width: calc(100% - 8px);
+
+            &.content-inline {
+                height: $height-11;
+                width: 100%;
+            }
+
+            &.content-bottom {
+                margin-bottom: $spacing-6;
+            }
+
+            .ap-fileupload-content-shadow {
+                background-color: transparent;
+                border-radius: $border-radius-2;
+                height: calc(100% + 16px);
+                left: calc(-1 * $spacing-3);
+                padding: $spacing-3;
+                position: absolute;
+                top: calc(-1 * $spacing-3);
+                width: calc(100% + 16px);
+
+                &.file-over {
+                    background-color: $neutral-02;
+                }
+            }
+
+            .ap-fileupload-content {
+                background-color: transparent;
+                border: dashed rem(2px) $color-text-body;
+                border-radius: $border-radius-2;
+                display: flex;
+                height: 100%;
+                padding: $spacing-3;
+                position: absolute;
+                width: 100%;
+
+                .ap-fileupload-drop-btn {
+                    width: 100%;
+                    font-size: $typography-text-size-3;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    .ap-fileupload-drop-span {
+                        font-size: $typography-text-size-3;
+                        line-height: $typography-line-height-3;
+                        letter-spacing: $letter-spacing-1;
+                        text-align: center;
+                        color: $color-text-body;
+                    }
+
+                    .ap-fileupload-drop-browse-span {
+                        color: $color-text-link-primary;
+                        font-weight: $font-weight-2;
+                    }
+                }
+            }
+        }
+
+        .ap-fileupload-fileLists {
+            margin-bottom: $spacing-6;
+            transition: all $transition-1 ease-in-out;
+
+            .ap-fileupload-fileList {
+                &:not(:last-child) {
+                    margin-bottom: $spacing-2;
+                }
+
+                .ap-fileupload-loaded {
+                    align-items: center;
+                    background-color: transparent;
+                    border-radius: $border-radius-2;
+                    display: flex;
+                    height: rem(48px);
+                    justify-content: space-between;
+                    padding-left: $spacing-3;
+                    position: relative;
+
+                    &.modal-loaded {
+                        margin-left: calc(-1 * $spacing-3);
+                    }
+
+                    &:hover {
+                        background-color: $color-background-container-alt;
+
+                        .icon-file-upload-fill,
+                        .ap-fileupload-fileName,
+                        .ap-fileupload-fileSize,
+                        .icon-close-outline {
+                            color: $neutral-20;
+                        }
+                    }
+
+                    .doc-text {
+                        fill: $color-text-heading;
+                    }
+
+                    .fail-color {
+                        fill: $states-error-05 !important;
+                    }
+
+                    .upload-fail {
+                        color: $states-error-05 !important;
+                    }
+
+                    .ap-fileupload-loaded-close {
+                        margin-right: $spacing-2;
+                        background-color: transparent;
+                        cursor: pointer;
+                        width: $width-6;
+                        height: $height-5;
+                        padding: $spacing-3;
+                        border-radius: $border-radius-2;
+                        font-size: $typography-text-size-3;
+
+                        &:hover {
+                            background-color: $color-background-hover;
+                        }
+
+                        .icon-close-outline {
+                            color: $color-text-heading;
+                        }
+                    }
+
+                    .ap-fileupload-fileSpan {
+                        width: rem(370px);
+                        display: flex;
+                        align-items: center;
+                        margin-left: $spacing-2;
+                        margin-right: auto;
+
+                        .ap-fileupload-fileName {
+                            font-size: $typography-text-size-3;
+                            font-weight: normal;
+                            line-height: $typography-line-height-3;
+                            letter-spacing: $letter-spacing-1;
+                            color: $color-text-heading;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        .ap-fileupload-fileSize {
+                            font-size: $typography-text-size-3;
+                            margin-left: $spacing-3;
+                            line-height: $typography-line-height-3;
+                            letter-spacing: $letter-spacing-1;
+                            color: $color-text-body;
+                        }
+                    }
+
+                    // .icon-wrapper .Appkit4-icon {
+                    //     cursor: pointer;
+                    // }
+
+                    .icon-file-upload-fill {
+                        color: $color-text-heading;
+                    }
+
+                    .ap-fileupload-percentage {
+                        margin-right: $spacing-3;
+                        font-size: $typography-text-size-3;
+                        font-weight: normal;
+                        line-height: $typography-line-height-3;
+                        letter-spacing: $letter-spacing-1;
+                        color: $neutral-14;
+                    }
+
+                    .ap-fileupload-progressbar {
+                        width: calc(100% - 8px);
+                        height: rem(4px);
+                        margin: $spacing-2 0 0;
+                        border-radius: $border-radius-1;
+                        background-color: $primary-blue-01;
+                        position: absolute;
+                        bottom: $spacing-2;
+                        left: $spacing-2;
+
+                        &.upload-fail-progress {
+                            background-color: #f3d4d1 !important;
+                        }
+
+                        &-inside {
+                            height: rem(4px);
+                            border-radius: $border-radius-1;
+                            background-color: $primary-blue-04;
+
+                            &.upload-fail-progress-inside {
+                                background-color: $states-error-05 !important;
+                            }
+                        }
+                    }
+
+                    .ap-fileupload-success {
+                        width: $width-6;
+                        height: $height-5;
+                        padding: $spacing-3;
+                        border-radius: $border-radius-2;
+
+                        .Appkit4-icon {
+                            color: $states-success-06;
+                        }
+                    }
+                }
+
+                .ap-fileupload-error-message {
+                    margin-top: $spacing-3;
+                    margin-bottom: $spacing-4;
+                    font-size: $typography-text-size-1;
+                    line-height: $typography-line-height-1;
+                    letter-spacing: $letter-spacing-1;
+                    text-align: center;
+                    color: $states-error-05;
+                    word-break: break-word;
+
+                    span {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .ap-fileupload-footer {
+            display: flex;
+            justify-content: space-between;
+            overflow: auto;
+            padding: $spacing-2;
+            margin: calc(-1 * $spacing-2);
+
+            &-delete-attachment {
+                align-items: flex-end;
+                display: flex;
+                flex-shrink: 0;
+                margin-right: $spacing-4;
+
+                span {
+                    display: inline-block;
+                    font-size: $typography-text-size-3;
+                    font-weight: $font-weight-2;
+                    line-height: $typography-line-height-3;
+                    letter-spacing: $letter-spacing-1;
+                    color: $color-text-primary;
+                    cursor: pointer;
+                }
+            }
+
+            .ap-fileupload-footer-btn {
+                margin-right: $spacing-3;
+            }
+        }
+
+    }
+
+    input[type="file"],
+    input[type="file"]::-webkit-file-upload-button {
+        cursor: pointer;
+        opacity: 0;
+        visibility: visible;
+        width: 0%;
+        position: absolute;
+        height: 0%;
+        left: 0;
+    }
+
+
+    input[type="file"] {
+        opacity: 0;
+    }
+}

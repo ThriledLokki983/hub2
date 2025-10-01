@@ -1,0 +1,7 @@
+node_modules
+svgs/
+verd_psd_files/
+.vscode/
+# src/
+/.idea
+.DS_Store

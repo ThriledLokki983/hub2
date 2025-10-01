@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../../assets/img/favicon.png" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<script defer type="module" src="js/script.js"></script>
+		<title>modulo-select</title>
+	</head>
+	<body class="page-categories">
+		<header class="header size">
+			<section class="top" aria-labelledby="top-search-bar">
+				<form
+					class="top__search"
+					role="search"
+					method="get"
+					id="searchform"
+				>
+					<div class="top__search--input">
+						<span>aangesloten bij</span>
+						<picture>
+							<source
+								media="(max-width: 767px)"
+								srcset="assets/img/top.png"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/img/top.png"
+							/>
+							<img
+								src="assets/img/top.png"
+								alt="logo"
+								id="logo"
+								class="m-t-08"
+								loading="lazy"
+							/>
+						</picture>
+						<div class="top__search--input-box">
+							<svg class="top__search--input-box-icon icon">
+								<use
+									xlink:href="assets/icons/sprite.svg#icon-search"
+								></use>
+							</svg>
+							<input
+								type="text"
+								class="search-field"
+								placeholder="Zoeken in onze collectie"
+								id="s"
+							/>
+						</div>
+					</div>
+					<div class="button-box">
+						<button class="btn secondary"> contact</button>
+						<button class="btn green"> offerte</button>
+					</div>
+				</form>
+			</section>
+			<section class="header-reviews">
+				<div class="header-reviews__icon-box">
+					<svg class="header-reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header-reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header-reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header-reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header-reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+				</div>
+				<div class="header-reviews__text">
+					<span>1772 beoordelingen</span>
+				</div>
+			</section>
+			<section class="nav m-t--7">
+				<div class="logo--box">
+					<a href="/" class="nav__logo-link">
+						<div class="nav__logo">
+							<picture class="logo">
+								<source
+									media="(max-width: 767px)"
+									srcset="assets/img/vloerenraam-logo.png"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="assets/img/vloerenraam-logo.png"
+								/>
+								<img
+									src="assets/img/vloerenraam-logo.png"
+									alt="logo"
+									id="logo"
+								/>
+							</picture>
+						</div>
+					</a>
+					<div class="mob-menu">
+						<input
+							class="menu__btn"
+							type="checkbox"
+							id="menu__btn"
+						/>
+						<label class="menu__icon" htmlFor="menu__btn">
+							<span class="navicon"></span>
+						</label>
+					</div>
+				</div>
+				<nav
+					class="nav__container mobile--menu"
+					aria-labelledby="primary-navigation"
+				>
+					<ul class="nav__list menu">
+						<li class="nav__list--item">
+							<a
+								href="#"
+								class="nav__list--item-link"
+								data-link="vloeren"
+								>Vloeren</a
+							>
+							<ul class="sub__menu">
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>alle pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Moduleo pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>flooriginal pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>ambiant pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>therdex pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Alle vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span> Vloerverwarming</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Eiken vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Laminaat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Marmoleum</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Novilon</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Tapijt</span>
+									</a></li
+								>
+								<li class="sub__menu--item-last">
+									<span>AANGESLOTEN BIJ</span>
+									<img
+										src="assets/img/navigation-photo.png"
+										alt=""
+									/>
+									<span>BEKEND VAN TV</span>
+								</li>
+							</ul>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Home
+									</a></li
+								>
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										vloeren
+									</a></li
+								>
+							</ul>
+						</li>
+						<li class="nav__list--item">
+							<a
+								href="#"
+								class="nav__list--item-link"
+								data-link="vloerverwarming"
+							>
+								<span>Vloerverwarming</span>
+							</a>
+							<ul class="sub__menu">
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>alle pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Moduleo pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>flooriginal pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>ambiant pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>therdex pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Alle vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span> Vloerverwarming</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Eiken vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Laminaat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Marmoleum</span>
+									</a></li
+								>
+
+								<li class="sub__menu--item-last">
+									<span>AANGESLOTEN BIJ</span>
+									<img
+										src="assets/img/navigation-photo.png"
+										alt=""
+									/>
+									<span>BEKEND VAN TV</span>
+								</li>
+							</ul>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Home
+									</a></li
+								>
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Vloerverwarming
+									</a></li
+								>
+							</ul>
+						</li>
+						<li class="nav__list--item">
+							<a
+								href="#"
+								class="nav__list--item-link"
+								data-link="traprenovatie"
+							>
+								<span>Traprenovatie</span>
+							</a>
+							<ul class="sub__menu">
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>alle pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Moduleo pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>flooriginal pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>ambiant pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>therdex pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Alle vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span> Vloerverwarming</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Eiken vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item-last">
+									<span>AANGESLOTEN BIJ</span>
+									<img
+										src="assets/img/navigation-photo.png"
+										alt=""
+									/>
+									<span>BEKEND VAN TV</span>
+								</li>
+							</ul>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Home
+									</a></li
+								>
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Traprenovatie
+									</a></li
+								>
+							</ul>
+						</li>
+						<li class="nav__list--item">
+							<a
+								href="#"
+								class="nav__list--item-link"
+								data-link="raamdecoratie"
+							>
+								<span>Raamdecoratie</span>
+							</a>
+							<ul class="sub__menu">
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>alle pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Moduleo pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>flooriginal pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>ambiant pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>therdex pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Alle vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span> Vloerverwarming</span>
+									</a></li
+								>
+								<li class="sub__menu--item-last">
+									<span>AANGESLOTEN BIJ</span>
+									<img
+										src="assets/img/navigation-photo.png"
+										alt=""
+									/>
+									<span>BEKEND VAN TV</span>
+								</li>
+							</ul>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Home
+									</a></li
+								>
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Raamdecoratie
+									</a></li
+								>
+							</ul>
+						</li>
+						<li class="nav__list--item">
+							<a
+								href="#"
+								class="nav__list--item-link"
+								data-link="kasten"
+							>
+								<span>Kasten</span>
+							</a>
+							<ul class="sub__menu">
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>alle pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Moduleo pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>flooriginal pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>ambiant pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>therdex pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Alle vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Alle vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item-last">
+									<span>AANGESLOTEN BIJ</span>
+									<img
+										src="assets/img/navigation-photo.png"
+										alt=""
+									/>
+									<span>BEKEND VAN TV</span>
+								</li>
+							</ul>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Home
+									</a></li
+								>
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Kasten
+									</a></li
+								>
+							</ul>
+						</li>
+						<li class="nav__list--item">
+							<a
+								href="#"
+								class="nav__list--item-link"
+								data-link="wandafwerking"
+							>
+								<span>Wandafwerking</span>
+							</a>
+							<ul class="sub__menu">
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>alle pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Moduleo pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>flooriginal pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>ambiant pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>therdex pvc vloeren</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>pvc visgraat</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>PVC vloer betonlook</span>
+									</a></li
+								>
+								<li class="sub__menu--item"
+									><a href="#" class="sub__menu--item-link">
+										<span>Click PVC</span>
+									</a></li
+								>
+								<li class="sub__menu--item-last">
+									<span>AANGESLOTEN BIJ</span>
+									<img
+										src="assets/img/navigation-photo.png"
+										alt=""
+									/>
+									<span>BEKEND VAN TV</span>
+								</li>
+							</ul>
+							<ul class="breadcrumbs">
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Home
+									</a></li
+								>
+								<li class="breadcrumbs--item">
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+										></use>
+									</svg>
+									<a href="#" class="breadcrumbs--item-link">
+										Wandafwerking
+									</a></li
+								>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
+		</header>
+
+		<main class="main">
+			<section class="categories__header">
+				<div class="filter-box">
+					<svg class="icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-filter"
+						></use>
+					</svg>
+					<span>filter</span>
+				</div>
+				<div class="categories__header--container">
+					<div class="categories__header--container-left">
+						<div class="categories__header--container-left-text">
+							<picture class="hero__big--img">
+								<source
+									media="(max-width: 767px)"
+									srcset="assets/img/modulo-main.png"
+								/>
+								<source
+									media="(min-width: 768px)"
+									srcset="assets/img/modulo-main.png"
+								/>
+								<img
+									src="assets/img/modulo-main.png"
+									alt="hero"
+									loading="lazy"
+								/>
+								<div class="hero__big--overlay">
+									<span>MODULEO SELECT VLOEREN</span>
+									<h1>TOP KWALITEIT VLOEREN</h1>
+								</div>
+							</picture>
+						</div>
+					</div>
+					<div class="categories__header--container-right">
+						<div class="product-card-title-secondary">
+							<span class="product-text"
+								>MODULEO SELECT VLOEREN</span
+							>
+							<h2 class="product-text">TOP KWALITEIT VLOEREN</h2>
+						</div>
+						<div class="categories__header--container-right-text">
+							<p class="paragraph">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Aliquam vitae tellus dapibus,
+								hendrerit ante in, tempus purus. Curabitur
+								vulputate mi urna, et elementum ante viverra ut.
+								Sed nisi elit, sodales dapibus pellentesque sed,
+								elementum id mauris. Donec tempus tempor nisl.
+								Curabitur feugiat neque sit amet vulputate
+								hendrerit.
+							</p>
+						</div>
+						<button class="btn black">BeKIJK onze collectie</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="modulo__select">
+				<aside
+					class="select__options hide mob-select-opt"
+					data-expanded="false"
+				>
+					<div class="product-card-title-secondary">
+						<span class="product-text">BINNEN WELKE CATEGORIE</span>
+						<h2 class="product-text">WILT U ZOEKEN?</h2>
+					</div>
+
+					<div class="form__group">
+						<label for="moduleo-search"
+							>Zoeken in onze collectie</label
+						>
+						<input
+							type="text"
+							id="moduleo-search"
+							class="moduleo-search input"
+							placeholder="productnaam, kleur, sort, etc..."
+						/>
+					</div>
+					<!-- We will display the typed value in here with JS -->
+					<ul class="form__group--results"></ul>
+					<!-- ----------------------------------------------- -->
+					<ul class="lists">
+						<li class="lists-item" data-state="open">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Prijs</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<div
+									class="wrap"
+									role="group"
+									aria-labelledby="multi-lbl"
+									style="
+										--a: 23;
+										--b: 75;
+										--min: -50;
+										--max: 50;
+									"
+								>
+									<div id="multi-lbl"></div>
+									<label class="sr-only" for="a"
+										>Value A:</label
+									>
+									<input
+										id="a"
+										type="range"
+										min="23"
+										value="23"
+										max="75"
+									/>
+									<output
+										for="a"
+										style="--c: var(--a)"
+									></output>
+									<label class="sr-only" for="b"
+										>Value B:</label
+									>
+									<input
+										id="b"
+										type="range"
+										min="23"
+										value="75"
+										max="75"
+										class="bgn"
+									/>
+									<output
+										for="b"
+										style="--c: var(--b)"
+									></output>
+								</div>
+							</details>
+						</li>
+						<li class="lists-item" data-state="open">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Soort</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<ul class="radio__lists lists">
+									<li class="radio__lists-item">
+										<div class="radio__group">
+											<input
+												type="radio"
+												id="click"
+												checked
+											/>
+											<label
+												for="click"
+												class="radio-label"
+												>Click (23)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="plak" />
+											<label
+												for="plak"
+												class="radio-label"
+												>Plak (12)</label
+											>
+										</div>
+									</li>
+								</ul>
+							</details>
+						</li>
+						<li class="lists-item" data-state="open">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Geschikt voor</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<ul class="radio__lists lists">
+									<li class="radio__lists-item">
+										<div class="radio__group">
+											<input
+												type="radio"
+												id="woonkamer"
+											/>
+											<label
+												for="woonkamer"
+												class="radio-label"
+												>Woonkamer (45)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input
+												type="radio"
+												id="keuken"
+												checked
+											/>
+											<label for="keuken"
+												>Keuken (27)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input
+												type="radio"
+												id="slaapkamer"
+											/>
+											<label
+												for="slaapkamer"
+												class="radio-label"
+												>Slaapkamer (32)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="badkamer" />
+											<label
+												for="badkamer"
+												class="radio-label"
+												>Badkamer (15)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="gang" />
+											<label
+												for="gang"
+												class="radio-label"
+												>Gang (15)</label
+											>
+										</div>
+										<div class="radio__group m-t-08">
+											<svg class="icon-small">
+												<use
+													xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+												></use>
+											</svg>
+											<label class="radio-label"
+												>Meer Tonen</label
+											>
+										</div>
+									</li>
+								</ul>
+							</details>
+						</li>
+						<li class="lists-item" data-state="open">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Kleur</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<ul class="colors--lists">
+									<li class="colors--lists-item active-color">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+									<li class="colors--lists-item">
+										<span data-color-choice=""></span>
+									</li>
+								</ul>
+							</details>
+						</li>
+						<li class="lists-item" data-state="open">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Plank dikte (mm)</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<ul class="radio__lists lists">
+									<li class="radio__lists-item">
+										<div class="radio__group">
+											<input type="radio" id="2" />
+											<label for="2" class="radio-label"
+												>2,00 (25)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="2.5" />
+											<label for="2.5" class="radio-label"
+												>2,50 (12)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="3.0" />
+											<label for="3.0" class="radio-label"
+												>3,00 (43)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="4.0" />
+											<label for="4.0" class="radio-label"
+												>4,00 (4)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="4.2" />
+											<label for="4.2" class="radio-label"
+												>4,20 (5)</label
+											>
+										</div>
+										<div class="radio__group m-t-08">
+											<svg class="icon-small">
+												<use
+													xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+												></use>
+											</svg>
+											<label>Meer Tonen</label>
+										</div>
+									</li>
+								</ul>
+							</details>
+						</li>
+						<li class="lists-item" data-state="open">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Groef</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<ul class="radio__lists lists">
+									<li class="radio__lists-item">
+										<div class="radio__group">
+											<input type="radio" id="geen" />
+											<label
+												for="geen"
+												class="radio-label"
+												>Geen (12)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input
+												type="radio"
+												id="v-groef"
+												checked
+											/>
+											<label for="v-groef"
+												>V-groef (45)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input type="radio" id="u-groef" />
+											<label
+												for="u-groef"
+												class="radio-label"
+												>U-groef (27)</label
+											>
+										</div>
+										<div class="radio__group">
+											<input
+												type="radio"
+												id="double-v-groef"
+											/>
+											<label
+												for="double-v-groef"
+												class="radio-label"
+												>Dubbele V-groef (5)</label
+											>
+										</div>
+										<div class="radio__group m-t-08">
+											<svg class="icon-small">
+												<use
+													xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+												></use>
+											</svg>
+											<label class="radio-label"
+												>Meer Tonen</label
+											>
+										</div>
+									</li>
+								</ul>
+							</details>
+						</li>
+						<li class="lists-item" data-state="close">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Merk</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<!-- Content todisplay goes here -->
+							</details>
+						</li>
+						<li class="lists-item" data-state="close">
+							<details class="flex-space" open>
+								<summary>
+									<h4>Vloerverwarming</h4>
+									<svg class="icon-small">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+										></use>
+									</svg>
+								</summary>
+								<!-- Content todisplay goes here -->
+							</details>
+						</li>
+					</ul>
+				</aside>
+				<article class="select__results span-3">
+					<div class="top__search--input-box end">
+						<svg
+							class="top__search--input-box-icon icon-small t-13"
+						>
+							<use
+								xlink:href="assets/icons/sprite.svg#icon-chevron-down"
+							></use>
+						</svg>
+						<input
+							type="text"
+							class="search-field"
+							placeholder="Sorteer op prijs laag › hoog"
+							id="s"
+						/>
+					</div>
+					<ul class="collection__items">
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-1.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 70,99
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-2.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+
+									<figcaption>
+										<div class="discount">
+											<span>actie prijs</span>
+											<span>20%</span>
+											<span>korting</span>
+										</div>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-3.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 64,95
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-4.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-5.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-6.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-7.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-8.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<div class="discount">
+											<span>actie prijs</span>
+											<span>20%</span>
+											<span>korting</span>
+										</div>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-9.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-10.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-11.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+						<li class="collection__items--item"
+							><a
+								href="details.html"
+								class="collection__items--item-link-right"
+							>
+								<figure>
+									<img
+										src="assets/img/modulo-12.png"
+										alt="collection item"
+										loading="lazy"
+									/>
+									<figcaption>
+										<div class="discount">
+											<span>actie prijs</span>
+											<span>40%</span>
+											<span>korting</span>
+										</div>
+										<h3>
+											<span class="product-tag"
+												>all in deal</span
+											>
+											<span class="product-price"
+												>€ 61,50
+												<span>
+													m<sup>2</sup></span
+												></span
+											>
+										</h3>
+									</figcaption>
+								</figure>
+							</a></li
+						>
+					</ul>
+					<button class="btn primary">MEER VLOEREN TONEN</button>
+				</article>
+			</section>
+
+			<section class="specialist">
+				<div class="product-card-title-secondary">
+					<span class="product-text"
+						>Ontdek ons assortiment vloeren</span
+					>
+					<h2 class="product-text">Dé PVC Vloerenspecialist</h2>
+				</div>
+				<p class="m-t-2 bold"
+					>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Donec quis sollicitudin odio, id pretium neque. Nam cursus
+					id tortor eu sollicitudin. Etiam cursus imperdiet mi, et
+					volutpat nisl euismod at. Sed efficitur orci sed justo
+					iaculis volutpat. Suspendisse imperdiet, nunc eu finibus
+					porta, nunc quam posuere quam, non congue tortor risus ac
+					neque. Donec mollis efficitur dictum. Duis eu dolor eu velit
+					iaculis facilisis. Nunc tincidunt nisi eu orci convallis
+					tincidunt. Aliquam erat volutpat. Sed leo est, finibus sed
+					nibh nec, mollis ornare orci. Praesent metus leo, fringilla
+					vitae dignissim nec, venenatis ut neque. Duis eu nunc ipsum.
+					Curabitur libero augue, ornare a lacus a, condimentum
+					sollicitudin nisi. Cras gravida tempus ex, vitae laoreet
+					velit dapibus sit amet.</p
+				>
+
+				<p
+					>Phasellus lobortis ornare libero, et aliquet elit laoreet
+					a. Suspendisse eros diam, sodales ultricies mi ullamcorper,
+					dapibus pellentesque purus. Suspendisse cursus nunc turpis,
+					vel rutrum nibh ultrices eu. Suspendisse potenti. Mauris
+					aliquet tincidunt enim ac vulputate. In viverra, urna at
+					feugiat auctor, urna sem lacinia arcu, sed mollis nunc justo
+					et est. Nullam auctor, libero at egestas vehicula, purus mi
+					finibus ante, et interdum sapien erat non massa. Fusce non
+					facilisis leo, sed auctor quam. Quisque ut mi augue. Morbi
+					hendrerit, diam facilisis hendrerit aliquet, libero est
+					convallis magna, ut condimentum felis dolor eget tellus.</p
+				>
+
+				<p
+					>Etiam a risus ultricies justo porta tempor et id dui.
+					Phasellus at interdum elit. Suspendisse et nulla consequat,
+					viverra tellus vitae, luctus turpis. Mauris ipsum lectus,
+					finibus ac pretium et, bibendum quis ligula. Duis mollis
+					vitae mauris eu consequat. Mauris efficitur blandit augue.
+					Suspendisse sit amet dictum urna. Vestibulum mollis at ante
+					fermentum venenatis. Vivamus et tempor dui. Nullam pulvinar
+					lacinia porttitor.</p
+				>
+
+				<p
+					>In eget augue a magna vehicula efficitur eget et neque. Sed
+					accumsan laoreet tortor sed congue. Integer quis mi in velit
+					commodo ultricies. Vivamus eget augue sem. Pellentesque
+					habitant morbi tristique senectus et netus et malesuada
+					fames ac turpis egestas. Maecenas molestie nisl nec nisi
+					mollis fermentum. Vestibulum pellentesque sodales ultrices.
+					Vestibulum a turpis eu ligula volutpat sagittis venenatis ut
+					purus. Nullam consequat varius orci et rhoncus. Integer
+					pretium tempus tincidunt. Mauris ac lectus sit amet mi
+					tincidunt fringilla ac eget ipsum. In sed ipsum sed turpis
+					mollis porta.</p
+				>
+
+				<p
+					>In volutpat metus ut consectetur pellentesque. Phasellus
+					vel scelerisque est, id commodo tortor. Cras eu nunc
+					sollicitudin, tristique dui nec, cursus dui. Nam mauris
+					eros, congue sit amet posuere quis, imperdiet ut velit.
+					Vivamus ac elit libero. Sed lacus elit, convallis non
+					vehicula vitae, blandit ac ligula. Nullam tempor tincidunt
+					venenatis. Aliquam a quam dui. Cras quis arcu magna.
+					Praesent commodo molestie scelerisque. Ut et libero orci.
+					Integer fringilla feugiat malesuada. Curabitur et tellus
+					eget mi vulputate ornare. Nunc lacinia at enim quis
+					eleifend. Cras cursus ex sit amet urna fermentum auctor.</p
+				>
+
+				<p>
+					Vestibulum sed metus venenatis, venenatis nunc eget, iaculis
+					ligula. Phasellus blandit imperdiet lacus in rhoncus. Donec
+					consequat massa vitae consectetur euismod. Nunc porta risus
+					id maximus tincidunt. Nam laoreet blandit magna, auctor
+					placerat metus aliquet sed. Donec commodo consequat metus,
+					nec posuere elit tempor eu. Aenean vestibulum, tortor sit
+					amet blandit venenatis, est purus consectetur enim, vitae
+					hendrerit orci purus eget lectus. Praesent finibus urna a
+					arcu fringilla pretium. Sed nibh leo, scelerisque sit amet
+					leo id, porttitor consectetur quam. Etiam ex tortor,
+					suscipit a diam sed, eleifend lobortis est. Aliquam
+					vestibulum vel quam non convallis. Mauris efficitur purus
+					lectus, sed tempus tortor sollicitudin et.
+				</p>
+
+				<p>
+					Morbi vitae justo in enim suscipit gravida vel eu purus.
+					Aenean ullamcorper facilisis mi scelerisque euismod. Vivamus
+					ullamcorper sed quam ut pulvinar. Etiam ac dolor ac ligula
+					egestas commodo. Donec feugiat urna lacus, et venenatis eros
+					ullamcorper at. Morbi volutpat libero in eleifend rutrum.
+					Maecenas mattis volutpat tristique. Quisque malesuada,
+					tortor nec volutpat accumsan, tortor dui ultricies ante,
+					eget efficitur elit massa et sem. Phasellus quis tristique
+					sapien, vel iaculis ligula. Cras vel turpis arcu. Quisque
+					vitae orci non justo aliquam congue. Donec tempus sapien ut
+					urna pretium hendrerit. Duis a volutpat mi. Curabitur
+					aliquet mi ex, sit amet molestie ipsum cursus sit amet.
+					Donec nec quam sed risus interdum vehicula.
+				</p>
+
+				<p>
+					Nunc non cursus tortor. Curabitur volutpat dui id est
+					congue, a rutrum lorem fringilla. Ut eu condimentum metus,
+					aliquet cursus purus. Donec efficitur dignissim sem ac
+					varius. In vestibulum dictum massa, eu aliquet mi commodo
+					quis. Proin sit amet felis imperdiet, suscipit massa sed,
+					sodales ex. Pellentesque augue lorem, finibus nec nisi ut,
+					pellentesque pellentesque lectus. Mauris magna nulla,
+					finibus sit amet ante at, finibus tempor justo. Nunc
+					ultricies ex vel ullamcorper sagittis. Praesent ac gravida
+					dolor. In hac habitasse platea dictumst. Integer varius est
+					eget varius sodales. Sed non malesuada nulla. Suspendisse
+					rhoncus, magna eu volutpat auctor, ex sem lobortis ipsum,
+					sed posuere nisl mi ac nulla. Nam vehicula bibendum elit, in
+					ullamcorper augue efficitur eget.
+				</p>
+
+				<p>
+					Donec nunc ligula, tempus eu dui ac, varius aliquam tortor.
+					Aliquam erat volutpat. Quisque leo augue, ornare eget dui
+					sed, accumsan porta purus. Phasellus aliquam, turpis quis
+					viverra aliquam, est sapien imperdiet libero, nec dignissim
+					purus ex in tortor. In vulputate tincidunt fringilla. Nam
+					nec nunc neque. Vivamus non augue a metus dictum aliquam ac
+					quis erat. Sed sem risus, tristique eget consectetur
+					imperdiet, volutpat vel nisi.
+				</p>
+
+				<p>
+					Quisque purus ante, posuere vitae mollis eget, ornare ut
+					lacus. Duis consectetur vulputate diam id gravida. Ut
+					aliquet risus vitae dui dapibus dapibus. Mauris viverra a
+					nisl id dictum. Vivamus blandit sem non neque sagittis
+					dignissim. Cras ut efficitur lectus. Vestibulum eleifend
+					metus sit amet ante pretium condimentum. Vivamus ac mi
+					ultrices, pharetra urna vitae, suscipit leo.
+				</p>
+
+				<p>
+					Integer sed augue turpis. Sed gravida mi nulla, sed dictum
+					ligula varius ac. Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Vestibulum ante ipsum primis in faucibus
+					orci luctus et ultrices posuere cubilia curae; Sed mauris
+					metus, molestie id neque vitae, posuere tincidunt dolor.
+					Curabitur augue orci, pellentesque quis volutpat nec,
+					placerat nec purus. Quisque vitae tellus eget quam
+					condimentum semper. Nullam a consequat nisi. Praesent
+					venenatis luctus metus, vitae ullamcorper arcu blandit ut.
+					Duis urna nisi, auctor sit amet blandit a, mollis eu mauris.
+					Cas fermentum magna felis, ac cursus nulla lobortis blandit.
+					Praesent pharetra libero et scelerisque laoreet. Etiam
+					sagittis vulputate dolor eu consectetur. Praesent elit enim,
+					volutpat eget nunc in, commodo luctus enim. Vestibulum
+					sodales porta iaculis. Curabitur tincidunt, ante sed
+					sollicitudin ultrices, sem dui mattis quam, id ultricies
+					metus velit at neque. Morbi in suscipit turpis. Mauris
+					semper vulputate libero, sed blandit massa.
+				</p>
+
+				<p>
+					Integer ultrices tortor congue dolor pharetra fringilla.
+					Pellentesque euismod nisi a arcu aliquet pretium. Ut
+					fringilla odio ac turpis maximus, et rhoncus mauris lacinia.
+					Sed ut est nisi. Nam tincidunt, nunc quis finibus
+					sollicitudin, sapien est scelerisque elit, sit amet
+					elementum tortor nunc et velit. Nam venenatis pellentesque
+					orci, non volutpat sapien molestie ut. Interdum et malesuada
+					fames ac ante ipsum primis in faucibus. Phasellus pulvinar
+					sapien nec ligula eleifend, vitae tempus massa ornare. Lorem
+					ipsum dolor sit amet, consectetur adipiscing elit.
+				</p>
+
+				<p>
+					Nullam euismod massa nec dui faucibus posuere. Sed bibendum,
+					dui et euismod convallis, sem metus aliquam mi, in tincidunt
+					dolor diam sed nisl. Vivamus nec scelerisque nunc. Phasellus
+					vitae velit ac massa condimentum congue. Nullam vehicula
+					eleifend diam. Nunc tincidunt, nunc ut interdum dapibus,
+					mauris tellus sodales mauris, vitae tincidunt velit dui non
+					nunc. Interdum et malesuada fames ac ante ipsum primis in
+					faucibus. Cras tristique eleifend nisi, eget tempor lectus.
+					Donec commodo sodales metus. Vivamus a urna ac urna
+					imperdiet dignissim in sed ante. Integer rhoncus finibus
+					nibh, in ultricies neque mollis non. Mauris at nunc
+					consequat, eleifend enim ac, dignissim dui.
+				</p>
+
+				<p>
+					Sed tincidunt vehicula lorem nec tincidunt. Donec eleifend
+					mi eu augue pulvinar pulvinar. Nunc ac lobortis augue.
+					Pellentesque pulvinar mi quis elit interdum aliquam vel et
+					tortor. Nam ut tellus vulputate, pharetra lectus et, posuere
+					eros. Pellentesque sit amet ante sollicitudin sem mollis
+					aliquam. Vestibulum volutpat libero efficitur, gravida neque
+					vitae, tempor nulla. Sed id sapien ante. Morbi laoreet
+					sollicitudin nisi sed posuere. Morbi aliquet, lacus eu
+					dictum ultrices, mauris lectus pellentesque erat, tempor
+					facilisis felis felis id purus. Praesent sed dapibus lacus.
+					Proin efficitur lectus sed sagittis pulvinar.
+				</p>
+
+				<p>
+					Proin vulputate nisi posuere, lacinia nisi non, dapibus
+					justo. Donec convallis ante sed suscipit laoreet.
+					Pellentesque elit ligula, porttitor et augue bibendum,
+					mollis dapibus tortor. Aliquam varius pellentesque purus id
+					maximus. Donec in tempus ante. Vestibulum et lorem id magna
+					fermentum imperdiet. Vivamus quis interdum mi, in hendrerit
+					tellus. Quisque mollis sed ipsum quis fermentum. Suspendisse
+					blandit dolor commodo neque semper, in efficitur elit
+					gravida. Sed sollicitudin diam eu erat mattis pellentesque.
+					Mauris et mi vitae quam pellentesque gravida. In vulputate
+					id orci ac laoreet. Maecenas finibus tempor turpis, quis
+					volutpat neque pharetra vitae. Vestibulum dolor urna,
+					imperdiet nec lectus eu, tempor ullamcorper velit.
+					Pellentesque suscipit lacinia arcu, a euismod leo pharetra
+					ut. Vestibulum ante ipsum primis in faucibus orci luctus et
+					ultrices posuere cubilia curae;
+				</p>
+
+				<p>
+					Cras finibus rutrum nisl et rutrum. Vestibulum consectetur
+					malesuada massa, vel viverra dolor aliquam quis. Integer
+					libero metus, varius eu bibendum eu, commodo ut nunc. Fusce
+					mattis pretium sapien et tincidunt. Sed sed sapien eget
+					ipsum rutrum auctor ut et elit. Nam sed urna sed lacus
+					hendrerit efficitur. Maecenas id enim sit amet diam porta
+					blandit in id magna. Nulla fringilla ligula id est maximus
+					porttitor. Aenean lacus odio, gravida at libero vel,
+					pharetra congue nisl. Integer egestas pharetra odio ac
+					pharetra. Integer gravida, ex eget euismod porttitor, libero
+					nisi fringilla purus, rhoncus facilisis lacus lectus at
+					ipsum. Aenean venenatis erat id dolor interdum ultrices et
+					non massa. Vivamus eget tortor non erat venenatis
+					condimentum.
+				</p>
+
+				<p>
+					Ut pretium, elit vitae dignissim feugiat, quam ligula
+					porttitor nibh, eget condimentum lectus ex ut tortor.
+					Curabitur consectetur placerat diam nec elementum. Morbi
+					posuere lectus id felis pretium, eu imperdiet nisi
+					facilisis. Praesent eget aliquet sapien, ac fermentum quam.
+					Fusce quis volutpat dui. Praesent in condimentum nulla. Nam
+					quis tellus nec enim luctus placerat quis accumsan velit.
+					Integer blandit tempor hendrerit. Nunc elementum tellus leo,
+					vel bibendum sem sollicitudin sed. Aenean condimentum
+					fermentum eros vitae molestie. Sed vel sem tellus. Integer
+					turpis massa, maximus ac egestas non, pellentesque id nibh.
+					Nullam a justo sit amet dolor finibus accumsan. Maecenas
+					tempus ultrices felis sed posuere. Integer sed turpis massa.
+					Maecenas porta quam leo, a placerat purus bibendum
+					condimentum.
+				</p>
+
+				<p>
+					Vivamus nulla justo, aliquam id augue ac, vulputate
+					pellentesque ante. Pellentesque habitant morbi tristique
+					senectus et netus et malesuada fames ac turpis egestas.
+					Donec sit amet elementum diam, in tristique augue. Ut
+					efficitur tellus iaculis, rutrum felis eget, sagittis purus.
+					Vivamus eleifend suscipit sem, in varius massa lacinia eget.
+					Phasellus vestibulum ultrices bibendum. Maecenas vitae
+					blandit neque. Donec laoreet vehicula libero, non luctus dui
+					egestas vel. Nullam suscipit lacinia consectetur.
+					Pellentesque et est sit amet justo condimentum vestibulum
+					non vel magna.
+				</p>
+
+				<p>
+					Aliquam mauris tellus, fermentum eu dolor at, imperdiet
+					posuere odio. Suspendisse eu iaculis diam, at euismod sem.
+					Fusce tempor condimentum sem vitae imperdiet. Donec eu quam
+					congue, bibendum magna et, gravida nisl. Pellentesque
+					ullamcorper blandit arcu, a aliquet mi viverra nec. Mauris
+					faucibus sapien aliquet orci maximus, id tincidunt leo
+					malesuada. In tempus hendrerit risus. Maecenas nec ornare
+					ex, a tincidunt ipsum. Quisque eros urna, condimentum sit
+					amet diam sit amet, laoreet rutrum dui. Vestibulum libero
+					orci, molestie quis ultrices vel, ullamcorper a nisl. Nulla
+					mauris dolor, ultrices sit amet molestie et, blandit id
+					mauris. In sagittis pharetra semper.
+				</p>
+
+				<p>
+					Duis vitae varius odio. Nam laoreet sem tristique, gravida
+					lacus id, tristique odio. Pellentesque id venenatis urna.
+					Sed et augue non libero consequat tincidunt ut sed nunc.
+					Praesent iaculis ipsum nec posuere semper. Maecenas neque
+					leo, ullamcorper quis pharetra ac, imperdiet quis nunc.
+					Pellentesque sed luctus dolor. In sodales mauris non lorem
+					feugiat, sit amet luctus diam aliquet. Nullam nulla nisi,
+					bibendum ac odio a, condimentum viverra eros. Nullam ex
+					felis, pellentesque ac neque ut, porttitor sagittis sapien.
+					Curabitur quis egestas mi. Duis scelerisque nibh dui, in
+					dictum turpis porttitor eget. Nulla sagittis nisl eget
+					iaculis molestie. Mauris eu hendrerit massa. Orci varius
+					natoque penatibus et magnis dis parturient montes, nascetur
+					ridiculus mus.
+				</p>
+
+				<p>
+					Integer nec gravida purus, et iaculis lorem. Praesent
+					finibus a massa non rhoncus. Nullam et orci sapien. Duis
+					sagittis lacinia commodo. Quisque erat felis, placerat ut
+					vehicula sed, imperdiet ut sem. Sed rutrum lorem sit amet
+					ornare facilisis. Nunc quis tortor nec odio luctus lacinia
+					auctor sed justo. Pellentesque ut est sollicitudin,
+					condimentum leo at, consectetur metus. Aliquam in semper
+					lorem. Nunc imperdiet ex non auctor lacinia. Mauris ac
+					suscipit nulla, ac imperdiet magna. Nam suscipit nisi orci.
+					Vivamus mollis sollicitudin dapibus. Morbi fringilla viverra
+					elit non pellentesque.
+				</p>
+
+				<p>
+					Phasellus tristique rhoncus elit quis ultricies. Ut sed dui
+					euismod, finibus nisl et, faucibus quam. Mauris in pretium
+					nisl. Phasellus quis vestibulum odio. Pellentesque luctus
+					purus pulvinar arcu pretium gravida non in mi. Sed malesuada
+					sit amet velit et porta. Integer in vestibulum sem. Vivamus
+					sit amet justo ultrices, pretium tellus at, viverra enim.
+					Integer leo nisi, mattis vitae lacinia at, sodales in lacus.
+					Pellentesque dapibus nibh pellentesque ultrices eleifend.
+					Sed mattis lacinia mi ut vulputate. Nulla id mollis turpis,
+					vel malesuada nulla.
+				</p>
+
+				<p>
+					Fusce malesuada finibus libero eget blandit. Donec aliquet
+					sit amet justo at tempus. Duis libero dui, dapibus accumsan
+					fermentum et, imperdiet eu ex. Curabitur hendrerit interdum
+					tempus. Morbi id nulla id magna iaculis semper ac vel metus.
+					Vestibulum semper posuere nunc in pulvinar. Fusce in
+					consectetur sem.
+				</p>
+
+				<p>
+					Class aptent taciti sociosqu ad litora torquent per conubia
+					nostra, per inceptos himenaeos. Fusce ornare, arcu et
+					ullamcorper sollicitudin, ex felis posuere urna, interdum
+					sodales nulla diam at tortor. Vivamus ultricies quam ac
+					laoreet tempus. Duis placerat quis risus non suscipit. Proin
+					vulputate lectus nunc, at mattis enim rutrum vel. Ut cursus
+					ut est ut tincidunt. Etiam sed ipsum euismod, sollicitudin
+					erat eget, pulvinar mauris. Praesent pharetra felis a metus
+					commodo, nec convallis ligula tempor. Sed tincidunt eros
+					vitae enim volutpat iaculis. Vestibulum id arcu convallis,
+					tincidunt nunc eu, sagittis diam. In quis cursus augue, et
+					ullamcorper lorem. Sed sit amet suscipit nisi. Vivamus in
+					blandit lorem. Etiam eu diam sem. Ut vel consectetur erat.
+				</p>
+
+				<p>
+					Sed vehicula viverra eleifend. In ut lacus at justo feugiat
+					facilisis id et neque. Integer non viverra urna. Sed
+					pellentesque, est vitae consectetur feugiat, elit odio
+					pharetra risus, nec tristique metus turpis non felis. Etiam
+					id dolor sit amet massa aliquet aliquam. Cras eu pharetra
+					massa. Morbi quam lacus, ultrices eu turpis quis, volutpat
+					aliquet mauris. Phasellus est ante, interdum sit amet nibh
+					sit amet, venenatis sollicitudin leo. Nam non tempor nibh,
+					sit amet faucibus sem. Mauris nec dolor porttitor odio
+					ornare ornare. In pretium sem dui, pretium hendrerit mi
+					dignissim et. Phasellus vitae nisl molestie, porttitor dui
+					eget, egestas mi.
+				</p>
+
+				<p>
+					Nam vel gravida nibh, id malesuada turpis. Aliquam erat
+					volutpat. Etiam faucibus luctus sapien, at scelerisque justo
+					consectetur nec. Phasellus ac nibh nisl. Fusce tincidunt
+					pellentesque sollicitudin. Aliquam vel lacus congue augue
+					posuere pellentesque sit amet sed tellus. Morbi non laoreet
+					nulla, in aliquam neque. Aenean egestas, mauris et suscipit
+					rutrum, ex libero blandit ex, sed iaculis nibh nisi id diam.
+					In quis dolor urna. Mauris sed cursus purus. Sed magna
+					tortor, iaculis a ex at, dapibus venenatis urna. Duis
+					tincidunt rhoncus diam, et suscipit neque blandit ac.
+					Suspendisse turpis nulla, facilisis id massa ac, sodales
+					porttitor leo. Suspendisse imperdiet metus non erat
+					pulvinar, in vestibulum felis laoreet. Sed sit amet pretium
+					erat, non auctor lacus. Duis sagittis tellus vitae ex
+					accumsan, vel rutrum felis pharetra.
+				</p>
+
+				<p>
+					In consectetur malesuada mi et egestas. Nulla facilisi.
+					Morbi pulvinar et sem eu pulvinar. Quisque dictum tortor ut
+					quam mollis vulputate. Ut faucibus leo ultricies tellus
+					vestibulum, vitae ullamcorper turpis mollis. In mi mauris,
+					viverra at gravida ut, pretium at est. In hac habitasse
+					platea dictumst. Cras aliquam nisi in dolor venenatis
+					tristique. Donec id blandit felis. Integer bibendum, felis
+					vitae posuere rhoncus, arcu dui sollicitudin neque, et
+					bibendum est ipsum quis eros. Nam fringilla dolor vel
+					condimentum ullamcorper.
+				</p>
+
+				<p>
+					Curabitur nec rutrum lectus, laoreet pretium nunc. Praesent
+					egestas massa ac tellus aliquam egestas. Nunc luctus, velit
+					nec ullamcorper consectetur, nisl tellus feugiat quam, vel
+					tempor sapien mi porta dui. Proin imperdiet pharetra est,
+					quis pulvinar risus mattis ultricies. Vestibulum posuere
+					tempus erat, ac dapibus urna faucibus eu. Praesent varius,
+					odio sed malesuada consequat, risus leo euismod lectus, non
+					feugiat lectus sem quis est. Etiam in feugiat urna. Sed
+					consectetur orci non ex euismod, in blandit massa ultricies.
+					Integer in leo at velit ultricies viverra eleifend nec ante.
+					Suspendisse viverra nunc sed vehicula luctus. Aliquam tellus
+					dolor, blandit sit amet efficitur porta, lacinia et metus.
+					In lobortis congue velit in gravida. Fusce accumsan vehicula
+					enim, non dignissim ligula auctor convallis.
+				</p>
+
+				<p>
+					Aliquam quis nibh elementum nunc posuere finibus. Mauris
+					diam metus, aliquam mollis blandit porttitor, venenatis nec
+					massa. Aliquam sollicitudin ligula dictum, sodales nibh eu,
+					tincidunt est. Sed non eros nec felis aliquam finibus. Morbi
+					eu felis a augue imperdiet viverra non nec turpis. Proin
+					augue leo, tristique id mi a, convallis blandit elit.
+					Quisque non blandit tortor, in malesuada odio. Proin eu est
+					finibus purus imperdiet pulvinar. Proin nulla urna, blandit
+					dignissim vulputate in, sollicitudin non eros. Integer eu
+					lacus id nisl pretium cursus a non erat. Pellentesque
+					posuere orci quis semper tempor. Aenean volutpat feugiat
+					enim. Vestibulum bibendum mi sapien, et efficitur ex
+					tristique ac. Nam dapibus posuere quam, non sagittis nunc.
+					Fusce sit amet tortor mauris.
+				</p>
+
+				<p>
+					Proin auctor augue elit. Vestibulum ante ipsum primis in
+					faucibus orci luctus et ultrices posuere cubilia curae;
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Aenean a volutpat elit. Nullam sit amet erat sit amet magna
+					tempor malesuada a ac sem. Suspendisse semper nibh nisl.
+					Praesent tempor massa sed velit consectetur maximus a vel
+					tortor. Praesent gravida, ipsum quis volutpat porta, metus
+					dolor ultricies neque, sit amet pretium metus orci non
+					turpis. Nulla sagittis mi sed malesuada dapibus. Nullam
+					convallis tincidunt diam, ut laoreet leo tincidunt quis.
+					Curabitur consectetur ante nulla, ac ornare massa suscipit
+					malesuada. Duis et purus nec est interdum cursus ac et mi.
+					Etiam non lectus diam. Vivamus sit amet urna convallis,
+					imperdiet felis sit amet, imperdiet massa. Praesent et orci
+					ex. Praesent massa nibh, dictum non lectus quis, euismod
+					suscipit felis. Vestibulum sed neque.
+				</p>
+			</section>
+
+			<section class="services container--small">
+				<ul class="services__lists">
+					<li class="services__lists--item">
+						<svg class="icon">
+							<use
+								xlink:href="assets/icons/sprite.svg#icon-bags"
+							></use>
+						</svg>
+						<a href="#" class="services__lists--item-link">
+							Top merken</a
+						>
+					</li>
+					<li class="services__lists--item">
+						<svg class="icon">
+							<use
+								xlink:href="assets/icons/sprite.svg#icon-handshake"
+							></use>
+						</svg>
+						<a href="#" class="services__lists--item-link">
+							All-in-service</a
+						></li
+					>
+					<li class="services__lists--item">
+						<svg class="icon">
+							<use
+								xlink:href="assets/icons/sprite.svg#icon-medal"
+							></use>
+						</svg>
+						<a href="#" class="services__lists--item-link">
+							Uitgebreide garantie</a
+						></li
+					>
+					<li class="services__lists--item">
+						<svg class="icon">
+							<use
+								xlink:href="assets/icons/sprite.svg#icon-eye"
+							></use>
+						</svg>
+						<a href="#" class="services__lists--item-link">
+							Eigen showroom</a
+						></li
+					>
+					<li class="services__lists--item">
+						<svg class="icon">
+							<use
+								xlink:href="assets/icons/sprite.svg#icon-clipboard-checklist"
+							></use>
+						</svg>
+						<a href="#" class="services__lists--item-link">
+							Compleet advies</a
+						></li
+					>
+				</ul>
+			</section>
+
+			<section class="support container--full">
+				<article class="support__content">
+					<ul class="support__content--list">
+						<li class="support__content--list-item">
+							<figure>
+								<img
+									src="assets/img/support-1.png"
+									alt=""
+									loading="lazy"
+								/>
+							</figure>
+						</li>
+						<li class="support__content--list-item">
+							<figure>
+								<img
+									src="assets/img/support-3.png"
+									alt=""
+									loading="lazy"
+								/>
+							</figure>
+						</li>
+						<li class="support__content--list-item">
+							<figure>
+								<img
+									src="assets/img/support-2.png"
+									alt=""
+									loading="lazy"
+								/>
+							</figure>
+						</li>
+						<li class="support__content--list-item">
+							<figure>
+								<img
+									src="assets/img/support-4.png"
+									alt=""
+									loading="lazy"
+								/>
+							</figure>
+						</li>
+						<li class="support__content--list-item">
+							<figure>
+								<img
+									src="assets/img/support-5.png"
+									alt=""
+									loading="lazy"
+								/>
+							</figure>
+						</li>
+					</ul>
+				</article>
+			</section>
+		</main>
+		<footer class="footer">
+			<section class="footer__content">
+				<div class="content">
+					<div class="content__first">
+						<div class="first_top">
+							<h2 class="footer__column--title">
+								Openingstijden
+							</h2>
+							<ul class="content__lists">
+								<li class="content__lists--item">
+									<span>Maandag</span>
+									<span>: 13:00 - 17:30 uur</span>
+								</li>
+								<li class="content__lists--item">
+									<span>Dinsdag / Vrijdag</span>
+									<span>: 9:30 - 17:30 uur</span>
+								</li>
+								<li class="content__lists--item">
+									<span>Zaterdag</span>
+									<span>: 9:30 - 17:00 uur</span>
+								</li>
+								<li class="content__lists--item">
+									<span>Zondag</span>
+									<span>: 12:00 - 17:00 uur</span>
+								</li>
+							</ul>
+						</div>
+						<div class="first_bottom">
+							<ul>
+								<li>
+									<a href="#">
+										<img
+											src="assets/img/footer-1.png"
+											alt=""
+										/>
+									</a>
+								</li>
+								<li class="w-8">
+									<a href="#">
+										<img
+											src="assets/img/footer-2.png"
+											alt=""
+										/>
+										<span>CBW voorwaarden</span>
+									</a>
+								</li>
+								<li class="w-7">
+									<a href="#">
+										<img
+											src="assets/img/footer-3.png"
+											alt=""
+										/>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content__second">
+						<h2 class="footer__column--title"> Adresgevevens </h2>
+						<ul class="content__lists">
+							<li class="content__lists--item">
+								<span>Woonboulevard Dordt</span>
+							</li>
+							<li class="content__lists--item">
+								<span>Mijlweg 55 E</span>
+							</li>
+							<li class="content__lists--item">
+								<span>3316 BE Dordrecht</span>
+							</li>
+							<li class="content__lists--item">
+								<a href="tel:+31782033811"
+									><span>078 203 3811</span></a
+								>
+							</li>
+							<li class="content__lists--item">
+								<span>info@vloerenraamdecor.nl</span>
+							</li>
+						</ul>
+						<ul class="content__lists--social">
+							<li class="content__lists--item">
+								<a
+									href="https://www.facebook.com/vloerenraamdecor/"
+									target="_blank"
+								>
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-facebook"
+										></use>
+									</svg>
+								</a>
+							</li>
+							<li class="content__lists--item">
+								<a
+									href="https://www.linkedin.com/company/vloeren-raamdecor/"
+									target="_blank"
+								>
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-pinterest"
+										></use>
+									</svg>
+								</a>
+							</li>
+							<li class="content__lists--item">
+								<a
+									href="https://www.instagram.com/vloerenraamdecor/"
+									target="_blank"
+								>
+									<svg class="icon">
+										<use
+											xlink:href="assets/icons/sprite.svg#icon-instagram"
+										></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="content__last">
+						<picture>
+							<source
+								srcset="assets/img/footer-card.png"
+								type="image/webp"
+							/>
+							<source
+								srcset="assets/img/footer-card.png"
+								type="image/png"
+							/>
+							<img
+								src="assets/img/footer-card.png"
+								alt=""
+								loading="lazy"
+							/>
+						</picture>
+					</div>
+				</div>
+			</section>
+			<section class="footer__copyright">
+				<div class="content">
+					<p class="footer__copyright-copy">
+						© 2022 Vloer & Raamdecor
+					</p>
+					<p class="footer__copyright-text"
+						>Algemene voorwaarden · Leveringsvoorwaarden · Privacy
+						Verklaring</p
+					>
+				</div>
+			</section>
+		</footer>
+
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-1.11.0.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+	</body>
+</html>

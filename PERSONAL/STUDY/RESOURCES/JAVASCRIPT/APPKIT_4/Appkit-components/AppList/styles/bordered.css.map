@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["bordered.scss","../../../vendor-styles/scss/_variables.scss"],"names":[],"mappings":"AAIA;EACE,YCiFQ;EDhFR,eC2FgB;;ADzFhB;EACE,eC2HQ;ED1HR,cC0HQ;;ADvHV;EACE,eCsHQ;EDrHR,cCqHQ;;ADlHV;EACE,eCiHQ;EDhHR,cCgHQ;;AD7GV;EACE;;AAIA;EACE,SCwGM;;ADrGR;AAAA;EAEE,SC4FO;;ADvFT;EACE,SCsFO;;ADnFT;AAAA;EAEE,SCiFO","file":"bordered.css"}

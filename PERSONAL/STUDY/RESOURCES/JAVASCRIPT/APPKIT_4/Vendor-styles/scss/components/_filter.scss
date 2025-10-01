@@ -1,0 +1,225 @@
+
+.ap-field-dropdown-icon {
+    padding: $spacing-1;
+    width: 24px;
+    height: 24px;
+    user-select: none;
+    }
+
+    .ap-field-dropdown-phone .ap-field-dropdown-item .ap-option-item .ap-checkbox-label .ap-option-prefix {
+        display: flex;
+        margin: 0;
+    }
+
+
+    .ap-field .ap-field-container:not(.show) .ap-field-dropdown-wrapper .ap-field-dropdown {
+        visibility: hidden;
+    opacity: 0;
+    transform: translateY(var(--spacing-4));
+
+
+    }
+
+
+
+.ap-filter {
+    ul,
+    li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    // padding: $border-radius-3;
+    // border-radius: $border-radius-3;
+    // box-shadow: 0 0 $border-1 $border-1 rgba($color-text-heading-rgb, $opacity-4) inset;
+    border-radius: $border-2;
+
+    .hide {
+        display: none;
+    }
+    &-button {
+        transition: margin-bottom $transition-0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: $height-10;
+        padding: $spacing-2 $spacing-3;
+        border-radius: $border-radius-2;
+        -webkit-backdrop-filter: blur($spacing-2);
+        backdrop-filter: blur($spacing-2);
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-background-hover;
+        }
+
+        &-title {
+            text-align: start;
+            letter-spacing: $typography-letter-spacing-1;
+            height: $typography-line-height-3;
+            margin-right: $spacing-3;
+            font-size: $typography-text-size-3;
+            font-weight: $font-weight-2;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: $typography-line-height-3;
+            color: $color-text-heading;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .Appkit4-icon {
+            color: $color-text-heading;
+            transform: rotate(0);
+            transition: transform $transition-0;
+            flex-grow: 0;
+            flex-shrink: 0;
+
+            &::before {
+                font-weight: $font-weight-2;
+            }
+
+            &.rotate {
+                transform: rotate($degree-1);
+            }
+        }
+    }
+
+    .ap-filter-list {
+        // padding: 0 $spacing-3 0 0;
+        border-radius: $border-radius-2;
+        -webkit-backdrop-filter: blur($spacing-2);
+        backdrop-filter: blur($spacing-2);
+        transition-property: height;
+        transition-duration: 350ms;
+        background-color: transparent;
+        padding-top: $spacing-2;
+
+        // .icon-check-fill-outline {
+        //     color: $color-background-icon-secondary;
+        // }   
+
+        .ap-filter-item {
+            &:last-child {
+                height: $typography-line-height-5;
+            }
+    
+            &:not(:last-child) {
+                height: $typography-line-height-6;
+            }
+
+            &-container {
+                display: flex;
+                justify-content: space-between;
+                height: $height-10;
+                padding: $spacing-2 $spacing-3 $spacing-2 $spacing-2;
+                border-radius: $border-radius-2;
+
+                &:not(:last-child) {
+                    margin-bottom: $spacing-2;
+                }
+    
+                .disabled {
+                    opacity: $opacity-5;
+                    // color: $color-text-disabled;
+                }
+    
+                &-left {
+                    display: flex;
+                    overflow: hidden;
+
+                    .icon-radio-deselected-fill, .icon-checkbox-deselected-fill {
+                        color: $color-text-body !important;
+                    }
+    
+                    .ap-checkbox-label {
+                        margin-right: 0 !important;
+                        margin-left: 0 !important;
+                    }
+                    .complete {
+                        background-color: $color-background-success;
+                    }
+                    .inprogress {
+                        background-color: $color-background-warning;
+                    }
+                    .error {
+                        background-color: $color-background-danger;
+                    }
+                    .draft {
+                        background-color: $color-text-heading;
+                    }
+                    &-status {
+                        flex-grow: 0;
+                        flex-shrink: 0;
+                        display: inline-block;
+                        border-radius: $border-radius-7;
+                        width: $spacing-3;
+                        height: $spacing-3;
+                        margin: $spacing-3 $spacing-2 $spacing-3 $spacing-2;
+                    }
+
+                    &-name {
+                        height: $typography-line-height-3;
+                        margin-left: $spacing-2;
+                        font-size: $typography-text-size-3;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: $typography-line-height-3;
+                        letter-spacing: $typography-letter-spacing-1;
+                        color: $color-text-body;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+    
+                &-num {
+                    height: $typography-line-height-3;
+                    // opacity: $opacity-6;
+                    font-size: $typography-text-size-3;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: $typography-line-height-3;
+                    letter-spacing: $typography-letter-spacing-1;
+                    text-align: right;
+                    color: $color-text-light;
+                    max-width: 46%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex: none;
+                }
+
+                .hidden-text {
+                    width: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    right: 0
+                }
+            }
+
+            &-hover {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-background-hover;
+                    -webkit-backdrop-filter: 4px;
+                    backdrop-filter: 4px;
+                }
+            }
+
+            &-focus:focus {
+                outline: auto 2px Highlight; /* Firefox */
+                outline: auto 5px -webkit-focus-ring-color; /* Webkit, Safari */
+            }
+        }
+    }
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}

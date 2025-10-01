@@ -1,0 +1,74 @@
+// @import '../../styles/partials';s
+
+.icon {
+    display: inline-block;
+    line-height: inherit;
+    // vertical-align: top;
+    vertical-align: text-bottom;
+
+    object-fit: contain;
+    object-position: center center;
+
+    &--valign {
+        &-middle {
+            vertical-align: middle;
+        }
+        &-sub {
+            vertical-align: sub;
+        }
+        &-text-top {
+            vertical-align: text-top;
+        }
+    }
+
+    &--inline {
+        margin-right: 14px;
+
+        &-after {
+            margin-left: 14px;
+        }
+    }
+
+    &--cursor {
+        &-pointer {
+            cursor: pointer;
+        }
+    }
+
+    &--size {
+        &-extra-small {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+
+        &-small {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        &-default {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+
+        &-medium {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        &-large {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &-extra-large {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    &--float {
+        width: 3rem;
+        height: 3rem;
+    }
+}

@@ -1,0 +1,22 @@
+.nf-before-form-content {
+	display: none;
+}
+
+.nf-form-content {
+	padding: 5px;
+	max-width: 1000px;
+	margin: 0 !important;
+}
+
+.submit-container {
+}
+
+input#nf-field-14 {
+	background: var(--primary-color);
+
+	&:hover {
+		color: var(--primary-color);
+		border: 1px solid var(--primary-color-hover);
+		background: var(--primary-color-hover);
+	}
+}

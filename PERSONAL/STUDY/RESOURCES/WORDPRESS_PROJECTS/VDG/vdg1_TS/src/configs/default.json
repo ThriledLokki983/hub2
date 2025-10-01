@@ -1,0 +1,10 @@
+{
+  "log": {
+    "format": "dev",
+    "dir": "../logs"
+  },
+  "cors": {
+    "origin": true,
+    "credentials": true
+  }
+}

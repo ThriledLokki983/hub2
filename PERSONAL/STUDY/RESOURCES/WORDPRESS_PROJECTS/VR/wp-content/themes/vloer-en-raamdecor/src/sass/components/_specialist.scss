@@ -1,0 +1,26 @@
+@use '../abstract' as ab;
+
+.specialist {
+	@include ab.default-layout;
+	@include ab.flex-column-content();
+	margin-block-end: var(--section-space-l);
+
+	.product-card-title-secondary {
+		align-items: flex-start;
+
+		span,
+		h2 {
+			color: var(--clr-black);
+			text-align: left;
+		}
+
+		span {
+			font-size: var(--product-card-text-main-font-size-3);
+		}
+
+		h2 {
+			line-height: 1.5;
+			font-size: var(--product-card-title-main-font-size-3);
+		}
+	}
+}

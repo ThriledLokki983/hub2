@@ -1,0 +1,233 @@
+@font-face {
+	font-family: MyriadBlack;
+	src: url('/wp-content/themes/dhwz/public/assets/fonts/Myriad-Pro-Black.otf');
+	// size-adjust: ;
+}
+
+@font-face {
+	font-family: MyriadBold;
+	src: url('/wp-content/themes/dhwz/public/assets/fonts/Myriad-Pro-Bold.ttf');
+}
+
+@font-face {
+	font-family: MyriadRegular;
+	src: url('/wp-content/themes/dhwz/public/assets/fonts/Myriad-Pro-Regular.ttf');
+}
+
+@font-face {
+	font-family: MyriadLight;
+	src: url('/wp-content/themes/dhwz/public/assets/fonts/Myriad-Pro-Light.otf');
+}
+
+@font-face {
+	font-family: Vincent;
+	src: url('/wp-content/themes/dhwz/public/assets/fonts/HWVincentDB.ttf');
+}
+
+/*
+ 1. Use a more-intuitive box-sizing model.
+ 2. Remove default margin and padding on all elements.
+*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// border: 1px solid red; // just for debugging - it helps sometimes
+
+	&:focus {
+		outline: none;
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-shades-dark);
+		outline-offset: 4px;
+	}
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+	height: 100%;
+	background-color: var(--bg);
+}
+
+/*
+  Typographic tweaks!
+  4. Set the default font-size from 16px to 10px
+*/
+html {
+	font-size: 62.5%;
+}
+
+/*
+  Typographic tweaks!
+  5. Add accessible line-height
+  6. Improve text rendering
+*/
+body {
+	line-height: var(--line-h);
+	font-family: var(--font-primary), sans-serif;
+	font-display: swap;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/*
+  6. Improve media defaults
+*/
+
+img,
+video,
+iframe {
+	block-size: auto;
+	max-inline-size: 100%;
+}
+
+picture,
+canvas,
+svg {
+	display: block;
+	block-size: auto;
+	max-inline-size: 100%;
+}
+
+/*
+  8. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+  9. Avoid text overflows
+*/
+h1,
+h2,
+h3,
+h5,
+h6 {
+	font-family: var(--font-primary);
+	overflow-wrap: break-word;
+}
+
+h4 {
+	font-family: var(--font-secondary);
+	color: var(--clr-black);
+	font-weight: var(--font-bold);
+	font-size: 1.5rem;
+}
+
+p {
+	font-family: var(--font-secondary);
+	overflow-wrap: break-word;
+	line-height: 1.5;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/*
+  10. Custom Selection styles to fit the theme
+*/
+::selection {
+	background-color: var(--primary-color);
+	color: var(--clr-white);
+}
+
+/*
+ 11. Remove all animations, transitions and smooth scroll for
+        people that prefer not to see them
+*/
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/*
+12. A elements that don't have a class get default styles
+*/
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+a {
+	text-decoration: none;
+	--text-color: var(--color-shades-dark);
+	border-block-end: 3px solid var(--border-color, transparent);
+	color: var(--text-color);
+	padding: 0.1rem;
+	text-decoration: none;
+
+	&:where(:hover, :focus) {
+		--border-color: var(--tex-color);
+	}
+}
+
+/*
+13. Remove list styles on ul, ol elements with a list role,
+    which suggests default styling will be removed
+*/
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/*
+14. Set core root defaults
+*/
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/*
+15. Set default space between sections
+*/
+section {
+	&:not(:first-child) {
+		margin-block-start: var(--section-space-l, 4rem);
+	}
+}
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+iframe {
+	width: 100%;
+	height: 350px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	ul.nav__lists {
+		transition: transform 0.6s var(--transition-animation),
+			visibility 0.3s linear;
+	}
+}

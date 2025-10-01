@@ -1,0 +1,34 @@
+@use '../abstract' as ab;
+
+.support {
+	background-color: var(--clr-grey-light);
+	padding: 5rem var(--support-padding);
+	margin-block-end: var(--section-space-l);
+
+	@include ab.respond(375px) {
+		padding: 3rem var(--support-padding);
+		margin-block-end: 2rem !important;
+	}
+
+	&__content {
+		@include ab.default-layout;
+
+		&--list {
+			@include ab.flex-space-content();
+			align-items: center;
+
+			@include ab.respond(375px) {
+				justify-content: center;
+				align-items: center;
+			}
+
+			&-item {
+				list-style-type: none;
+
+				figure {
+					mix-blend-mode: multiply;
+				}
+			}
+		}
+	}
+}

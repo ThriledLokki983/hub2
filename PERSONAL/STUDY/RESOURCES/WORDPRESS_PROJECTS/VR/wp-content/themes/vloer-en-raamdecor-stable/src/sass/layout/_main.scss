@@ -1,0 +1,16 @@
+.main {
+  transition: transform 0.3s ease-out;
+  position: relative;
+  width: 100%;
+}
+
+// .main[data-expanded="false"] {
+//   @media screen and (max-width: 960px) {
+//     transform: translateY(-107vh);
+//   }
+// }
+
+// .main[data-expanded="true"],
+// .footer[data-expanded="true"] {
+//   transform: translateY(0vh);
+// }

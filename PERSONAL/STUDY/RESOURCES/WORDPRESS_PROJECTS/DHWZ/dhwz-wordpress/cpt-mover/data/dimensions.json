@@ -1,0 +1,3306 @@
+[
+    {
+        "id": 15867,
+        "title": "Plisse hordeur Keje (Dubbel\/Gekoppeld)",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "200",
+        "dimensions_x_axis_maximum_value": "3800",
+        "dimensions_y_axis_minimum_value": "1791",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1920",
+                "dimensions_y_axis": "2691"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "2691"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "2691"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "2721"
+            },
+            {
+                "dimensions_x_axis": "2640",
+                "dimensions_y_axis": "2721"
+            },
+            {
+                "dimensions_x_axis": "3720",
+                "dimensions_y_axis": "2721"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "2721"
+            }
+        ]
+    },
+    {
+        "id": 15580,
+        "title": "Plisse hordeur Keje (Enkel)",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "200",
+        "dimensions_x_axis_maximum_value": "1900",
+        "dimensions_y_axis_minimum_value": "1791",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "960",
+                "dimensions_y_axis": "2691"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "2691"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "2691"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "2721"
+            },
+            {
+                "dimensions_x_axis": "1820",
+                "dimensions_y_axis": "2721"
+            },
+            {
+                "dimensions_x_axis": "1860",
+                "dimensions_y_axis": "2721"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "2721"
+            }
+        ]
+    },
+    {
+        "id": 15579,
+        "title": "Solidscreen XL",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "1000",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "1000",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "5600"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "5300"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "4700"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "4300"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "4100"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "3900"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3700"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3600"
+            },
+            {
+                "dimensions_x_axis": "5200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "5400",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "5600",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "5800",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 15578,
+        "title": "Exellent 95",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "660",
+        "dimensions_x_axis_maximum_value": "3200",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "2200"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "2100"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1900"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "1900"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "1800"
+            }
+        ]
+    },
+    {
+        "id": 15577,
+        "title": "Excellent 85",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "660",
+        "dimensions_x_axis_maximum_value": "3200",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "2200"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "2100"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1900"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "1900"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "1800"
+            }
+        ]
+    },
+    {
+        "id": 15576,
+        "title": "Excellent 75",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "660",
+        "dimensions_x_axis_maximum_value": "2700",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "1900"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "1700"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "1600"
+            }
+        ]
+    },
+    {
+        "id": 15575,
+        "title": "Solidscreen 125",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "660",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "4600"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "4400"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "4100"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "3900"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3700"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 15574,
+        "title": "Solidscreen 105",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "660",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 15573,
+        "title": "Solidscreen XS 105",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "600",
+        "dimensions_x_axis_maximum_value": "4000",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 15562,
+        "title": "Rolluik CD135",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "600",
+        "dimensions_x_axis_maximum_value": "3000",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "2200"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "2100"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1900"
+            }
+        ]
+    },
+    {
+        "id": 15561,
+        "title": "Rolluik CD942",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "600",
+        "dimensions_x_axis_maximum_value": "3800",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "3300",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "3700",
+                "dimensions_y_axis": "2200"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "2200"
+            }
+        ]
+    },
+    {
+        "id": 15552,
+        "title": "Veranda B127 extentie:EX geleiderspositie:BU",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "1700",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "1750",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3500"
+            }
+        ]
+    },
+    {
+        "id": 15551,
+        "title": "Veranda B127 extentie:EX geleiderspositie:BI",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "1700",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "1750",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "4000"
+            }
+        ]
+    },
+    {
+        "id": 15550,
+        "title": "Veranda B127 extentie:ST geleiderspositie:BU",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "1700",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3500"
+            }
+        ]
+    },
+    {
+        "id": 15545,
+        "title": "Veranda B127 extentie:ST geleiderspositie:BI",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "1700",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "4000"
+            }
+        ]
+    },
+    {
+        "id": 15544,
+        "title": "Veranda B126 Extentie",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "500",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "1250",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "5500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "5500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 15543,
+        "title": "Veranda B126 Standaard",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "1700",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "6000"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3500"
+            }
+        ]
+    },
+    {
+        "id": 15527,
+        "title": "Rolluik RS38 Solar",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "800",
+        "dimensions_x_axis_maximum_value": "3700",
+        "dimensions_y_axis_minimum_value": "750",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "3600"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3300",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "2200"
+            },
+            {
+                "dimensions_x_axis": "3700",
+                "dimensions_y_axis": "2200"
+            }
+        ]
+    },
+    {
+        "id": 15513,
+        "title": "By Michel ZIP &#8211; Zipscreen Solar",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "800",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "750",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "4400"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "4400"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 9318,
+        "title": "Markiezen HHKL, HHPE, HHST",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "1000",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "798",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "1800"
+            }
+        ]
+    },
+    {
+        "id": 9317,
+        "title": "Terrasscherm Prestige B24, B25 en B27",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "3500",
+        "dimensions_x_axis_maximum_value": "14000",
+        "dimensions_y_axis_minimum_value": "3000",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "6500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "7000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "8000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "9000",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "9500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "10000",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "11000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "12000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "13000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "14000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 9316,
+        "title": "Inzethor (Keje)",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "200",
+        "dimensions_x_axis_maximum_value": "1500",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "200",
+                "dimensions_y_axis": "2200"
+            }
+        ]
+    },
+    {
+        "id": 7875,
+        "title": "Terrasscherm Oliva",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "2500",
+        "dimensions_x_axis_maximum_value": "6500",
+        "dimensions_y_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "2750",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3250",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3750",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4250",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4750",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5250",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5750",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "6250",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "6500",
+                "dimensions_y_axis": "3500"
+            }
+        ]
+    },
+    {
+        "id": 6913,
+        "title": "Lamellendak B200 XL",
+        "dimensions_table_type": "reversed",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Diepte",
+        "dimensions_x_axis_minimum_value": "1810",
+        "dimensions_x_axis_maximum_value": "999999",
+        "dimensions_y_axis_minimum_value": "2620",
+        "dimensions_reversed_x_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_maximum_value": "999999",
+        "dimensions_reversed_y_axis_maximum_value": "999999",
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1810",
+                "dimensions_y_axis": "4090"
+            },
+            {
+                "dimensions_x_axis": "2010",
+                "dimensions_y_axis": "3460"
+            },
+            {
+                "dimensions_x_axis": "2210",
+                "dimensions_y_axis": "2830"
+            },
+            {
+                "dimensions_x_axis": "2410",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "2610",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "2810",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "3010",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "3210",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "3510",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "3810",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "4010",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "4210",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "4410",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "4510",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "4810",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "5010",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "5210",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "5410",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "5610",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "5810",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "6010",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "6210",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "6410",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "6610",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "6810",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "7000",
+                "dimensions_y_axis": "2620"
+            },
+            {
+                "dimensions_x_axis": "9999999999",
+                "dimensions_y_axis": "2620"
+            }
+        ]
+    },
+    {
+        "id": 6900,
+        "title": "Terrasscherm Elite B24, B25 en B27",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "2500",
+        "dimensions_x_axis_maximum_value": "14000",
+        "dimensions_y_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "1500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "6500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "7000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "8000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "9000",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "9500",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "10000",
+                "dimensions_y_axis": "3750"
+            },
+            {
+                "dimensions_x_axis": "11000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "12000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "13000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "14000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 6901,
+        "title": "Terrasscherm Elite B25V",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "2500",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "1500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 6902,
+        "title": "Terrasscherm B50XL",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "2500",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 6903,
+        "title": "Terrasscherm Linea",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "2500",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "2750",
+                "dimensions_y_axis": "2000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3250",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3750",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4250",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4750",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5450",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5750",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "2500"
+            }
+        ]
+    },
+    {
+        "id": 6906,
+        "title": "Buitenjaloezie\u00ebn &#8211; aluminium zijgeleiding",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "800",
+        "dimensions_x_axis_maximum_value": "4000",
+        "dimensions_y_axis_minimum_value": "1000",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "900",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "3900"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "3700"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "3600"
+            },
+            {
+                "dimensions_x_axis": "3300",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "3700",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "3900",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "2800"
+            }
+        ]
+    },
+    {
+        "id": 6907,
+        "title": "Buitenjaloezie\u00ebn &#8211; staaldraad geleiding",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "800",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "1000",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "4500"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "4400"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "4200"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "4100"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "3900"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "3700"
+            },
+            {
+                "dimensions_x_axis": "3300",
+                "dimensions_y_axis": "3600"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "3700",
+                "dimensions_y_axis": "3200"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "3900",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "4100",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "4300",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "4700",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "4900",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "2300"
+            }
+        ]
+    },
+    {
+        "id": 6908,
+        "title": "Vista El\u00e9gance\u00ae 95",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "1000",
+        "dimensions_x_axis_maximum_value": "4600",
+        "dimensions_y_axis_minimum_value": "1000",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1350"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "1150"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "1150"
+            }
+        ]
+    },
+    {
+        "id": 6909,
+        "title": "Lamellendak",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Diepte",
+        "dimensions_x_axis_minimum_value": "2000",
+        "dimensions_x_axis_maximum_value": "7000",
+        "dimensions_y_axis_minimum_value": "2860",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "0"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "5200",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "5400",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "5600",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "5800",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "6200",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "6400",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "6600",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "6800",
+                "dimensions_y_axis": "7000"
+            },
+            {
+                "dimensions_x_axis": "7000",
+                "dimensions_y_axis": "7000"
+            }
+        ]
+    },
+    {
+        "id": 6910,
+        "title": "By Michel ZIP &#8211; Zipscreen",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "660",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "4400"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "4400"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 6911,
+        "title": "Markiezen ALKL, ALPE, ALST",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedtehttps:\/\/test.grafilux.nl\/wp-admin\/edit.php?post_type=dhwec_dimensions",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "1000",
+        "dimensions_x_axis_maximum_value": "6500",
+        "dimensions_y_axis_minimum_value": "800",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "6250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "6500",
+                "dimensions_y_axis": "1800"
+            }
+        ]
+    },
+    {
+        "id": 6912,
+        "title": "Markiezen GHST",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "1000",
+        "dimensions_x_axis_maximum_value": "4200",
+        "dimensions_y_axis_minimum_value": "800",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "1750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "2750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "3750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "4750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5250",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "5750",
+                "dimensions_y_axis": "1800"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "1800"
+            }
+        ]
+    },
+    {
+        "id": 6905,
+        "title": "Cubola",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Diepte",
+        "dimensions_x_axis_minimum_value": "2000",
+        "dimensions_x_axis_maximum_value": "999999",
+        "dimensions_y_axis_minimum_value": "2000",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "999999999999",
+                "dimensions_y_axis": "4000"
+            }
+        ]
+    },
+    {
+        "id": 6904,
+        "title": "Pergola B128 en Veranda B128",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Uitval",
+        "dimensions_x_axis_minimum_value": "2010",
+        "dimensions_x_axis_maximum_value": "999999",
+        "dimensions_y_axis_minimum_value": "500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "5000"
+            },
+            {
+                "dimensions_x_axis": "999999",
+                "dimensions_y_axis": "5000"
+            }
+        ]
+    },
+    {
+        "id": 6899,
+        "title": "Knikarm B38",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "3000",
+        "dimensions_x_axis_maximum_value": "6000",
+        "dimensions_y_axis_minimum_value": "1500",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "4500",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "5500",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "6000",
+                "dimensions_y_axis": "3000"
+            }
+        ]
+    },
+    {
+        "id": 6898,
+        "title": "Rolluik RS55",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "600",
+        "dimensions_x_axis_maximum_value": "5000",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "4000"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "3700"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "3500"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "3800",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "4000",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "4200",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "4400",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "4600",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "4800",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "5000",
+                "dimensions_y_axis": "2400"
+            }
+        ]
+    },
+    {
+        "id": 6820,
+        "title": "Rolluik RS38",
+        "dimensions_table_type": "regular",
+        "dimensions_x_axis_data_label": "Breedte",
+        "dimensions_y_axis_data_label": "Hoogte",
+        "dimensions_x_axis_minimum_value": "600",
+        "dimensions_x_axis_maximum_value": "3700",
+        "dimensions_y_axis_minimum_value": "200",
+        "dimensions_reversed_x_axis_minimum_value": null,
+        "dimensions_reversed_x_axis_maximum_value": null,
+        "dimensions_reversed_y_axis_maximum_value": null,
+        "dimensions": [
+            {
+                "dimensions_x_axis": "1000",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1100",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1200",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1300",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1400",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1500",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1600",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1700",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1800",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "1900",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2000",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2100",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2200",
+                "dimensions_y_axis": "3800"
+            },
+            {
+                "dimensions_x_axis": "2300",
+                "dimensions_y_axis": "3600"
+            },
+            {
+                "dimensions_x_axis": "2400",
+                "dimensions_y_axis": "3400"
+            },
+            {
+                "dimensions_x_axis": "2500",
+                "dimensions_y_axis": "3300"
+            },
+            {
+                "dimensions_x_axis": "2600",
+                "dimensions_y_axis": "3100"
+            },
+            {
+                "dimensions_x_axis": "2700",
+                "dimensions_y_axis": "3000"
+            },
+            {
+                "dimensions_x_axis": "2800",
+                "dimensions_y_axis": "2900"
+            },
+            {
+                "dimensions_x_axis": "2900",
+                "dimensions_y_axis": "2800"
+            },
+            {
+                "dimensions_x_axis": "3000",
+                "dimensions_y_axis": "2700"
+            },
+            {
+                "dimensions_x_axis": "3100",
+                "dimensions_y_axis": "2600"
+            },
+            {
+                "dimensions_x_axis": "3200",
+                "dimensions_y_axis": "2500"
+            },
+            {
+                "dimensions_x_axis": "3300",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "3400",
+                "dimensions_y_axis": "2400"
+            },
+            {
+                "dimensions_x_axis": "3500",
+                "dimensions_y_axis": "2300"
+            },
+            {
+                "dimensions_x_axis": "3600",
+                "dimensions_y_axis": "2200"
+            },
+            {
+                "dimensions_x_axis": "3700",
+                "dimensions_y_axis": "2200"
+            }
+        ]
+    }
+]

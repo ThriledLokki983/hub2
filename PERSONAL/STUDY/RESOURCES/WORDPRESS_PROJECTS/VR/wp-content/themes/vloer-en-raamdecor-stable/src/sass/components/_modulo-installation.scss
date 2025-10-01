@@ -1,0 +1,34 @@
+@use "../abstract" as ab;
+
+body:is(.page-categories) {
+	.modulo__installation {
+		width: var(--container-width) !important;
+		margin-inline: auto;
+		@include ab.grid-layout(2);
+		grid-gap: 5rem;
+		margin-block-end: var(--section-space-l);
+
+		.product-card-title-primary {
+			span,
+			h2 {
+				color: var(--clr-black);
+			}
+		}
+
+		.left {
+			@include ab.flex-column-content();
+		}
+
+		.right {
+			@include ab.flex-column-content();
+
+			p {
+				margin-block-start: 2rem;
+			}
+
+			li {
+				list-style-type: square;
+			}
+		}
+	}
+}

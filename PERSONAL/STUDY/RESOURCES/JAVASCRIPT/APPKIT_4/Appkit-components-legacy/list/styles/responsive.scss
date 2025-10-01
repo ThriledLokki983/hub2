@@ -1,0 +1,40 @@
+@media screen and (max-width: 100px) {
+  .#{$list-prefix-cls} {
+    &-item {
+      &-action {
+        margin-left: $width-3;
+      }
+    }
+  }
+
+  .#{$list-prefix-cls}-vertical {
+    .#{$list-prefix-cls}-item {
+      &-extra {
+        margin-left: $width-3;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .#{$list-prefix-cls} {
+    &-item {
+      flex-wrap: wrap;
+      &-action {
+        margin-left: $spacing-4;
+      }
+    }
+  }
+
+  .#{$list-prefix-cls}-vertical {
+    .#{$list-prefix-cls}-item {
+      flex-wrap: wrap-reverse;
+      &-main {
+        min-width: 220px;
+      }
+      &-extra {
+        margin: auto auto $spacing-5;
+      }
+    }
+  }
+}

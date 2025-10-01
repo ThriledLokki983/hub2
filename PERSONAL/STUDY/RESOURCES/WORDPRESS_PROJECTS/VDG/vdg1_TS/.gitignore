@@ -1,0 +1,13 @@
+node_modules
+*.env
+src/utils/*.json
+*.log
+*.sh
+*.config.js
+*.txt
+*.zip
+build/
+# dist/
+# font/
+cert/
+

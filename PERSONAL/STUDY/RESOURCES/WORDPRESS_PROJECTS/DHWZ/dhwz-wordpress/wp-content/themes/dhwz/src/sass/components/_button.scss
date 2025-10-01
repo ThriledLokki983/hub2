@@ -1,0 +1,117 @@
+@use '../abstract/' as ab;
+
+.btn {
+	--background: var(--clr-white);
+	--color: var(--primary-color);
+	--border: 1px solid var(--primary-color);
+
+	padding: 2rem 3rem;
+	background-color: var(--background);
+	border: var(--border);
+	font-size: var(--btn-text);
+	color: var(--color);
+	display: flex;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem 2rem;
+	transition: all 0.2s ease-in-out;
+
+	@include ab.respond(600px) {
+		padding: 1.3rem 0.5rem;
+	}
+
+	.icon {
+		--icon-display: inline-block;
+		--stroke: var(--primary-color);
+		--fill: var(--primary-color);
+
+		stroke: var(--stroke);
+		fill: var(--fill);
+		stroke-width: 3rem;
+		height: 0.8rem;
+		margin-right: 0.5rem;
+		width: 1rem;
+		margin-inline-start: 0.5rem;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	span {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	@include ab.on-hover() {
+		background-color: var(--tertiary-color);
+		color: var(--clr-white);
+		border: 1px solid var(--tertiary-color);
+
+		span {
+			transform: translateX(-0.5rem);
+		}
+
+		.icon {
+			stroke: var(--clr-white);
+			fill: var(--clr-white);
+			transform: translateX(0.5rem);
+		}
+	}
+}
+
+.btn.primary {
+
+	border: 1px solid transparent;
+	width: fit-content;
+	margin-inline-start: 2rem;
+
+	@include ab.on-hover() {
+		--background: var(--tertiary-color);
+		--color: var(--clr-white);
+	}
+
+	.icon {
+		--stroke: var(--primary-color);
+		--fill: var(--primary-color);
+	}
+}
+
+.button-wrapper {
+	--background: var(--secondary-color);
+	display: var(--btn-display);
+	align-items: var(--btn-align-items);
+	flex-wrap: var(--btn-flex-wrap);
+	z-index: var(--btn-z-index);
+	font-family: var(--btn-font-family);
+
+	.btn.bn {
+		margin-block-start: 1rem;
+		margin-inline-start: 0rem;
+	}
+
+	&-bn {
+		margin-inline-start: var(--btn-margin-inline-start);
+		background-color: var(--btn-background-color);
+		font-size: var(--btn-font-size);
+		color: var(--btn-color);
+		display: var(--btn-display);
+		white-space: var(--btn-white-space);
+		overflow: var(--btn-overflow);
+		text-overflow: var(--btn-text-overflow);
+		align-items: var(--btn-align-items);
+		padding: var(--btn-padding);
+		font-weight: var(--btn-font-weight);
+		border: var(--btn-border);
+
+		.icon {
+			stroke: var(--btn-icon-stroke);
+			fill: var(--btn-icon-fill);
+			stroke-width: var(--btn-icon-stroke-width);
+			height: var(--btn-icon-height);
+			margin-right: var(--btn-icon-margin-right);
+			width: var(--btn-icon-width);
+			margin-inline-start: var(--btn-icon-margin-inline-start);
+		}
+	}
+
+}

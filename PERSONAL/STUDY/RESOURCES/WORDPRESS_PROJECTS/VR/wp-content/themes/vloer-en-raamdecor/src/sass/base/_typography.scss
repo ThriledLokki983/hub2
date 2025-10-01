@@ -1,0 +1,111 @@
+@use '../abstract' as ab;
+
+.section--title {
+	font-family: var(--font-primary);
+	font-weight: var(--font-regular);
+	color: var(--primary-color);
+	text-transform: uppercase;
+	font-size: var(--section-title-font-size);
+
+	@include ab.respond(600px) {
+		text-align: center;
+	}
+}
+
+.inner-title-span {
+	font-weight: var(--font-black);
+}
+
+.product-text {
+	font-family: var(--font-primary);
+	text-transform: uppercase;
+	line-height: 1;
+	color: var(--secondary-color);
+	width: -webkit-fill-available;
+}
+
+.product-card-title-secondary {
+	flex: 1;
+	@include ab.flex-start-content();
+	flex-direction: column;
+	align-items: center;
+
+	span {
+		font-size: var(--product-card-text-main-font-size-2);
+		font-weight: var(--font-regular);
+		text-align: center;
+		padding-bottom: 0.2rem;
+	}
+
+	h2 {
+		font-size: var(--product-card-title-main-font-size-2);
+		font-weight: var(--font-black);
+	}
+}
+
+.product-card-title-primary {
+	@include ab.flex-start-content();
+	flex-direction: column;
+	align-items: flex-start;
+
+	span {
+		font-size: var(--product-card-text-main-font-size-3);
+		font-weight: var(--font-regular);
+		color: var(--primary-color);
+
+		@include ab.respond(600px) {
+			text-align: center;
+		}
+	}
+
+	h2 {
+		font-size: var(--product-card-title-main-font-size-3);
+		font-weight: var(--font-black);
+		color: var(--primary-color);
+		line-height: 1.2;
+	}
+}
+
+.paragraph,
+p {
+	font-family: var(--font-secondary);
+	font-weight: var(--font-light);
+	color: var(--clr-black);
+	font-size: var(--paragraph-font-size);
+	line-height: 1.7;
+	padding-block-end: 2rem;
+	max-width: 90%;
+}
+
+.paragraph-title {
+	font-size: 2rem;
+	margin-block-start: 2rem;
+	margin-block-end: 1rem;
+	color: var(--clr-black);
+	text-transform: uppercase;
+}
+
+.footer__column--title {
+	text-transform: uppercase;
+	font-family: var(--font-primary);
+	color: var(--clr-white);
+	font-size: 2.3rem;
+}
+
+.collection__items .collection__items--item .product-price {
+	font-size: var(--product-price-font-size);
+}
+
+.container {
+	@include ab.respond(600px) {
+		p {
+			max-width: 100%;
+			width: 100%;
+			// padding-inline: 1rem;
+		}
+
+		h1 {
+			// padding-inline: 1rem;
+		}
+	}
+}

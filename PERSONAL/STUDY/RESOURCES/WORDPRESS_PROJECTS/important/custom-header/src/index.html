@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<script defer type="module" src="js/script.js"></script>
+		<title>Responsive Header</title>
+	</head>
+	<body>
+		<header class="header container">
+			<section class="header__top">
+				<form class="header__top--form">
+					<article class="header__top--form--input">
+						<span>aangesloten bij</span>
+						<picture>
+							<source
+								media="(max-width: 767px)"
+								srcset="assets/img/top.png"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/img/top.png"
+							/>
+							<img
+								src="assets/img/top.png"
+								alt="logo"
+								id="logo"
+								class="m-t-08"
+								loading="lazy"
+							/>
+						</picture>
+						<div class="header__top--form--input-box">
+							<button>
+								<svg class="icon">
+									<use
+										xlink:href="assets/icons/sprite.svg#icon-search"
+									></use>
+								</svg>
+							</button>
+							<input
+								type="text"
+								class="input"
+								placeholder="Zoeken in onze collectie"
+							/>
+						</div>
+					</article>
+					<div class="header__top--form--button-box">
+						<button class="btn secondary"> contact</button>
+						<button class="btn green"> offerte</button>
+						<article class="toggle mob-menu">
+							<input
+								class="menu__btn"
+								type="checkbox"
+								id="menu__btn"
+							/>
+							<label class="menu__icon" htmlFor="menu__btn">
+								<span class="navicon"></span>
+							</label>
+						</article>
+					</div>
+				</form>
+			</section>
+			<section class="header__reviews">
+				<article class="header__reviews__icon-box">
+					<svg class="header__reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header__reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header__reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header__reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+					<svg class="header__reviews__icon-box-icon icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-star-full"
+						></use>
+					</svg>
+				</article>
+				<article class="header__reviews__text">
+					<span>1772 beoordelingen</span>
+				</article>
+			</section>
+			<section class="header__nav">
+				<a href="/" class="header__logo">
+					<picture>
+						<source
+							media="(max-width: 767px)"
+							srcset="assets/img/vloerenraam-logo.png"
+						/>
+						<source
+							media="(min-width: 768px)"
+							srcset="assets/img/vloerenraam-logo.png"
+						/>
+						<img
+							src="assets/img/vloerenraam-logo.png"
+							alt="logo"
+							id="logo"
+						/>
+					</picture>
+				</a>
+				<nav class="header__nav--container mobile--menu">
+					<ul class="nav__lists">
+						<li class="nav__lists-item"
+							><a class="nav__lists-item-link" href="#"
+								>Vloeren</a
+							>
+								<svg class="icon mobile-icon">
+								<use
+									xlink:href="assets/icons/sprites.svg#icon-chevron-right"
+								></use>
+							</svg>
+							<!-- SubMenu list to be shown here -->
+							<div class="sub__menu">
+								<ul class="sub__menu--lists">
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											zonwering
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Screens
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Rolluiken
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Uitvalschermen
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Markiezen
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Jaloezieën (buiten)
+										</a>
+									</li>
+								</ul>
+								<ul class="sub__menu--lists">
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Buitenleven
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Knikarmschermen
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Pergola
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Cibola
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Lamellendak
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Serre zonwering
+										</a>
+									</li>
+								</ul>
+								<ul class="sub__menu--lists">
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Producten
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Binnen
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Raamdecoratie
+										</a>
+									</li>
+									<li class="sub__menu--lists--item">
+										<a
+											href="products.html"
+											class="sub__menu--lists--item-link"
+										>
+											Horren
+										</a>
+									</li>
+								</ul>
+								<ul class="sub__menu--lists">
+									<li class="sub__menu--lists--item">
+										<picture>
+											<img
+												src="./assets/img/nav-photo.jpg"
+												alt=""
+											/>
+										</picture>
+									</li>
+								</ul>
+							</div>
+							<!-- End of SubMenu -->
+							</li
+						>
+
+						<li class="nav__lists-item"
+							><a class="nav__lists-item-link" href="#"
+								>Vloerverwarming</a
+							></li
+						>
+						<li class="nav__lists-item"
+							><a class="nav__lists-item-link" href="#"
+								>Traprenovatie</a
+							></li
+						>
+						<li class="nav__lists-item"
+							><a class="nav__lists-item-link" href="#"
+								>Raamdecoratie</a
+							></li
+						>
+						<li class="nav__lists-item"
+							><a class="nav__lists-item-link" href="#"
+								>Kasten</a
+							></li
+						>
+						<li class="nav__lists-item"
+							><a class="nav__lists-item-link" href="#"
+								>Wandafwerking</a
+							></li
+						>
+					</ul></nav
+				>
+			</section>
+		</header>
+
+		<main class="main">
+			<section class="hero grid size">
+				<article class="hero__big span-2">
+					<a href="vloeren.html">
+						<picture class="hero__big--img">
+							<source
+								media="(max-width: 767px)"
+								srcset="assets/img/hero-mobile.jpg"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/img/hero-big.png"
+							/>
+							<img
+								src="assets/img/hero-big.png"
+								alt="hero"
+								loading="lazy"
+							/>
+							<div class="hero__big--overlay">
+								<span>HET IS ÉCHT WAAR!</span>
+								<h1
+									>VLOERVERWARMING & <br />PVC VLOER IN
+									<span>DRIE</span> DAGEN</h1
+								>
+							</div>
+							<button class="btn secondary"
+								>bekijk alles over Vloerverwarming</button
+							>
+						</picture>
+					</a>
+				</article>
+				<article class="hero__small">
+					<a href="#">
+						<picture class="hero__small--img">
+							<source
+								media="(max-width: 767px)"
+								srcset="assets/img/hero-side-2-medium.jpg"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/img/hero-side-2.png"
+							/>
+							<img
+								src="assets/img/hero-side-2.png"
+								alt="hero"
+								loading="lazy"
+							/>
+							<button class="btn red">raamdecoratie</button>
+						</picture>
+					</a>
+				</article>
+				<article class="hero__small">
+					<a href="#">
+						<picture class="hero__small--img">
+							<source
+								media="(max-width: 767px)"
+								srcset="assets/img/hero-side-1-medium.jpg"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/img/hero-side-1.png"
+							/>
+							<img
+								src="assets/img/hero-side-1.png"
+								alt="hero"
+								loading="lazy"
+							/>
+							<button class="btn primary"
+								>speciale vloeren</button
+							>
+						</picture>
+					</a>
+				</article>
+				<button class="btn home-hero-caro" aria-label="Next">
+					<svg class="icon">
+						<use
+							xlink:href="assets/icons/sprite.svg#icon-chevron-right"
+						></use>
+					</svg>
+				</button>
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+@use '../abstract' as ab;
+
+.top {
+	@include ab.flex-right-content();
+	@include ab.respond(960px) {
+		margin-inline-end: 6rem;
+		z-index: 99;
+	}
+
+	@include ab.respond(425px) {
+		margin-inline-end: 10rem;
+		z-index: unset;
+	}
+
+	&__search {
+		@include ab.flex-right-content();
+
+		@include ab.respond(960px) {
+			// z-index: inherit;
+		}
+
+		span {
+			font-family: var(--font-primary);
+			min-width: 9rem;
+			color: var(--clr-grey);
+			text-transform: uppercase;
+		}
+
+		&--input {
+			@include ab.flex-right-content();
+			padding-inline-end: 1.5rem;
+
+			transition: var(--transition-fast);
+
+			@include ab.respond(960px) {
+				display: none;
+			}
+
+			&-box {
+				position: relative;
+
+				&-icon {
+					position: absolute;
+					top: 0.65rem;
+					right: 0.75rem;
+					font-size: 1.3rem;
+					width: 2.2rem;
+					height: 2.2rem;
+					margin-top: 16px;
+				}
+
+				button {
+					display: none;
+				}
+			}
+
+			picture {
+				display: contents;
+			}
+		}
+
+		.button-box {
+			width: 100%;
+			display: flex;
+			z-index: 1;
+
+			a {
+				flex: 1;
+				padding-inline: 2.5rem;
+				text-align: center;
+
+				@include ab.respond(960px) {
+					padding-block: 0.7rem;
+				}
+			}
+
+			@include ab.respond(960px) {
+				width: fit-content;
+			}
+
+			@include ab.respond(425px) {
+				margin-right: -4rem;
+			}
+
+			@include ab.respond(375px) {
+				margin-right: -1.99rem;
+			}
+		}
+
+		&--input {
+			span {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	@include ab.respond(375px) {
+		&__search {
+			row-gap: 1rem;
+
+			&--input {
+				picture {
+					display: none;
+				}
+			}
+		}
+
+		.button-box {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,111 @@
+@use "../base/mixin" as ab;
+
+.top {
+	&__search{
+		width: var(--top-search-width, 100%);
+		display: var(--top-search-display, flex);
+		justify-content: var(--top-search-justify-content, center);
+		gap: var(--top-search-gap, 1rem);
+
+		&--input {
+			display: var(--input-display, none);
+			justify-content: var(--input-justify-content, unset);
+			align-items: var(--input-align-items, unset);
+			padding-inline-end: var(--input-padding-inline-end, 0);
+			transition: var(--input-transition, none);
+
+			&-box {
+				position: var(--box-position, unset);
+
+				&-icon{
+					position: var(--icon-position, unset);
+					inset: var(--icon-inset, initial);
+					block-size: var(--icon-inline-size);
+					inline-size: var(--icon-block-size);
+				}
+			}
+
+			&-text {
+				font-family: var(--top-text-family, var(--font-secondary));
+				min-inline-size: var(--min-inline-size, 0);
+				color: var(--top-text-color, var(--clr-black));
+				text-transform: var(--top-text-transform, normal);
+			}
+
+			&-picture {
+				display: var(--top-photo-display, none);
+			}
+		}
+
+		.button-box{
+			width: var(--btn-box-inline-size, 0);
+			display: var(--btn-box-display, flex);
+			z-index: var(--btn-box-z-index, 0);
+			justify-self: flex-end;
+
+			&-link {
+				--btn-link-inline-padding: 2rem;
+
+				flex: var(--btn-link-flex-size, unset);
+				padding-inline: var(--btn-link-inline-padding);
+				padding-block: 1rem;
+				text-align: var(--btn-link-text-align, initial);
+			}
+		}
+	}
+}
+
+
+// MEDIA QUERIES
+@media (min-width: 48em) {
+	.top {
+		&__search {
+			--top-search-width: fit-content;
+			--top-search-display: flex;
+			--top-search-justify-content: space-between;
+			--top-search-gap: 5rem;
+
+			&--input {
+				--input-display: flex;
+				--input-layout-justify: flex-end;
+				--input-align-items: center;
+				--input-padding-inline-end: 1.5rem;
+				--input-transition: var(--transition-fast);
+
+				&-box {
+					--box-position: relative;
+
+					&-icon {
+						--icon-position: absolute;
+						--icon-inset: 0.65rem 1rem auto auto;
+						--icon-block-size: 2.2rem;
+						--icon-inline-size: 2.2rem;
+					}
+				}
+
+				&-text {
+					--top-text-family: var(--font-primary);
+					--min-inline-size: 9rem;
+					--top-text-color: var(--clr-grey);
+					--top-text-transform: uppercase;
+				}
+
+				&-picture {
+					--top-photo-display: contents;
+				}
+			}
+
+			.button-box {
+				--btn-box-inline-size: 100%;
+				--btn-box-display: flex;
+				--btn-box-z-index: 1;
+
+				&-link {
+					--btn-link-flex-size: 1;
+					--btn-link-inline-padding: 2.5rem;
+					--btn-link-text-align: center;
+				}
+			}
+		}
+	}
+}

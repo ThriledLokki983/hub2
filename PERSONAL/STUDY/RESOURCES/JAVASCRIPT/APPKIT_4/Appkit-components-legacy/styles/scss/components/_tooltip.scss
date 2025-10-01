@@ -1,0 +1,98 @@
+
+.ap-tooltip-react {
+  // pointer-events: unset;
+  position: fixed;
+  // padding: $spacing-3;
+  // border-radius: $border-radius-2;
+  // backdrop-filter: $blur-2;
+  // background-color: rgba($color-background-alt-inverse-rgb, $opacity-6);
+  // transition: transform $transition-0, visibility $transition-0, opacity $transition-0;
+  // transition: transform 1s,  opacity 1s;
+  visibility: visible;
+  z-index: 10000;
+  max-width: rem(240px);
+  color: $color-background-secondary;
+  font-size: $typography-text-size-2;
+  line-height: $typography-line-height-16;
+  .ap-tooltip-reactContent{
+    backdrop-filter: $blur-2;
+    transition: transform $transition-0, visibility $transition-0, opacity $transition-0;
+    padding: $spacing-3;
+    background-color: rgba($color-background-alt-inverse-rgb, $opacity-6);
+    border-radius: $border-radius-2;
+    visibility: visible;
+    &:not(.show) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .ap-tooltip-text {
+    color: $color-background-secondary;
+    font-size: $typography-text-size-2;
+    line-height: $typography-line-height-16;
+  }
+
+  &:not(.show) {
+    visibility: hidden;
+    // opacity: 0;
+
+    &.right {
+      transform: translateX(rem(-5px));
+    }
+
+    &.left {
+      transform: translateX(rem(5px));
+    }
+
+    &.top {
+      transform: translateY(rem(5px));
+    }
+
+    &.bottom {
+      transform: translateY(rem(-5px));
+    }
+  }
+}
+// .ap-tooltip {
+//     position: absolute;
+//     backdrop-filter: $blur-2;
+//     transition: transform $transition-0, visibility $transition-0, opacity $transition-0;
+//     visibility: visible;
+//     z-index: 10000;
+//     max-width: rem(240px);
+//     color: $color-text-primary;
+//     font-size: $typography-text-size-2;
+//     line-height: $typography-line-height-16;
+//     .ap-tooltip-content{
+//       padding: $spacing-3;
+//       background-color: rgba($color-background-default-inverse-rgb, $opacity-6);
+//       border-radius: $border-radius-2;
+//     }
+//     .ap-tooltip-text {
+//       color: $color-text-primary;
+//       font-size: $typography-text-size-2;
+//       line-height: $typography-line-height-16;
+//     }
+  
+//     &:not(.show) {
+//       visibility: hidden;
+//       opacity: 0;
+  
+//       &.right {
+//         transform: translateX(rem(-5px));
+//       }
+  
+//       &.left {
+//         transform: translateX(rem(5px));
+//       }
+  
+//       &.top {
+//         transform: translateY(rem(5px));
+//       }
+  
+//       &.bottom {
+//         transform: translateY(rem(-5px));
+//       }
+//     }
+//   }

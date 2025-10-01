@@ -1,0 +1,233 @@
+@use '../abstract' as ab;
+
+.modulo__select {
+	@include ab.default-layout;
+	@include ab.grid-layout(4);
+	margin-block-start: 5rem !important;
+	margin-block-end: var(--section-space-l);
+
+	@include ab.respond(960px) {
+		display: block !important;
+	}
+
+	@include ab.respond(425px) {
+		display: unset;
+	}
+
+	.select__options {
+		@include ab.flex-column-content();
+		background-color: var(--primary-color-light);
+		padding: 3rem 2rem 5rem 2rem;
+		gap: 1rem;
+		height: fit-content;
+
+		// Come back to this later
+
+		.product-card-title-secondary {
+			align-items: flex-start;
+
+			span {
+				text-align: left;
+				font-size: 1.5rem;
+				color: var(--primary-color);
+			}
+
+			h2 {
+				text-align: left;
+				font-size: var(--section-title-font-size);
+				line-height: 1.5;
+				color: var(--primary-color);
+			}
+		}
+
+		input {
+			max-width: 100%;
+		}
+
+		.lists {
+			margin-block-start: 0;
+
+			&-item {
+				padding-block: 2rem;
+				justify-content: space-between;
+				border-bottom: 1px solid var(--primary-border-color);
+				flex-direction: column;
+
+				margin: 0;
+
+				.flex-space > svg {
+					transition: var(--transition);
+				}
+			}
+
+			$h: 2em;
+
+			.wrap {
+				--dif: calc(var(--max) - var(--min));
+
+				display: grid;
+				grid-template-rows: max-content;
+				width: 100%;
+				overflow: visible; // in case <label> elements overflow
+				position: relative;
+				background: transparent;
+				grid-template: repeat(2, max-content) #{$h}/ 1fr 1fr;
+
+				output {
+					margin-block-end: 1.5rem;
+					grid-row: 2;
+
+					&:last-child {
+						text-align: right;
+					}
+
+					&::after {
+						counter-reset: c var(--c);
+						content: '€' ' ' counter(c) ',-';
+						font-weight: var(--font-bold);
+						font-family: var(--font-secondary);
+					}
+				}
+			}
+
+			[id='multi-lbl'] {
+				grid-column: 1 / span 2;
+			}
+
+			[id='a'] {
+				width: 95%;
+				margin-right: auto;
+			}
+
+			[id='b'] {
+				width: 95%;
+				margin-left: auto;
+			}
+
+			.sr-only {
+				position: absolute;
+				clip-path: inset(50%);
+			}
+		}
+	}
+
+	.select__results {
+		container-type: inline-size;
+		container-name: results;
+
+		@include ab.flex-column-content();
+		place-items: center;
+
+		@include ab.respond(960px) {
+			width: 100%;
+		}
+
+		@include ab.respond(425px) {
+			width: 100%;
+		}
+
+		input {
+			width: 30rem;
+		}
+
+		button {
+			width: fit-content;
+			margin-block-start: 2rem;
+		}
+
+		.top__search--input-box {
+			margin-block-end: 2rem;
+		}
+
+		.collection__items {
+			@include ab.grid-layout(3);
+			grid-auto-rows: minmax(min-content, 345px);
+
+			@include ab.respond(425px) {
+				@include ab.grid-layout(1);
+				grid-gap: 3rem;
+			}
+
+			&--item {
+				figcaption {
+					.discount {
+						position: absolute;
+						top: -9rem;
+						padding: 1.5rem 1rem;
+						max-width: 12rem;
+						max-height: 12rem;
+						background-color: var(--primary-color);
+						color: var(--clr-white);
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+
+						span {
+							text-transform: uppercase;
+							font-family: var(--font-primary);
+							font-weight: var(--font-black);
+						}
+
+						span:nth-child(1),
+						span:nth-child(3) {
+							font-size: 1.5rem;
+						}
+
+						span:nth-child(2) {
+							font-size: 3.5rem;
+							line-height: 1;
+						}
+					}
+				}
+			}
+		}
+
+		.no-results {
+			padding: 30px;
+			background-color: var(--primary-color-light);
+			width: 100%;
+			text-align: center;
+			color: var(--primary-color);
+			font-weight: var(--font-black);
+			font-size: 1.8rem;
+		}
+	}
+}
+
+li[data-state='open'] > .flex-space > svg {
+	transform: rotate(180deg);
+}
+
+li[data-state='close'] > .flex-space > svg {
+	transform: rotate(0deg);
+}
+
+.page-categories .main .specialist {
+	@include ab.respond(425px) {
+		display: none;
+	}
+}
+
+.page-categories .main .services {
+	@include ab.respond(425px) {
+		display: none;
+	}
+}
+
+// This is for the aside menu on mobile devices
+.mob-select-opt {
+	@include ab.respond(600px) {
+		width: 80vw;
+		position: absolute;
+		top: 17.6%;
+		left: 0;
+		min-height: 20vh;
+		box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.2);
+	}
+}
+
+.select__results.span-4 {
+	.collection__items {
+		@include ab.grid-layout(4);
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"profiles": [
+		{
+			"id": 1,
+			"title": "Overige",
+			"value": "geen_profiel",
+			"borderColor": "gray"
+		},
+		{
+			"id": 2,
+			"title": "Mediavormgever",
+			"value": "mediavormgever",
+			"borderColor": "red-lighter"
+		},
+		{
+			"id": 3,
+			"title": "AV-Specialist",
+			"value": "av_specialist",
+			"borderColor": "orange"
+		},
+		{
+			"id": 4,
+			"title": "Podium - en Evenemententechniek",
+			"value": "podium_evenementen",
+			"borderColor": "purple-dark"
+		},
+		{
+			"id": 5,
+			"title": "Productie",
+			"value": "productie",
+			"borderColor": "green"
+		},
+		{
+			"id": 6,
+			"title": "AVO",
+			"value": "avo",
+			"borderColor": "blue-semi-light"
+		}
+	],
+
+	"competences": [
+		{
+			"id": 1,
+			"title": "Plannen en organiseren"
+		},
+		{
+			"id": 2,
+			"title": "Instructies en procedures opvolgen"
+		},
+		{
+			"id": 3,
+			"title": "Materialen en middelen inzetten"
+		}
+	]
+
+}

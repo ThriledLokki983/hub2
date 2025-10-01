@@ -1,0 +1,163 @@
+.custom {
+  --dlg-accept-bgc: hsl(159, 65%, 75%);
+  --dlg-accept-c: #000;
+  --dlg-bg: linear-gradient(to bottom right, #00f5a0, #00d9f5);
+  --dlg-button-p: 0.75em 2em;
+  --dlg-outline-c: #00d9f5;
+  --dlg-w: 50%;
+  --dlg-p: 2rem;
+  --dlg-mis: 0.5rem;
+}
+
+[data-component*='dialog'] * {
+  box-sizing: border-box;
+  outline-color: var(--dlg-outline-c, hsl(218, 79.19%, 35%));
+}
+:where([data-component*='dialog']) {
+  --dlg-gap: 1em;
+  background: var(--dlg-bg, #fff);
+  border: var(--dlg-b, 0);
+  border-radius: var(--dlg-bdrs, 0.35em);
+  box-shadow: var(--dlg-bxsh, 0px 25px 50px -12px rgba(0, 0, 0, 0.25));
+  font-family: var(--dlg-ff, ui-sansserif, system-ui, sans-serif);
+  min-inline-size: var(--dlg-mis, auto);
+  padding: 2rem !important;
+  width: 30%;
+  top: revert;
+  left: 40%;
+}
+
+:where([data-component='no-dialog']:not([hidden])) {
+  display: block;
+  inset-block-start: var(--dlg-gap);
+  inset-inline-start: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+}
+:where([data-component*='dialog'] menu) {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin: 2rem 0 0 0 !important;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  legend {
+    font-size: 1.7rem !important;
+    text-align: center;
+  }
+}
+
+:where([data-component*='dialog'] menu button) {
+  background-color: var(--dlg-button-bgc);
+  border: 0;
+  border-radius: var(--dlg-bdrs, 0.25em);
+  color: var(--dlg-button-c);
+  font-size: var(--dlg-button-fz, 0.8em);
+  padding: var(--dlg-button-p, 0.65em 1.5em);
+}
+:where([data-component*='dialog'] [data-ref='accept']) {
+  text-decoration: none;
+  font-family: 'Frutiger LT';
+  --dlg-button-bgc: var(--dlg-accept-bgc, #0e1a41);
+  --dlg-button-c: var(--dlg-accept-c, #fff);
+  padding: 1.4rem 3.2rem !important;
+  border-radius: 1.5px;
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+  cursor: pointer;
+}
+
+:where([data-component*='dialog'] [data-ref='cancel']) {
+  font-family: 'Frutiger LT';
+  --dlg-button-bgc: var(--dlg-accept-bgc, #0e1a41);
+  --dlg-button-c: var(--dlg-accept-c, #fff);
+  padding: 1.4rem 3.2rem !important;
+  border-radius: 1.5px;
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+  cursor: pointer;
+}
+
+:where([data-component*='dialog'] [data-ref='fieldset']) {
+  border: 0;
+  margin: unset;
+  padding: unset;
+}
+:where([data-component*='dialog'] [data-ref='message']) {
+  font-size: var(--dlg-message-fz, 1.25em);
+  margin-block-end: var(--dlg-gap);
+}
+:where([data-component*='dialog'] [data-ref='template']:not(:empty)) {
+  margin-block-end: var(--dlg-gap);
+  width: 100%;
+}
+
+/* hack for Firefox */
+@-moz-document url-prefix() {
+  [data-component='no-dialog']:not([hidden]) {
+    inset-inline-start: 0;
+    transform: none;
+  }
+}
+
+/* added to `body` when browser do not support `<dialog>` */
+.dialog-open {
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* FOR DEMO */
+[name='prompt'] {
+  border: 1px solid silver;
+  padding: 0.6em 1em;
+  width: 100%;
+}
+
+.custom {
+  --dlg-accept-bgc: hsl(159, 65%, 75%);
+  --dlg-accept-c: #000;
+  --dlg-bg: linear-gradient(to bottom right, #00f5a0, #00d9f5);
+  --dlg-button-p: 0.75em 2em;
+  --dlg-outline-c: #00d9f5;
+}
+.custom input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.25em;
+  border: 0;
+  display: block;
+  margin-block: 0.5em 1em;
+  padding: 0.75em 1em;
+  width: 100%;
+}
+.custom label {
+  display: block;
+  font-size: small;
+}
+
+button[id] {
+  background-color: rgb(239, 239, 239);
+  border: 1px solid rgb(118, 118, 118);
+  border-radius: 0.25em;
+  font-size: 0.8rem;
+  margin-inline-end: 0.25em;
+  padding: 1em 2em;
+}
+
+button[id]:hover {
+  background-color: rgb(250, 250, 250);
+  border-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+a.btn__back {
+  text-decoration: none;
+  font-family: 'Frutiger LT';
+  padding: 1.4rem 3.2rem !important;
+  border-radius: 1.5px;
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+  background: #0c1a41;
+  color: #fff;
+}

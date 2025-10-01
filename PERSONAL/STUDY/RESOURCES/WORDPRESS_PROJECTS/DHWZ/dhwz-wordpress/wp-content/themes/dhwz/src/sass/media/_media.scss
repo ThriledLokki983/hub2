@@ -1,0 +1,26 @@
+@media (orientation: landscape) {
+	// code here
+}
+
+@media (orientation: portrait) {
+	// code here
+}
+
+// when the browser window is wider than a certain width, use min-width
+@media (min-width: 400px){
+	// styles for viewport wider than 400px
+}
+
+// when the browser window is smaller than a certain width, use max-width
+@media (max-width: 400px){
+	// styles for viewport narrower than 400px
+}
+
+// Combine media queries to apply more than one condition
+@media (min-width: 50em) and (max-width: 60em) {
+	// styles for viewport wider than 50em and narrower than 60em
+}
+
+@media (min-width: 50em) and (min-height: 60em) {
+//   the viewport must be at least 50em wide and 60em tall in order for the column styles to be applied.
+}

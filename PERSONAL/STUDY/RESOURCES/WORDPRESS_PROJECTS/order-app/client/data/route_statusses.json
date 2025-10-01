@@ -1,0 +1,22 @@
+{
+    "VERTRAGEND": {
+        "icon": "redo",
+        "name": "Vertragend",
+        "description": "Deze cursus is ingepland omdat je deze moet inhalen."
+    },
+    "VERSNELLEND": {
+        "icon": "stopwatch-speed",
+        "name": "Versnellend",
+        "description": "Versnellende keuze"
+    },
+    "VERBREDEND": {
+        "icon": "books",
+        "name": "Verbredend",
+        "description": "Verbredende keuze"
+    },
+    "MASTERCLASS": {
+        "icon": "crown",
+        "name": "Masterclass",
+        "description": "Masterclass, workshop of presentatie"
+    }
+}

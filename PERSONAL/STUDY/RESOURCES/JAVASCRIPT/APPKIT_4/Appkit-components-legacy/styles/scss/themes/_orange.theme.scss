@@ -1,0 +1,18 @@
+@import '../variables';
+@import '../mixin';
+
+$tokens: (
+    (color-background-primary, $primary-orange-05),
+    (color-background-primary-code, $primary-orange-05),
+    (color-background-icon-primary, $primary-orange-05),
+    (color-text-primary, $primary-orange-05),
+    (color-text-link-primary, $primary-orange-05),
+    (color-text-link-secondary, $primary-orange-05),
+    (color-text-link-primary-inverse, $primary-orange-05),
+    (color-text-link-secondary-inverse, $primary-orange-05),
+    (color-text-tertiary, $neutral-01),
+);
+
+:root, ::before, ::after {
+    @include setColorToken($tokens);
+}

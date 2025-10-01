@@ -1,0 +1,135 @@
+@use '../abstract' as ab;
+
+.page-content-container {
+	.title__head {
+		font-size: var(--section-title-font-size);
+		margin-bottom: 2rem;
+	}
+
+	h2 {
+		color: var(--clr-black);
+		align-self: flex-start;
+		font-size: var(--product-card-title-font-size);
+		margin-bottom: 2rem;
+	}
+
+	.nf-form-fields-required {
+		font-family: var(--font-secondary);
+		font-weight: var(--font-light);
+		color: var(--clr-black);
+		font-size: var(--paragraph-font-size);
+		line-height: 1.7;
+	}
+}
+
+.contact-form {
+	flex: 1;
+}
+.contact-container {
+	display: flex;
+	justify-content: space-between;
+
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		line-height: 2.4rem;
+
+		h2 {
+			color: var(--clr-black);
+			align-self: flex-start;
+			font-size: var(--product-card-title-font-size);
+			margin-bottom: 2rem;
+		}
+
+		span {
+			font-family: var(--font-secondary);
+			font-weight: var(--font-light);
+			color: var(--clr-black);
+			font-size: var(--paragraph-font-size);
+			line-height: 1.7;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		a {
+			color: var(--primary-color);
+			text-decoration: none;
+
+			&:active,
+			&:hover,
+			&:focus {
+				color: var(--primary-color-light);
+			}
+		}
+	}
+}
+
+.contact.container.maps {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	gap: 2rem;
+	margin-bottom: 40px;
+
+	iframe {
+		border: 0;
+		flex: 0.9;
+	}
+
+	@include ab.respond(425px) {
+		flex-direction: column;
+
+		iframe {
+			width: inherit;
+		}
+	}
+}
+
+.contact__content.container .contact-container {
+	display: flex;
+	justify-content: flex-start !important;
+
+	.contact-form {
+		flex: 0.7;
+	}
+
+	.contact-info {
+		margin-left: 4rem;
+		margin-top: 4rem;
+
+		@include ab.respond(960px) {
+			margin: 0 !important;
+		}
+	}
+}
+
+.contact.container {
+	margin-block-start: 9rem;
+
+	@include ab.respond(425px) {
+		margin-block-start: 1rem !important;
+	}
+}
+
+.contact__content.container {
+	h1 {
+		color: var(--primary-color);
+		margin-block-end: 2rem;
+
+		@include ab.respond(425px) {
+			padding-left: 1rem;
+		}
+	}
+}
+
+.contact-container {
+	@include ab.respond(425px) {
+		flex-direction: column-reverse;
+
+		.contact-info {
+			padding-left: 1rem;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+@use '../abstract/' as ab;
+
+.grid {
+	@include ab.grid-layout();
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+
+		@include ab.respond(tab-port) {
+			margin-bottom: 5rem;
+		}
+	}
+}
+
+.span-1 {
+	grid-column: auto / span 1;
+}
+
+.span-2 {
+	grid-column: auto / span 2;
+
+	@include ab.respond(600px) {
+		grid-column: unset;
+	}
+}
+
+.span-3 {
+	grid-column: auto / span 3;
+}
+
+.span-4 {
+	grid-column: auto / span 4;
+}
+
+.span-5 {
+	grid-column: auto / span 5;
+}
+
+.span-6 {
+	grid-column: auto / span 6;
+}

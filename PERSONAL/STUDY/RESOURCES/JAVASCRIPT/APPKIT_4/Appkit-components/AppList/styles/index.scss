@@ -1,0 +1,311 @@
+@import '../../../vendor-styles/scss/rem';
+@import '../../../vendor-styles/scss/variables';
+@import '../../../vendor-styles/scss/mixin';
+
+$list-prefix-cls: "ap-list";
+
+* {
+  margin: 0;
+}
+
+.#{$list-prefix-cls} {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: $spacing-3;
+  color: $color-text-body;
+  font-size: $typography-text-size-3;
+  line-height: $height-1;
+  list-style: none;
+  font-stretch: normal;
+  // line-height: 1.5;
+  background-color: $color-background-container;
+
+  &-pagination {
+    margin-top: $spacing-10;
+    text-align: right;
+
+    .a-pagination-options {
+      text-align: left;
+    }
+  }
+
+  &-more {
+    margin-top: $spacing-10;
+    text-align: center;
+
+    button {
+      padding-right: $spacing-32;
+      padding-left: $spacing-32;
+    }
+  }
+
+  &-spin {
+    min-height: $height-5;
+    text-align: center;
+  }
+
+  &-empty-text {
+    padding: 10px;
+    color: $color-text-body;
+    font-size: $typography-text-size-3;
+    text-align: center;
+  }
+
+  &-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-4;
+    color: $color-text-body;
+    margin-top: $spacing-2;
+    cursor: pointer;
+
+    &-no-focus:focus {
+      outline: none;
+    }
+
+    &.selected {
+      background-color: $color-background-selected;
+      border-radius: $border-radius-2;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    span {
+      line-height: $typography-line-height-4;
+      word-break: break-all;
+    }
+
+    &-extra {
+      font-size: $typography-text-size-3;
+      line-height: 0;
+      letter-spacing: $letter-spacing-1;
+      color: $color-text-light;
+
+    }
+
+    &-meta {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      max-width: 100%;
+
+      &-avatar {
+        margin-right: $spacing-3;
+
+        span {
+          word-break: normal;
+        }
+
+      }
+
+      &-content {
+        flex: 1 0;
+        width: 0;
+        align-items: center;
+        color: $color-text-body;
+      }
+
+      &-title {
+        color: $color-text-body;
+        font-size: $typography-text-size-3;
+        font-weight: normal;
+        line-height: $typography-line-height-4;
+        letter-spacing: $letter-spacing-1;
+
+        >a {
+          color: $color-text-body;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $color-text-body;
+          }
+        }
+      }
+
+      &-description {
+        font-size: $typography-text-size-3;
+        line-height: $typography-line-height-4;
+        letter-spacing: $letter-spacing-1;
+        color: $color-text-light;
+      }
+    }
+
+    &-action {
+      flex: 0 0 auto;
+      margin-left: $spacing-8;
+      padding: 0;
+      font-size: 0;
+      list-style: none;
+      max-width: 50%;
+
+      &>li {
+        position: relative;
+        display: inline-block;
+        font-size: $typography-text-size-3;
+        line-height: 0;
+        letter-spacing: $letter-spacing-1;
+        text-align: center;
+
+        &:first-child {
+          padding-left: 0;
+          margin-top: 0;
+        }
+
+        span {
+          // opacity: $opacity-6;
+          color: $color-text-light;
+          word-break: break-all;
+        }
+
+        // .Appkit4-icon {
+        //   opacity: $opacity-7;
+        //   font-weight: $font-weight-2;
+        // }
+        .Appkit4-icon::before {
+          font-weight: $font-weight-2;
+        }
+      }
+
+      &-split {
+        position: absolute;
+        top: $border-radius-7;
+        right: 0;
+        width: $border-1;
+        height: $typography-line-height-1;
+        margin-top: -7px;
+        background-color: $color-background-secondary;
+      }
+    }
+  }
+
+  &-item:hover {
+    background-color: $color-background-hover;
+    border-radius: $border-radius-2;
+  }
+
+  &-header {
+    background: $color-background-secondary;
+  }
+
+  &-footer {
+    background: $color-background-secondary;
+  }
+
+  &-header,
+  &-footer {
+    padding-top: $spacing-5;
+    padding-bottom: $spacing-5;
+  }
+
+  &-empty {
+    padding: $spacing-5 0;
+    color: $color-background-hover;
+    font-size: $typography-text-size-1;
+    text-align: center;
+  }
+
+  &-split &-item {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &-split &-header {
+    border-bottom: $border-1 $border-type-1 $border-color-1;
+  }
+
+  &-split &-empty &-footer {
+    border-top: $border-1 $border-type-1 $border-color-1;
+  }
+
+  &-loading &-spin-nested-loading {
+    min-height: $typography-line-height-5;
+  }
+
+  &-split &-something-after-last-item .a-spin-container>&-items>&-item:last-child {
+    border-bottom: $border-1 $border-type-1 $border-color-1;
+  }
+
+  &-lg &-item {
+    padding: $spacing-5;
+  }
+
+  &-sm &-item {
+    padding: $spacing-3;
+  }
+
+  &-vertical &-item {
+    align-items: initial;
+
+    &-main {
+      display: block;
+      flex: 1;
+    }
+
+    &-extra {
+      margin-left: $height-5;
+    }
+
+    &-meta {
+      margin-bottom: $spacing-5;
+
+      &-title {
+        margin-bottom: $spacing-5;
+        color: $color-text-body;
+        font-size: $typography-text-size-3;
+      }
+    }
+
+    &-action {
+      margin-top: $spacing-5;
+      margin-left: auto;
+
+      >li {
+        padding: 0 $spacing-5;
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  &-grid .a-col>&-item {
+    display: block;
+    max-width: 100%;
+    margin-bottom: $spacing-5;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  // ============================ without flex ============================
+  &-item-no-flex {
+    display: block;
+  }
+
+  // Horizontal
+  &:not(.#{$list-prefix-cls}-vertical) {
+    .#{$list-prefix-cls}-item-no-flex {
+      .#{$list-prefix-cls}-item-action {
+        float: right;
+      }
+    }
+  }
+}
+
+@import "./bordered";
+@import "./responsive";
+@import "./rtl";
+
+@import "./sample";

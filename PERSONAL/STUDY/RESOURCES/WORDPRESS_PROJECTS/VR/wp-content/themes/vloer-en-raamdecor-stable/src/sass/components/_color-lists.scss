@@ -1,0 +1,46 @@
+@use "../abstract" as ab;
+
+.colors--lists {
+	width: 95%;
+	display: flex;
+	gap: 1.2rem;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&-item {
+		list-style-type: none;
+		height: 3.5rem;
+		width: 3.5rem;
+
+		&:nth-child(1) {
+			background-color: #3b312d;
+		}
+		&:nth-child(2) {
+			background-color: #452f1f;
+		}
+		&:nth-child(3) {
+			background-color: #73583d;
+		}
+		&:nth-child(4) {
+			background-color: #876f4e;
+		}
+		&:nth-child(5) {
+			background-color: #876f4e;
+		}
+		&:nth-child(6) {
+			background-color: #b49b81;
+		}
+		&:nth-child(7) {
+			background-color: #8a827b;
+		}
+		&:nth-child(8) {
+			background-color: #aaa399;
+		}
+		&:nth-child(9) {
+			background-color: #ded7cd;
+		}
+		&:nth-child(10) {
+			background-color: #f8f4ed;
+		}
+	}
+}

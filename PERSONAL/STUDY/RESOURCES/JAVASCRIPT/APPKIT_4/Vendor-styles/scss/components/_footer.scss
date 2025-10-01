@@ -1,0 +1,16 @@
+.ap-footer {
+  font-size: $typography-text-size-2;
+  color: $color-text-heading;
+  line-height: $typography-line-height-2;
+  letter-spacing: -0.2px;
+
+  .ap-footer-link-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ap-footer-link .ap-footer-divider {
+      margin: 0 $spacing-4;
+      height: $height-2; // 20px
+    }
+  }
+}

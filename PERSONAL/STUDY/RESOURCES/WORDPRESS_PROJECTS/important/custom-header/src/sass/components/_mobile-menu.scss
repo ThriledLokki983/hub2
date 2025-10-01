@@ -1,0 +1,65 @@
+@use '../abstract' as ab;
+
+@include ab.respond(960px) {
+	.header__nav {
+	.mobile--menu {
+		transform: translateX(100%);
+		position: fixed;
+		top: 5rem;
+		right: 0;
+		margin-block-start: 2rem;
+		background: var(--secondary-color);
+		z-index: 20;
+		width: 100%;
+		transition: transform 0.3s ease-out;
+
+		.nav__lists {
+			width: 100%;
+			padding-block: 15rem;
+			padding-inline: 3rem;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			min-height: 100vh;
+			width: 100%;
+			height: auto;
+			overflow: auto;
+
+			@include ab.respond(425px) {
+				padding-inline: 0rem;
+			}
+
+			li {
+				width: 100%;
+				text-align: left;
+				height: auto;
+				transition: all 0.3s ease-in-out;
+
+				a {
+					display: flex;
+					align-items: center;
+					font-size: 2rem;
+					color: var(--clr-white);
+					text-transform: uppercase;
+					padding-left: 1rem;
+				}
+
+				&:last-child {
+					margin-bottom: 2rem;
+
+					a {
+						padding-left: 1rem;
+					}
+				}
+			}
+		}
+
+		&[data-visible]{
+			display: flex;
+			transform: translateX(0%);
+			transition: all 0.3s ease-in-out;
+
+		}
+	}
+}
+}

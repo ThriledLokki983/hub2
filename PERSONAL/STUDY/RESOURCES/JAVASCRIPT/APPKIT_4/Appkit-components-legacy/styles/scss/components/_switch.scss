@@ -1,0 +1,101 @@
+.ap-switch{
+   
+    display: inline-flex;
+    align-items: center;
+
+    .ap-switch-btn{
+        position: relative;
+        margin:0;
+        cursor: pointer;
+        display: flex;
+        width: $width-4;
+        height: $height-2;
+        opacity: $opacity-7;
+        border-radius: $border-radius-4;
+        background-color: $color-background-border;  
+        padding: $spacing-1 0;
+        padding-left:  $spacing-1;
+        transition: padding $transition-0;
+
+        .ap-switch-default{
+            width: $width-1;
+            height: $height-1;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $color-background-secondary;
+        }
+
+       
+        &.ap-switch-checked {
+            background-color: $color-background-icon-primary;
+            padding: $spacing-1 0;
+            padding-left: rem(18px);
+            opacity: $opacity-7;
+        }
+
+        &.ap-switch-disabled {
+            opacity: $opacity-5;
+            cursor: not-allowed;
+            background: $color-text-disabled;
+        }
+
+        &.ap-switch-checked.ap-switch-disabled {
+            opacity: $opacity-5;
+            cursor: not-allowed;
+            background-color: $color-background-icon-primary;
+        }
+
+        &.ap-switch-readonly{
+            cursor: not-allowed;
+            opacity: $opacity-6;
+        }
+        &.ap-switch-checked.ap-switch-readonly{
+            cursor: not-allowed;
+            opacity: $opacity-6;
+        }
+
+       
+        
+    }
+
+    .ap-switch-lg{
+        width: $width-5;
+        height: $height-3;
+        padding: $spacing-1  $spacing-6  $spacing-1 $spacing-1;
+
+        .ap-switch-default{
+            width: $width-2;
+            height: $height-2; 
+        }
+
+        &.ap-switch-checked{ 
+            padding: $spacing-1  $spacing-1  $spacing-1  $spacing-6;    
+        }
+
+    }  
+}
+
+.ap-switch-label{  
+    font-size: $typography-text-size-3;
+    padding-left: $spacing-3;
+    line-height: $typography-line-height-3;
+    letter-spacing: $letter-spacing-1;
+    color: $color-text-body;
+    cursor: pointer;
+    display: inline-block;
+
+    &:empty{
+        display: none;
+    }
+}
+.ap-switch-disabled + .ap-switch-label{
+    // opacity: $opacity-3;
+    opacity: $opacity-5;
+    cursor: not-allowed;
+    // color: $color-text-disabled;
+}
+
+.ap-switch-readonly + .ap-switch-label{
+    cursor: not-allowed;
+}
+

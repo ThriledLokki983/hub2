@@ -1,0 +1,87 @@
+@mixin on-hover() {
+	@media (hover: hover) and (pointer: fine) {
+  		&:hover {
+			@content
+		}
+	}
+}
+
+@mixin respond($breakpoint) {
+	@media only screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin track() {
+	background-color: transparent; /* get rid of Firefox track background */
+}
+
+@mixin thumb() {
+	$h: 2em;
+	background-color: currentcolor;
+	border: none; /* get rid of Firefox thumb border */
+	border-radius: 0; /* get rid of Firefox corner rounding */
+	pointer-events: auto; /* catch clicks */
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+@mixin scaleUpOnHover {
+	img {
+		transform: translateZ(0);
+		transition: transform 0.45s ease-out;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.2) translateZ(0);
+		}
+
+		button.secondary {
+			color: var(--secondary-color);
+			background: var(--secondary-color-hover);
+			border: 1px solid var(--secondary-color-hover);
+		}
+
+		button.red {
+			color: var(--tertiary-color);
+			border: 1px solid var(--tertiary-color-hover);
+			background: var(--tertiary-color-hover);
+		}
+
+		button.primary {
+			color: var(--primary-color);
+			border: 1px solid var(--primary-color-hover);
+			background: var(--primary-color-hover);
+		}
+	}
+}
+
+@mixin rating-stars($size: 1.5rem) {
+	fill: var(--clr-yellow);
+	width: $size;
+	height: $size;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 0.5;
+	stroke: var(--clr-yellow);
+
+	@include respond(960px) {
+		width: 1rem;
+		height: 1rem;
+	}
+}
+
+@mixin flex-right-content() {
+	display: flex;
+
+	justify-content: flex-end;
+	align-items: center;
+}
+
+@mixin defaultLayout() {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}

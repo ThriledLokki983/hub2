@@ -1,0 +1,29 @@
+{
+    "breakpoint-map": {
+        "xxxxs": 240,
+        "tiny-phone": 240,
+        "xxxs": 320,
+        "small-phone": 320,
+        "xxs": 360,
+        "phone": 360,
+        "xs": 480,
+        "large-phone": 480,
+        "s": 540,
+        "small-tablet": 640,
+        "tablet": 768,
+        "large-tablet": 900,
+        "m": 1024,
+        "small-desktop": 1024,
+        "l": 1200,
+        "laptop": 1200,
+        "xl": 1440,
+        "desktop": 1440,
+        "xxl": 1920,
+        "hd": 1920,
+        "1080p": 1920,
+        "xxxl": 2560,
+        "1440p": 2560,
+        "xxxxl": 3840,
+        "4k": 3840
+    }
+}

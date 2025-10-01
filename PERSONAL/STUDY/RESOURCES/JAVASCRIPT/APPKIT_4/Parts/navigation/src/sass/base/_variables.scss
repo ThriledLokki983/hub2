@@ -1,0 +1,181 @@
+:root {
+	--primary-color: #792183;
+    --selection-color: #e5b4ee;
+    --primary-color-hover: #c2a9c7;
+    --primary-color-light: #efe9f1;
+    --primary-color-lightest: #f9f6f9;
+    --primary-border-color: #d3c1d7;
+    --secondary-color: #104094;
+    --secondary-color-hover: #a1b2ce;
+    --secondary-color-mobile-hover: #becce4;
+    --secondary-color-light: #e7ebf3;
+    --secondary-border-color: #5974a6;
+    --tertiary-color: #d52a47;
+    --tertiary-color-hover: #edabb6;
+    --clr-green: #069d3b;
+    --clr-green-hover: #add2b1;
+    --clr-green-light: #c8e4d2;
+    --clr-green-lightest: #eaf1ec;
+    --clr-black: #000;
+    --clr-black-hover: #999;
+    --clr-white: #fff;
+    --overlay-bg: hsla(0,0%,99%,.8);
+    --clr-grey: #a1a1a1;
+    --faded-price-color: #a6a6a6;
+    --clr-grey-light: #e6e6e6;
+    --border-clr: #ccc;
+    --clr-yellow: #e5c576;
+    --price-label-bg: #efe9f1;
+    --copyright-clr: #ebebeb;
+    --copyright-text-clr: #a78fae;
+    --footer-bg-clr: #4c1e57;
+    --faq-border-color: #bdc8dd;
+
+	// color scheme
+	// color-scheme: light darkgit ;
+
+	// COLORS
+	--primary-color: hsl(294, 60%, 32%); //#782182
+	--selection-color: hsl(290, 64%, 82%);
+	--primary-color-hover: hsl(290, 21%, 72%); //#c2a9c7
+	--primary-color-light: hsl(285, 22%, 93%);
+	--primary-color-lightest: hsl(300, 20%, 97%);
+	--primary-border-color: hsl(289, 22%, 80%);
+	--secondary-color: hsl(218, 81%, 32%); // #104195;
+	// -p: hsl(141, 93%, 32%);
+	--secondary-color-hover: hsl(218, 32%, 72%); //#a0b1ce
+	--secondary-color-mobile-hover: hsl(218, 42%, 82%); //#a0b1ce
+	--secondary-color-light: hsl(220, 33%, 93%);
+	--secondary-border-color: hsl(219, 30%, 50%);
+	--tertiary-color: hsl(350, 67%, 50%);
+	--tertiary-color-hover: hsl(350, 65%, 80%); //#edaab5
+	--clr-green: hsl(141, 93%, 32%); // #069d3c
+	--clr-green-hover: hsl(127, 29%, 75%); //#aed2b2
+	--clr-green-light: hsl(141, 34%, 84%);
+	// --clr-green-lightest: hsl(140, 33%, 93%);
+	--clr-green-lightest: hsl(140, 20%, 93%);
+	--clr-black: hsl(0, 0%, 0%);
+	--clr-black-hover: hsl(0, 0%, 60%); //#999999
+	--clr-white: hsl(0, 0%, 100%);
+	--overlay-bg: hsl(0, 0%, 99%, 0.8);
+	--clr-grey: hsl(0, 0%, 63%);
+	--faded-price-color: hsl(0, 0%, 65%);
+	--clr-grey-light: hsl(0, 0%, 90%);
+	--border-clr: hsl(0, 0%, 80%);
+	--clr-yellow: hsl(43, 68%, 68%);
+	--price-label-bg: hsl(285, 22%, 93%);
+	--copyright-clr: hsl(0, 0%, 92%);
+	--copyright-text-clr: hsl(287, 16%, 62%);
+	--footer-bg-clr: hsl(289, 48%, 23%);
+	--faq-border-color: #bdc8dd;
+
+	// FONT FAMILIES
+	--font-primary: 'Lato', sans-serif;
+	--font-secondary: 'Open Sans', sans-serif;
+
+	// FONT SIZES
+	--min-font-size: 1.5rem;
+	--header-homepage-font-size: clamp(1.8rem, 1.5vw + 1rem, 3.5rem);
+	--product-card-title-main-font-size: clamp(2.5rem, 1.5vw + 1rem, 4.5rem);
+	--product-card-title-main-font-size-3: clamp(2.5rem, 1.5vw + 1rem, 3rem);
+	--product-card-title-main-font-size-4: clamp(2rem, 1.5vw + 1rem, 2.5rem);
+	--product-card-title-main-font-size-2: clamp(2.5rem, 2.5vw + 3rem, 5.5rem);
+	--product-card-text-main-font-size: clamp(
+		var(--min-font-size),
+		1.4vw + 1rem,
+		2rem
+	);
+	--product-card-text-main-font-size-3: clamp(
+		var(--min-font-size),
+		1.4vw + 1rem,
+		1.7rem
+	);
+	--product-card-text-main-font-size-2: clamp(
+		var(--min-font-size),
+		1.4vw + 1rem,
+		3rem
+	);
+	--paragraph-font-size: clamp(var(--min-font-size), 1.5vw + 1rem, 1.8rem);
+	--section-title-font-size: clamp(2.5rem, 1.5vw + 1rem, 3rem);
+	--product-card-title-font-size: clamp(2.5rem, 1.5vw + 1rem, 3.5rem);
+	--top-header-button-font-size: clamp(1.2rem, 0.5vw + 1rem, 1.8rem);
+	--nav-items-font-size: clamp(var(--min-font-size), 1.5vw + 1rem, 1.8rem);
+	--nav-items-font-size-small: clamp(1.2rem, 0.4vw + 1rem, 1.6rem);
+	--category-title-font-size: clamp(1.2rem, 1vw + 1rem, 1.8rem);
+	--product-price-font-size: clamp(1.7rem, 1vw + 1rem, 2.3rem);
+	--collection-item-font-size: clamp(1.2rem, 1vw + 1rem, 2.2rem);
+	--service-list-item-font-size: clamp(
+		var(--min-font-size),
+		1.5vw + 1rem,
+		2.5rem
+	);
+	--collection-paragraph: clamp(1rem, 0.7vw + 1rem, var(--min-font-size));
+	--quote-font-size: clamp(5.9rem, 9vw + 1rem, 12.5rem);
+	--review-text-font-size: clamp(var(--min-font-size), 0.8vw + 1rem, 1.8rem);
+	--copyright-font-size: clamp(1.1rem, 0.4vw + 1rem, 1.3rem);
+
+	// FONT WEIGHTS
+	--font-light: 300;
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+	--font-black: 900;
+
+	// LINE HEIGHTS
+	--line-h: 1.5;
+
+	// SPACING
+	--input-padding: 0.7rem 1.5rem;
+	--support-padding: clamp(1rem, 4vw + 1rem, 10rem);
+	--input-width: clamp(20rem, 30.5vw + 1rem, 52rem);
+	--section-space-s: 1rem;
+	--section-space-m: 3rem;
+	--section-space-l: 4rem;
+	--nav-items-space: clamp(0.5rem, 1.7vw + 1rem, 1rem);
+	--nav-items-space-small: clamp(0.5rem, 1vw + 1rem, 0.8rem);
+
+	// BORDERS
+	--border: 1px solid var(--border-clr);
+
+	// RADIUS
+	--radius: 0.1rem;
+
+	// SHADOWS
+	--shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+	// TRANSITIONS
+	--duration: 0.3s;
+	--transition: all 0.35s ease-in-out;
+	--transition-fast: all 0.25s ease-in-out;
+	--review-and-review-btn-transition: 0.75s ease-out;
+	--btn-transition: background var(--duration) ease-out,
+		color var(--duration) ease-out, border 0s ease-out;
+	--details-transition-time: 400ms;
+
+	//   SIZES
+	--default-width: 150rem; // 1440px
+	--max-width: 144rem; //1400px
+	--container-width: min(95%, var(--max-width));
+	--preferred-width: min(95%, var(--max-width));
+	--mobile-width: min(90%, var(--default-width));
+	--auto-margin-top: min(6rem, 4.5vw + 1rem, 10rem);
+	--details-height-open: 100%;
+
+
+	//
+	--color-shades-dark: rgb(25, 25, 25);
+	--color-shade-light: rgb(165, 167, 175);
+	--color-highlight: rgb(24, 54, 145);
+	--transition-animation: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+button,
+.btn {
+	// Responsive padding for the buttons depending on the size of the screen
+	--btn-small: 1rem clamp(1rem, 5%, 1.5rem);
+	--btn-medium: 1rem clamp(1rem, 7%, 2rem);
+	--btn-large: 1.6rem clamp(1rem, 10%, 2.5rem);
+
+	--btn-small-font-size: 1.3rem;
+}

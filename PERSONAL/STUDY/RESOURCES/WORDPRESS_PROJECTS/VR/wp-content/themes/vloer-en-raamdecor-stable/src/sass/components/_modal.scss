@@ -1,0 +1,133 @@
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	z-index: 99;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+
+	svg.icon {
+		stroke: var(--clr-white);
+		fill: var(--clr-white);
+		stroke-width: 6rem;
+		stroke-width: 6rem;
+		width: 10rem;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 1rem;
+		height: 10rem;
+		padding: 2rem;
+
+		&.go-back {
+			margin-left: 10%;
+		}
+
+		&.go-next {
+			margin-right: 10%;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+/* Modal Content (image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	object-fit: cover;
+	width: 50%;
+	max-width: 75%;
+	max-height: 80%;
+	border-radius: 1rem;
+
+	&:hover {
+		cursor: zoom-out;
+	}
+}
+
+/* Caption of Modal Image */
+#caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 10px 0;
+	height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+.out {
+	animation-name: zoom-out;
+	animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+	from {
+		-webkit-transform: scale(1);
+	}
+	to {
+		-webkit-transform: scale(2);
+	}
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0.4);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes zoom-out {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0);
+	}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		width: 100%;
+	}
+}

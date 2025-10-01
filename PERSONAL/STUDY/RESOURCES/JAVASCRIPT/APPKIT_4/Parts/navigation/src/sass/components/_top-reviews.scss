@@ -1,0 +1,61 @@
+@use "../base/mixin" as ab;
+
+.reviews {
+    display: var(--top-reviews-display, flex);
+    justify-content: var(--top-reviews-justify, flex-end);
+    padding-inline-end: var(--top-reviews-inline-end-padding, 2rem);
+
+    &__icon-box {
+        display: var(--icon-box-display, flex);
+        gap: var(--icon-box-gap);
+        margin-right: var(--icon-right-margin);
+
+        &-icon {
+            @include ab.rating-stars();
+        }
+    }
+
+    &__text {
+        &-content {
+          font-family: var(--top-content-text-family);
+          font-weight: var(--top-content-text-weight);
+          font-size: var(--top-content-text-size);
+
+          @include ab.respond(960px) {
+            font-size: 1rem;
+          }
+        }
+    }
+
+     @include ab.respond(960px) {
+        // padding-inline-end: 2rem;
+        // transform: translateY(-7px);
+    }
+}
+
+
+@media (min-width: 48em) {
+    .reviews {
+        --top-reviews-display: flex;
+        --top-reviews-justify: flex-end;
+        --top-reviews-inline-end-padding: 3rem;
+
+        &__icon-box {
+          --icon-box-display: flex;
+          --icon-box-gap: 0.5rem;
+          --icon-right-margin: 0.7rem;
+
+          svg {
+            @include ab.rating-stars();
+          }
+        }
+
+        &__text {
+          &-content {
+            --text-content-text-font-family: var(--font-primary);
+            --text-content-text-font-weight: var(--font-bold);
+            --text-content-text-font-size: 1.1rem;
+          }
+        }
+    }
+}

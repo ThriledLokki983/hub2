@@ -1,0 +1,13 @@
+.size {
+	width: var(--container-width);
+	margin-inline: auto;
+}
+
+.main {
+	min-height: 45.5vh;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.3s ease-out;
+	position: relative;
+	width: 100%;
+}

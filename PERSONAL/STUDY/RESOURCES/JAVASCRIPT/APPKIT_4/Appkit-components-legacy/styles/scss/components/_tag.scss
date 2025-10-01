@@ -1,0 +1,299 @@
+.ap-tag {
+    position: relative;
+    display: inline-block;
+    padding: $spacing-2 $spacing-3 $spacing-2 $spacing-4;
+    border-radius: $border-radius-5;
+    line-height: $typography-line-height-16;
+    letter-spacing: $typography-letter-spacing-1;
+    color: $color-background-secondary;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+
+    &::after{
+        border-radius: $border-radius-5; 
+    }
+
+    // &:hover{
+    //     cursor: pointer;
+    // }
+
+    &.ap-tag-disabled {
+        opacity: 0.32;
+        cursor: not-allowed;
+        // color: $color-text-primary;
+
+        .ap-tag-label {
+            cursor: not-allowed;
+            // color: $color-text-primary;
+        }
+
+        .Appkit4-icon{
+            cursor: not-allowed;
+            color: $color-text-primary-rgb;
+
+            &:hover{
+                cursor: not-allowed;
+            }
+        }
+
+        .icon-close-outline{
+            cursor: not-allowed;
+        }
+
+        // use backgroundColor to replace the type
+        &.ap-tag-default {
+            background-color: rgba($color-background-primary-rgb);
+        }
+
+        // &.ap-tag-blue {
+        //     background-color: rgba($color-background-tag-blue-primary, $opacity-5);
+        // }
+
+        // &.ap-tag-green{
+        //     background-color: rgba($color-background-tag-green-primary, $opacity-5);
+        // }
+
+        // &.ap-tag-indigo {
+        //     background-color: rgba($color-background-tag-indigo-primary, $opacity-5);
+        // }
+
+        // &.ap-tag-orange{
+        //     background-color: rgba($color-background-tag-orange-primary, $opacity-5);
+        // }
+
+        // &.ap-tag-pink {
+        //     background-color: rgba($color-background-tag-pink-primary, $opacity-5);
+        // }
+
+        // &.ap-tag-purple{
+        //     background-color: rgba($color-background-tag-purple-primary, $opacity-5);
+        // }
+    }
+
+    &.ap-tag-sm {
+        height: $height-3;
+        font-size: $typography-text-size-2;
+        display: inline-flex;
+        font-weight: $font-weight-2;
+
+        .Appkit4-icon {
+            width: $width-1;
+            height: $height-1;
+
+            &:before{
+                font-size: $typography-text-size-1;
+                font-weight: $font-weight-6;
+                line-height: $typography-line-height-16;
+                letter-spacing: $letter-spacing-1;
+            }
+        }
+
+        .ap-tag-label {
+            font-size: $typography-text-size-2;
+            line-height: $height-1;
+        }
+    }
+
+    &.ap-tag-lg {
+        height: $height-10;
+        font-size: $typography-text-size-3;
+        display: inline-flex;
+
+        .Appkit4-icon{
+            width: $width-3;
+            height: $height-3;
+        
+            &:before{
+                font-weight: $font-weight-2;
+                font-size: $typography-text-size-3;
+                line-height: $height-3;
+                letter-spacing: normal;
+            }
+        }
+
+        .ap-tag-label{
+            font-size: $typography-text-size-3;
+            font-weight: $font-weight-2;
+        }
+    }
+
+    .ap-tag-label {
+        margin-right: $spacing-2;
+        letter-spacing: $letter-spacing-1;
+    }
+
+    .Appkit4-icon {
+        // color: $color-background-alt;
+        color: $color-background-secondary;
+        cursor: pointer;
+        z-index: $z-index-1;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    // use backgroundColor to replace the type
+    &.ap-tag-default:not(.ap-tag-disabled){
+        background: $color-background-primary;
+
+        &:hover{
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            // outline: none;
+            box-shadow: 0 0 0 $border-2 rgba($color-background-primary, $opacity-1);
+            outline: auto 2px Highlight; /* Firefox */
+            outline: auto 5px -webkit-focus-ring-color; /* Webkit, Safari */
+            outline-offset: $spacing-1;
+        }
+    }
+
+    &.ap-tag-blue:not(.ap-tag-disabled){
+        // background: $color-background-tag-blue-primary;
+
+        &:hover{
+            // background: $color-background-tag-blue-lighter;
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            // background: $color-background-tag-blue-darker;
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            outline: none;
+            // box-shadow: 0 0 0 $border-2 rgba($color-background-tag-blue-primary, $opacity-1);
+        }
+    }
+
+    &.ap-tag-green:not(.ap-tag-disabled)  {
+        // background: $color-background-tag-green-primary;
+
+        &:hover{
+            // background: $color-background-tag-green-lighter;
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            // background: $color-background-tag-green-darker;
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            outline: none;
+            // box-shadow: 0 0 0 $border-2 rgba($color-background-tag-green-primary, $opacity-1);   
+        }
+    }
+
+    &.ap-tag-indigo:not(.ap-tag-disabled)  {
+        // background: $color-background-tag-indigo-primary;
+
+        &:hover{
+            // background: $color-background-tag-indigo-lighter;
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            // background: $color-background-tag-indigo-darker;
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            outline: none;
+            // box-shadow: 0 0 0 $border-2 rgba($color-background-tag-indigo-primary, $opacity-1);  
+        }
+    }
+
+    &.ap-tag-orange:not(.ap-tag-disabled)  {
+        // background: $color-background-tag-orange-primary;
+
+        &:hover{
+            // background: $color-background-tag-orange-lighter;
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            // background: $color-background-tag-orange-darker;
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            outline: none;
+            // box-shadow: 0 0 0 $border-2 rgba($color-background-tag-orange-primary, $opacity-1);
+        }
+    }
+
+    &.ap-tag-pink:not(.ap-tag-disabled) {
+        // background: $color-background-tag-pink-primary;
+
+        &:hover{
+            // background: $color-background-tag-pink-lighter;
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            // background: $color-background-tag-pink-darker;
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            outline: none;
+            // box-shadow: 0 0 0 $border-2 rgba($color-background-tag-pink-primary, $opacity-1);
+        }
+    }
+
+    &.ap-tag-purple:not(.ap-tag-disabled)  {
+        // background: $color-background-tag-purple-primary;
+
+        &:hover{
+            // background: $color-background-tag-purple-lighter;
+            &::after {
+                @include setMultipleColors(rgba(255, 255, 255, $opacity-3));
+            }
+        }
+
+        &:active,
+        &:visited{
+            // background: $color-background-tag-purple-darker;
+            &::after {
+                @include setMultipleColors(rgba(0, 0, 0, $opacity-1));
+            }
+        }
+        &:focus{
+            outline: none;
+            // box-shadow: 0 0 0 $border-2 rgba($color-background-tag-purple-primary, $opacity-1); 
+        }
+    }
+}

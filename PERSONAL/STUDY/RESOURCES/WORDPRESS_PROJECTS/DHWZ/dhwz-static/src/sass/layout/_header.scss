@@ -1,0 +1,109 @@
+// Bring in all the mixins
+@use '../abstract' as ab;
+
+.header {
+	background-color: var(--bg);
+
+
+	&__top {
+		@include ab.container;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-inline-end: var(--top-header-padding);
+
+		&--tel {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			flex-wrap: wrap;
+
+			span,
+			a {
+				font-size: var(--paragraph);
+				color: var(--primary-color);
+			}
+
+			span {
+				font-family: 'MyriadRegular';
+			}
+
+			a {
+				font-family: 'MyriadBold';
+				text-decoration: none;
+				transition: all 0.2s ease-in-out;
+
+				&:hover {
+					color: var(--secondary-color);
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&--btn {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			a {
+				margin-inline-start: 2rem;
+				padding: 2rem 3rem;
+				background-color: var(--secondary-color);
+				font-size: var(--paragraph);
+				// color: var(--primary-color);
+				color: var(--clr-white);
+				display: flex;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				align-items: center;
+				padding: 1.5rem 2rem;
+				font-weight: 700;
+
+				.icon {
+					stroke: var(--clr-white);
+					fill: var(--clr-white);
+					stroke-width: 3rem;
+					height: 0.8rem;
+					margin-right: 0.5rem;
+					width: 1rem;
+					margin-inline-start: 0.5rem;
+				}
+			}
+		}
+
+		@include ab.respond(960px) {
+			display: none;
+		}
+	}
+
+	&__bottom {
+		@include ab.container;
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+		gap: var(--header-bottom-items-spacing);
+		padding-inline-start: var(--bottom-header-logo-padding);
+		transform: translateY(-2rem);
+		position: relative;
+		transition: all 0.6s ease-in-out;
+
+
+		&--logo-box {
+			z-index: 5;
+			transition: all 0.3s ease-in-out;
+		}
+
+		@include ab.respond(960px) {
+			width: 100%;
+			padding-block-start: 3rem;
+			padding-inline: 4rem;
+			justify-content: space-between;
+			margin-block-end: -1rem;
+
+			button.toggle {
+				right: 3rem;
+			}
+		}
+	}
+}

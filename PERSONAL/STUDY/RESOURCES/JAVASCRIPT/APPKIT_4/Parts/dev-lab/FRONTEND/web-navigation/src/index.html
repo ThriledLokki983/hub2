@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script defer type="module" src="./js/index.js"></script>
+		<title>Accessible Navigation</title>
+	</head>
+	<body>
+		<!-- if we don't set the role="list" Safari wont treat it as such if we set list-style: none; -->
+		<!-- If After validating the HTML and we get a warning like "The list role is unnecessary for element ul", you can safely ignore that -->
+		<header>
+			<nav aria-label="Main" id="mainnav">
+				<ul role="list">
+					<li>
+						<a href="/home">Home</a>
+					</li>
+					<li>
+						<a
+							href="/about-us"
+							aria-current="page"
+							class="active-page"
+							>About Us</a
+						>
+					</li>
+					<li>
+						<a href="/pricing">Pricing</a>
+					</li>
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<template id="burger-template">
+				<button
+					type="button"
+					class="burger"
+					aria-label="Menu"
+					aria-expanded="false"
+					aria-controls="mainnav"
+				>
+					<span class="burger__line" aria-hidden="true"></span>
+					<span class="burger__line" aria-hidden="true"></span>
+					<span class="burger__line" aria-hidden="true"></span>
+				</button>
+			</template>
+		</header>
+		<main>
+			<span>OKAY</span>
+		</main>
+	</body>
+</html>

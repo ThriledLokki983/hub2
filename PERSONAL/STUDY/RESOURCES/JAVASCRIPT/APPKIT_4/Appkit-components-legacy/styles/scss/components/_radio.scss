@@ -1,0 +1,137 @@
+.ap-radio-container {
+    display: flex;
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.ap-radio {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: $width-3;
+    height: $height-3;
+    color: $color-text-body;
+    line-height: $typography-line-height-3;
+
+    .a-hidden-accessibility {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: $height-3;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: $width-3;
+
+        .ap-radio-input {
+            cursor: default;
+            -webkit-appearance: radio;
+            padding: initial;
+            border: initial;
+        }
+
+        input {
+            transform: scale(0);
+        }
+
+    }
+
+
+    .Appkit4-icon::before {
+        font-weight: $font-weight-2;
+    }
+
+    .icon-radio-deselected-fill {
+        color: $color-text-body;
+    }
+
+    .icon-radio-backdrop-outline {
+        display: none;
+        position: relative;
+        color: $color-background-secondary;
+
+        .icon-radio-selected-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $color-background-icon-primary;
+            font-size: $typography-text-size-3;
+        }
+    }
+
+    &.ap-radio-checked {
+
+        .icon-radio-deselected-fill {
+            display: none;
+        }
+
+        .icon-radio-backdrop-outline {
+            display: inline-flex;
+        }
+    }
+
+    &.ap-radio-disabled {
+        cursor: not-allowed;
+
+        .ap-radio-input {
+            cursor: not-allowed;
+        }
+
+        .icon-radio-deselected-fill {
+            opacity: $opacity-5;
+        }
+    }
+
+    &.ap-radio-checked.ap-radio-disabled {
+
+        .icon-radio-backdrop-outline {
+            opacity: $opacity-5;
+            // background: $color-background-icon-primary;
+        }
+    }
+
+    &.ap-radio-readonly {
+
+        .ap-radio-input {
+            cursor: not-allowed;
+        }
+    }
+
+    &.ap-radio-focused {
+        outline: auto 2px Highlight;
+        /* Firefox */
+        outline: auto 5px -webkit-focus-ring-color;
+        /* Webkit, Safari */
+        outline-offset: $spacing-1;
+    }
+}
+
+.ap-radio-label {
+    padding-left: $spacing-2;
+    height: $height-3;
+    font-size: $typography-text-size-3;
+    color: $color-text-body;
+    letter-spacing: $letter-spacing-1;
+    line-height: $typography-line-height-3;
+    cursor: pointer;
+
+    &:empty {
+        display: none;
+    }
+}
+
+.ap-radio-disabled+.ap-radio-label {
+    cursor: not-allowed;
+    opacity: $opacity-5;
+    // color: $color-text-disabled;
+}
+
+.ap-radio-readonly+.ap-radio-label {
+    cursor: not-allowed;
+}

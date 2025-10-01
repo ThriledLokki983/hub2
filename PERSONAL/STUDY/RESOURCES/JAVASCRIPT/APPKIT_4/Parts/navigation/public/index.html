@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<script defer type="module" src="./js/index.js"></script>
+		<title>Accessible Navigation</title>
+	</head>
+	<body>
+		<header class="header">
+			<section class="header__top top">
+				<form class="top__search" role="search" method="get" id="searchform">
+					<div class="top__search--input">
+						<span class="top__search--input-text">aangesloten bij</span>
+						<picture class="top__search--input-picture">
+							<source media="(max-width: 767px)" srcset="assets/img/top.png" />
+							<source media="(min-width: 768px)" srcset="assets/img/top.png" />
+							<img
+								src="assets/img/top.png"
+								alt="logo"
+								id="logo"
+								class="m-t-08"
+								loading="lazy"
+							/>
+						</picture>
+						<div class="top__search--input-box">
+							<svg class="top__search--input-box-icon icon">
+								<use xlink:href="assets/icons/sprite.svg#icon-search"></use>
+							</svg>
+							<input
+								type="text"
+								class="search-field"
+								placeholder="Zoeken in onze collectie"
+								id="s"
+							/>
+						</div>
+					</div>
+					<div class="button-box">
+						<a class="btn secondary mob-sm button-box-link"> contact</a>
+						<a class="btn green mob-sm button-box-link"> offerte</a>
+					</div>
+				</form>
+			</section>
+			<section class="header__reviews reviews">
+				<div class="reviews__icon-box">
+					<svg class="reviews__icon-box-icon icon">
+						<use xlink:href="assets/icons/sprite.svg#icon-star-full"></use>
+					</svg>
+					<svg class="reviews__icon-box-icon icon">
+						<use xlink:href="assets/icons/sprite.svg#icon-star-full"></use>
+					</svg>
+					<svg class="reviews__icon-box-icon icon">
+						<use xlink:href="assets/icons/sprite.svg#icon-star-full"></use>
+					</svg>
+					<svg class="reviews__icon-box-icon icon">
+						<use xlink:href="assets/icons/sprite.svg#icon-star-full"></use>
+					</svg>
+					<svg class="reviews__icon-box-icon icon">
+						<use xlink:href="assets/icons/sprite.svg#icon-star-full"></use>
+					</svg>
+				</div>
+				<div class="reviews__text">
+					<span class="reviews__text-content">1772 beoordelingen</span>
+				</div>
+			</section>
+			<section class="header__main">
+				<div class="header__logo">
+					<div class="header__logo--link">
+						<picture class="header__logo--link-logo">
+							<source
+								media="(max-width: 767px)"
+								srcset="assets/img/vloerenraam-logo.png"
+							/>
+							<source
+								media="(min-width: 768px)"
+								srcset="assets/img/vloerenraam-logo.png"
+							/>
+							<img src="assets/img/vloerenraam-logo.png" alt="logo" id="logo" class="header__logo--link-logo-img"/>
+						</picture>
+
+					</div>
+				</div>
+				<nav aria-label="Main" id="mainnav" class="header__nav">
+					<ul role="list" class="header__nav__list">
+						<li class="header__nav__list--item-nothing"></li>
+						<li class="header__nav__list--item">
+						<a href="/" aria-current="page" class=" active-page header__nav__list--item-link">vloeren</a>
+						<div class="dropdown--content">
+							<ul class="sub__menu">
+								<li class="sub__menu--item"><a href="#" class="sub__menu--item-link">
+									<span>alle pvc vloeren</span>
+									</a></li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Moduleo pvc vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">flooriginal pvc vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">ambiant pvc vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">therdex pvc vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">pvc visgraat</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">PVC vloer betonlook</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Click PVC</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Alle vloeren</a>
+								</li>
+								<li class="sub__menu--item-last">
+									<span class="sub__menu--item-last-text">aangesloten bij</span>
+									<img src="assets/img/navigation-photo.png" alt="">
+									<span class="sub__menu--item-last-text">bekend van tv</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="header__nav__list--item">
+						<a
+							href="/"
+							class="header__nav__list--item-link"
+							>Vloerverwarming</a
+						>
+						<div class="dropdown--content">
+							<ul class="sub__menu">
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Vloerverwarming </a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Eiken vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Laminaat</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Marmoleum</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Novilon</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Tapijt</a>
+								</li>
+								<li class="sub__menu--item-last">
+									<span class="sub__menu--item-last-text">aangesloten bij</span>
+									<img src="assets/img/navigation-photo.png" alt="">
+									<span class="sub__menu--item-last-text">bekend van tv</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="header__nav__list--item">
+						<a href="/" class="header__nav__list--item-link">Traprenovatie</a>
+						<div class="dropdown--content">
+							<ul class="sub__menu">
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Vloerverwarming</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Eiken vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Laminaat</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Marmoleum</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Novilon</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Tapijt</a>
+								</li>
+								<li class="sub__menu--item-last">
+									<span class="sub__menu--item-last-text">aangesloten bij</span>
+									<img src="assets/img/navigation-photo.png" alt="">
+									<span class="sub__menu--item-last-text">bekend van tv</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="header__nav__list--item">
+						<a href="/" class="header__nav__list--item-link">raamdecoratie</a>
+							<div class="dropdown--content">
+								<ul class="sub__menu">
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">alle pvc vloeren</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">Moduleo pvc vloeren</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">flooriginal pvc vloeren</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">ambiant pvc vloeren</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">therdex pvc vloeren</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">pvc visgraat</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">PVC vloer betonlook</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">Click PVC</a>
+									</li>
+									<li class="sub__menu--item">
+										<a href="#" class="sub__menu--item-link">Alle vloeren</a>
+									</li>
+									<li class="sub__menu--item-last">
+										<span class="sub__menu--item-last-text">aangesloten bij</span>
+										<img src="assets/img/navigation-photo.png" alt="">
+										<span class="sub__menu--item-last-text">bekend van tv</span>
+									</li>
+								</ul>
+							</div>
+					</li>
+					<li class="header__nav__list--item">
+						<a href="/" class="header__nav__list--item-link">kasten</a>
+						<div class="dropdown--content">
+							<ul class="sub__menu">
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Vloerverwarming</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Eiken vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Laminaat</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Marmoleum</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Novilon</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Tapijt</a>
+								</li>
+								<li class="sub__menu--item-last">
+									<span class="sub__menu--item-last-text">aangesloten bij</span>
+									<img src="assets/img/navigation-photo.png" alt="">
+									<span class="sub__menu--item-last-text">bekend van tv</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="header__nav__list--item">
+						<a
+							href="/"
+							class="header__nav__list--item-link"
+							>wandafwerking</a
+						>
+						<div class="dropdown--content">
+							<ul class="sub__menu">
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Vloerverwarming </a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Eiken vloeren</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Laminaat</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Marmoleum</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Novilon</a>
+								</li>
+								<li class="sub__menu--item">
+									<a href="#" class="sub__menu--item-link">Tapijt</a>
+								</li>
+								<li class="sub__menu--item-last">
+									<span class="sub__menu--item-last-text">aangesloten bij</span>
+									<img src="assets/img/navigation-photo.png" alt="">
+									<span class="sub__menu--item-last-text">bekend van tv</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				</nav>
+				<template id="burger-template">
+					<button
+						type="button"
+						class="burger"
+						aria-label="Menu"
+						aria-expanded="false"
+						aria-controls="mainnav"
+					>
+						<span class="burger__line" aria-hidden="true"></span>
+						<span class="burger__line" aria-hidden="true"></span>
+						<span class="burger__line" aria-hidden="true"></span>
+					</button>
+				</template>
+			</section>
+		</header>
+		<main>
+			<!-- <span>OKAY</span> -->
+		</main>
+	</body>
+</html>

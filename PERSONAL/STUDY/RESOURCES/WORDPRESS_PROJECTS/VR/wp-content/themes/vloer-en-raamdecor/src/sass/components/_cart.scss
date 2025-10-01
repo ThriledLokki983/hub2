@@ -1,0 +1,141 @@
+@use '../abstract' as ab;
+
+.offerte-aanvragen > .woocommerce {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto;
+	grid-template-areas: 'top-info top-info' 'top-info top-info' 'table form';
+	gap: 10px;
+	& > .woocommerce {
+		grid-area: form;
+		grid-column: 1;
+		grid-row: auto;
+	}
+	W .woocommerce-checkout {
+		grid-area: form;
+		grid-column: 2;
+	}
+
+	.woocommerce-notices-wrapper {
+		grid-column: 1 / 3;
+		grid-area: top-info;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.offerte-aanvragen > .woocommerce {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 'top-info' 'top-info' 'table' 'form';
+		gap: 10px;
+		& > .woocommerce {
+			grid-area: form;
+			grid-row: auto;
+		}
+
+		.woocommerce-checkout {
+			grid-area: form;
+			max-width: 100%;
+		}
+
+		.woocommerce-notices-wrapper {
+			grid-area: top-info;
+		}
+
+		.woocommerce-message {
+		}
+	}
+}
+
+.woocommerce-checkout {
+	color: var(--clr-black);
+	p {
+		font-size: 13px;
+		color: var(--clr-black);
+		font-weight: 400;
+	}
+
+	.total-products {
+		float: right;
+	}
+
+	.return-to-shop {
+		display: none;
+	}
+}
+
+.woocommerce-info,
+.woocommerce-message {
+	border-top: 2px solid var(--primary-color);
+	background-color: var(--primary-color-lightest);
+	width: 100%;
+	max-width: 100%;
+	grid-column: 1 / 2;
+	font-size: 15px;
+	font-family: var(--font-secondary);
+	font-weight: var(--font-light);
+	color: var(--clr-black);
+	margin: 0 0 1em 0 !important;
+}
+
+.woocommerce-message::before {
+	color: var(--primary-color) !important;
+}
+
+.woocommerce .quantity .qty {
+	margin-right: 5px;
+	padding: 0.5rem 1rem;
+}
+
+.woocommerce a.remove i {
+	color: var(--clr-black);
+}
+.woocommerce a.remove:hover {
+	color: #fff !important;
+	background: none;
+
+	i {
+		color: #777;
+	}
+}
+
+.woocommerce .actions button.button {
+	background-color: #fff;
+	font-weight: 300;
+	font-size: 16px;
+	font-style: italic;
+
+	i {
+		font-family: 'Font Awesome 6 Free';
+		font-weight: 900;
+	}
+}
+
+.woocommerce .actions button.button {
+	i {
+		color: #777;
+	}
+}
+
+.woocommerce-cart-form table.woocommerce-cart-form__contents tr td .product-name {
+	margin-bottom: 2px !important;
+	font-weight: 900 !important;
+}
+
+.woocommerce-cart-form table.woocommerce-cart-form__contents tr td.product-info {
+	gap: 6px !important;
+}
+
+.woocommerce-checkout-review-order table.woocommerce-checkout-review-order-table tbody tr th, .woocommerce-checkout-review-order table.woocommerce-checkout-review-order-table tbody tr td {
+	padding: 7px 0;
+	font-size: 14px;
+}
+
+.order-total th {
+	padding: 11px 0 7px 0 !important;
+}
+
+.fee th {
+	padding: 7px 0 11px 0 !important;
+}

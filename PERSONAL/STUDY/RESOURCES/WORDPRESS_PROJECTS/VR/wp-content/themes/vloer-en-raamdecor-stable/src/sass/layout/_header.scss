@@ -1,0 +1,10 @@
+@use '../abstract' as ab;
+
+.header {
+	// @include ab.default-layout;
+	// @include ab.flex-column-content();
+	@include ab.respond(960px) {
+		overflow-x: clip;
+		// overflow-x: hidden;
+	}
+}

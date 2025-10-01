@@ -1,0 +1,24 @@
+@use '../abstract/' as ab;
+
+.overlay--title,
+.title {
+	font-family: var(--font-secondary);
+	font-size: var(--heading);
+	line-height: 1.2;
+}
+
+.card--title {
+}
+
+.paragraph,
+p {
+	font-family: var(--font-tertiary);
+	font-size: var(--paragraph);
+	max-width: 90%;
+	text-align: left;
+	// line-height: 1.4;
+
+	@include ab.respond(960px) {
+		max-width: 100%;
+	}
+}

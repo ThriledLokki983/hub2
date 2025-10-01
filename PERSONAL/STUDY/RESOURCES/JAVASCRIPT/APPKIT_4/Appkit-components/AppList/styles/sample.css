@@ -1,0 +1,35 @@
+.ap-list .sample3 .ap-list-item .Appkit4-icon::before {
+  color: var(--color-text-heading);
+  opacity: var(--opacity-4);
+}
+.ap-list .sample3 .ap-list-item.selected .Appkit4-icon::before {
+  color: var(--color-text-warning);
+  border-width: 0;
+  opacity: var(--opacity-7);
+}
+.ap-list .sample5 .ap-list-item {
+  padding-left: var(--spacing-3);
+}
+.ap-list .sample6 .ap-list-item {
+  padding-left: var(--spacing-3);
+}
+.ap-list .sample7 .ap-list-item {
+  padding-left: var(--spacing-3);
+}
+.ap-list .sample9 .ap-list-item {
+  padding: 0;
+}
+.ap-list .sample9 .ap-list-item .ap-list-avatar-container {
+  padding: 4px;
+}
+.ap-list .sample10 .ap-list-item {
+  padding: var(--spacing-3);
+}
+.ap-list .sample10 .ap-list-item .ap-list-avatar-container {
+  padding: var(--spacing-2);
+}
+.ap-list .sample11 .ap-list-item {
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+/*# sourceMappingURL=sample.css.map */

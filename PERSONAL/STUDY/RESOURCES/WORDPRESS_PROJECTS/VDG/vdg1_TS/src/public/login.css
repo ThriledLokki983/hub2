@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'Kepler Std Regular';
+	src: url('./font/KeplerStd-Disp.otf') format('truetype');
+  }
+
+  @font-face {
+	font-family: 'Frutiger LT';
+	src: url('./font/unicode.frutigel.ttf') format('truetype');
+  }
+
+
+.page {
+	width: min(90%, 50rem);
+	margin-inline: auto;
+	border: 1px solid #ccc;
+	border-radius: 0.5rem;
+}
+
+.login-container {
+	width: 100%;
+	padding: 2rem 5rem;
+	background-color: #fefefe;
+}
+
+.btn {
+	font-family: 'Frutiger LT';
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 1em;
+    background: #0e1a41;
+    border: none !important;
+    padding: 2.4rem 3.2rem;
+    border-radius: 1.5px;
+    text-transform: uppercase;
+}

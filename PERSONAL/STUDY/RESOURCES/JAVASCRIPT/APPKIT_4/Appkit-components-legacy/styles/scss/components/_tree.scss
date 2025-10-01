@@ -1,0 +1,200 @@
+.ap-tree {
+    margin: 0;
+    padding: 0;
+
+    &.no-outline {
+        .focus {
+            outline: 0 !important;
+        }
+    }
+}
+
+.ap-files-fold {
+    color: $color-text-body;
+    padding: $spacing-4;
+    margin-bottom: $spacing-2;
+    letter-spacing: normal !important;
+    user-select: none;
+    list-style: none;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    .ap-fold-name.focus, .ap-tree-list-item.focus {
+        @supports (-moz-appearance:none) {
+            box-shadow: 0 0 0 rem(2px) #2474d6;
+            border-radius: rem(2px);
+        }
+        outline: -webkit-focus-ring-color auto rem(5px);
+        outline-offset: $spacing-1;
+    }
+
+    .ap-fold-name {
+        width: 100%;
+        border-radius: $border-radius-2;
+        font-size: $typography-text-size-3;
+        // background-color: $color-background-alt;
+        display: flex;
+
+        .Appkit4-icon {
+            margin-right: $spacing-2;
+        }
+
+        .ap-file-title {
+            display: inline-block;
+            height: $typography-line-height-3;
+            line-height: $typography-line-height-3;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:hover {
+                font-weight: $font-weight-2;
+            }
+        }
+    }
+
+    .ap-tree-list {
+        // background-color: $color-background-accordion-hover;
+        padding-left: $spacing-4;
+
+        &.fadeInDown {
+            display: block;
+        }
+
+        &.fadeOutUp {
+            display: none;
+        }
+
+        .ap-tree-list-item {
+            display: flex;
+
+            &:hover {
+                cursor: pointer;
+                color: $color-text-heading;
+                font-weight: $font-weight-2;
+
+                // .ap-file-title {
+                    // padding-top: 1px;
+                // }
+            }
+
+            .ap-file-title {
+                display: inline-block;
+                height: $typography-line-height-3;
+                line-height: $typography-line-height-3;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .Appkit4-icon {
+                margin-right: $spacing-2;
+            }
+        }
+    }
+
+    &.active,
+    &:hover {
+        cursor: pointer;
+        background-color: $color-background-hover;
+        border-radius: $border-radius-2;
+    }
+
+    &.active .ap-fold-name {
+        margin-bottom: 0;
+    }
+
+    &.active .ap-fold-name,.ap-files-fold {
+        background-color: $color-background-hover;
+        margin-top: $spacing-4;
+        padding: 0;
+    }
+
+    &.active .ap-fold-name {
+        margin-top: 0;
+    }
+
+    &.normal .ap-tree-list {
+        background-color: $color-background-alt;
+    }
+}
+
+
+.animated {
+    -webkit-animation-duration: $transition-0;
+    animation-duration: $transition-0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0)
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0)
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/gideonnimoh/Desktop/ongoing_projects/wiersma/vdg1-TS/src/logs/error/.59de40f608ad6f93350ed4d0518a4811eb7a718e-audit.json",
+    "files": [
+        {
+            "date": 1647124225759,
+            "name": "/Users/gideonnimoh/Desktop/ongoing_projects/wiersma/vdg1-TS/src/logs/error/2022-03-12.log",
+            "hash": "54d113a47aa1b56c4f4533f2f765d926"
+        }
+    ],
+    "hashType": "md5"
+}

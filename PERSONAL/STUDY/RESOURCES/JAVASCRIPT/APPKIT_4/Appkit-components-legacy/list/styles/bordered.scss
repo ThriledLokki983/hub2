@@ -1,0 +1,45 @@
+.#{$list-prefix-cls}-bordered {
+  box-shadow: $level-1;
+  border-radius: $border-radius-3;
+
+  .#{$list-prefix-cls}-header {
+    padding-right: $spacing-4;
+    padding-left: $spacing-4;
+  }
+
+  .#{$list-prefix-cls}-footer {
+    padding-right: $spacing-4;
+    padding-left: $spacing-4;
+  }
+
+  .#{$list-prefix-cls}-item {
+    padding-right: $spacing-4;
+    padding-left: $spacing-4;
+  }
+
+  .#{$list-prefix-cls}-pagination {
+    margin: $spacing-10 $spacing-10;
+  }
+
+  &.#{$list-prefix-cls}-sm {
+    .#{$list-prefix-cls}-item {
+      padding: $spacing-3;
+    }
+
+    .#{$list-prefix-cls}-header,
+    .#{$list-prefix-cls}-footer {
+      padding: $spacing-10;
+    }
+  }
+
+  &.#{$list-prefix-cls}-lg {
+    .#{$list-prefix-cls}-item {
+      padding: $spacing-10;
+    }
+
+    .#{$list-prefix-cls}-header,
+    .#{$list-prefix-cls}-footer {
+      padding: $spacing-10;
+    }
+  }
+}

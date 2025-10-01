@@ -1,0 +1,140 @@
+// Transition Mixin
+@mixin transition-ease {
+	transition: all 0.3s ease-in-out;
+}
+
+// default layout which will also restrict the content within a specified width and center the content
+@mixin container {
+	--width: min(85%, var(--restricted-width));
+	width: var(--width);
+	margin-inline: auto;
+
+	// @include respond(1100px) {
+	// 	--width: min(95%, var(--restricted-width));
+	// }
+
+	// @media (max-width: 50em) {
+	// 	--width: min(90%, var(--restricted-width));
+	// }
+}
+
+// Media queries
+@mixin respond($breakpoint) {
+	@media only screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+/*
+* Create an intrinsically responsive grid layout, optionally using a CSS custom  property to extend to variable contexts. Each column will resize at the same rate, and items will begin to break to a new row if the width reaches the --min/$width value.
+*/
+@mixin grid-auto-layout($width: 15ch) {
+	--gap: clamp(1rem, 1.5vw + 1rem, 3rem);
+
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(var(--max-width), $width), 1fr)
+	);
+	grid-auto-flow: row;
+	grid-gap: var(--gap);
+	grid-auto-rows: 1fr;
+}
+
+@mixin on-hover() {
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+// prefix declarations
+@mixin prefixed($property, $value) {
+	@if $webkit == true {
+		-webkit-#{$property}: #{$value};
+	}
+
+	@if $moz == true {
+		-moz-#{$property}: #{$value};
+	}
+
+	@if $ms == true {
+		-ms-#{$property}: #{$value};
+	}
+
+	@if $o == true {
+		-o-#{$property}: #{$value};
+	}
+
+	#{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+	@if $webkit == true {
+		@-webkit-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $moz == true {
+		@-moz-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $ms == true {
+		@-ms-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@if $o == true {
+		@-o-keyframes #{$name} {
+			@content;
+		}
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+/* Bounce To Right */
+@mixin bounce-to-right {
+	@include hacks();
+	position: relative;
+	@include prefixed(transition-property, color);
+	@include prefixed(transition-duration, $slowDuration);
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $activeColor;
+		@include prefixed(transform, scaleX(0));
+		@include prefixed(transform-origin, 0 50%);
+		@include prefixed(transition-property, transform);
+		@include prefixed(transition-duration, $slowDuration);
+		@include prefixed(transition-timing-function, ease-out);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: white;
+
+		&:before {
+			@include prefixed(transform, scaleX(1));
+			@include prefixed(
+				transition-timing-function,
+				cubic-bezier(0.52, 1.64, 0.37, 0.66)
+			);
+		}
+	}
+}

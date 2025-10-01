@@ -1,0 +1,144 @@
+.ap-progress {
+  position: relative;
+  background-color: $color-text-disabled;
+  border-radius: $border-radius-1;
+  ul {
+    padding-inline-start: 0;
+    li {
+      list-style: none;
+    }
+  }
+  .ap-progress-bar {
+    position: relative;
+    height: 100%;
+    background: $color-background-primary;
+    border-radius: $border-radius-1;
+    transition: all 0.15s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: $width-0;
+      height: $height-0;
+      border-radius: 50%;
+      background-color: $color-background-primary;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+
+.ap-progress-mark {
+  position: absolute;
+  top: $spacing-18;
+  left: 0;
+  width: 100%;
+  display: grid;
+}
+
+.ap-progress-mark-text {
+  // position: absolute;
+  font-size: $typography-text-size-3;
+  letter-spacing: $typography-letter-spacing-1;
+  font-weight: 400;
+  padding: $spacing-2 $spacing-3;
+  border-radius: $border-radius-2;
+  color: $color-text-body;
+  // transform: translateX(-50%);
+  background-color: transparent;
+  word-break: break-word;
+  display: table;
+
+  span {
+    display: inline-block;
+    line-height: $typography-line-height-3;
+    height: $height-3;
+  }
+
+  &:hover {
+    background: $color-background-container-alt;
+    cursor: pointer;
+  }
+
+  .active {
+    color: $color-text-heading;
+    font-weight: $font-weight-2;
+  }
+}
+
+.ap-progress-readonly {
+  .ap-progress-mark-text {
+    &:hover {
+      background: none;
+      cursor: default;
+    }
+  }
+}
+
+.is-vertical {
+  width: $spacing-2;
+
+  .ap-progress-bar::before {
+    right: unset;
+    bottom: unset;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ap-progress-mark {
+    top: 0;
+    width: 0;
+    left: $spacing-4;
+    height: 100%;
+
+    // .ap-progress-mark-text {
+      // transform: translate(0, -50%);
+      // &:first-child {
+      //   transform: translateY(calc(-1 * $spacing-2));
+      // }
+      // &:last-child {
+      //   transform: translate(0, -100%);
+      //   margin-top: $spacing-2;
+      // }
+    // }
+
+    // &>:first-child .ap-progress-mark-text {
+      // transform: translateY(calc(-1 * $spacing-3));
+    // }
+
+    // &>:last-child .ap-progress-mark-text {
+      // transform: translateY(-100%);
+      // margin-top: $spacing-3;
+    // }
+  }
+}
+
+.is-horizontal {
+  height: $spacing-2;
+
+  // .ap-progress-mark-text {
+  //   &:first-child {
+  //     transform: translateX(-8px);
+  //   }
+
+  //   &:last-child {
+  //     transform: translateX(-100%);
+  //     margin-left: $spacing-3;
+  //     transform: none;
+  //     margin-right: rem(-6px);
+  //   }
+  // }
+
+  // .ap-progress-mark {
+    // &>:first-child .ap-progress-mark-text {
+      // transform: translateX(calc(-1 * $spacing-3));
+    // }
+
+    // &>:last-child .ap-progress-mark-text {
+      // transform: translateX(-100%);
+      // margin-left: rem(6px);
+    // }
+  // }
+}

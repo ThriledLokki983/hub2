@@ -1,0 +1,65 @@
+
+.ap-avatar {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-background-primary;
+    color: $color-text-secondary;
+    border-color: $color-text-primary;
+    border-style: solid;
+    font-weight: $font-weight-2;
+    padding: $spacing-3;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+
+    &.mask {
+        mask-image: url('../../images/avatar/avatar-mask.svg');
+        -webkit-mask-image: url('../../images/avatar/avatar-mask.svg');
+        mask-position: right;
+        -webkit-mask-position: right;
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    }
+
+    &:not(.mask) {
+        color: $color-text-tertiary;
+    }
+
+    &.disabled {
+        cursor: default;
+    }
+
+    &:not(.disabled):focus {
+        &:not(.keyboard-focus) {
+            outline: none;
+            box-shadow: 0 0 0 $border-2 rgba($color-background-primary-rgb, $opacity-3);
+        }
+
+        &.keyboard-focus {
+            outline: auto 2px Highlight; /* Firefox */
+            outline: auto 5px -webkit-focus-ring-color; /* Webkit, Safari */
+            outline-offset: $spacing-1;
+        }
+    }
+
+    &-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .back-mask {
+        position: absolute;
+        top: rem(-4px);
+        left: rem(-4px);
+        background-color: $color-background-primary;
+        border-radius: $border-radius-7;
+        opacity: $opacity-3;
+    }
+}

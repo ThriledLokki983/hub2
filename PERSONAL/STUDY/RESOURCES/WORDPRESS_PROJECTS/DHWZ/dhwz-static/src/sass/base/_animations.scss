@@ -1,0 +1,856 @@
+@use '../abstract/' as ab;
+
+
+@keyframes moveInTop {
+	0% {
+		opacity: 0;
+		background-color: transparent;
+		transform: translateY(-4rem);
+	}
+
+	100% {
+		opacity: 1;
+		background-color: var(--bg);
+		transform: translateY(0);
+	}
+}
+
+@keyframes moveInTopHeader {
+	0% {
+		opacity: 0;
+		background-color: transparent;
+		backdrop-filter: blur(0px);
+		transform: translateY(-10rem);
+	}
+
+	100% {
+		opacity: 1;
+		background-color: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(5px);
+		transform: translateY(0);
+	}
+}
+
+@keyframes moveOutTop {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-2rem);
+	}
+}
+
+// animate: grow border bottom from left to right
+@keyframes animateBorderBottom {
+	0% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 0%,
+				transparent 0%
+			)
+			0 0 1 0;
+	}
+	1% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 1%,
+				transparent 1%
+			)
+			0 0 1 0;
+	}
+	2% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 2%,
+				transparent 2%
+			)
+			0 0 1 0;
+	}
+	3% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 3%,
+				transparent 3%
+			)
+			0 0 1 0;
+	}
+	4% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 4%,
+				transparent 4%
+			)
+			0 0 1 0;
+	}
+	5% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 5%,
+				transparent 5%
+			)
+			0 0 1 0;
+	}
+	6% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 6%,
+				transparent 6%
+			)
+			0 0 1 0;
+	}
+	7% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 7%,
+				transparent 7%
+			)
+			0 0 1 0;
+	}
+	8% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 8%,
+				transparent 8%
+			)
+			0 0 1 0;
+	}
+	9% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 9%,
+				transparent 9%
+			)
+			0 0 1 0;
+	}
+	10% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 10%,
+				transparent 10%
+			)
+			0 0 1 0;
+	}
+	11% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 11%,
+				transparent 11%
+			)
+			0 0 1 0;
+	}
+	12% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 12%,
+				transparent 12%
+			)
+			0 0 1 0;
+	}
+	13% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 13%,
+				transparent 13%
+			)
+			0 0 1 0;
+	}
+	14% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 14%,
+				transparent 14%
+			)
+			0 0 1 0;
+	}
+	15% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 15%,
+				transparent 15%
+			)
+			0 0 1 0;
+	}
+	16% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 16%,
+				transparent 16%
+			)
+			0 0 1 0;
+	}
+	17% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 17%,
+				transparent 17%
+			)
+			0 0 1 0;
+	}
+	18% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 18%,
+				transparent 18%
+			)
+			0 0 1 0;
+	}
+	19% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 19%,
+				transparent 19%
+			)
+			0 0 1 0;
+	}
+	20% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 20%,
+				transparent 20%
+			)
+			0 0 1 0;
+	}
+	21% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 21%,
+				transparent 21%
+			)
+			0 0 1 0;
+	}
+	22% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 22%,
+				transparent 22%
+			)
+			0 0 1 0;
+	}
+	23% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 23%,
+				transparent 23%
+			)
+			0 0 1 0;
+	}
+	24% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 24%,
+				transparent 24%
+			)
+			0 0 1 0;
+	}
+	25% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 25%,
+				transparent 25%
+			)
+			0 0 1 0;
+	}
+	26% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 26%,
+				transparent 26%
+			)
+			0 0 1 0;
+	}
+	27% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 27%,
+				transparent 27%
+			)
+			0 0 1 0;
+	}
+	28% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 28%,
+				transparent 28%
+			)
+			0 0 1 0;
+	}
+	29% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 29%,
+				transparent 29%
+			)
+			0 0 1 0;
+	}
+	30% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 30%,
+				transparent 30%
+			)
+			0 0 1 0;
+	}
+	31% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 31%,
+				transparent 31%
+			)
+			0 0 1 0;
+	}
+	32% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 32%,
+				transparent 32%
+			)
+			0 0 1 0;
+	}
+	33% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 33%,
+				transparent 33%
+			)
+			0 0 1 0;
+	}
+	34% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 34%,
+				transparent 34%
+			)
+			0 0 1 0;
+	}
+	35% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 35%,
+				transparent 35%
+			)
+			0 0 1 0;
+	}
+	36% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 36%,
+				transparent 36%
+			)
+			0 0 1 0;
+	}
+	37% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 37%,
+				transparent 37%
+			)
+			0 0 1 0;
+	}
+	38% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 38%,
+				transparent 38%
+			)
+			0 0 1 0;
+	}
+	39% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 39%,
+				transparent 39%
+			)
+			0 0 1 0;
+	}
+	40% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 40%,
+				transparent 40%
+			)
+			0 0 1 0;
+	}
+	41% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 41%,
+				transparent 41%
+			)
+			0 0 1 0;
+	}
+	42% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 42%,
+				transparent 42%
+			)
+			0 0 1 0;
+	}
+	43% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 43%,
+				transparent 43%
+			)
+			0 0 1 0;
+	}
+	44% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 44%,
+				transparent 44%
+			)
+			0 0 1 0;
+	}
+	45% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 45%,
+				transparent 45%
+			)
+			0 0 1 0;
+	}
+	46% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 46%,
+				transparent 46%
+			)
+			0 0 1 0;
+	}
+	47% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 47%,
+				transparent 47%
+			)
+			0 0 1 0;
+	}
+	48% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 48%,
+				transparent 48%
+			)
+			0 0 1 0;
+	}
+	49% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 49%,
+				transparent 49%
+			)
+			0 0 1 0;
+	}
+	50% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 50%,
+				transparent 50%
+			)
+			0 0 1 0;
+	}
+	51% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 51%,
+				transparent 51%
+			)
+			0 0 1 0;
+	}
+	52% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 52%,
+				transparent 52%
+			)
+			0 0 1 0;
+	}
+	53% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 53%,
+				transparent 53%
+			)
+			0 0 1 0;
+	}
+	54% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 54%,
+				transparent 54%
+			)
+			0 0 1 0;
+	}
+	55% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 55%,
+				transparent 55%
+			)
+			0 0 1 0;
+	}
+	56% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 56%,
+				transparent 56%
+			)
+			0 0 1 0;
+	}
+	57% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 57%,
+				transparent 57%
+			)
+			0 0 1 0;
+	}
+	58% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 58%,
+				transparent 58%
+			)
+			0 0 1 0;
+	}
+	59% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 59%,
+				transparent 59%
+			)
+			0 0 1 0;
+	}
+	60% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 60%,
+				transparent 60%
+			)
+			0 0 1 0;
+	}
+	61% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 61%,
+				transparent 61%
+			)
+			0 0 1 0;
+	}
+	62% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 62%,
+				transparent 62%
+			)
+			0 0 1 0;
+	}
+	63% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 63%,
+				transparent 63%
+			)
+			0 0 1 0;
+	}
+	64% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 64%,
+				transparent 64%
+			)
+			0 0 1 0;
+	}
+	65% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 65%,
+				transparent 65%
+			)
+			0 0 1 0;
+	}
+	66% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 66%,
+				transparent 66%
+			)
+			0 0 1 0;
+	}
+	67% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 67%,
+				transparent 67%
+			)
+			0 0 1 0;
+	}
+	68% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 68%,
+				transparent 68%
+			)
+			0 0 1 0;
+	}
+	69% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 69%,
+				transparent 69%
+			)
+			0 0 1 0;
+	}
+	70% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 70%,
+				transparent 70%
+			)
+			0 0 1 0;
+	}
+	71% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 71%,
+				transparent 71%
+			)
+			0 0 1 0;
+	}
+	72% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 72%,
+				transparent 72%
+			)
+			0 0 1 0;
+	}
+	73% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 73%,
+				transparent 73%
+			)
+			0 0 1 0;
+	}
+	74% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 74%,
+				transparent 74%
+			)
+			0 0 1 0;
+	}
+	75% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 75%,
+				transparent 75%
+			)
+			0 0 1 0;
+	}
+	76% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 76%,
+				transparent 76%
+			)
+			0 0 1 0;
+	}
+	77% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 77%,
+				transparent 77%
+			)
+			0 0 1 0;
+	}
+	78% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 78%,
+				transparent 78%
+			)
+			0 0 1 0;
+	}
+	79% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 79%,
+				transparent 79%
+			)
+			0 0 1 0;
+	}
+	80% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 80%,
+				transparent 80%
+			)
+			0 0 1 0;
+	}
+	81% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 81%,
+				transparent 81%
+			)
+			0 0 1 0;
+	}
+	82% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 82%,
+				transparent 82%
+			)
+			0 0 1 0;
+	}
+	83% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 83%,
+				transparent 83%
+			)
+			0 0 1 0;
+	}
+	84% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 84%,
+				transparent 84%
+			)
+			0 0 1 0;
+	}
+	85% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 85%,
+				transparent 85%
+			)
+			0 0 1 0;
+	}
+	86% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 86%,
+				transparent 86%
+			)
+			0 0 1 0;
+	}
+	87% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 87%,
+				transparent 87%
+			)
+			0 0 1 0;
+	}
+	88% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 88%,
+				transparent 88%
+			)
+			0 0 1 0;
+	}
+	89% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 89%,
+				transparent 89%
+			)
+			0 0 1 0;
+	}
+	90% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 90%,
+				transparent 90%
+			)
+			0 0 1 0;
+	}
+	91% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 91%,
+				transparent 91%
+			)
+			0 0 1 0;
+	}
+	92% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 92%,
+				transparent 92%
+			)
+			0 0 1 0;
+	}
+	93% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 93%,
+				transparent 93%
+			)
+			0 0 1 0;
+	}
+	94% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 94%,
+				transparent 94%
+			)
+			0 0 1 0;
+	}
+	95% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 95%,
+				transparent 95%
+			)
+			0 0 1 0;
+	}
+	96% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 96%,
+				transparent 96%
+			)
+			0 0 1 0;
+	}
+	97% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 97%,
+				transparent 97%
+			)
+			0 0 1 0;
+	}
+	98% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 98%,
+				transparent 98%
+			)
+			0 0 1 0;
+	}
+	99% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 99%,
+				transparent 99%
+			)
+			0 0 1 0;
+	}
+	100% {
+		border-image: linear-gradient(
+				to right,
+				var(--secondary-color) 100%,
+				transparent 100%
+			)
+			0 0 1 0;
+	}
+}

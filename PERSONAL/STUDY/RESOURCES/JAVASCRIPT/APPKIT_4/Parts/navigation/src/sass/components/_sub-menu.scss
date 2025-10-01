@@ -1,0 +1,44 @@
+.sub__menu {
+	.level-1 {
+		.sub__menu--item {
+			padding: 0.5rem;
+		}
+	}
+
+	&--item {
+		padding-block-end: 0.5rem;
+		padding-inline-start: 0.4rem;
+
+		&-link{
+			text-decoration: none;
+			color: var(--text-color);
+			font-size: 1.4rem;
+		}
+	}
+
+	.level-2 {
+		padding-left: 0.5em;
+
+		li {
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+	}
+}
+
+// MEDIA QUERIES
+@media (min-width: 48em) {
+	.dropdown--content {
+		display: none;
+
+		.sub__menu {
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+

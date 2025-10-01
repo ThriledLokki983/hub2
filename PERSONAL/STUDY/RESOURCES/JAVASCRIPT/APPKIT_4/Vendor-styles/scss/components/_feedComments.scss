@@ -1,0 +1,303 @@
+@mixin fontStyle($color, $fontSize, $fontWeight, $letterSpacing, $lineHeight) {
+    color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpacing;
+    line-height: $lineHeight;
+}
+
+.ap-feeds-comments-body .ap-field.textarea .ap-field-container .ap-field-wrapper textarea {
+    resize: none !important;
+}
+
+.ap-feeds-comments {
+    padding: $spacing-4 $spacing-4 $spacing-6 $spacing-6;
+    border-radius: $border-radius-3;
+    box-shadow: $box-shadow-3;
+    background-color: $color-background-container;
+    user-select: none;
+
+    &-header {
+        // height: $typography-line-height-40;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-title {
+            font-size: $typography-text-size-4;
+            font-weight: $font-weight-2;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: $typography-line-height-4;
+            letter-spacing: $typography-letter-spacing-1;
+            color: $color-text-heading;
+            word-break: break-word;
+        }
+
+        &-action {
+            display: flex;
+
+            .more,
+            .close {
+                width: $width-6;
+                height: $typography-line-height-40;
+                border-radius: $border-radius-2;
+                text-align: center;
+                line-height: $typography-line-height-40;
+                cursor: pointer;
+                background-color: $color-background-container;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .more {
+                margin-right: $spacing-2;
+                position: relative;
+
+                &:hover {
+                    background-color: $color-background-hover;
+                }
+
+                .Appkit4-icon {
+                    color: $color-text-heading;
+                }
+            }
+
+            .close {
+                &:hover {
+                    background-color: $color-background-hover;
+                }
+
+                .Appkit4-icon {
+                    color: $color-text-heading;
+                }
+            }
+        }
+    }
+
+    &-body {
+        height: $height-112;
+        margin: $spacing-4 $spacing-3 $spacing-6 0;
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: $spacing-2;
+        margin: calc(-1 * $spacing-2);
+
+        &-attach {
+            width: $width-6;
+            height: $typography-line-height-40;
+            padding: $spacing-3;
+            border-radius: $border-radius-2;
+            background-color: $color-background-container;
+            cursor: pointer;
+            color: $color-text-body;
+            position: relative;
+
+            &:hover {
+                background-color: $color-background-hover;
+            }
+
+            // .Appkit4-icon {
+            //     color: $color-text-heading;
+            // }
+
+            input[type="file"] {
+                cursor: pointer;
+                text-indent: rem(999px);
+                width: rem(40px);
+                position: absolute;
+                height: rem(40px);
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+
+            .footer-button {
+                margin-right: $spacing-3;
+            }
+        }
+    }
+
+    .uploaded-images {
+        display: grid;
+        gap: $spacing-3;
+        grid-template-columns: repeat(4, rem(119px));
+        margin-top: $spacing-6;
+        position: relative;
+
+        &-placeholder {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            &-item {
+                width: rem(119px);
+                height: rem(120px);
+                border-radius: $border-radius-2;
+
+                &.rimless {
+                    border: dashed $border-1 $neutral-14;
+                }
+            }
+
+            .uploaded-images-placeholder-item+.uploaded-images-placeholder-item {
+                margin-left: $spacing-3;
+            }
+        }
+
+        .image-wrapper {
+            width: rem(119px);
+            height: rem(120px);
+            border-radius: $border-radius-2;
+            position: relative;
+
+            img {
+                border-radius: $border-radius-2;
+                height: 100%;
+                width: 100%;
+            }
+
+            .Appkit4-icon {
+                border-radius: $border-radius-1;
+                color: $neutral-01;
+                cursor: pointer;
+                position: absolute;
+                top: $spacing-1;
+                right: $spacing-1;
+
+                &:hover,
+                &:focus {
+                    background-color: rgba(37, 37, 37, $opacity-6);
+                }
+            }
+        }
+    }
+}
+
+.comments-wrapper {
+    width: 100%;
+    padding: $spacing-6;
+    border-radius: $border-radius-3;
+    box-shadow: $box-shadow-1;
+    background-color: $color-background-container;
+
+    .comments+.comments {
+        margin-top: $spacing-6;
+    }
+
+    .comments {
+        display: flex;
+        align-items: flex-start;
+
+        .comments-detail {
+            .comments-info {
+                align-items: baseline;
+                display: inline-flex;
+                padding: $spacing-3 0 0 $spacing-4;
+
+                .comments-name {
+                    margin-right: $spacing-4;
+                    @include fontStyle($color-text-heading, $typography-text-size-3, $font-weight-2, $letter-spacing-1, $typography-line-height-3);
+                }
+
+                .comments-time {
+                    @include fontStyle($color-text-light, $typography-text-size-3, normal, $letter-spacing-1, $typography-line-height-3)
+                }
+            }
+
+            .comments-content {
+                margin: $spacing-2 0 0 $spacing-4;
+                word-break: break-word;
+                @include fontStyle($color-text-body, $typography-text-size-3, normal, $letter-spacing-1, $typography-line-height-3);
+            }
+
+            .comments-images {
+                display: grid;
+                grid-template-columns: rem(200px) rem(200px);
+                padding-left: $spacing-4;
+                margin-top: $spacing-3;
+                margin-bottom: calc(-1 * $spacing-2);
+
+                .image {
+                    align-items: center;
+                    display: flex;
+                    height: rem(128px);
+                    justify-content: center;
+                    width: rem(200px);
+
+                    &:focus {
+                        border: $border-type-1 rem(2px) $neutral-20;
+                        border-radius: $border-radius-3;
+                        padding: $spacing-2;
+                    }
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+
+                    img {
+                        height: rem(120px);
+                        width: rem(192px);
+                    }
+                }
+            }
+
+            .comments-likes {
+                display: flex;
+                margin-top: $spacing-4;
+                margin-left: $spacing-2;
+
+                .comments-action {
+                    cursor: pointer;
+                    height: $height-5;
+                    padding: $spacing-3 $spacing-4 $spacing-3 $spacing-3;
+                    border-radius: $border-radius-2;
+                    background-color: transparent;
+
+                    .Appkit4-icon {
+                        color: $color-text-heading;
+                    }
+
+                    &:hover {
+                        background-color: $color-background-hover;
+                    }
+
+                    &-text {
+                        margin: 0 0 0 $spacing-2;
+                        @include fontStyle($color-text-heading, $typography-text-size-3, $font-weight-2, $letter-spacing-1, $typography-line-height-3);
+                    }
+                }
+
+                .comments-action+.comments-action {
+                    margin-left: $spacing-2;
+                }
+            }
+        }
+    }
+}
+
+.backBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(17, 17, 17, $opacity-5);
+    backdrop-filter: $blur-1;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.bigImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

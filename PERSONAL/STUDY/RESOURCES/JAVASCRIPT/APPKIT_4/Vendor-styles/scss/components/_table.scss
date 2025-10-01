@@ -1,0 +1,311 @@
+// table demo
+
+.ap-table-demo {
+    th {
+        background-color: $color-background-container;
+    }
+
+    td {
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+// table component
+.animated {
+    -webkit-animation-duration: $transition-0;
+    animation-duration: $transition-0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.rotateIn {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+
+@keyframes rotateIn {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        // -webkit-transform: rotate3d(0, 0, 1, -180deg);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        // -webkit-transform: translate3d(0, 0, 0);
+        transform: rotate3d(0, 0, 1, -180deg);
+        opacity: 1;
+    }
+}
+
+.rotateOut {
+    -webkit-animation-name: rotateOut;
+    animation-name: rotateOut;
+}
+
+@keyframes rotateOut {
+    from {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        opacity: 1;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+
+    to {
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate3d(0, 0, -1, 180deg);
+        transform: matrix(1, 0, 0, -1, 0, 0) rotate3d(0, 0, -1, 180deg);
+        opacity: 1;
+    }
+}
+
+.ap-table {
+    width: 100%;
+    padding: $spacing-2 $spacing-3;
+    box-shadow: inset $shadow-border;
+    border-radius: $border-radius-3;
+    background-color: $color-background-container;
+    letter-spacing: $typography-letter-spacing-1;
+
+    &.ap-table-checkbox {
+        td:first-child {
+            padding-left: $spacing-3;
+        }
+    }
+
+    table {
+        border-spacing: 0 $spacing-2;
+        width: 100%;
+        font-size: $typography-text-size-3;
+        border-collapse: separate;
+
+        thead {
+            th {
+                line-height: $typography-line-height-3;
+                font-size: $typography-text-size-3;
+                font-weight: $font-weight-2;
+                color: $color-text-heading;
+                transition: background-color $transition-0;
+                padding: 0;
+
+                &:not(:last-child) .header-container {
+                    margin-right: $spacing-2;
+                }
+
+                .header-container {
+                    display: flex;
+                    justify-content: space-between;
+                    height: $height-7;
+                    line-height: $typography-line-height-3;
+                    padding: 0 $spacing-4;
+                    margin-bottom: $spacing-2;
+                    border-radius: $border-radius-2;
+                    align-items: center;
+
+                    .Appkit4-icon.sort-table {
+                        color: $color-text-heading;
+                        font-size: $typography-text-size-1;
+                        opacity: 1;
+                        line-height: $typography-line-height-3;
+
+                        &::before {
+                            font-weight: $font-weight-2;
+                        }
+                    }
+
+                    &:hover {
+                        .Appkit4-icon.sort-table:not(.sorted) {
+                            color: $color-background-icon-primary;
+                        }
+                    }
+
+                    &.has-sorter {
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $color-background-hover;
+                        }
+
+                        .ap-table-header-description-sr-only {
+                            display: none;
+                        }
+                    }
+
+                    &.head-sorted {
+                        background-color: $color-background-hover;
+                    }
+
+                    &.start-slot {
+                        flex-direction: row-reverse;
+
+                        .Appkit4-icon.sort-table {
+                            padding-right: 0;
+                            margin-right: $spacing-4;
+                            transition: opacity $transition-0, padding-right $transition-0, color $transition-0;
+
+                            &.sorted {
+                                transform: matrix(1, 0, 0, -1, 0, 0);
+                                color: $color-background-icon-primary;
+                            }
+                        }
+
+                        &:not(:hover) {
+                            .Appkit4-icon.sort-table:not(.sorted) {
+                                padding-right: $spacing-3;
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    &.end-slot {
+                        flex-direction: row;
+
+                        .Appkit4-icon.sort-table {
+                            padding-left: 0;
+                            margin-left: $spacing-4;
+                            transition: opacity $transition-0, padding-left $transition-0, color $transition-0;
+
+                            &.sorted {
+                                transform: matrix(1, 0, 0, -1, 0, 0);
+                                color: $color-background-icon-primary;
+                            }
+                        }
+
+                        &:not(:hover) {
+                            .Appkit4-icon:not(.sorted) {
+                                padding-left: $spacing-3;
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                padding: 0;
+                height: $height-7;
+                color: $color-text-body;
+                transition: background-color $transition-0, transform $transition-0;
+
+                &.selected {
+                    background-color: $color-background-hover;
+                }
+
+                &:hover {
+                    background-color: $color-background-hover;
+                }
+
+                td {
+                    line-height: $typography-line-height-3;
+                    padding: $spacing-4;
+
+                    &:first-child {
+                        border-top-left-radius: $border-radius-2;
+                        border-bottom-left-radius: $border-radius-2;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: $border-radius-2;
+                        border-bottom-right-radius: $border-radius-2;
+                    }
+
+                    span {
+                        vertical-align: inherit;
+                    }
+
+                    .ap-checkbox-wrapper {
+                        vertical-align: inherit;
+                        margin: 0 $spacing-3 0 0;
+                        position: relative;
+
+                        .Appkit4-icon::before {
+                            font-weight: $font-weight-2;
+                        }
+
+                        .icon-check-blank-outline {
+                            color: $color-text-body;
+                        }
+
+                        .icon-check-backdrop-outline {
+                            display: none;
+                            position: relative;
+                            color: $color-text-primary;
+                            font-size: $typography-text-size-1;
+                        }
+
+                        // .icon-check-fill-outline {
+                        //     position: absolute;
+                        //     left: 0;
+                        //     top: 0;
+                        //     color: $color-background-primary;
+                        //     font-size: $typography-text-size-3;
+                        // }
+
+                        .a-checkbox-text {
+                            height: $height-3;
+                            line-height: $typography-line-height-3;
+                            font-size: $typography-text-size-1;
+                            font-weight: normal;
+                            color: $color-text-body;
+                        }
+
+                        input[type="checkbox"] {
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            opacity: 0;
+
+                            &:checked {
+                                &~.icon-check-blank-outline {
+                                    display: none;
+                                }
+
+                                &~.icon-check-backdrop-outline {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.ap-table-condensed {
+        tbody tr {
+            height: rem(32px) !important;
+
+            td {
+                padding-top: $spacing-2 !important;
+                padding-bottom: $spacing-2 !important;
+            }
+        }
+    }
+
+    &.ap-table-striped {
+        tbody tr.striped {
+            background-color: $color-background-selected;
+
+            &:hover,
+            &.selected {
+                background-color: $color-background-hover-selected;
+            }
+        }
+
+        // tbody tr:nth-child(2n-1) {
+        //     background-color: $color-background-table-striped;
+
+        //     &:hover {
+        //         background-color: $color-background-table-hover;
+        //     }
+        // }
+    }
+}

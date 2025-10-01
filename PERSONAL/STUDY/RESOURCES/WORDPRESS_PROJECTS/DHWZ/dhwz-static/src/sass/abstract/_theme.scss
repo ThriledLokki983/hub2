@@ -1,0 +1,80 @@
+// THEME STYLES - DO NOT TOUCH (unless you know what you are doing)
+// Add your own styles in src/sass/abstract/_variables.scss
+// -----------------------------------------------------------------------------
+:root {
+	// COLORS
+	--primary-color: hsl(218, 87%, 29%);
+	--secondary-color: hsl(37, 100%, 48%);
+	--tertiary-color: hsl(83, 94%, 32%);
+	--overlay-background: hsla(240, 20%, 99%, 0.85);
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-white-light: hsla(0, 0%, 100%, 0.5);
+	--clr-black: hsl(0, 0%, 0%);
+	--bg: hsl(0, 0%, 100%);
+
+	// FONTS
+
+	// FONT SIZES
+	--min-font-size: 1.5rem;
+	--header-top-font-size: clamp(1.2rem, 1.5vw + 1rem, 1.6rem);
+	--prefooter-text-size: clamp(1.2rem, 1.5vw + 1rem, 1.7rem);
+	--nav-font-size: clamp(1.4rem, 1.5vw + 1rem, 1.8rem);
+	--heading: clamp(2rem, 1.5vw + 1rem, 3rem);
+	--product-card-heading: clamp(2rem, 1.5vw + 1rem, 2.7rem);
+	--product-item-heading: clamp(2rem, 1.5vw + 1rem, 3rem);
+	--paragraph: clamp(1.4rem, 1.5vw + 1rem, 1.8rem);
+	--btn-text: clamp(1.4rem, 0.7vw + 1rem, 1.6rem);
+	--usp-numbers: clamp(2rem, 1.7vw + 1rem, 4rem);
+	--usp-text: clamp(1.4rem, 1.5vw + 1rem, 2rem);
+
+	// LINE HEIGHTS
+	--line-h: 1.5;
+
+	// FONT WEIGHTS
+
+	// FONT FAMILIES
+	--font-primary: 'MyriadRegular';
+	--font-secondary: 'MyriadBold';
+	--font-tertiary: 'MyriadLight';
+	--font-regular: 'MyriadRegular';
+	--font-bold: 'MyriadBold';
+	--font-black: 'MyriadBlack';
+	--font-light: 'MyriadLight';
+
+	// SPACING
+	--top-header-padding: clamp(0rem, 0.7vw + 1rem, 5rem);
+	--bottom-header-logo-padding: clamp(0rem, 2vw + 1rem, 10rem);
+	--header-bottom-items-spacing: clamp(5rem, 5vw + 1rem, 15rem);
+	--nav-items-spacing: clamp(1rem, 1.5vw + 1rem, 4rem);
+	--intro-padding-block: clamp(3rem, 2.5vw + 1rem, 8rem);
+	--intro-padding-inline: clamp(4rem, 2.5vw + 1rem, 7rem);
+	--intro-padding-inline-mobile: clamp(1.5rem, 2.5vw + 1rem, 7rem);
+
+	--section-space-s: 2rem;
+	--section-space-m: 4rem;
+	--section-space-l: 5rem;
+
+	//   SIZES
+	--max-width: 150rem; // 1500px
+	--restricted-width: 140rem; // 1200px
+	--main-hero-width: min(100%, var(--max-width));
+	--container-width: min(80%, var(--restricted-width));
+	--container-hero-width: min(100%, var(---restricted-width));
+	--auto-margin-top: min(6rem, 4.5vw + 1rem, 10rem);
+
+	--mobile-aspect-ratio: 1.8/1;
+
+	// SHADOWS
+	--shadow: 7px 0px 28px 5px rgba(0, 0, 0, 0.22);
+	--header-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+		6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+		12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+		22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+		41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+		100px 100px 80px rgba(0, 0, 0, 0.07);
+
+	--color-shades-dark: rgb(25, 25, 25);
+	--color-shade-light: rgb(165, 167, 175);
+	--color-highlight: rgb(24, 54, 145);
+	--transition-animation: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}

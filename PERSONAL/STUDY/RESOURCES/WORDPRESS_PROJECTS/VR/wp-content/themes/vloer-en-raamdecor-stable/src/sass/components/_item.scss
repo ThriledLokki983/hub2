@@ -1,0 +1,325 @@
+@use "../abstract" as ab;
+
+.item {
+	@include ab.default-layout;
+	margin-block-end: var(--section-space-l);
+
+	&__content {
+		@include ab.grid-layout(2);
+		grid-gap: 5rem;
+
+		@include ab.respond(700px) {
+			grid-template: none;
+		}
+
+		&__left {
+			picture {
+				width: 100%;
+				position: relative;
+
+				img {
+					width: 100%;
+					height: auto;
+					aspect-ratio: 1;
+					object-fit: cover;
+					margin-inline-end: auto;
+
+					cursor: url(/wp-content/themes/vloer-en-raamdecor/public/assets/icons/zoom.svg), -webkit-zoom-in;
+				}
+
+				svg {
+					position: absolute;
+					inset: 50% auto auto auto;
+					stroke-width: 2rem;
+					cursor: pointer;
+					transition: var(--transition);
+
+					&:hover {
+						stroke: var(--clr-white);
+						fill: var(--clr-white);
+					}
+				}
+
+				svg.left {
+					left: 1%;
+				}
+
+				svg.right {
+					right: 1%;
+				}
+			}
+
+			&--related-images {
+				width: 100%;
+				margin-inline-end: auto;
+
+				.related__image--lists {
+					@include ab.flex-space-content();
+					width: fit-content;
+					margin-inline: auto;
+					margin-block-start: 1.5rem;
+					align-items: center;
+					gap: 1rem;
+
+					&-item {
+						list-style-type: none;
+						width: 7rem;
+						height: 7rem;
+						border: 5px solid transparent;
+						cursor: pointer;
+
+						img {
+							height: 100%;
+							width: 100%;
+							transition: var(--transition);
+						}
+
+						&:hover {
+							img {
+								filter: brightness(0.8);
+							}
+						}
+					}
+
+					&-item.active-image {
+						border: 5px solid var(--primary-color-light);
+					}
+
+					svg {
+						width: 1rem;
+						height: 1rem;
+						stroke: var(--primary-color);
+						stroke-width: 5rem;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		&__right {
+			@include ab.flex-column-content();
+			width: 100%;
+
+			.item__header {
+				@include ab.flex-space-content();
+				width: 100%;
+
+				.product-card-title-primary {
+					padding-block-start: 1.5rem;
+				}
+
+				// @include ab.respond(375px) {
+				// 	width: 95%;
+				// 	margin-inline: auto;
+				// }
+			}
+
+			.item__info {
+				margin-block-start: 3rem;
+				@include ab.flex-space-content();
+
+				.product-card-title-primary {
+					span {
+						text-align: left;
+					}
+					h2 {
+						font-size: 4rem;
+					}
+				}
+
+				.other__colors {
+					margin-block-start: 1rem;
+
+					&--lists {
+						@include ab.flex-space-content();
+						gap: 1.2rem;
+						margin-block-start: 1rem;
+
+						&-item {
+							list-style-type: none;
+							height: 2.5rem;
+							width: 2.5rem;
+							cursor: pointer;
+
+							> [data-color-choice] {
+								width: 100%;
+								height: 100%;
+							}
+
+							&:nth-child(1) {
+								background-color: #73583d;
+							}
+							&:nth-child(2) {
+								background-color: #876f4e;
+							}
+							&:nth-child(3) {
+								background-color: #937d5e;
+							}
+							&:nth-child(4) {
+								background-color: #b49b81;
+							}
+						}
+					}
+				}
+
+				.price__include {
+					h4 {
+						color: var(--primary-color);
+						font-size: 1.8rem;
+					}
+
+					&--lists {
+						list-style-type: inherit;
+						color: var(--primary-color);
+
+						&--item {
+							list-style-type: none;
+							font-size: 1.6rem;
+							font-family: var(--font-secondary);
+							color: var(--primary-color);
+
+							&:not(:last-child) {
+								// margin-inline-start: 1.5rem;
+								 &::before {
+             					content: "\b7\a0";
+          						}
+							}
+
+							&:last-child {
+								@include ab.flex-space-content();
+								gap: 1rem;
+								align-items: center;
+								margin-block-start: 1rem;
+								list-style-type: none;
+
+								svg {
+									stroke-width: 5rem;
+									width: 1rem;
+									height: 1rem;
+								}
+
+								a {
+									color: var(--primary-color);
+									text-decoration: underline;
+									font-weight: var(--font-bold);
+								}
+							}
+
+
+						}
+					}
+				}
+
+				// @include ab.respond(375px) {
+				// 	width: 95%;
+				// 	margin-inline: auto;
+				// }
+			}
+
+			.more__info {
+				@include ab.flex-space-content();
+				align-items: center;
+				margin-block-start: 2.5rem;
+				margin-block-end: 2.5rem;
+				border-color: var(--primary-color-light);
+				cursor: pointer;
+
+				svg {
+					stroke-width: 5rem;
+					width: 1rem;
+					height: 1rem;
+					stroke: var(--primary-color);
+					fill: var(--primary-color);
+					margin-inline-end: 1.5rem;
+				}
+
+				// @include ab.respond(375px) {
+				// 	width: 95%;
+				// 	margin-inline: auto;
+				// }
+			}
+
+			.calculate__price {
+				@include ab.flex-column-content();
+				background-color: var(--primary-color-light);
+				padding: 3rem;
+
+				.product-card-title-primary {
+					span {
+						text-align: left;
+					}
+				}
+
+				&--content {
+					@include ab.flex-space-content;
+					gap: 3.5rem;
+					margin-block-start: 1rem;
+					// align-items: center;
+
+					.right {
+						flex: 1;
+						background-color: var(--primary-color-lightest);
+						padding: 3rem 5rem;
+
+						p {
+							margin-block-start: 1rem;
+							line-height: 1.5;
+							max-width: 100%;
+							padding-block-end: 0;
+							font-style: italic;
+							font-size: 1.7rem;
+						}
+					}
+				}
+
+				a {
+					margin-block-start: 4rem;
+					display: flex;
+					align-items: center;
+					width: fit-content;
+
+					svg {
+						stroke-width: 5rem;
+						width: 1rem;
+						height: 1rem;
+						stroke: var(--clr-white);
+						fill: var(--clr-white);
+						margin-inline-end: 1.5rem;
+					}
+
+					&:hover {
+						svg {
+							stroke: var(--primary-color);
+							fill: var(--primary-color);
+						}
+					}
+				}
+
+				@include ab.respond(525px) {
+					padding: 1.5rem;
+
+					&--content {
+						flex-direction: column;
+
+						.form__group input {
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body:is(.page-categories) {
+	@include ab.respond(960px) {
+	.main.details {
+		.modulo__installation {
+			display: flex;
+			flex-direction: column !important;
+			width: 95% !important;
+			margin-inline: auto;
+		}
+	}
+	}
+}

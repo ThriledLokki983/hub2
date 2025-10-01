@@ -1,0 +1,142 @@
+.ap-panel {
+  position: relative;
+  background: $color-background-container;
+  border-radius: $border-radius-3;
+
+  &-bordered {
+    box-shadow: $box-shadow-1;
+  }
+
+  &-hoverable {
+    cursor: pointer;
+    transition: box-shadow 0.3s, border-color 0.3s;
+
+    &:hover {
+      box-shadow: $box-shadow-2;
+    }
+  }
+
+  &-head {
+    min-height: $typography-line-height-16;
+    padding: $spacing-6 $spacing-6 0 $spacing-6;
+    margin-bottom: $spacing-4;
+    color: $color-background-tertiary;
+    font-weight: $font-weight-2;
+    font-size: $typography-text-size-3;
+    background-color: $color-background-container;
+    border-radius: $border-radius-3 $border-radius-3 0 0;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-title {
+      display: inline-flex;
+      flex: 1;
+      align-items: center;
+      height: $height-3;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: $typography-text-size-4;
+      font-weight: $font-weight-2;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: $height-3;
+      letter-spacing: $typography-letter-spacing-1;
+      color: $color-text-heading;
+
+      >.ap-typography,
+      >.ap-typography-edit-content {
+        left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      &-text {
+        line-height: $typography-line-height-3;
+      }
+    }
+  }
+
+  &-head.has-extra {
+    padding: $spacing-6 $spacing-4 0 $spacing-6;
+
+    &-extra {
+      float: right;
+      margin-left: auto;
+      padding: 0;
+      // color: $color-background-button-tertiary-hover;
+      font-weight: normal;
+      font-size: $typography-text-size-3;
+
+      .ap-rtl & {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-extra {
+    position: absolute;
+    top: $spacing-3;
+    right: $spacing-4;
+  }
+
+  &-body {
+    padding: 0 $spacing-6 $spacing-6 $spacing-6;
+    font-size: $typography-text-size-3;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: $typography-line-height-3;
+    letter-spacing: $typography-letter-spacing-1;
+    color: $color-text-body;
+  }
+
+  &-actions {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: $color-background-container;
+    border-top: $border-1 $border-type-1 $border-color-1;
+
+    &>li {
+      float: left;
+      margin: $spacing-3;
+      text-align: center;
+
+      .ap-rtl & {
+        float: right;
+      }
+
+      >span {
+        position: relative;
+        display: block;
+        min-width: $spacing-32;
+        font-size: $typography-text-size-3;
+        line-height: $typography-line-height-16;
+        cursor: pointer;
+
+        &:hover {
+          transition: color 0.3s;
+        }
+
+        >.Appkit4-icon {
+          font-size: $typography-text-size-3;
+          line-height: $height-3;
+        }
+      }
+
+      &:not(:last-child) {
+        border-right: $border-1 $border-type-1 $border-color-1;
+
+        .ap-rtl & {
+          border-right: none;
+          border-left: $border-1 $border-type-1 $border-color-1;
+        }
+      }
+    }
+  }
+}

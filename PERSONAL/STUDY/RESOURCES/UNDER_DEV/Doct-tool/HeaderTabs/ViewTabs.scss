@@ -1,0 +1,72 @@
+.header-tab-bar {
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .header-tab-mui-close-icon-button-root {
+        padding: 6px;
+        margin-left: 5px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    .header-tab-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        button {
+            //height: auto;
+            padding: 0 !important;
+            display: flex;
+            place-content: center;
+            place-items: center;
+        }
+
+        .icon-close-fill {
+            font-size: 8px;
+            margin: 0 !important;
+        }
+    }
+
+    .Mui-selected {
+        .header-tab-mui-tab-wrapper {
+            color: #d04a02;
+        }
+    }
+
+    .header-tab-mui-tab-root {
+        min-width: auto;
+    }
+
+    .header-tab-mui-tab-wrapper {
+        text-transform: initial;
+    }
+
+    .header-tab-mui-tabs-indicator {
+        background-color: #d04a02;
+        &.just-closed {
+            /* Prevents the indicator from animating when a tab was closed */
+            transition: none;
+        }
+    }
+
+    .header-tab-button-container {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        .icon-plus-fill {
+            font-size: 12px;
+        }
+    }
+
+    .header-tab-unsaved {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 0.85rem;
+    }
+}
