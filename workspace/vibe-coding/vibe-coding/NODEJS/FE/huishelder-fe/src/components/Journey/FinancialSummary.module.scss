@@ -1,0 +1,123 @@
+@import '../../styles/utils';
+@import './Journey.module.scss';
+
+.financialContainer {
+  @extend .sectionContainer;
+}
+
+.statCard {
+  @extend .card;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+.statTitle {
+  font-size: 14px;
+  color: $text-secondary;
+  margin-bottom: $spacing-xs;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.highlight {
+  color: $primary;
+}
+
+.warning {
+  color: $alert;
+}
+
+.statusIndicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: $spacing-xs;
+
+  &.approved {
+    background-color: $primary;
+  }
+
+  &.pending {
+    background-color: $accent;
+  }
+
+  &.attention {
+    background-color: $alert;
+  }
+}
+
+.paymentSchedule {
+  margin-top: $spacing-md;
+  padding: $spacing-md;
+  background-color: rgba($background, 0.7);
+  border-radius: 8px;
+}
+
+.paymentTitle {
+  font-weight: 600;
+  margin-bottom: $spacing-sm;
+}
+
+.paymentItem {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing-xs 0;
+  border-bottom: 1px solid $divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.paymentDate {
+  color: $text-secondary;
+  font-size: 14px;
+}
+
+.paymentAmount {
+  font-weight: 500;
+}
+
+.dashboardLinkContainer {
+  margin-top: $spacing-lg;
+  padding-top: $spacing-md;
+  border-top: 1px solid $divider;
+}
+
+.dashboardLink {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md;
+  background-color: rgba($accent-color, 0.1);
+  border-radius: $border-radius-lg;
+  text-decoration: none;
+  color: $text-primary;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba($accent-color, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.dashboardLinkIcon {
+  font-size: 24px;
+  margin-right: $spacing-md;
+}
+
+.dashboardLinkSubtitle {
+  font-size: 12px;
+  color: $text-secondary;
+  margin-top: 4px;
+}

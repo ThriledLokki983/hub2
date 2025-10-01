@@ -1,0 +1,63 @@
+# filepath: /Users/gideonnimoh/projects/dev/VIBE-CODING/NODEJS/API/huishelder-be/docker-compose.journey.yml
+version: '3.8'
+
+services:
+  # PostgreSQL database for journey feature development
+  journey-db:
+    image: postgres:15-alpine
+    container_name: huishelder-journey-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-huishelder_journey}
+    ports:
+      - "${POSTGRES_PORT:-5435}:5432"
+    volumes:
+      - journey-db-data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    networks:
+      - huishelder-journey-network
+    command: postgres -c log_statement=all
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # API server configured for journey development
+  journey-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: huishelder-journey-api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - POSTGRES_HOST=journey-db
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-huishelder_journey}
+      - JWT_SECRET=${JWT_SECRET:-journey-dev-secret-key}
+      - LOG_FORMAT=dev
+      - LOG_DIR=./logs
+      - ORIGIN=*
+    ports:
+      - "${API_PORT:-3035}:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    networks:
+      - huishelder-journey-network
+    depends_on:
+      - journey-db
+    command: npm run dev
+
+volumes:
+  journey-db-data:
+
+networks:
+  huishelder-journey-network:
+    driver: bridge

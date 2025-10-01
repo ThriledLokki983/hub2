@@ -1,0 +1,350 @@
+@import '../../styles/utils';
+@import './Journey.module.scss';
+
+.tabsContainer {
+  margin-bottom: $spacing-xl;
+  background-color: rgba($bone-white, 0.5);
+  border-radius: 16px;
+  padding: $spacing-lg;
+  box-shadow: 0 2px 12px rgba($charcoal-ink, 0.03);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba($charcoal-ink, 0.06);
+  }
+
+  // Adding a subtle grain texture for a luxurious feel
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px rgba($deep-olive-green, 0);
+    transition: box-shadow 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    box-shadow: 0 0 0 1px rgba($deep-olive-green, 0.05);
+  }
+}
+
+.tabsHeader {
+  display: flex;
+  border-bottom: 1px solid rgba($muted-taupe, 0.5);
+  margin-bottom: $spacing-lg;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  // padding-bottom: $spacing-xs;
+  position: relative;
+  gap: $spacing-md;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      rgba($muted-taupe, 0),
+      $muted-taupe 10%,
+      $muted-taupe 90%,
+      rgba($muted-taupe, 0)
+    );
+    pointer-events: none;
+  }
+
+  // Hide scrollbar for Chrome, Safari and Opera
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($slate-gray, 0.3);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-xs;
+  }
+}
+
+.tabButton {
+  padding: $spacing-md $spacing-lg;
+  border: none;
+  background: none;
+  color: $slate-gray;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+  border-radius: 12px 12px 0 0;
+  letter-spacing: 0.02em;
+
+  transition:
+    all 0.2s ease-out,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    color: $deep-olive-green;
+    background-color: rgba($deep-olive-green, 0.04);
+  }
+
+  &.active {
+    color: $deep-olive-green;
+    font-weight: 600;
+    background: rgba(110, 118, 115, 0.06);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $deep-olive-green;
+      border-radius: 3px 3px 0 0;
+      box-shadow: 0 0 8px rgba($deep-olive-green, 0.3);
+    }
+  }
+
+  &:focus {
+    outline: none;
+    // box-shadow: 0 0 0 3px rgba($deep-olive-green, 0.15);
+    border-radius: 12px 12px 0 0;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  @media (max-width: 768px) {
+    padding: $spacing-sm $spacing-md;
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: $spacing-xs $spacing-sm;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  // Enhance tab button emoji styling for a more cohesive and polished look
+  span[role='img'],
+  span.emoji {
+    font-size: 15px;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    position: relative;
+
+    // Add subtle glow effect for active tab emojis
+    .active & {
+      transform: scale(1.1);
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba($soft-amber, 0.15) 0%, rgba($soft-amber, 0) 70%);
+        z-index: -1;
+        opacity: 0;
+        animation: fadeIn 0.5s ease-out forwards 0.2s;
+      }
+    }
+  }
+
+  &:hover span[role='img'],
+  &:hover span.emoji {
+    transform: translateY(-1px);
+  }
+}
+
+.tabButton:not(.active):hover::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba($deep-olive-green, 0.15);
+}
+
+.tabButton:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px $white,
+    0 0 0 4px rgba($deep-olive-green, 0.4);
+  border-radius: 6px;
+}
+
+.tabContent {
+  padding: $spacing-md $spacing-xs;
+  animation: fadeIn 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  min-height: 200px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba($bone-white, 0.8), rgba($bone-white, 0));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+    animation: fadeGlow 0.5s ease-out forwards;
+  }
+
+  &.exitActive {
+    animation: fadeOut 0.25s ease-out forwards;
+    opacity: 0;
+  }
+
+  &.enterActive {
+    animation: fadeIn 0.35s ease-out 0.1s forwards;
+  }
+}
+
+@keyframes fadeGlow {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+// Elegant pulse animation to the active tab indicator
+.tabButton.active::after {
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 3px rgba($deep-olive-green, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 6px rgba($deep-olive-green, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 9px rgba($soft-amber, 0.3);
+  }
+}
+
+// Additional style refinements for accessibility and aesthetics
+@media (prefers-reduced-motion: reduce) {
+  .tabContent {
+    animation: none;
+  }
+
+  .tabButton.active::after {
+    animation: none;
+    box-shadow: 0 0 4px rgba($deep-olive-green, 0.3);
+  }
+}
+
+// Enhanced mobile experience with better tab navigation
+@media (max-width: 768px) {
+  .tabsContainer {
+    padding: $spacing-md $spacing-sm;
+    margin-bottom: $spacing-lg;
+  }
+
+  .tabsHeader {
+    // Add scroll indicators to show there's more content
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent 100%);
+    padding-left: $spacing-xs;
+    padding-right: $spacing-xs;
+    margin-left: -$spacing-xs;
+    margin-right: -$spacing-xs;
+
+    // Add haptic scroll feel on mobile
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    // Ensure tabs are properly spaced with touch targets
+    gap: $spacing-sm;
+  }
+
+  .tabButton {
+    // Ensure scroll-snapping works for mobile
+    scroll-snap-align: start;
+    flex-shrink: 0;
+
+    // Increase active indicator visibility on mobile
+    &.active::after {
+      height: 4px;
+    }
+  }
+
+  // Make content container adaptable to different screen sizes
+  .tabContent {
+    min-height: 180px;
+    padding: $spacing-md 0;
+  }
+}
+
+// Extra small screens
+@media (max-width: 480px) {
+  .tabsContainer {
+    border-radius: 12px;
+    padding: $spacing-sm;
+  }
+
+  // Optimize emojis on mobile
+  .tabButton span[role='img'],
+  .tabButton span.emoji {
+    margin-right: 4px;
+  }
+}

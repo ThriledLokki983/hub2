@@ -1,0 +1,119 @@
+{
+  "name": "huishelder-fe",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "watch": "vite",
+    "dev": "vite",
+    "serve": "vite preview",
+    "build": "tsc && vite build",
+    "tsc": "tsc --watch --noEmit",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
+    "lint:style": "stylelint 'src/**/*.scss'",
+    "lint:style:fix": "stylelint 'src/**/*.scss' --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,scss,json}'",
+    "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,scss,json}'",
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@grrr/utils": "^2.5.1",
+    "@tanstack/react-query": "^5.75.7",
+    "@tanstack/react-query-devtools": "^5.75.1",
+    "@types/classnames": "^2.3.4",
+    "axios": "^1.9.0",
+    "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
+    "dompurify": "^3.0.6",
+    "phosphor-react": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0",
+    "react-use-cookie": "^1.4.0",
+    "recharts": "^2.15.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-webpack5": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vitejs/plugin-react": "^4.1.0",
+    "@vitest/coverage-c8": "^0.33.0",
+    "autoprefixer": "^10.4.16",
+    "chokidar": "^3.5.3",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.12.0",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^15.5.1",
+    "meow": "^9.0.0",
+    "postcss-pxtorem": "^6.0.0",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.5.3",
+    "sass": "^1.69.5",
+    "storybook": "^8.6.12",
+    "stylelint": "^15.11.0",
+    "stylelint-scss": "^5.3.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-plugin-svgr": "^4.1.0",
+    "vitest": "^3.1.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

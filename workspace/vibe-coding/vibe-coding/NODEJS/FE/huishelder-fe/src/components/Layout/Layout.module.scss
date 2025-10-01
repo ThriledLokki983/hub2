@@ -1,0 +1,47 @@
+@import '../../styles/utils';
+
+.layout {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family-primary;
+}
+
+.layout > main {
+  position: relative;
+  flex: 1;
+  padding: $spacing-lg $gutter-site;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  max-width: $content-max-width-large;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: $section-spacing;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid $divider-color;
+    padding-bottom: $section-spacing;
+  }
+}
+
+.card {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  transition: box-shadow $transition-base;
+  margin-bottom: $spacing-lg;
+  
+  &:hover {
+    box-shadow: $shadow-medium;
+  }
+}

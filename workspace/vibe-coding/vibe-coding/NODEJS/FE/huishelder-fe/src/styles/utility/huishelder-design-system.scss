@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/**
+ * HuisHelder Design System
+ * 
+ * A world-class, ultra-clean, and award-winning user interface design system
+ * for a real estate app helping users buy and sell homes in the Netherlands.
+ * 
+ * Design Intent & Personality:
+ * - Minimal yet warm
+ * - Luxurious but not flashy
+ * - Smart, trustworthy, and incredibly clean
+ * - Slightly "cosmic" and futuristic in visual language
+ * - Highly readable and effortlessly elegant
+ */
+
+/**
+ * Colors: HuisHelder Palette - Refined, Earthy-Cosmic Theme
+ */
+// Primary Palette
+$deep-olive-green: #3a4f41; // Brand Primary (modern, stable, grounded)
+$soft-amber: #f4c77b; // Accent / CTA (warm & visible without being aggressive)
+$bone-white: #f8f5f0; // Light Background (luxurious off-white)
+$warm-fog: #eae6e1; // Cards / Surfaces (ultra-soft, subtle contrast)
+$clay-red: #c25a5a; // Alerts / Highlights (mature red tone)
+$charcoal-ink: #2a2a2a; // Text Primary (modern and readable)
+
+// Optional complement colors
+$slate-gray: #6e7673; // Secondary UI / Hover (calm neutral)
+$muted-taupe: #dad5cf; // Divider / Line (soft contrast)
+
+// Legacy colors - maintain for backward compatibility
+$white: #ffffff;
+$whitish: #f9f9f9;
+$grey: #eaeaea;
+$grey-dark: #d1d1d1;
+$blackish: #252525;
+$black: #000000;
+
+/**
+* Status Colors
+*/
+$error-color: $clay-red;
+$error-color-light: lighten($error-color, 30%);
+$error-color-dark: darken($error-color, 20%);
+
+$warning-color: #eb8c00;
+$warning-color-light: #ffecbd;
+
+$success-color: #175d2d;
+$success-color-light: #d4ebe9;
+$success-color-dark: #0f3a1e;
+
+// Color assignments
+$primary-color: $deep-olive-green;
+$primary-color-light: lighten($primary-color, 40%);
+$primary-color-medium: lighten($primary-color, 20%);
+$primary-color-regular: $primary-color;
+$primary-color-dark: darken($primary-color, 10%);
+$accent-color: $soft-amber;
+$background-color: $bone-white;
+$card-background: $warm-fog;
+$text-color: $charcoal-ink;
+$text-color-secondary: $slate-gray;
+$text-color-light: lighten($slate-gray, 15%);
+$secondary-ui-color: $slate-gray;
+$divider-color: $muted-taupe;
+
+// States and variations
+$primary-color-hover: darken($primary-color, 5%);
+$accent-color-hover: darken($accent-color, 5%);
+$accent-color-light: lighten($accent-color, 15%);
+
+/**
+ * Spacing System - Based on 4pt grid
+ */
+$spacing-unit: 4px;
+$spacing-xxxs: $spacing-unit * 0.5; // 2px
+$spacing-xxs: $spacing-unit; // 4px
+$spacing-xs: $spacing-unit * 2; // 8px
+$spacing-sm: $spacing-unit * 3; // 12px
+$spacing-md: $spacing-unit * 4; // 16px
+$spacing-base: $spacing-unit * 4; // 16px (alias for md)
+$spacing-lg: $spacing-unit * 6; // 24px
+$spacing-xl: $spacing-unit * 8; // 32px
+$spacing-xxl: $spacing-unit * 12; // 48px
+$spacing-xxxl: $spacing-unit * 16; // 64px
+
+// Default component spacing
+$gutter: $spacing-md;
+$gutter-site: $spacing-xl;
+$card-padding-vertical: $spacing-lg;
+$card-padding-horizontal: $spacing-xl;
+$card-padding: $card-padding-vertical $card-padding-horizontal;
+$section-spacing: $spacing-xxl;
+
+/**
+ * Typography
+ */
+$font-family-primary:
+  'Satoshi',
+  'Inter',
+  'General Sans',
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif;
+$heading-font: $font-family-primary;
+$ui-font: $font-family-primary;
+$body-font: $font-family-primary;
+
+// Font Sizes - Following a modular scale
+$font-size-xxs: 0.625rem; // 10px
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 2rem; // 32px
+$font-size-3xl: 2.5rem; // 40px
+$font-size-4xl: 3rem; // 48px
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-base: 1.5;
+$line-height-relaxed: 1.6;
+
+// Letter Spacing
+$letter-spacing-tight: -0.01em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.01em;
+$letter-spacing-wider: 0.02em;
+
+// Typography role applications - grouped with their properties
+$font-title: $font-size-2xl;
+$font-title-weight: $font-weight-bold;
+$font-title-line-height: $line-height-tight;
+$font-title-letter-spacing: $letter-spacing-tight;
+
+$font-section-header: $font-size-xl;
+$font-section-header-weight: $font-weight-semibold;
+$font-section-header-line-height: $line-height-tight;
+
+$font-body: $font-size-base;
+$font-body-weight: $font-weight-regular;
+$font-body-line-height: $line-height-base;
+
+$font-caption: $font-size-xs;
+$font-caption-weight: $font-weight-regular;
+$font-caption-line-height: $line-height-base;
+
+/**
+ * Transitions
+ */
+$transition-base: 0.2s ease-out;
+$transition-fast: 0.15s ease-out;
+$transition-slow: 0.3s ease-out;
+$transition-button-hover:
+  transform $transition-base,
+  box-shadow $transition-base;
+$transition-modal:
+  opacity $transition-base,
+  transform $transition-base;
+$transition-element-hover: all $transition-base;
+
+/**
+ * Accessibility
+ */
+$input-border-color: $muted-taupe;
+$input-focus-color: $primary-color;
+$input-disabled-color: lighten($muted-taupe, 10%);
+$input-disabled-text: $slate-gray;
+
+$selection-color: rgba($primary-color, 0.15);
+$placeholder-color: lighten($slate-gray, 15%);
+
+$focus-ring-color: rgba($primary-color, 0.25);
+$interactive-element-transition: all $transition-base;
+
+/**
+ * Widths & Sizes
+ */
+$site-max-width: 1440px;
+$content-max-width: 880px;
+$content-max-width-large: 1400px;
+$modal-text-max-width: 520px;
+
+$max-widths: (
+  site: $site-max-width,
+  content: $content-max-width,
+  content-large: $content-max-width-large,
+  full: 100%,
+);
+
+$header-width-expanded: 270px;
+$header-width-collapsed: 73px;
+$header-height: 64px;
+
+/**
+ * Border Radius
+ */
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+
+$border-radius: $border-radius-md;
+
+$button-radius: $border-radius-md;
+$card-radius: $border-radius-md;
+$input-radius: $border-radius-md;
+$tag-radius: $border-radius-sm;
+$pill-radius: 9999px;
+
+/**
+ * Border Widths
+ */
+$border-width-thin: 1px;
+$border-width-medium: 2px;
+$border-width-thick: 4px;
+$border-width-default: $border-width-thin;
+
+/**
+ * Shadows & Effects
+ */
+$shadow-subtle:
+  0 2px 4px rgba($charcoal-ink, 0.04),
+  0 1px 2px rgba($charcoal-ink, 0.06);
+$shadow-medium:
+  0 4px 12px rgba($charcoal-ink, 0.08),
+  0 1px 3px rgba($charcoal-ink, 0.04);
+$shadow-elevated:
+  0 8px 24px rgba($charcoal-ink, 0.12),
+  0 2px 8px rgba($charcoal-ink, 0.06);
+$shadow-floating:
+  0 16px 40px rgba($charcoal-ink, 0.12),
+  0 4px 12px rgba($charcoal-ink, 0.04);
+
+$focus-ring: 0 0 0 3px $focus-ring-color;
+$subtle-inner-shadow: inset 0 1px 2px rgba($charcoal-ink, 0.04);
+$button-pressed-shadow: inset 0 1px 2px rgba($charcoal-ink, 0.1);
+
+/**
+ * Opacity
+ */
+$opacity-faint: 0.1;
+$opacity-light: 0.25;
+$opacity-medium: 0.5;
+$opacity-heavy: 0.75;
+$opacity-full: 1;
+
+/**
+ * Icons
+ */
+$icon-size-xs: 0.75rem; // 12px
+$icon-size-sm: 1rem; // 16px
+$icon-size-md: 1.25rem; // 20px
+$icon-size-lg: 1.5rem; // 24px
+$icon-size-xl: 2rem; // 32px
+
+$icon-size: $icon-size-md; // Default icon size
+
+/**
+ * Breakpoints
+ */
+$tiny: 480;
+$small: 640;
+$medium: 900;
+$large: 1200;
+$huge: 1600;
+
+// Generate CSS variables for breakpoints
+:root {
+  --breakpoint-tiny: #{$tiny}px;
+  --breakpoint-small: #{$small}px;
+  --breakpoint-medium: #{$medium}px;
+  --breakpoint-large: #{$large}px;
+  --breakpoint-huge: #{$huge}px;
+}
+
+/**
+ * Z-index Stack
+ */
+$z-index: (
+  skiplinks: 10000,
+  toast: 2500,
+  fetch-loader: 2000,
+  modal: 1500,
+  dropdown: 1200,
+  site-header: 1000,
+  tooltip: 800,
+  above: 10,
+  default: 1,
+  below: -1,
+);
+
+/**
+ * Utility Mixins
+ */
+@mixin card {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  transition: box-shadow $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-medium;
+  }
+}
+
+@mixin primary-button {
+  background-color: $primary-color;
+  color: white;
+  font-weight: $font-weight-semibold;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  transition: $transition-button-hover;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color-hover;
+    transform: translateY(-1px);
+    box-shadow: $shadow-subtle;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $button-pressed-shadow;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    background-color: lighten($primary-color, 20%);
+  }
+}
+
+@mixin secondary-button {
+  background-color: $accent-color;
+  color: $charcoal-ink;
+  font-weight: $font-weight-semibold;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  transition: $transition-button-hover;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color-hover;
+    transform: translateY(-1px);
+    box-shadow: $shadow-subtle;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $button-pressed-shadow;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@mixin outline-button {
+  background-color: transparent;
+  color: $primary-color;
+  font-weight: $font-weight-medium;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  border: $border-width-thin solid $primary-color;
+  transition: $transition-button-hover;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($primary-color, 0.05);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    background-color: rgba($primary-color, 0.1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+@mixin form-input {
+  border: $border-width-thin solid $input-border-color;
+  border-radius: $input-radius;
+  padding: $spacing-sm $spacing-md;
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  color: $text-color;
+  background-color: rgba($bone-white, 0.8);
+  transition: all $transition-base;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: $focus-ring;
+    background-color: $bone-white;
+  }
+
+  &:disabled {
+    background-color: $input-disabled-color;
+    color: $input-disabled-text;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin cosmic-subtle-gradient {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin transition-all {
+  transition: all $transition-base;
+}
+
+@mixin scrollbar-style {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba($muted-taupe, 0.5);
+    border-radius: $pill-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($slate-gray, 0.5);
+    border-radius: $pill-radius;
+
+    &:hover {
+      background-color: $slate-gray;
+    }
+  }
+}

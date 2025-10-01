@@ -1,0 +1,235 @@
+openapi: 3.0.0
+info:
+  title: Huishelder Financial Dashboard API
+  version: 1.0.0
+  description: API documentation for the Huishelder Financial Dashboard feature
+
+tags:
+- name: financial
+  description: Financial dashboard endpoints
+
+paths:
+  # [POST] financial-snapshot
+  /financial-snapshot:
+    post:
+      tags:
+      - financial
+      summary: Create a new financial snapshot
+      description: Create a new financial snapshot with calculations based on user input
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFinancialSnapshotDto'
+      responses:
+        201:
+          description: Financial snapshot created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Financial snapshot created successfully
+                  data:
+                    $ref: '#/components/schemas/FinancialOutput'
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        400:
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  # [GET] financial-snapshots
+  /financial-snapshots:
+    get:
+      tags:
+      - financial
+      summary: Get all financial snapshots
+      description: Retrieve all financial snapshots for the authenticated user
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Financial snapshots retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Financial snapshots retrieved successfully
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FinancialOutput'
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  # [GET] financial-snapshots/{id}
+  /financial-snapshots/{id}:
+    get:
+      tags:
+      - financial
+      summary: Get a specific financial snapshot
+      description: Retrieve a specific financial snapshot by ID
+      security:
+        - bearerAuth: []
+      parameters:
+      - name: id
+        in: path
+        description: ID of the financial snapshot to retrieve
+        required: true
+        schema:
+          type: string
+          format: uuid
+      responses:
+        200:
+          description: Financial snapshot retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Financial snapshot retrieved successfully
+                  data:
+                    $ref: '#/components/schemas/FinancialOutput'
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        404:
+          description: Financial snapshot not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    CreateFinancialSnapshotDto:
+      type: object
+      required:
+        - current_home_value
+        - current_mortgage_left
+        - new_home_price
+        - interest_rate
+        - fixed_term_years
+        - monthly_income
+        - include_nhg
+        - extra_savings
+      properties:
+        current_home_value:
+          type: integer
+          description: Current home value in euros
+          example: 450000
+        current_mortgage_left:
+          type: integer
+          description: Amount left on current mortgage in euros
+          example: 300000
+        new_home_price:
+          type: integer
+          description: New home price in euros
+          example: 600000
+        interest_rate:
+          type: number
+          format: float
+          description: Interest rate as a percentage
+          example: 3.5
+        fixed_term_years:
+          type: integer
+          description: Fixed term in years
+          example: 20
+        monthly_income:
+          type: integer
+          description: Monthly income in euros
+          example: 5500
+        include_nhg:
+          type: boolean
+          description: Whether to include NHG (Nationale Hypotheek Garantie)
+          example: true
+        extra_savings:
+          type: integer
+          description: Extra savings in euros
+          example: 20000
+
+    FinancialOutput:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
+        created_at:
+          type: string
+          format: date-time
+          example: 2025-05-14T10:30:00Z
+        estimated_mortgage:
+          type: integer
+          description: Estimated mortgage amount in euros
+          example: 300000
+        estimated_boeterente:
+          type: integer
+          description: Estimated penalty interest in euros
+          example: 5000
+        bridge_loan_amount:
+          type: integer
+          description: Bridge loan amount in euros
+          example: 100000
+        total_buyer_costs:
+          type: integer
+          description: Total buyer costs in euros
+          example: 25000
+        monthly_payment_gross:
+          type: integer
+          description: Monthly payment before tax benefits in euros
+          example: 1350
+        monthly_payment_net:
+          type: integer
+          description: Monthly payment after tax benefits in euros
+          example: 1150

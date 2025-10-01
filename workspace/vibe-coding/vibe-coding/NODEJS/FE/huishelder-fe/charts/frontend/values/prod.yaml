@@ -1,0 +1,12 @@
+---
+react:
+  ingress:
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    hosts:
+      - host: ++DOMAIN_NAME++
+    tls:
+      - hosts:
+          - ++DOMAIN_NAME++
+        secretName: tls-certs

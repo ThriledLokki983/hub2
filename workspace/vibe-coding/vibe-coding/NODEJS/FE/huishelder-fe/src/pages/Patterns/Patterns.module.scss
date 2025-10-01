@@ -1,0 +1,46 @@
+@import '../../styles/utils';
+
+.root {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-xl;
+}
+
+.customSelectSection {
+  margin: $spacing-xxl 0;
+
+  h2 {
+    font-size: $font-title;
+    font-weight: $font-title-weight;
+    color: $primary-color;
+    margin-bottom: $spacing-xl;
+    letter-spacing: $letter-spacing-tight;
+  }
+}
+
+.selectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xxl;
+}
+
+.selectExample {
+  h3 {
+    font-size: $font-section-header;
+    font-weight: $font-section-header-weight;
+    color: $text-color;
+    margin-bottom: $spacing-md;
+    letter-spacing: $letter-spacing-tight;
+  }
+
+  // Add a subtle card-like effect
+  padding: $spacing-lg;
+  background-color: $warm-fog;
+  border-radius: $card-radius;
+  transition: box-shadow $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-subtle;
+  }
+}

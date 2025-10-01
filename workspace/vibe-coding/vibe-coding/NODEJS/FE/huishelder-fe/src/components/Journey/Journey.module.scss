@@ -1,0 +1,214 @@
+@import '../../styles/utils.scss';
+
+// Variables from the design system
+$primary: $deep-olive-green;
+$accent: $soft-amber;
+$background: $bone-white;
+$surface: $warm-fog;
+$alert: $clay-red;
+$text-primary: $charcoal-ink;
+$text-secondary: $slate-gray;
+$divider: $muted-taupe;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// Common shadows
+$shadow-card: 0 4px 16px rgba(42, 42, 42, 0.05);
+$shadow-elevated: 0 8px 24px rgba(42, 42, 42, 0.08);
+$shadow-button: 0 2px 8px rgba(42, 42, 42, 0.1);
+
+// Common transitions
+$transition-default: all 0.2s ease-out;
+
+// Common utility classes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+
+  @media (max-width: 768px) {
+    padding: $spacing-md;
+  }
+}
+
+.sectionContainer {
+  margin-bottom: $spacing-lg;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: $spacing-md;
+  color: $primary;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $spacing-lg;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
+.gridItemFull {
+  grid-column: span 12;
+}
+
+.gridItemHalf {
+  grid-column: span 6;
+
+  @media (max-width: 768px) {
+    grid-column: span 12;
+  }
+}
+
+.gridItemThird {
+  grid-column: span 4;
+
+  @media (max-width: 768px) {
+    grid-column: span 12;
+  }
+}
+
+.card {
+  background-color: $surface;
+  border-radius: 16px;
+  padding: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  transition: $transition-default;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-button;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.buttonPrimary {
+  background-color: $primary;
+  color: white;
+}
+
+.buttonSecondary {
+  background-color: $accent;
+  color: $text-primary;
+}
+
+.buttonText {
+  background: none;
+  padding: $spacing-xs $spacing-sm;
+  color: $primary;
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba($primary, 0.05);
+    box-shadow: none;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Loading animation
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  margin: $spacing-xl 0;
+}
+
+.loadingDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $primary;
+  margin: 0 8px;
+  animation: bounce 1.4s infinite ease-in-out both;
+
+  &:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+// Error state
+.errorState {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $alert;
+}
+
+.divider {
+  height: 1px;
+  background-color: $divider;
+  margin: $spacing-md 0;
+}

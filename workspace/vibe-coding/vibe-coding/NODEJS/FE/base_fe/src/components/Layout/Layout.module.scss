@@ -1,0 +1,9 @@
+@import '../../styles/utils';
+
+.layout {
+    position: relative;
+    padding: $gutter-site;
+}
+.layout > main {
+    position: relative;
+}

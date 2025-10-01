@@ -1,0 +1,9 @@
+@import '../../styles/utils';
+
+.root {
+    z-index: z(site-header);
+    position: relative;
+}
+.root__logo > svg {
+    fill: $primary-color-light;
+}

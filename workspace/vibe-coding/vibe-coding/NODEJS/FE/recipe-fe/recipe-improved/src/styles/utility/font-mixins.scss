@@ -1,0 +1,91 @@
+/**
+ * Types
+ */
+@mixin body-font {
+    font-family: $body-font;
+    font-weight: 400;
+}
+
+@mixin heading-font($title: false) {
+    font-family: $heading-font;
+    font-weight: 700;
+    @if ($title) {
+        font-family: $title-font;
+    }
+}
+
+@mixin ui-font($bold: false, $line-height: true) {
+    font-family: $ui-font;
+    font-weight: 500; line-height: 1.25; letter-spacing: -0.025em;
+    @if ($bold) {
+        font-weight: 700;
+    }
+}
+
+/**
+ * Sizes
+ */
+@mixin small-text {
+    font-size: 11px;
+    @include bp-min($medium) {
+        font-size: 12px;
+    }
+}
+
+@mixin medium-text {
+    font-size: 13px;
+    @include bp-min($medium) {
+        font-size: 14px;
+    }
+}
+
+@mixin regular-text {
+    font-size: 15px;
+    @include bp-min($medium) {
+        font-size: 16px;
+    }
+}
+
+@mixin large-text {
+    font-size: 17px;
+    @include bp-min($medium) {
+        font-size: 18px;
+    }
+}
+
+/**
+ * Headings
+ */
+@mixin heading-base {
+    @include heading-font; @include font-smoothing;
+    margin: 0 0 0.65rem;
+    line-height: 1.25;
+}
+
+@mixin h1 {
+    @include heading-base;
+    font-size: 2.5rem; line-height: 1.15;
+}
+
+@mixin h2 {
+    @include heading-base;
+    font-size: 1.85rem;
+}
+
+@mixin h3 {
+    @include heading-base;
+    font-size: 1.35rem;
+}
+
+@mixin h4 {
+    @include heading-base;
+    font-size: 1.15rem;
+}
+
+@mixin h5 {
+    @include h4;
+}
+
+@mixin h6 {
+    @include h4;
+}

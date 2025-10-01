@@ -1,0 +1,347 @@
+@import '../../styles/utils';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin: 0;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.addButton {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: lighten($primary-color, 5%);
+    transform: translateY(-1px);
+    box-shadow: $shadow-subtle;
+  }
+}
+
+.refreshButton {
+  background-color: transparent;
+  color: $text-color;
+  border: 1px solid $muted-taupe;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: rgba($slate-gray, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .spinnerIcon {
+    animation: spin 1s linear infinite;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+  padding: $spacing-md $spacing-lg;
+  background-color: rgba($card-background, 0.7);
+  border-radius: $card-radius;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.filterLabel {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $text-color-secondary;
+}
+
+.filterSelect {
+  padding: $spacing-xs $spacing-md;
+  border: 1px solid $muted-taupe;
+  border-radius: $input-radius;
+  font-family: $font-family-primary;
+  font-size: $font-size-sm;
+  color: $text-color;
+  background-color: rgba($bone-white, 0.8);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.15);
+  }
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 1.7rem 1.1rem 0.6rem !important;
+  }
+}
+
+.propertiesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: $spacing-lg;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+  padding: $spacing-xxl;
+  background-color: $card-background;
+  border-radius: $card-radius;
+  border: 2px dashed $muted-taupe;
+  color: $text-color-secondary;
+
+  .emptyIcon {
+    font-size: 48px;
+    margin-bottom: $spacing-lg;
+    color: lighten($text-color-secondary, 20%);
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-md;
+    color: $text-color;
+  }
+
+  p {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-lg;
+    max-width: 400px;
+  }
+}
+
+.propertyCard {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  overflow: hidden;
+  box-shadow: $shadow-subtle;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-medium;
+  }
+}
+
+.propertyImage {
+  width: 100%;
+  height: 180px;
+  background-color: lighten($muted-taupe, 10%);
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.statusBadge {
+  position: absolute;
+  top: $spacing-md;
+  right: $spacing-md;
+  padding: $spacing-xxs $spacing-sm;
+  border-radius: $pill-radius;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+
+  &.active {
+    background-color: rgba($primary-color, 0.9);
+    color: white;
+  }
+
+  &.pending {
+    background-color: rgba($accent-color, 0.9);
+    color: $text-color;
+  }
+
+  &.sold {
+    background-color: rgba($slate-gray, 0.9);
+    color: white;
+  }
+
+  &.draft {
+    background-color: rgba($muted-taupe, 0.9);
+    color: $text-color;
+  }
+}
+
+.propertyContent {
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.propertyTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  margin: 0 0 $spacing-xs 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.propertyAddress {
+  font-size: $font-size-sm;
+  color: $text-color-secondary;
+  margin: 0 0 $spacing-md 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.propertyPrice {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+  margin: 0 0 $spacing-md 0;
+}
+
+.propertyFeatures {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $divider-color;
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .featureValue {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+      color: $text-color;
+    }
+
+    .featureLabel {
+      font-size: $font-size-xs;
+      color: $text-color-secondary;
+    }
+  }
+}
+
+.propertyCardFooter {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.actionButton {
+  background: transparent;
+  border: none;
+  color: $text-color-secondary;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $button-radius;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: $transition-base;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xxs;
+
+  &:hover {
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.05);
+  }
+
+  &.deleteButton:hover {
+    color: $error-color;
+    background-color: rgba($error-color, 0.05);
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: $secondary-ui-color;
+  font-size: $font-size-lg;
+
+  .spinnerIcon {
+    margin-right: $spacing-sm;
+    animation: spin 1s linear infinite;
+  }
+}
+
+.errorMessage {
+  background-color: $error-color-light;
+  color: $error-color;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-base;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

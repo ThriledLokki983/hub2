@@ -1,0 +1,13 @@
+---
+react:
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-production
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    hosts:
+      - host: ++PROJECT_NAME++.tst.devcfs.com
+    tls:
+      - hosts:
+          - ++PROJECT_NAME++.tst.devcfs.com
+        secretName: tls-certs

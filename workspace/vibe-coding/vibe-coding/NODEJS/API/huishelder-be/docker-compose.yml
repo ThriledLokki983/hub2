@@ -1,0 +1,96 @@
+version: "3.9"
+
+services:
+  proxy:
+    image: nginx:alpine
+    container_name: proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: "unless-stopped"
+    networks:
+      - backend
+
+  server:
+    container_name: server
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    env_file:
+      - .env.development.local
+    environment:
+      - NODE_ENV=development
+      - NODE_OPTIONS="--max-old-space-size=2048"
+      - SHARP_IGNORE_GLOBAL_LIBVIPS=1
+    volumes:
+      - ./src:/app/src:delegated
+      - ./migrations:/app/migrations:delegated
+      - ./tsconfig.json:/app/tsconfig.json:delegated
+      - ./nodemon.json:/app/nodemon.json:delegated
+    restart: "unless-stopped"
+    networks:
+      - backend
+    depends_on:
+      - pg
+      - redis
+    mem_limit: 3g
+    command: npm run dev
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT:-8000}/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  pg:
+    container_name: pg
+    image: postgres:14.5-alpine
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    env_file:
+      - .env.development.local
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-huishelder}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./src/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: "always"
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-huishelder}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    container_name: redis
+    image: redis:alpine
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    restart: "always"
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  pg_data:
+    driver: local
+  redis_data:
+    driver: local

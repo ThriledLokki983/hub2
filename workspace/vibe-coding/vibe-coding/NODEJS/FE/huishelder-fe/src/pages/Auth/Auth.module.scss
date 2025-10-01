@@ -1,0 +1,121 @@
+@import '../../styles/utils';
+
+.authContainer {
+  position: relative;
+  display: flex;
+  min-height: 100dvh;
+  width: 100dvw;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.authBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-color;
+  width: 40%;
+  padding: $spacing-xxl;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 90%, rgba(255, 255, 255, 0.25) 15%, transparent 40%);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+    pointer-events: none;
+  }
+  
+  @media (max-width: 992px) {
+    width: 35%;
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 240px;
+    padding: $spacing-lg;
+  }
+}
+
+.brandContent {
+  color: $bone-white;
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+}
+
+.brandTitle {
+  font-size: 3rem;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+  letter-spacing: 1px;
+}
+
+.brandTagline {
+  font-size: 1.25rem;
+  font-weight: $font-weight-light;
+  line-height: $line-height-tight;
+  opacity: 0.9;
+}
+
+.authContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xxl;
+  background-color: $background-color;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    padding: $spacing-lg;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: $spacing-xl;
+  left: $spacing-xl;
+  display: flex;
+  align-items: center;
+  color: $primary-color;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-lg;
+  transition: transform $transition-base;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+  
+  strong {
+    font-size: $font-size-sm;
+    color: $secondary-ui-color;
+    font-weight: $font-weight-bold;
+    font-style: italic;
+    margin-left: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    top: $spacing-lg;
+    left: $spacing-lg;
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../styles/utility/huishelder-design-system.scss';
+
+.termsOfService {
+  background-color: $background-color;
+  min-height: 100vh;
+  padding: $spacing-md;
+  color: $text-color;
+  font-family: $font-family-primary;
+}
+
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-xxl 0;
+}
+
+.title {
+  font-size: 32px; // Following design system
+  font-weight: 700; // Bold
+  color: #3a4f41; // Deep Olive Green from design system
+  margin-bottom: 12px;
+  letter-spacing: -0.02em; // Tight letter spacing
+  line-height: 1.2; // Tight line height
+}
+
+.lastUpdated {
+  color: #6e7673; // Slate Gray from design system
+  font-size: 12px;
+  margin-bottom: 48px;
+}
+
+.section {
+  margin-bottom: 48px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600; // Semi-bold
+    color: #3a4f41; // Deep Olive Green
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5; // Relaxed line height
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.bulletList {
+  list-style: none;
+  padding-left: 16px;
+  margin-bottom: 16px;
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #f4c77b; // Soft Amber from design system
+    }
+  }
+}
+
+.contactInfo {
+  background-color: #f8f5f0; // Bone White from design system
+  padding: 16px;
+  border-radius: 12px; // Following design system
+  margin-top: 12px;
+  box-shadow: 0 4px 12px rgba(42, 42, 42, 0.05); // Subtle shadow
+
+  p {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

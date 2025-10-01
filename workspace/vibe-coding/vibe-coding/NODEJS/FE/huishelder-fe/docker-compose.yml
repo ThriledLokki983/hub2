@@ -1,0 +1,101 @@
+version: "3.9"
+
+# Define named volumes
+volumes:
+  node_modules:
+    driver: local
+
+# Define networks
+networks:
+  app-network:
+    driver: bridge
+
+# Common configuration to be extended
+x-common-config: &common-config
+  restart: unless-stopped
+  platform: ${DOCKER_PLATFORM:-linux/amd64}
+  env_file:
+    - .env
+
+services:
+  # Development service
+  frontend-dev:
+    <<: *common-config
+    container_name: ${APP_NAME:-huishelder-fe}-dev
+    build:
+      dockerfile: Dockerfile-dev
+      context: .
+      args:
+        NODE_ENV: development
+        APP_PORT: ${APP_PORT:-3000}
+    env_file:
+      - .env
+      - .env.development
+    environment:
+      NODE_ENV: development
+      APP_NAME: ${APP_NAME:-huishelder-fe}
+      APP_PORT: ${APP_PORT:-3000}
+      MAKE_TARGET: dev
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:8080}
+    ports:
+      - "${DOCKER_HOST_PORT:-3000}:${APP_PORT:-3000}"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    profiles: ["dev"]
+    command: ["make", "dev"]
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:${APP_PORT:-3000}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+  # Production service
+  frontend-prod:
+    <<: *common-config
+    container_name: ${APP_NAME:-huishelder-fe}-prod
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        NODE_ENV: production
+        APP_NAME: ${APP_NAME:-huishelder-fe}
+    env_file:
+      - .env
+      - .env.production
+    environment:
+      NODE_ENV: production
+      NGINX_PORT: ${NGINX_PORT:-80}
+      APP_NAME: ${APP_NAME:-huishelder-fe}
+    ports:
+      - "${DOCKER_HOST_PORT:-80}:${NGINX_PORT:-80}"
+    profiles: ["prod"]
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:${NGINX_PORT:-80}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Local Nginx proxy for a multi-service setup with proper DNS - optional
+  nginx-proxy:
+    image: nginx:1.22-alpine
+    container_name: ${APP_NAME:-huishelder-fe}-nginx-proxy
+    ports:
+      - "${PROXY_PORT:-8080}:80"
+    volumes:
+      - ./conf/nginx.proxy.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend-dev
+      - frontend-prod
+    profiles: ["proxy"]
+    networks:
+      - app-network
+    environment:
+      APP_NAME: ${APP_NAME:-huishelder-fe}
+    restart: unless-stopped

@@ -1,0 +1,194 @@
+@import '../../styles/utils';
+
+.root {
+    position: relative;
+}
+
+.logoutContainer {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing-lg;
+  background-color: $bone-white;
+  
+  // Add subtle cosmic pattern to background
+  background-image: 
+    radial-gradient(
+      circle at 20% 20%, 
+      rgba($soft-amber, 0.03) 0%, 
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 80% 80%, 
+      rgba($deep-olive-green, 0.03) 0%, 
+      transparent 70%
+    );
+}
+
+.logoutCard {
+  width: 100%;
+  max-width: 520px;
+  background-color: $warm-fog;
+  border-radius: $card-radius;
+  box-shadow: $shadow-medium;
+  padding: $spacing-xxl;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  position: relative;
+  overflow: hidden;
+  
+  // Add subtle gradient overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      to right,
+      rgba($deep-olive-green, 0.5),
+      rgba($soft-amber, 0.5)
+    );
+    border-radius: $card-radius $card-radius 0 0;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing-md;
+}
+
+.successIcon {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background-color: rgba($deep-olive-green, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $deep-olive-green;
+  margin: 0 auto;
+  
+  svg {
+    filter: drop-shadow(0 2px 4px rgba($deep-olive-green, 0.2));
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $deep-olive-green;
+  line-height: $line-height-tight;
+}
+
+.message {
+  margin: 0;
+  font-size: $font-size-md;
+  font-weight: $font-weight-light;
+  color: $charcoal-ink;
+  line-height: $line-height-relaxed;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-top: $spacing-lg;
+}
+
+.primaryButton {
+  height: 48px;
+  background-color: $deep-olive-green;
+  color: white;
+  font-weight: $font-weight-semibold;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  border: none;
+  transition: $transition-button-hover;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: darken($deep-olive-green, 5%);
+    transform: translateY(-1px);
+    box-shadow: $shadow-subtle;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+.secondaryButton {
+  height: 48px;
+  background-color: transparent;
+  color: $deep-olive-green;
+  font-weight: $font-weight-medium;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  border: $border-width-thin solid $deep-olive-green;
+  transition: $transition-button-hover;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: rgba($deep-olive-green, 0.05);
+    transform: translateY(-1px);
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+.footer {
+  margin-top: $spacing-md;
+  font-size: $font-size-sm;
+  color: $text-color-secondary;
+  
+  .footerText {
+    margin: 0;
+  }
+  
+  .link {
+    color: $deep-olive-green;
+    text-decoration: none;
+    transition: color $transition-base;
+    font-weight: $font-weight-medium;
+    
+    &:hover {
+      color: darken($deep-olive-green, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .logoutCard {
+    padding: $spacing-xl $spacing-lg;
+  }
+  
+  .title {
+    font-size: $font-size-xl;
+  }
+  
+  .message {
+    font-size: $font-size-base;
+  }
+}

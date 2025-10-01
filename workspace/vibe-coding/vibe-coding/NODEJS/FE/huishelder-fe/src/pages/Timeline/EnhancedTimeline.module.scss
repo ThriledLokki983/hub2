@@ -1,0 +1,111 @@
+@import '../../styles/utility/huishelder-design-system.scss';
+
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-lg 0;
+}
+
+.header {
+  margin-bottom: $spacing-xxl;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -$spacing-lg;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: $soft-amber;
+    border-radius: $pill-radius;
+  }
+}
+
+.title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $deep-olive-green;
+  margin: 0 0 $spacing-xs 0;
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: $slate-gray;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.steps {
+  margin-top: $spacing-xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.loading,
+.error,
+.empty,
+.noResults {
+  text-align: center;
+  padding: $spacing-xxl $spacing-lg;
+  color: $slate-gray;
+  background-color: $warm-fog;
+  border-radius: $border-radius-lg;
+  margin: $spacing-xl 0;
+  box-shadow: $shadow-subtle;
+}
+
+.error {
+  color: $clay-red;
+  background-color: rgba($clay-red, 0.05);
+  border-left: 4px solid $clay-red;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .container {
+    padding: $spacing-lg $spacing-md;
+  }
+
+  .header {
+    margin-bottom: $spacing-xl;
+
+    &::after {
+      width: 60px;
+      bottom: -$spacing-md;
+    }
+  }
+
+  .title {
+    font-size: $font-size-2xl;
+  }
+
+  .subtitle {
+    font-size: $font-size-md;
+  }
+
+  .steps {
+    gap: $spacing-sm;
+  }
+}
+
+// Animation for loading state
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s infinite ease-in-out;
+}

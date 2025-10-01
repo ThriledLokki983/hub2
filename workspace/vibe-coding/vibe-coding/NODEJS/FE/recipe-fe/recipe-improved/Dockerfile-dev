@@ -1,0 +1,11 @@
+FROM node:18-buster as build
+
+RUN mkdir -p /app
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+RUN yarn global add serve
+
+COPY . .
+
+CMD ["make", "run"]

@@ -1,0 +1,17 @@
+version: "3"
+services:
+
+  frontend:
+    platform:
+      ${DOCKER_PLATFORM:-linux/amd64}
+    env_file:
+      - .env.development
+    build:
+      dockerfile: Dockerfile-dev
+      context: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - ${DOCKER_HOST_PORT:-3000}:3000
+    volumes:
+      - .:/app

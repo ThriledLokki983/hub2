@@ -1,0 +1,50 @@
+@import '../../styles/utils.scss';
+
+.container {
+  max-width: $content-max-width-large;
+  margin: 0 auto;
+  padding: $spacing-md;
+
+  @media (min-width: 768px) {
+    padding: $spacing-lg;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  font-size: 16px;
+  color: $text-color-secondary;
+}
+
+.header {
+  margin-bottom: $spacing-lg;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: $deep-olive-green;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken($deep-olive-green, 10%);
+  }
+}
+
+.backIcon {
+  margin-right: $spacing-sm;
+  font-size: 18px;
+}
+
+.footer {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $muted-taupe;
+  display: flex;
+  justify-content: flex-end;
+}

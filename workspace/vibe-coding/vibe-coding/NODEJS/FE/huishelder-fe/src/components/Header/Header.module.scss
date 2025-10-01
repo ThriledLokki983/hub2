@@ -1,0 +1,138 @@
+@import '../../styles/utils';
+
+.root {
+  z-index: z(site-header);
+  position: relative;
+  padding: $spacing-md $gutter-site;
+  background-color: $card-background;
+  box-shadow: $shadow-subtle;
+}
+
+.root__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.root__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $deep-olive-green;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-lg;
+  transition: transform $transition-base;
+//   font-style: italic;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  > span strong {
+    font-size: $font-size-sm;
+    color: $secondary-ui-color;
+    font-weight: $font-weight-bold;
+    font-style: italic;
+  }
+  
+  svg {
+    height: 40px;
+    width: auto;
+    fill: $primary-color;
+    margin-right: $spacing-sm;
+  }
+}
+
+.root__nav {
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: $spacing-md;
+  }
+  
+  li {
+    position: relative;
+  }
+  
+  a {
+    display: block;
+    color: $text-color;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-sm;
+    transition: color $transition-base, background-color $transition-base;
+    
+    &:hover {
+      background-color: rgba($primary-color, 0.05);
+      color: $primary-color;
+    }
+    
+    &.is-active {
+      color: $primary-color;
+      font-weight: $font-weight-semibold;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -$spacing-xs;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 3px;
+        background-color: $primary-color;
+        border-radius: 2px;
+        transition: width $transition-base;
+      }
+      
+      &:hover::after {
+        width: 30px;
+      }
+    }
+  }
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  
+  .userName {
+    font-weight: $font-weight-medium;
+    color: $secondary-ui-color;
+  }
+  
+  .logoutButton {
+    background-color: $accent-color;
+    color: $text-color;
+    font-weight: $font-weight-semibold;
+    border-radius: $button-radius;
+    padding: $spacing-xs $spacing-md;
+    border: none;
+    font-size: $font-size-sm;
+    transition: $transition-button-hover;
+    cursor: pointer;
+    
+    &:hover, &:focus {
+      background-color: darken($accent-color, 5%);
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: $shadow-subtle;
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: $focus-ring;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@import '../../../styles/utility/huishelder-design-system.scss';
+
+.progressContainer {
+  margin-bottom: $spacing-xl;
+}
+
+.overallProgress {
+  margin-bottom: $spacing-lg;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: $spacing-xs;
+}
+
+.progressTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  margin: 0;
+}
+
+.percentage {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+}
+
+.progressBar {
+  height: 12px;
+  background-color: $divider-color;
+  border-radius: $pill-radius;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: $primary-color;
+  border-radius: $pill-radius;
+  transition: width 0.6s ease-out;
+}
+
+.categoryBreakdown {
+  background-color: $warm-fog;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-subtle;
+}
+
+.breakdownTitle {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  margin: 0 0 $spacing-md 0;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.categoryLabel {
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  font-size: $font-size-sm;
+  color: $text-color;
+}
+
+.categoryDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &[data-category='buying'] {
+    background-color: $primary-color;
+  }
+
+  &[data-category='selling'] {
+    background-color: $clay-red;
+  }
+
+  &[data-category='shared'] {
+    background-color: $slate-gray;
+  }
+}
+
+.categoryProgressBar {
+  flex: 1;
+  height: 8px;
+  background-color: $divider-color;
+  border-radius: $pill-radius;
+  overflow: hidden;
+}
+
+.categoryProgressFill {
+  height: 100%;
+  border-radius: $pill-radius;
+  transition: width 0.6s ease-out;
+
+  &[data-category='buying'] {
+    background-color: $primary-color;
+  }
+
+  &[data-category='selling'] {
+    background-color: $clay-red;
+  }
+
+  &[data-category='shared'] {
+    background-color: $slate-gray;
+  }
+}
+
+.categoryPercentage {
+  min-width: 40px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  text-align: right;
+  color: $text-color-secondary;
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .categoryItem {
+    flex-wrap: wrap;
+  }
+
+  .categoryLabel {
+    min-width: 60px;
+  }
+}

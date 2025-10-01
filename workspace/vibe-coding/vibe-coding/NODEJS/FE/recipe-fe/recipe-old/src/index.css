@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+:root {
+  /* Using our theme colors */
+  --emerald-green: #317039;
+  --maximum-yellow: #f8e449;
+  --antique-white: #f8edd9;
+  --dark-pastel-red: #cc4b24;
+  --papaya-whip: #fffdd4;
+  --cosmic-latte: #fff8eb;
+  --galaxy-grey: #2d2d34;
+  --deep-space: #1a1a22;
+
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+
+  color-scheme: light;
+  color: var(--deep-space);
+  background-color: var(--cosmic-latte);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--emerald-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--dark-pastel-red);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust horizontal padding for mobile */
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller spacing for mobile */
+  section {
+    margin-bottom: 2rem;
+  }
+
+  /* Stack buttons on mobile */
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button-group > * {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,81 @@
+/* stylelint-disable no-duplicate-selectors */
+
+@import-normalize;
+
+@import 'utility/variables';
+@import 'utility/functions';
+@import 'utility/mixins';
+@import 'utility/font-imports';
+@import 'utility/font-mixins';
+
+
+/**
+ * Core
+ */
+:root {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px; quotes: '“' '”' '‘' '’';
+    accent-color: $primary-color;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    @include body-font; @include regular-text;
+    margin: 0; padding: 0;
+    background: $background-color; color: $text-color;
+    line-height: 1.5; letter-spacing: -0.025em;
+}
+
+/**
+ * Helpers
+ */
+[hidden] {
+    display: none !important;
+}
+
+[tabindex="-1"] {
+    outline: none;
+}
+
+button[disabled] {
+    cursor: not-allowed !important;
+}
+
+[data-color="success"] {
+    color: $success-color;
+}
+[data-color="warning"] {
+    color: $warning-color;
+}
+[data-color="error"] {
+    color: $error-color;
+}
+
+/**
+ * Variables for usages in JS
+ */
+:root {
+
+    --breakpoint-tiny: #{$tiny};
+    --breakpoint-small: #{$small};
+    --breakpoint-medium: #{$medium};
+    --breakpoint-large: #{$large};
+    --breakpoint-huge: #{$huge};
+
+}
+
+/**
+ * Primers
+ */
+@import 'primer/forms';
+@import 'primer/headings';
+@import 'primer/hr';
+@import 'primer/links';
+@import 'primer/media';
+@import 'primer/paragraphs';

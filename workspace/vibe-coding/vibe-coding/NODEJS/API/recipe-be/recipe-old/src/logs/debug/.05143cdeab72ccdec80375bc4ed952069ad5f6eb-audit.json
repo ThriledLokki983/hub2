@@ -1,0 +1,55 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/.05143cdeab72ccdec80375bc4ed952069ad5f6eb-audit.json",
+    "files": [
+        {
+            "date": 1745322669191,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-22 13:51:09.log",
+            "hash": "ba6516733dd8e3907301bf49df05cc718efe52abb58b74e5d06454b78f790047"
+        },
+        {
+            "date": 1745323191743,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-22 13:59:51.log",
+            "hash": "cc211c72a93cec7f08b97600dc4b7cadedce8181b4c41fab19f9be1b462633e9"
+        },
+        {
+            "date": 1745482083977,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 10:08:03.log",
+            "hash": "2b823fac6f042987a7cf99183cba0cb5eb835125cb208820288886cc8c7601de"
+        },
+        {
+            "date": 1745482084002,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 10:08:04.log",
+            "hash": "d828c2cf6c9c8a46a046a8793ef4c63759d3e00396864617ac11b3030a16e794"
+        },
+        {
+            "date": 1745482400076,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 10:13:20.log",
+            "hash": "837b1173b3fa6a192027334e39e2cfb613de721771f947685432712085b060ca"
+        },
+        {
+            "date": 1745483130382,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 10:25:30.log",
+            "hash": "16bcc36b319f10edd7253fdaed50cef0a2b281c4fc66eede0f35cde3c80efb7d"
+        },
+        {
+            "date": 1745483465547,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 10:31:05.log",
+            "hash": "37c9bab2ff03e5d46bb0b3ad69b39f0050f3e89928153028bc9ecbbc816e013c"
+        },
+        {
+            "date": 1745485851925,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 11:10:51.log",
+            "hash": "5be2453843f6de95debcaca6ab135b04c7901414edef6fc3e0818b3849cdfeb4"
+        },
+        {
+            "date": 1745486082003,
+            "name": "/Users/gnimoh001/projects/vibe-coding/vibe-coding/NODEJS/API/recipe-api/src/logs/debug/2025-04-24 11:14:42.log",
+            "hash": "c394378bcd086d2e28e091b34fbb4dcb88f5779458126dcbcd12946ff80383a4"
+        }
+    ],
+    "hashType": "sha256"
+}

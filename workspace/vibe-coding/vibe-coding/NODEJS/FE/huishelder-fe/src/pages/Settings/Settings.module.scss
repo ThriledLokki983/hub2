@@ -1,0 +1,396 @@
+@import '../../styles/utils';
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin: 0;
+  }
+}
+
+.section {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  transition: box-shadow $transition-base;
+  margin-bottom: $spacing-xl;
+
+  &:hover {
+    box-shadow: $shadow-medium;
+  }
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $primary-color;
+    margin-top: 0;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $divider-color;
+  }
+}
+
+// New styles for the side-by-side layout
+.settingsRow {
+  display: flex;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-xl;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+}
+
+.settingsCol {
+  flex: 1;
+  min-width: 0; // Prevent flex items from overflowing
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  transition: box-shadow $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-medium;
+  }
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $primary-color;
+    margin-top: 0;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $divider-color;
+  }
+}
+
+.errorMessage {
+  background-color: $error-color-light;
+  color: $error-color;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-sm;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  color: $secondary-ui-color;
+  font-size: $font-size-lg;
+
+  .spinnerIcon {
+    margin-right: $spacing-sm;
+    animation: spin 1s linear infinite;
+  }
+}
+
+.switchLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+  border-bottom: 1px solid rgba($divider-color, 0.5);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.labelText {
+  display: flex;
+  flex-direction: column;
+
+  .settingTitle {
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $text-color;
+    margin-bottom: $spacing-xxs;
+  }
+
+  .settingDescription {
+    font-size: $font-size-sm;
+    color: $text-color-secondary;
+  }
+}
+
+.switchControl {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .slider {
+      background-color: $primary-color;
+
+      &:before {
+        transform: translateX(20px);
+      }
+    }
+
+    &:focus + .slider {
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+    }
+
+    &:disabled + .slider {
+      background-color: $muted-taupe;
+      cursor: not-allowed;
+
+      &:before {
+        background-color: lighten($muted-taupe, 10%);
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $muted-taupe;
+    transition: $transition-base;
+    border-radius: 24px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: $transition-base;
+    }
+  }
+}
+
+.formGroup {
+  margin-bottom: $spacing-lg;
+
+  label {
+    display: block;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $text-color;
+    margin-bottom: $spacing-xs;
+  }
+
+  input {
+    width: 100%;
+    height: 48px;
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $muted-taupe;
+    border-radius: $input-radius;
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    color: $text-color;
+    background-color: rgba($bone-white, 0.8);
+    transition: all $transition-base;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.15);
+      background-color: $bone-white;
+    }
+
+    &::placeholder {
+      color: lighten($secondary-ui-color, 20%);
+    }
+
+    &:disabled {
+      background-color: $input-disabled-color;
+      color: $input-disabled-text;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-md;
+  margin-top: $spacing-lg;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $divider-color;
+}
+
+.saveButton {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: lighten($primary-color, 5%);
+    transform: translateY(-1px);
+    box-shadow: $shadow-subtle;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .spinnerIcon {
+    animation: spin 1s linear infinite;
+  }
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: $text-color;
+  border: 1px solid $muted-taupe;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: rgba($slate-gray, 0.1);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.photoUploadContainer {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xl;
+  margin-bottom: $spacing-md;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.profilePhotoWrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $warm-fog;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-subtle;
+  border: 3px solid $bone-white;
+}
+
+.profilePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $muted-taupe;
+  color: $bone-white;
+}
+
+.photoActions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.photoButton {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  background-color: $warm-fog;
+  color: $charcoal-ink;
+  border: 1px solid $muted-taupe;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-base;
+  cursor: pointer;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: darken($warm-fog, 5%);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  &.deleteButton {
+    background-color: transparent;
+    color: $clay-red;
+    border-color: $clay-red;
+
+    &:hover {
+      background-color: rgba($clay-red, 0.1);
+    }
+  }
+
+  .spinnerIcon {
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

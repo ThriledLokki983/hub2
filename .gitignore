@@ -28,6 +28,8 @@ workspace/*
 workspace/vibe-coding/*
 !workspace/vibe-coding/README.md
 !workspace/vibe-coding/react/
+!workspace/vibe-coding/vibe-coding/
+!workspace/vibe-coding/vibe-coding/**
 !workspace/PLAYGROUND/
 workspace/PLAYGROUND/*
 !workspace/PLAYGROUND/default-styles/

@@ -1,0 +1,92 @@
+@import '../../styles/utils';
+
+.root {
+    z-index: z(toast);
+    position: fixed; top: 0; right: 0; left: 0;
+    display: block; max-width: 480px; padding: ($gutter * 0.5) $gutter;
+    background: $error-color-light; color: $error-color-dark;
+    transition: all 0.3s;
+    @include bp-min($medium) {
+        top: $gutter-site * 1.5; right: $gutter-site * 1.5; left: auto;
+        min-width: 320px;
+        padding: ($gutter * 0.75) $gutter;
+        border-radius: $border-radius;
+        box-shadow: 0 0 15px 5px rgba($white, 0.25);
+    }
+}
+.root[aria-hidden="true"] {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0; visibility: hidden;
+}
+body[data-has-modal="true"] .root {
+    @include bp-min($medium) {
+        box-shadow: $box-shadow;
+    }
+}
+
+/**
+ * Inner
+ */
+.root__inner {
+    position: relative;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    width: 100%; height: 100%;
+}
+
+/**
+ * Content
+ */
+.root__content {
+    flex: 1 1 auto; padding-right: 15px;
+    @include bp-min($small) {
+        padding-right: 1.5rem;
+    }
+}
+.root__content > h3 {
+    margin-bottom: 0.15em;
+}
+.root__content > p {
+    @include medium-text;
+    line-height: 1.25;
+}
+.root__content > p:last-child {
+    margin-bottom: 0;
+}
+
+/**
+ * Button
+ */
+.root__inner > button {
+    @include bare-button; @include ui-font;
+    flex: 0 0 auto; margin-right: -0.5rem;
+    min-width: 42px; min-height: 42px;
+    padding: 0.5rem; border-radius: $border-radius;
+    color: inherit; font-size: inherit; line-height: 0;
+    background-color: darken($error-color-light, 3);
+    @include bp-min($small) {
+        margin-right: -0.25rem;
+    }
+    @include hover {
+        background-color: darken($error-color-light, 5);
+    }
+}
+.root__inner > button[data-has-label="true"] {
+    align-self: center;
+    padding: 0.5rem 1.25rem;
+}
+
+/**
+ * Variation: message
+ */
+.root[data-type="message"] {
+    background: $success-color-light; color: $success-color;
+    &[data-has-button="true"] .root__content {
+        border-color: rgba($primary-color, 0.5);
+    }
+    .root__inner > button {
+        background-color: darken($success-color-light, 10);
+        @include hover {
+            background-color: darken($success-color-light, 15);
+        }
+    }
+}

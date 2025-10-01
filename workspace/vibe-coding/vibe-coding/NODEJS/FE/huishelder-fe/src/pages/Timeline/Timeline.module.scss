@@ -1,0 +1,187 @@
+@import '../../styles/utils';
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+}
+
+.header {
+  margin-bottom: $spacing-xl;
+  text-align: center;
+
+  h1 {
+    font-size: $font-size-2xl;
+    color: $text-color;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    color: $text-color-secondary;
+    margin-bottom: $spacing-md;
+  }
+
+  .enhancedLink {
+    margin-top: $spacing-md;
+  }
+
+  .enhancedButton {
+    display: inline-block;
+    padding: $spacing-sm $spacing-lg;
+    background-color: $accent-color;
+    color: $text-color;
+    font-weight: $font-weight-semibold;
+    border-radius: $border-radius-md;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: darken($accent-color, 5%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-subtle;
+    }
+  }
+}
+
+.timelineList {
+  position: relative;
+  padding-left: $spacing-lg;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: $muted-taupe;
+  }
+}
+
+.step {
+  position: relative;
+  padding: $spacing-lg 0;
+  margin-bottom: $spacing-lg;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -$spacing-lg;
+    top: $spacing-xl;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $bone-white;
+    border: 2px solid $muted-taupe;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-out;
+  }
+
+  &.completed::before {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &.in_progress::before {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.stepContent {
+  background-color: $bone-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-subtle;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-medium;
+  }
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-md;
+}
+
+.stepInfo {
+  flex: 1;
+}
+
+.stepName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  margin-bottom: $spacing-xs;
+}
+
+.stepDate {
+  font-size: $font-size-sm;
+  color: $text-color-secondary;
+}
+
+.statusBadge {
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $pill-radius;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+
+  &.pending {
+    background-color: $slate-gray;
+    color: $white;
+  }
+
+  &.in_progress {
+    background-color: $accent-color;
+    color: $text-color;
+  }
+
+  &.completed {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.completeButton {
+  margin-top: $spacing-md;
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $border-radius-md;
+  background-color: $primary-color;
+  color: $white;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    background-color: $muted-taupe;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: $text-color-secondary;
+}
+
+.error {
+  text-align: center;
+  color: $clay-red;
+  padding: $spacing-lg;
+  background-color: rgba($clay-red, 0.1);
+  border-radius: $border-radius-md;
+  margin: $spacing-lg 0;
+}

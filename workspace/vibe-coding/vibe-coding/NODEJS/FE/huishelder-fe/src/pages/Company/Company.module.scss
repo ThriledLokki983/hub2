@@ -1,0 +1,276 @@
+/* Company page shared styles */
+@import '../../styles/utils.scss';
+
+// Color variables based on the design system
+$color-primary: #3a4f41;
+$color-accent: #f4c77b;
+$color-background: #f8f5f0;
+$color-surface: #eae6e1;
+$color-alert: #c25a5a;
+$color-text: #2a2a2a;
+$color-secondary: #6e7673;
+$color-divider: #dad5cf;
+
+// Common container styles
+.company-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  background-color: $color-background;
+  color: $color-text;
+}
+
+// Page headers
+.page-header {
+  margin-bottom: 40px;
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: $color-secondary;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+// Section styles
+.section {
+  margin-bottom: 48px;
+  padding: 32px;
+  background-color: $color-surface;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: $color-primary;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Two-column layout for equal width sections
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px; // Increased spacing between the columns
+  margin: 24px 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Grid layouts
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+// Card styles
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  transition:
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: $color-primary;
+  }
+
+  p {
+    color: $color-text;
+    line-height: 1.5;
+  }
+}
+
+// Button styles
+.button {
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-out,
+    transform 0.2s ease-out;
+
+  &:hover {
+    background-color: darken($color-primary, 5%);
+    transform: translateY(-2px);
+  }
+
+  &.secondary {
+    background-color: $color-accent;
+    color: $color-primary;
+
+    &:hover {
+      background-color: darken($color-accent, 5%);
+    }
+  }
+}
+
+// Form styles
+.form {
+  .form-group {
+    margin-bottom: 24px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: $color-primary;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid $color-divider;
+      border-radius: 10px;
+      font-size: 16px;
+      background-color: white;
+      transition:
+        border-color 0.2s ease-out,
+        box-shadow 0.2s ease-out;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+  }
+
+  .form-row {
+    display: flex;
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .form-group {
+      flex: 1;
+    }
+  }
+}
+
+// Lists
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 16px 0;
+
+  li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background-color: $color-accent;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Message boxes
+.message-box {
+  padding: 16px;
+  border-radius: 10px;
+  margin: 24px 0;
+  background-color: rgba($color-accent, 0.15);
+  color: $color-primary;
+
+  &.success {
+    background-color: rgba(#3a7d44, 0.15);
+    color: #2a5a32;
+  }
+
+  &.error {
+    background-color: rgba($color-alert, 0.15);
+    color: $color-alert;
+  }
+}
+
+// Helper classes
+.text-center {
+  text-align: center;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .company-page {
+    padding: 32px 16px;
+  }
+
+  .section {
+    padding: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

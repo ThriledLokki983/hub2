@@ -1,0 +1,281 @@
+@import '../../styles/utils';
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin: 0;
+  }
+}
+
+.section {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  transition: box-shadow $transition-base;
+  margin-bottom: $spacing-xl;
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $primary-color;
+    margin-top: 0;
+    margin-bottom: $spacing-lg;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $divider-color;
+  }
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: $spacing-xl;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profilePhoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photoContainer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  color: $bone-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-md;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.uploadButton {
+  margin-top: $spacing-md;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  background-color: transparent;
+  border: 1px solid $slate-gray;
+  color: $text-color;
+  font-size: $font-size-sm;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $button-radius;
+  cursor: pointer;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.05);
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  width: 100%;
+}
+
+.fieldRow {
+  display: flex;
+  gap: $spacing-md;
+
+  .formGroup,
+  &[data-names='true'] > div {
+    flex: 1;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+
+  label {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $text-color-secondary;
+  }
+
+  input {
+    padding: 0.85rem !important;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+    border: $border-width-thin solid $divider-color;
+    border-radius: $input-radius;
+    font-size: $font-size-base;
+    transition: $transition-element-hover;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: $focus-ring;
+    }
+  }
+
+  .inputReadOnly {
+    background-color: $bone-white;
+    cursor: not-allowed;
+  }
+
+  .selectInput {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right $spacing-sm center;
+    background-size: 16px;
+    padding-right: $spacing-xl;
+  }
+}
+
+.accountInfo {
+  margin-top: $spacing-md;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba($divider-color, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-size-sm;
+
+  .infoLabel {
+    color: $text-color-secondary;
+  }
+
+  .infoValue {
+    font-weight: $font-weight-medium;
+    color: $text-color;
+  }
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-md;
+  margin-top: $spacing-lg;
+}
+
+.saveButton {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: lighten($primary-color, 5%);
+    transform: translateY(-1px);
+    box-shadow: $shadow-subtle;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .spinnerIcon {
+    animation: spin 1s linear infinite;
+  }
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: $text-color;
+  border: 1px solid $muted-taupe;
+  border-radius: $button-radius;
+  padding: $spacing-sm $spacing-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: $transition-button-hover;
+
+  &:hover {
+    background-color: rgba($slate-gray, 0.1);
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.errorMessage {
+  background-color: $error-color-light;
+  color: $error-color;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-sm;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  color: $secondary-ui-color;
+  font-size: $font-size-lg;
+
+  .spinnerIcon {
+    margin-right: $spacing-sm;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

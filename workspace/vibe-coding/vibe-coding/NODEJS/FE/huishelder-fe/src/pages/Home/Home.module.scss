@@ -1,0 +1,300 @@
+@import '../../styles/utils';
+
+// Main container
+.root {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+// Section common styles
+.hero,
+.journeySnapshot,
+.financialSection,
+.tasksSection,
+.aboutSection {
+  margin-bottom: 3rem;
+  border-radius: 12px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--deep-olive-green, #3a4f41);
+  }
+}
+
+// Hero section
+.hero {
+  background-color: var(--bone-white, #f8f5f0);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(58, 79, 65, 0.08);
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: -5%;
+    bottom: -10%;
+    width: 200px;
+    height: 200px;
+    background-color: var(--soft-amber, #f4c77b);
+    opacity: 0.15;
+    border-radius: 50%;
+  }
+
+  .heroContent {
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--deep-olive-green, #3a4f41);
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--slate-gray, #6e7673);
+    }
+  }
+}
+
+// Journey cards panel
+.journeySnapshot {
+  background-color: var(--warm-fog, #eae6e1);
+  padding: 2rem;
+  border-radius: 16px;
+
+  .journeyCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 968px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .journeyCard {
+    background-color: var(--bone-white, #f8f5f0);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(42, 42, 42, 0.05);
+    transition: all 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(58, 79, 65, 0.12);
+    }
+
+    .cardIcon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--deep-olive-green, #3a4f41);
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: var(--slate-gray, #6e7673);
+      margin: 0;
+    }
+  }
+}
+
+// Financial overview section
+.financialSection {
+  background-color: var(--bone-white, #f8f5f0);
+  padding: 2rem;
+  border-radius: 16px;
+
+  .financialCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 968px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .financeCard {
+    background-color: var(--warm-fog, #eae6e1);
+    padding: 1.5rem;
+    border-radius: 12px;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--slate-gray, #6e7673);
+    }
+
+    .financeAmount {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--deep-olive-green, #3a4f41);
+      margin-bottom: 0.75rem;
+    }
+
+    .viewDetails,
+    .cardLink {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--deep-olive-green, #3a4f41);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--soft-amber, #f4c77b);
+      }
+    }
+  }
+
+  .infoNote {
+    text-align: center;
+    color: var(--slate-gray, #6e7673);
+    font-size: 0.875rem;
+  }
+}
+
+// Tasks section
+.tasksSection {
+  background-color: var(--bone-white, #f8f5f0);
+  padding: 2rem;
+  border-radius: 16px;
+
+  .tasksList {
+    min-height: 150px;
+  }
+
+  .taskItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .taskItem {
+      border-bottom: 1px solid var(--muted-taupe, #dad5cf);
+      padding: 1rem 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .taskLink {
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--deep-olive-green, #3a4f41);
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          color: var(--soft-amber, #f4c77b);
+
+          .taskArrow {
+            transform: translateX(4px);
+          }
+        }
+
+        .taskTitle {
+          font-weight: 500;
+        }
+
+        .taskArrow {
+          font-size: 1.25rem;
+          transition: transform 0.2s ease-out;
+        }
+      }
+    }
+
+    .viewMoreTasks {
+      text-align: center;
+      padding-top: 1rem;
+
+      a {
+        color: var(--deep-olive-green, #3a4f41);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+
+        &:hover {
+          color: var(--soft-amber, #f4c77b);
+        }
+      }
+    }
+  }
+
+  .emptyTaskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+
+    .emptyStateIcon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      color: var(--slate-gray, #6e7673);
+    }
+  }
+}
+
+// About section
+.aboutSection {
+  background-color: var(--warm-fog, #eae6e1);
+  padding: 2rem;
+  border-radius: 16px;
+
+  h2 {
+    color: var(--deep-olive-green, #3a4f41);
+  }
+
+  p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: var(--charcoal-ink, #2a2a2a);
+  }
+}

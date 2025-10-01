@@ -1,0 +1,135 @@
+/**
+ * Colors: Shades
+ */
+$white: #FFFFFF;
+$whitish: #F9F9F9;
+$grey: #EAEAEA;
+$grey-dark: #D1D1D1;
+$blackish: #252525;
+$black: #000000;
+
+/**
+ * Colors: Brand
+ */
+$blue-light: #D2D7E2;
+$blue-medium: #62719A;
+$blue: #415385;
+$blue-dark: #203570;
+
+/**
+ * Colors: Core
+ */
+$primary-color-light: $blue-light;
+$primary-color-medium: $blue-medium;
+$primary-color-regular: $blue;
+$primary-color-dark: $blue-dark;
+
+$primary-color: $primary-color-regular;
+
+$background-color: $white;
+$text-color: $blackish;
+$text-color-light: #757575;
+
+/**
+ * Colors: Status
+ */
+$error-color: #C52A1A;
+$error-color-light: #F3D4D1;
+$error-color-dark: #822720;
+
+$warning-color: #EB8C00; // #FFBF1F
+$warning-color-light: #FFECBD; // #FFF4D9
+
+$success-color: #175D2D; // #22992E
+$success-color-light: #D4EBE9;
+
+/**
+ * Accessibility
+ */
+$input-border-color: $grey-dark;
+$input-focus-color: $primary-color;
+$input-disabled-color: $whitish;
+
+$selection-color: rgba($primary-color, 0.25);
+$placeholder-color: rgba($black, 0.4);
+
+/**
+ * Fonts
+ */
+$heading-font: 'PwC Helvetica Neue', 'Helvetica Neue', 'Helvetica', sans-serif;
+$body-font: 'PwC Helvetica Neue', 'Helvetica Neue', 'Helvetica', sans-serif;
+$ui-font: 'PwC Helvetica Neue', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+$system-font: -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+/**
+ * Borders
+ */
+$border-radius-small: 0.125rem;
+$border-radius-regular: 0.25rem;
+$border-radius-large: 0.5rem;
+
+$border-radius: $border-radius-regular;
+
+/**
+ * Box shadows
+ */
+$box-shadow:
+    0 0 1px 0 rgba($black, 0.1),
+    0 4px 8px 0 rgba($black, 0.2);
+
+/**
+ * Transitions
+ */
+$transition-layout: all 0.35s ease;
+
+/**
+ * Icons
+ */
+$icon-size: 1rem;
+
+/**
+ * Gutters
+ */
+$gutter: 1rem;
+$gutter-site: $gutter * 1.5;
+
+/**
+ * Widths & Sizes
+ */
+$site-max-width: 1280px;
+$content-max-width: 680px;
+$content-max-width-large: 800px;
+$modal-text-max-width: 520px;
+
+$max-widths: (
+    site: $site-max-width,
+    content: $content-max-width,
+    full: 100%,
+);
+
+$header-width-expanded: 270px;
+$header-width-collapsed: 73px;
+$header-height: 64px;
+
+/*
+ * Z-index
+ */
+$z-index: (
+    skiplinks: 10000,
+    toast: 2500,
+    fetch-loader: 2000,
+    modal: 1500,
+    site-header: 1000,
+);
+
+/**
+ * Breakpoints
+ */
+$tiny: 480;
+$small: 640;
+$medium: 900;
+$large: 1200;
+$huge: 1600;

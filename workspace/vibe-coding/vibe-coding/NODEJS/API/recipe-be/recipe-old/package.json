@@ -1,0 +1,89 @@
+{
+  "name": "recipe-api",
+  "displayName": "Recipe API",
+  "description": "API for recipe management and discovery",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/vscode-extension-samples"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onFileSystem:datei"
+  ],
+  "main": "./out/server.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "build": "tsc -p ./",
+    "lint": "eslint",
+    "start": "node ./out/server.js",
+    "watch": "tsc -watch -p ./",
+    "migrate:create": "ts-node ./src/scripts/create-migration.ts",
+    "migrate:up": "ts-node ./src/scripts/run-migrations.ts up",
+    "migrate:down": "ts-node ./src/scripts/run-migrations.ts down"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "class-validator": "^0.14.1",
+    "compression": "^1.8.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "envalid": "^8.0.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "mkdirp": "^0.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.2",
+    "pg": "^8.14.1",
+    "pg-format": "^1.0.4",
+    "pg-pool": "^3.8.0",
+    "pg-types": "^4.0.2",
+    "rimraf": "^2.6.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "typedi": "^0.10.0",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/compression": "^1.7.5",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/hpp": "^0.2.6",
+    "@types/mkdirp": "^0.5.2",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20",
+    "@types/promisify-node": "^0.4.0",
+    "@types/rimraf": "^2.0.2",
+    "@types/vscode": "^1.34.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/multer": "^1.4.12",
+    "@types/pg": "^8.11.13",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.13.0",
+    "node-pg-migrate": "^7.9.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  }
+}

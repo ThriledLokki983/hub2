@@ -1,0 +1,119 @@
+@import '../../styles/utils';
+@import './Journey.module.scss';
+
+.toolCard {
+  display: flex;
+  align-items: center;
+  padding: $spacing-lg;
+  background-color: $warm-fog;
+  border-radius: $border-radius-lg;
+  margin: $spacing-md 0;
+  text-decoration: none;
+  color: $text-primary;
+  box-shadow: $shadow-subtle;
+  transition: all 0.2s ease-out;
+  border-left: 4px solid $deep-olive-green;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+
+    &::after {
+      opacity: 1;
+    }
+
+    .actionIcon {
+      transform: translateX(4px);
+    }
+  }
+
+  &.completed {
+    border-left: 4px solid $soft-amber;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-width: 0 32px 32px 0;
+      border-style: solid;
+      border-color: transparent $soft-amber transparent transparent;
+    }
+  }
+}
+
+.toolIcon {
+  font-size: 32px;
+  margin-right: $spacing-md;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: rgba($deep-olive-green, 0.08);
+  border-radius: 50%;
+  color: $deep-olive-green;
+}
+
+.toolContent {
+  flex: 1;
+  padding: 0 $spacing-sm;
+}
+
+.toolTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: $spacing-xs;
+  display: flex;
+  align-items: center;
+}
+
+.completedBadge {
+  font-size: 12px;
+  background-color: $soft-amber;
+  color: $deep-olive-green;
+  padding: 4px 8px;
+  border-radius: $border-radius-sm;
+  margin-left: $spacing-sm;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.toolDescription {
+  font-size: 14px;
+  color: $text-secondary;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.toolAction {
+  margin-left: $spacing-md;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.actionIcon {
+  font-size: 22px;
+  color: $deep-olive-green;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba($deep-olive-green, 0.05);
+  border-radius: 50%;
+}

@@ -1,0 +1,120 @@
+@import '../../styles/utils';
+@import './Journey.module.scss';
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: $spacing-md;
+  position: relative;
+}
+
+.timelineConnector {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: -20px;
+  width: 2px;
+  background-color: $divider;
+  z-index: 1;
+}
+
+.timelineItem:last-child .timelineConnector {
+  display: none;
+}
+
+.statusBadge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: $spacing-md;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+
+  &.completed {
+    background-color: $primary;
+    color: white;
+  }
+
+  &.inProgress {
+    background-color: $accent;
+    color: $text-primary;
+  }
+
+  &.pending {
+    background-color: $divider;
+    color: $text-secondary;
+  }
+}
+
+.milestoneCard {
+  flex: 1;
+  @extend .card;
+  margin-bottom: $spacing-md;
+}
+
+.milestoneTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 $spacing-xs 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.milestoneDate {
+  font-size: 14px;
+  color: $text-secondary;
+  margin-bottom: $spacing-sm;
+}
+
+.milestoneDescription {
+  margin-bottom: $spacing-md;
+}
+
+.currentIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-sm;
+  background-color: rgba($accent, 0.1);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: darken($accent, 30%);
+}
+
+.milestoneDivider {
+  height: 1px;
+  background-color: $divider;
+  margin: $spacing-md 0;
+}
+
+.milestoneActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-md;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  cursor: pointer;
+  color: $text-secondary;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+
+  &:hover {
+    color: $primary;
+  }
+}

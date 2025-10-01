@@ -1,0 +1,1447 @@
+openapi: 3.0.0
+info:
+  title: Huishelder API
+  version: 1.0.0
+  description: The API documentation for the Huishelder backend service
+tags:
+  - name: users
+    description: User management endpoints
+  - name: auth
+    description: Authentication endpoints
+  - name: health
+    description: System health endpoints
+  - name: Journey
+    description: Home buying/selling journey endpoints
+  - name: financial
+    description: Financial dashboard endpoints
+paths:
+  /users:
+    get:
+      tags:
+        - users
+      summary: Find All Users
+      responses:
+        '200':
+          description: Users retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    post:
+      tags:
+        - users
+      summary: Add User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserDto'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Conflict - Email already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /users/me:
+    get:
+      tags:
+        - users
+      summary: Get current user profile
+      description: Retrieve the profile of the currently authenticated user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Current user data retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '401':
+          description: Unauthorized - Authentication required
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Authentication token missing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /users/{id}:
+    get:
+      tags:
+        - users
+      summary: Find User By Id
+      parameters:
+        - name: id
+          in: path
+          description: User Id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: User retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - users
+      summary: Update User By Id
+      parameters:
+        - name: id
+          in: path
+          description: user Id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserDto'
+      responses:
+        '200':
+          description: User updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Conflict - Email already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - users
+      summary: Delete User By Id
+      parameters:
+        - name: id
+          in: path
+          description: user Id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: User deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /users/{id}/photo:
+    post:
+      tags:
+        - users
+      summary: Upload User Photo
+      description: Upload a new photo for a user
+      parameters:
+        - name: id
+          in: path
+          description: User Id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                photo:
+                  type: string
+                  format: binary
+                  description: The image file to upload (jpg, jpeg, png, gif)
+              required:
+                - photo
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Photo uploaded successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad Request - Invalid file or missing file
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    put:
+      tags:
+        - users
+      summary: Update User Photo
+      description: Update an existing photo for a user
+      parameters:
+        - name: id
+          in: path
+          description: User Id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                photo:
+                  type: string
+                  format: binary
+                  description: The new image file to upload (jpg, jpeg, png, gif)
+              required:
+                - photo
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Photo updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad Request - Invalid file or missing file
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    delete:
+      tags:
+        - users
+      summary: Delete User Photo
+      description: Remove a user's photo
+      parameters:
+        - name: id
+          in: path
+          description: User Id
+          required: true
+          schema:
+            type: string
+            format: uuid
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Photo deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /auth/signup:
+    post:
+      tags:
+        - auth
+      summary: Register a new user
+      description: Create a new user account with email and password
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUserDto'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad request - validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Email already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /auth/login:
+    post:
+      tags:
+        - auth
+      summary: Login to the application
+      description: Authenticate user with email and password
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginDto'
+      responses:
+        '200':
+          description: Login successful
+          headers:
+            Set-Cookie:
+              description: Authentication cookie containing JWT
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad request - validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Wrong credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /auth/logout:
+    post:
+      tags:
+        - auth
+      summary: Logout from the application
+      description: Invalidate the authentication token
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Logout successful
+          headers:
+            Set-Cookie:
+              description: Clear authentication cookie
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '401':
+          description: Unauthorized - Invalid authentication token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Authentication token missing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /auth/request-password-reset:
+    post:
+      tags:
+        - auth
+      summary: Request password reset
+      description: Request a password reset link to be sent to the user's email
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestPasswordResetDto'
+      responses:
+        '200':
+          description: Password reset link sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad request - validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /auth/reset-password:
+    post:
+      tags:
+        - auth
+      summary: Reset password
+      description: Reset user's password using a valid reset token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResetPasswordDto'
+      responses:
+        '200':
+          description: Password reset successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+        '400':
+          description: Bad request - validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '409':
+          description: Invalid or expired token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /auth/dev/get-reset-token:
+    get:
+      tags:
+        - auth
+      summary: Get reset token for a user (DEV ONLY)
+      description: Development endpoint to retrieve a password reset token for testing
+      parameters:
+        - in: query
+          name: email
+          schema:
+            type: string
+          required: true
+          description: The email address of the user
+      responses:
+        '200':
+          description: Retrieved token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  email:
+                    type: string
+                  token:
+                    type: string
+        '404':
+          description: No token found for email
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /health:
+    get:
+      tags:
+        - health
+      summary: Get system health status
+      description: Returns basic health information about the system
+      responses:
+        '200':
+          description: System is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - healthy
+                          - unhealthy
+                      timestamp:
+                        type: string
+                        format: date-time
+                      redis:
+                        type: object
+                      system:
+                        type: object
+                  statusCode:
+                    type: integer
+                    example: 200
+        '503':
+          description: System is unhealthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /health/redis:
+    get:
+      tags:
+        - health
+      summary: Get Redis health status
+      description: Returns detailed health information about Redis
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Redis is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      healthy:
+                        type: boolean
+                      status:
+                        type: string
+                      latency:
+                        type: number
+                        description: Response time in milliseconds
+                      uptime:
+                        type: number
+                        description: Redis server uptime in seconds
+                  statusCode:
+                    type: integer
+                    example: 200
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '503':
+          description: Redis is unhealthy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /health/redis/metrics:
+    get:
+      tags:
+        - health
+      summary: Get Redis metrics
+      description: Returns detailed metrics about Redis usage and performance
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Redis metrics retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      uptime:
+                        type: number
+                        description: Redis server uptime in seconds
+                      connectedClients:
+                        type: number
+                      usedMemory:
+                        type: number
+                        description: Used memory in bytes
+                      hitRate:
+                        type: number
+                        description: Cache hit rate percentage
+                  statusCode:
+                    type: integer
+                    example: 200
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /journey/init:
+    post:
+      tags:
+        - Journey
+      summary: Initialize a user's home buying journey
+      description: Create or update a user's journey after onboarding
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JourneyInit'
+      responses:
+        '200':
+          description: Journey initialized successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    type: object
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /journey/timeline:
+    get:
+      tags:
+        - Journey
+      summary: Get user's journey timeline
+      description: Returns all user milestones sorted by order_index
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Timeline retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/UserMilestone'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Journey not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /journey/tasks:
+    get:
+      tags:
+        - Journey
+      summary: Get user's active tasks
+      description: Returns all active tasks grouped by milestone
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Tasks retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/UserTask'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Journey not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /journey/tasks/{id}/complete:
+    post:
+      tags:
+        - Journey
+      summary: Mark a task as complete
+      description: Marks a specific task as DONE and updates milestone status if needed
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Task ID
+      responses:
+        '200':
+          description: Task marked as complete
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Task not found or doesn't belong to the user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /journey/documents/upload:
+    post:
+      tags:
+        - Journey
+      summary: Upload a document
+      description: Upload a document and link to related task if applicable
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                type:
+                  type: string
+                  description: Document type
+      responses:
+        '200':
+          description: Document uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    $ref: '#/components/schemas/Document'
+        '400':
+          description: No file uploaded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /journey/finance/summary:
+    get:
+      tags:
+        - Journey
+      summary: Get financial summary
+      description: Returns the financial snapshot for the user journey
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Financial summary retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    $ref: '#/components/schemas/FinancialSummary'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      tags:
+        - Journey
+      summary: Update financial summary
+      description: Updates or creates a financial summary
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                estimated_mortgage:
+                  type: number
+                estimated_boeterente:
+                  type: number
+                bridge_loan_needed:
+                  type: number
+                monthly_gross:
+                  type: number
+                monthly_net:
+                  type: number
+      responses:
+        '200':
+          description: Financial summary updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  data:
+                    $ref: '#/components/schemas/FinancialSummary'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Journey not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /financial-snapshot:
+    post:
+      tags:
+        - financial
+      summary: Create a new financial snapshot
+      description: Create a new financial snapshot with calculations based on user input
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFinancialSnapshotDto'
+      responses:
+        '201':
+          description: Financial snapshot created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Financial snapshot created successfully
+                  data:
+                    $ref: '#/components/schemas/FinancialOutput'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /financial-snapshots:
+    get:
+      tags:
+        - financial
+      summary: Get all financial snapshots
+      description: Retrieve all financial snapshots for the authenticated user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Financial snapshots retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Financial snapshots retrieved successfully
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FinancialOutput'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /financial-snapshots/{id}:
+    get:
+      tags:
+        - financial
+      summary: Get a specific financial snapshot
+      description: Retrieve a specific financial snapshot by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          description: ID of the financial snapshot to retrieve
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Financial snapshot retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Financial snapshot retrieved successfully
+                  data:
+                    $ref: '#/components/schemas/FinancialOutput'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Financial snapshot not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Indicates if the request was successful
+          example: true
+        message:
+          type: string
+          description: A human-readable message describing the result
+          example: User retrieved successfully
+        data:
+          type: object
+          description: The response data payload
+        meta:
+          type: object
+          description: Metadata about the response (pagination, counts, etc.)
+          properties:
+            count:
+              type: integer
+              description: Number of items in the data array
+              example: 10
+            total:
+              type: integer
+              description: Total number of items available
+              example: 120
+            page:
+              type: integer
+              description: Current page number
+              example: 1
+            limit:
+              type: integer
+              description: Number of items per page
+              example: 10
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 200
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Always false for errors
+          example: false
+        message:
+          type: string
+          description: A human-readable error message
+          example: User not found
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              message:
+                type: string
+                description: Detailed error message
+              code:
+                type: string
+                description: Error code
+              field:
+                type: string
+                description: Field that caused the error
+        statusCode:
+          type: integer
+          description: HTTP status code
+          example: 404
+      required:
+        - success
+        - message
+        - statusCode
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: User unique identifier
+        email:
+          type: string
+          format: email
+          description: User email
+        password:
+          type: string
+          description: User password (hashed)
+        firstName:
+          type: string
+          description: User first name
+        lastName:
+          type: string
+          description: User last name
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updatedAt:
+          type: string
+          format: date-time
+          description: Last update timestamp
+      required:
+        - id
+        - email
+        - password
+    CreateUserDto:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          description: User email
+        password:
+          type: string
+          description: User password
+        firstName:
+          type: string
+          description: User first name
+        lastName:
+          type: string
+          description: User last name
+      required:
+        - email
+        - password
+    LoginDto:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          description: User email
+        password:
+          type: string
+          description: User password
+      required:
+        - email
+        - password
+    RequestPasswordResetDto:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          description: User's email address to send reset link
+      required:
+        - email
+    ResetPasswordDto:
+      type: object
+      properties:
+        token:
+          type: string
+          description: Password reset token received by email
+        password:
+          type: string
+          format: password
+          description: New password (min 9 chars, max 32 chars)
+      required:
+        - token
+        - password
+    JourneyInit:
+      type: object
+      required:
+        - is_first_time_buyer
+        - is_selling_current_home
+        - has_bridge_loan
+      properties:
+        is_first_time_buyer:
+          type: boolean
+          description: Whether the user is a first-time home buyer
+        is_selling_current_home:
+          type: boolean
+          description: Whether the user is selling their current home
+        has_bridge_loan:
+          type: boolean
+          description: Whether the user needs a bridge loan
+    Milestone:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        code:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        order_index:
+          type: integer
+        is_optional:
+          type: boolean
+    UserMilestone:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        milestone:
+          $ref: '#/components/schemas/Milestone'
+        is_complete:
+          type: boolean
+        due_date:
+          type: string
+          format: date
+        completed_at:
+          type: string
+          format: date-time
+        tasks:
+          type: array
+          items:
+            $ref: '#/components/schemas/UserTask'
+    UserTask:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        status:
+          type: string
+          enum:
+            - PENDING
+            - IN_PROGRESS
+            - DONE
+        related_document_id:
+          type: string
+          format: uuid
+          nullable: true
+    Document:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          type: string
+        filename:
+          type: string
+        file_url:
+          type: string
+        uploaded_at:
+          type: string
+          format: date-time
+    FinancialSummary:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        estimated_mortgage:
+          type: number
+          nullable: true
+        estimated_boeterente:
+          type: number
+          nullable: true
+        bridge_loan_needed:
+          type: number
+          nullable: true
+        monthly_gross:
+          type: number
+          nullable: true
+        monthly_net:
+          type: number
+          nullable: true
+    Error:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+    CreateFinancialSnapshotDto:
+      type: object
+      required:
+        - current_home_value
+        - current_mortgage_left
+        - new_home_price
+        - interest_rate
+        - fixed_term_years
+        - monthly_income
+        - include_nhg
+        - extra_savings
+      properties:
+        current_home_value:
+          type: integer
+          description: Current home value in euros
+          example: 450000
+        current_mortgage_left:
+          type: integer
+          description: Amount left on current mortgage in euros
+          example: 300000
+        new_home_price:
+          type: integer
+          description: New home price in euros
+          example: 600000
+        interest_rate:
+          type: number
+          format: float
+          description: Interest rate as a percentage
+          example: 3.5
+        fixed_term_years:
+          type: integer
+          description: Fixed term in years
+          example: 20
+        monthly_income:
+          type: integer
+          description: Monthly income in euros
+          example: 5500
+        include_nhg:
+          type: boolean
+          description: Whether to include NHG (Nationale Hypotheek Garantie)
+          example: true
+        extra_savings:
+          type: integer
+          description: Extra savings in euros
+          example: 20000
+    FinancialOutput:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: 123e4567-e89b-12d3-a456-426614174000
+        created_at:
+          type: string
+          format: date-time
+          example: 2025-05-14T10:30:00.000Z
+        estimated_mortgage:
+          type: integer
+          description: Estimated mortgage amount in euros
+          example: 300000
+        estimated_boeterente:
+          type: integer
+          description: Estimated penalty interest in euros
+          example: 5000
+        bridge_loan_amount:
+          type: integer
+          description: Bridge loan amount in euros
+          example: 100000
+        total_buyer_costs:
+          type: integer
+          description: Total buyer costs in euros
+          example: 25000
+        monthly_payment_gross:
+          type: integer
+          description: Monthly payment before tax benefits in euros
+          example: 1350
+        monthly_payment_net:
+          type: integer
+          description: Monthly payment after tax benefits in euros
+          example: 1150
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+servers:
+  - url: /api
+    description: Development server

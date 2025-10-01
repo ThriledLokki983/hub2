@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House Base -->
+  <rect x="100" y="120" width="200" height="160" fill="#EAE6E1" stroke="#3A4F41" stroke-width="4"/>
+  
+  <!-- Roof -->
+  <path d="M50 120L200 20L350 120" stroke="#3A4F41" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="#F4C77B" fill-opacity="0.8"/>
+  
+  <!-- Door -->
+  <rect x="160" y="200" width="40" height="80" fill="#3A4F41" rx="2"/>
+  <circle cx="185" cy="240" r="4" fill="#F4C77B"/>
+  
+  <!-- Windows -->
+  <rect x="120" y="150" width="40" height="40" fill="#F8F5F0" stroke="#3A4F41" stroke-width="2" rx="2"/>
+  <line x1="120" y1="170" x2="160" y2="170" stroke="#3A4F41" stroke-width="2"/>
+  <line x1="140" y1="150" x2="140" y2="190" stroke="#3A4F41" stroke-width="2"/>
+  
+  <rect x="240" y="150" width="40" height="40" fill="#F8F5F0" stroke="#3A4F41" stroke-width="2" rx="2"/>
+  <line x1="240" y1="170" x2="280" y2="170" stroke="#3A4F41" stroke-width="2"/>
+  <line x1="260" y1="150" x2="260" y2="190" stroke="#3A4F41" stroke-width="2"/>
+  
+  <!-- Chimney -->
+  <rect x="250" y="50" width="20" height="40" fill="#EAE6E1" stroke="#3A4F41" stroke-width="2"/>
+  <rect x="245" y="45" width="30" height="10" fill="#3A4F41"/>
+  <path d="M250 45C250 35 255 30 260 25" stroke="#F4C77B" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Garden Path -->
+  <path d="M180 280L180 310" stroke="#3A4F41" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 10"/>
+  
+  <!-- Decoration Elements -->
+  <circle cx="300" cy="80" r="15" fill="#F4C77B" fill-opacity="0.5"/>
+  <circle cx="70" cy="100" r="10" fill="#3A4F41" fill-opacity="0.3"/>
+  <rect x="100" y="190" width="40" height="20" fill="#F8F5F0" fill-opacity="0.5" rx="4"/>
+  <rect x="260" y="190" width="40" height="20" fill="#F8F5F0" fill-opacity="0.5" rx="4"/>
+  
+  <!-- Subtle Glow -->
+  <circle cx="200" cy="150" r="100" fill="url(#paint0_radial)" fill-opacity="0.15"/>
+  
+  <!-- Definitions -->
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 150) rotate(90) scale(100)">
+      <stop stop-color="#F4C77B"/>
+      <stop offset="1" stop-color="#F4C77B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

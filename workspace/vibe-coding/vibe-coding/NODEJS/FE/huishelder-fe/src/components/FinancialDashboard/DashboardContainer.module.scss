@@ -1,0 +1,215 @@
+@import '../../styles/utils.scss';
+
+/* Main container */
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-xl 0;
+}
+
+.title {
+  font-size: $font-title;
+  font-weight: $font-title-weight;
+  color: $primary-color;
+  margin-bottom: $spacing-lg;
+  letter-spacing: $letter-spacing-tight;
+}
+
+.subtitle {
+  font-size: $font-section-header;
+  font-weight: $font-section-header-weight;
+  margin-bottom: $spacing-xl;
+  color: $text-color-secondary;
+}
+
+.dashboardSection {
+  margin-bottom: $spacing-xxl;
+}
+
+/* Form section */
+.formContainer {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  margin-bottom: $spacing-xl;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-lg;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.formActions {
+  margin-top: $spacing-xl;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Results section */
+.resultsContainer {
+  margin-top: $spacing-xl;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-lg;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resultsSection {
+  margin-top: $spacing-xl;
+}
+
+.chartContainer {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  margin-top: $spacing-xl;
+}
+
+/* Card component */
+.resultCard {
+  background-color: $card-background;
+  border-radius: $card-radius;
+  padding: $card-padding;
+  box-shadow: $shadow-subtle;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-medium;
+  }
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  margin-bottom: $spacing-xs;
+  color: $text-color;
+}
+
+.cardValue {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-xs;
+  color: $primary-color;
+}
+
+.cardDescription {
+  font-size: $font-size-sm;
+  color: $text-color-secondary;
+  margin-top: auto;
+}
+
+.statusIndicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+
+  &.success {
+    background-color: $success-color;
+  }
+
+  &.warning {
+    background-color: $warning-color;
+  }
+
+  &.error {
+    background-color: $error-color;
+  }
+
+  &.info {
+    background-color: $primary-color;
+  }
+}
+
+/* Toggle component */
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+}
+
+.toggleLabel {
+  margin-right: $spacing-md;
+  font-size: $font-size-sm;
+  color: $text-color;
+}
+
+/* Form errors */
+.errorMessage {
+  color: $error-color;
+  font-size: $font-size-xs;
+  margin-top: $spacing-xs;
+}
+
+/* Chart styles */
+.chartWrapper {
+  background-color: $card-background;
+  border-radius: $border-radius-lg;
+  padding: $spacing-lg;
+  margin-top: $spacing-lg;
+  box-shadow: $shadow-subtle;
+}
+
+.chartSection {
+  margin: $spacing-xl 0;
+}
+
+.chartSubtitle {
+  font-size: $font-size-md;
+  font-weight: 400;
+  margin-bottom: $spacing-md;
+  color: $text-color;
+}
+
+.chartInfo {
+  font-size: $font-size-sm;
+  color: $text-color-secondary;
+  margin-top: $spacing-md;
+  font-style: italic;
+}
+
+.financialSummary {
+  background-color: rgba($accent-color, 0.1);
+  padding: $spacing-md;
+  border-radius: $border-radius-sm;
+  margin-top: $spacing-xl;
+
+  p {
+    font-weight: 400;
+    margin-bottom: $spacing-sm;
+  }
+
+  ul {
+    margin-left: $spacing-lg;
+
+    li {
+      margin-bottom: $spacing-sm;
+    }
+  }
+}

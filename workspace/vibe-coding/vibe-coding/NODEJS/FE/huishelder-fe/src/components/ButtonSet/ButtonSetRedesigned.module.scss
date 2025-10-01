@@ -1,0 +1,37 @@
+@import '../../styles/utility/huishelder-mixins.scss';
+
+.buttonSet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+
+  // Vertical alignment
+  &[data-direction='vertical'] {
+    flex-direction: column;
+
+    // On small screens, make all buttons full width for better touch targets
+    @media (max-width: #{map-get($breakpoints, 'sm') - 1px}) {
+      button,
+      a {
+        width: 100%;
+      }
+    }
+  }
+
+  // Center alignment
+  &[data-alignment='center'] {
+    justify-content: center;
+  }
+
+  // Right alignment
+  &[data-alignment='right'] {
+    justify-content: flex-end;
+  }
+
+  // Equal width buttons
+  &[data-equal-width='true'] {
+    & > * {
+      flex: 1;
+    }
+  }
+}

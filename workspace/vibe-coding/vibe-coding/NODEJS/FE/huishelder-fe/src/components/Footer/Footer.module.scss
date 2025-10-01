@@ -1,0 +1,136 @@
+@import '../../styles/utility/huishelder-design-system.scss';
+
+.footer {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family-primary;
+  border-top: 1px solid $divider-color;
+}
+
+.container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: $spacing-xl $spacing-md;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.brand {
+  flex: 1;
+}
+
+.logo {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+  margin: 0 0 $spacing-sm;
+  letter-spacing: $letter-spacing-tight;
+}
+
+.tagline {
+  color: $text-color-secondary;
+  font-size: $font-size-sm;
+  line-height: $line-height-relaxed;
+  max-width: 260px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: $spacing-lg;
+
+  @media (min-width: 768px) {
+    flex: 2;
+    justify-content: flex-end;
+  }
+}
+
+.linkGroup {
+  margin-bottom: $spacing-md;
+}
+
+.linkGroupTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $primary-color;
+  margin: 0 0 $spacing-md;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+.link {
+  color: $text-color;
+  text-decoration: none;
+  font-size: $font-size-sm;
+  transition: color $transition-base;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.bottom {
+  margin-top: $spacing-xxl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid $divider-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-md;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  color: $text-color-secondary;
+  font-size: $font-size-xs;
+  margin: 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.socialLink {
+  color: $text-color-secondary;
+  transition: all $transition-base;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba($primary-color, 0.05);
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+    background-color: rgba($primary-color, 0.1);
+  }
+}

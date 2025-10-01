@@ -1,0 +1,209 @@
+@import '../../../styles/utility/huishelder-design-system.scss';
+
+.stepCard {
+  background-color: $bone-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-subtle;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  transition: all 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-medium;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  &.pending::before {
+    background-color: $slate-gray;
+  }
+
+  &.in_progress::before {
+    background-color: $soft-amber;
+  }
+
+  &.completed::before {
+    background-color: $deep-olive-green;
+  }
+
+  .header {
+    margin-bottom: $spacing-md;
+  }
+
+  .titleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-sm;
+  }
+
+  .title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $text-color;
+    margin: 0;
+  }
+
+  .category {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    padding: $spacing-xxs $spacing-xs;
+    border-radius: $pill-radius;
+    text-transform: uppercase;
+
+    &.buying {
+      background-color: rgba($primary-color, 0.1);
+      color: $primary-color;
+    }
+
+    &.selling {
+      background-color: rgba($clay-red, 0.1);
+      color: $clay-red;
+    }
+
+    &.shared {
+      background-color: rgba($slate-gray, 0.1);
+      color: $slate-gray;
+    }
+  }
+
+  .metaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dueDate {
+    color: $text-color-secondary;
+    font-size: $font-size-sm;
+
+    .dateLabel {
+      margin-right: $spacing-xs;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .statusSelect {
+    width: 160px;
+  }
+
+  .expandedContent {
+    border-top: 1px solid $divider-color;
+    margin-top: $spacing-md;
+    padding-top: $spacing-md;
+  }
+
+  .description {
+    margin-bottom: $spacing-lg;
+    color: $text-color-secondary;
+  }
+
+  .sectionTitle {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-xs;
+    color: $text-color;
+  }
+
+  .dependencies {
+    margin-bottom: $spacing-lg;
+  }
+
+  .dependencyList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .dependencyItem {
+    display: inline-block;
+    margin-right: $spacing-xs;
+    margin-bottom: $spacing-xs;
+    padding: $spacing-xxs $spacing-xs;
+    background-color: rgba($primary-color, 0.1);
+    border-radius: $pill-radius;
+    font-size: $font-size-xs;
+  }
+
+  .notes {
+    margin-bottom: $spacing-md;
+  }
+
+  .notesInput {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid $divider-color;
+    border-radius: $border-radius-md;
+    font-size: $font-size-sm;
+    font-family: $body-font;
+    margin-bottom: $spacing-sm;
+    resize: vertical;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: $focus-ring;
+    }
+  }
+
+  .notesActions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-md;
+  }
+
+  .expandButton {
+    background: none;
+    border: none;
+    color: $primary-color;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-md;
+    transition: $transition-base;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.1);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: $focus-ring;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .stepCard {
+    .metaRow {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .dueDate {
+      margin-bottom: $spacing-sm;
+    }
+
+    .statusSelect {
+      width: 100%;
+    }
+  }
+}

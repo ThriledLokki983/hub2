@@ -1,0 +1,161 @@
+/**
+ * HuisHelder Design System Mixins
+ * 
+ * Utility mixins for consistent application of design tokens
+ */
+
+@import './design-tokens.scss';
+
+// Container with responsive padding
+@mixin container {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+
+  @media (min-width: map-get($breakpoints, 'md')) {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+}
+
+// Flexbox utilities
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// Grid utilities
+@mixin grid($columns: 1fr, $gap: var(--spacing-md)) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+// Card styles
+@mixin card($padding: var(--spacing-lg), $radius: var(--radius-md), $bg: var(--color-warm-fog)) {
+  background-color: $bg;
+  border-radius: $radius;
+  padding: $padding;
+  box-shadow: var(--shadow-sm);
+}
+
+// Interactive card styles with hover effects
+@mixin interactive-card {
+  @include card;
+  cursor: pointer;
+  transition:
+    transform var(--component-animation-duration) var(--component-animation-timing),
+    box-shadow var(--component-animation-duration) var(--component-animation-timing);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// Section styling
+@mixin section($spacing: var(--spacing-xxl), $bg: transparent) {
+  margin-bottom: $spacing;
+  background-color: $bg;
+  border-radius: var(--radius-lg);
+}
+
+// Typography presets
+@mixin heading-xl {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-md);
+}
+
+@mixin heading-lg {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--spacing-md);
+}
+
+@mixin heading-md {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-sm);
+}
+
+@mixin body-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-slate-gray);
+}
+
+@mixin body-text-sm {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-slate-gray);
+}
+
+// Responsive utilities
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$breakpoint}.";
+  }
+}
+
+// Animation and transitions
+@mixin transition($properties: all) {
+  transition: $properties var(--component-animation-duration) var(--component-animation-timing);
+}
+
+// Focus styles
+@mixin focus-ring {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+// Subtle background patterns
+@mixin cosmic-bg {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(circle at 20% 80%, rgba(244, 199, 123, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(58, 79, 65, 0.05) 0%, transparent 60%);
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../styles/utils';
+
+.root {
+    @include bare-button; @include ui-font; @include font-smoothing;
+    display: inline-block; min-width: 14ch; min-height: 42px; padding: 11px 22px;
+    background: $primary-color; color: $white;
+    border-radius: $border-radius; font-size: 16px;
+    transition: background 0.1s, color 0.1s, opacity 0.4s;
+    @include hover {
+        background: $primary-color-dark;
+    }
+}
+.root[disabled],
+.root[data-disabled="true"] {
+    opacity: 0.4; cursor: not-allowed;
+}
+
+/**
+ * Secondary (outline)
+ */
+.root[data-variation="secondary"] {
+    padding: 10px 21px;
+    background: $white; color: $primary-color;
+    border: 1px solid $primary-color;
+    @include hover {
+        background: rgba($primary-color, 0.05);
+    }
+}
+
+/**
+ * Small
+ */
+.root[data-size="small"] {
+    min-height: 34px; padding: 7px 16px;
+}
+.root[data-size="small"][data-variation="secondary"] {
+    padding: 6px 15px;
+}

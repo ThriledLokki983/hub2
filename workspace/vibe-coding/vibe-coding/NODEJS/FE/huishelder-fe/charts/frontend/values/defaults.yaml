@@ -1,0 +1,6 @@
+---
+react:
+  nameOverride: ++PROJECT_NAME++
+  image:
+    path: ++PROJECT_NAME++/frontend
+  add_ssh: false

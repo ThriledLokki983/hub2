@@ -1,0 +1,78 @@
+### Get all recipes
+GET http://localhost:3333/api/v1/recipes
+Accept: application/json
+
+### Get all recipes with pagination
+GET http://localhost:3333/api/v1/recipes?page=1&limit=10
+Accept: application/json
+
+### Get recipes by category
+GET http://localhost:3333/api/v1/recipes?category=dessert
+Accept: application/json
+
+### Get recipes with search
+GET http://localhost:3333/api/v1/recipes?search=chocolate
+Accept: application/json
+
+### Get a specific recipe by ID
+GET http://localhost:3333/api/v1/recipes/{{recipeId}}
+Accept: application/json
+
+### Create a new recipe (requires authentication)
+POST http://localhost:3333/api/v1/recipes
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "title": "Chocolate Cake",
+  "description": "Delicious chocolate cake recipe",
+  "chef": "John Doe",
+  "category": "dessert",
+  "tags": ["chocolate", "cake", "dessert"],
+  "prep_time": 20,
+  "cook_time": 30,
+  "total_time": 50,
+  "servings": 8,
+  "difficulty": "medium",
+  "calories": 350,
+  "protein": 5,
+  "fat": 15,
+  "carbohydrates": 45,
+  "source": "Grandma's recipe book"
+}
+
+### Update a recipe (requires authentication)
+PUT http://localhost:3333/api/v1/recipes/{{recipeId}}
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "title": "Updated Chocolate Cake",
+  "description": "Updated delicious chocolate cake recipe"
+}
+
+### Delete a recipe (requires authentication)
+DELETE http://localhost:3333/api/v1/recipes/{{recipeId}}
+Authorization: Bearer {{accessToken}}
+
+### Add an ingredient to a recipe (requires authentication)
+POST http://localhost:3333/api/v1/recipes/{{recipeId}}/ingredients
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "name": "Chocolate",
+  "quantity": "200",
+  "unit": "g",
+  "notes": "Dark chocolate, 70% cocoa"
+}
+
+### Add an instruction to a recipe (requires authentication)
+POST http://localhost:3333/api/v1/recipes/{{recipeId}}/instructions
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "step_number": 1,
+  "instruction": "Preheat oven to 350°F (175°C)"
+}
