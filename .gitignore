@@ -1,0 +1,34 @@
+# Hub2 Repository - Selective Backup
+# Only include essential source code and documentation
+
+# Exclude everything first
+*
+
+# Include specific files and directories
+!.gitignore
+!README.md
+
+# Include Frank's portfolio (smaller project)
+!PERSONAL/
+PERSONAL/*
+!PERSONAL/workplace/
+!PERSONAL/2025/
+PERSONAL/2025/*
+!PERSONAL/2025/FRANK/
+PERSONAL/2025/FRANK/*
+!PERSONAL/2025/FRANK/portfolio_frank/
+
+# But exclude large files even from included directories
+**/node_modules/
+**/*.jpg
+**/*.jpeg  
+**/*.png
+**/*.gif
+**/*.pdf
+**/*.zip
+**/*.pptx
+**/*.docx
+**/yarn.lock
+**/package-lock.json
+**/*.log
+**/.DS_Store
