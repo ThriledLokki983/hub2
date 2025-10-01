@@ -21,6 +21,21 @@ PERSONAL/workplace/**/node_modules/
 !PERSONAL/my-new-site/**
 !PERSONAL/Aboafo/
 !PERSONAL/Aboafo/**
+!PERSONAL/STUDY/
+PERSONAL/STUDY/*
+!PERSONAL/STUDY/2025/
+!PERSONAL/STUDY/2025/**
+!PERSONAL/STUDY/RESOURCES/
+PERSONAL/STUDY/RESOURCES/*
+!PERSONAL/STUDY/RESOURCES/TOOLS/
+!PERSONAL/STUDY/RESOURCES/TOOLS/**
+# But exclude heavy study content
+PERSONAL/STUDY/**/node_modules/
+PERSONAL/STUDY/**/dist/
+PERSONAL/STUDY/**/build/
+PERSONAL/STUDY/**/*.svg
+PERSONAL/STUDY/**/*.min.js
+PERSONAL/STUDY/**/*.min.css
 !PERSONAL/2025/
 PERSONAL/2025/*
 !PERSONAL/2025/FRANK/
@@ -49,6 +64,11 @@ workspace/PLAYGROUND/*
 
 # But exclude large files even from included directories
 **/node_modules/
+**/__pycache__/
+**/.idea/
+**/bin/
+**/obj/
+**/*.pyc
 **/*.jpg
 **/*.jpeg
 **/*.png
@@ -57,6 +77,9 @@ workspace/PLAYGROUND/*
 **/*.zip
 **/*.pptx
 **/*.docx
+**/*.dmg
+**/*.exe
+**/*.msi
 **/yarn.lock
 **/package-lock.json
 **/*.log
